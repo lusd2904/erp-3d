@@ -1,0 +1,57 @@
+:root {
+  /* 品牌主色系与强调色 */
+  --erp-primary: #2563EB;
+  --erp-primary-light: #3B82F6;
+  --erp-primary-lighter: #EFF6FF;
+  --erp-primary-dark: #1D4ED8;
+  --erp-accent: #22D3EE;
+
+  /* 背景与面板 */
+  --erp-bg: #F5F7FB;
+  --erp-card: #FFFFFF;
+  --erp-border: #E5E9F2;
+  --erp-border-light: #F1F4F9;
+
+  /* 文本颜色 */
+  --erp-text: #1F2A44;
+  --erp-text-2: #5B6478;
+  --erp-text-3: #98A2B3;
+
+  /* 功能语义色 */
+  --erp-success: #16A34A;
+  --erp-warning: #F59E0B;
+  --erp-danger: #DC2626;
+  --erp-info: #64748B;
+
+  /* 圆角与阴影 */
+  --erp-radius: 8px;
+  --erp-radius-sm: 4px;
+  --erp-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --erp-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+  /* 间距 */
+  --erp-gap-xs: 4px;
+  --erp-gap-s: 8px;
+  --erp-gap-m: 16px;
+  --erp-gap-l: 24px;
+
+  /* 字号 */
+  --erp-font-size-s: 12px;
+  --erp-font-size-m: 13px;
+  --erp-font-size-l: 14px;
+  --erp-font-size-xl: 16px;
+
+  /* 桌面端布局尺寸 */
+  --erp-sidebar-width: 220px;
+  --erp-sidebar-collapsed: 64px;
+  --erp-topbar-h: 52px;
+  --erp-tabs-h: 38px;
+  --erp-row-h: 36px;
+
+  /* HMI & PDA 触控尺寸 */
+  --erp-pda-header-h: 48px;
+  --erp-pda-btn-h: 44px;
+  --erp-hmi-header-h: 60px;
+  --erp-hmi-touch-target: 48px;
+  --erp-hmi-font-size-lg: 18px;
+}

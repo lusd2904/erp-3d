@@ -1,0 +1,17 @@
+export default {
+  workbench: '工作台',
+  base: '基础资料',
+  material: '物料主数据',
+  bom: '物料清单 (BOM)',
+  warehouse: '仓库维护',
+  purchase: '采购管理',
+  purReq: '采购申请',
+  purOrder: '采购订单',
+  production: '生产管理',
+  mo: '生产订单',
+  shopfloor: '车间执行',
+  hmi: 'HMI 工位终端',
+  warehouseOps: '仓库作业',
+  pda: 'PDA 条码作业',
+  login: '用户登录',
+};

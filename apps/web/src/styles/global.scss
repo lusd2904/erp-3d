@@ -1,0 +1,74 @@
+@use './tokens.scss';
+@use './element.scss';
+
+:root {
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--erp-bg);
+  color: var(--erp-text);
+  font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+/* 细滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* 企业后台基础排版类 */
+.erp-card {
+  background: var(--erp-card);
+  border-radius: var(--erp-radius);
+  border: 1px solid var(--erp-border);
+  box-shadow: var(--erp-shadow);
+}
+
+.erp-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--erp-gap-s) var(--erp-gap-m);
+  background: var(--erp-card);
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.erp-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--erp-gap-m);
+  gap: var(--erp-gap-m);
+}

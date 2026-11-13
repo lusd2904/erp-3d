@@ -1,0 +1,46 @@
+/* Element Plus 主题定制覆盖（仅浅色主题） */
+:root {
+  --el-color-primary: var(--erp-primary);
+  --el-color-primary-light-3: #5887ef;
+  --el-color-primary-light-5: #85a9f5;
+  --el-color-primary-light-7: #b3cbf9;
+  --el-color-primary-light-8: #cadbfc;
+  --el-color-primary-light-9: #e2ecfd;
+  --el-color-primary-dark-2: var(--erp-primary-dark);
+
+  --el-color-success: var(--erp-success);
+  --el-color-warning: var(--erp-warning);
+  --el-color-danger: var(--erp-danger);
+
+  --el-bg-color: var(--erp-card);
+  --el-bg-color-page: var(--erp-bg);
+  --el-border-color: var(--erp-border);
+  --el-border-radius-base: var(--erp-radius);
+  --el-border-radius-small: var(--erp-radius-sm);
+
+  --el-text-color-primary: var(--erp-text);
+  --el-text-color-regular: var(--erp-text-2);
+  --el-text-color-secondary: var(--erp-text-3);
+
+  --el-font-size-base: 13px;
+}
+
+/* 紧凑型企业级表格样式 */
+.el-table {
+  --el-table-header-bg-color: #F8FAFC;
+  --el-table-row-hover-bg-color: #F1F5F9;
+  font-size: 13px;
+
+  th.el-table__cell {
+    background-color: #F8FAFC !important;
+    color: var(--erp-text);
+    font-weight: 600;
+    height: var(--erp-row-h);
+    padding: 2px 0;
+  }
+
+  td.el-table__cell {
+    height: var(--erp-row-h);
+    padding: 2px 0;
+  }
+}
