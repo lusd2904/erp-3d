@@ -1,0 +1,15 @@
+{
+  "name": "erp3d",
+  "private": true,
+  "version": "0.1.0",
+  "description": "电子元器件生产 ERP 完整系统（monorepo）",
+  "packageManager": "pnpm@10.34.6",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "pnpm -r --filter ./packages/** run build && pnpm --filter @erp3d/api run build",
+    "test": "pnpm --filter @erp3d/api run test",
+    "test:e2e": "pnpm --filter @erp3d/api run test:e2e",
+    "migrate": "pnpm --filter @erp3d/api run migrate",
+    "lint": "pnpm -r run lint"
+  }
+}
