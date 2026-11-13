@@ -19,7 +19,7 @@ pnpm install
 cp apps/api/.env.example apps/api/.env
 pnpm migrate                    # 跑迁移（可重复执行）
 pnpm --filter @erp3d/api start:dev
-# Swagger: http://localhost:3000/api/docs   默认管理员 admin / Admin@123（首次登录须改密）
+# Swagger: http://localhost:8080/api/docs   默认管理员 admin / Admin@123（首次登录须改密）
 pnpm test && pnpm test:e2e
 ```
 

@@ -1,25 +1,24 @@
-import { Injectable } from '@nestjs/common';
-import * as fs from 'fs';
-import * as path from 'path';
+import { Inject, Injectable } from '@nestjs/common';
 import * as crypto from 'crypto';
 import { ErrorCodes } from '@erp3d/shared';
 import { DbService } from '../../db/db.service';
 import { nextId } from '../../db/snowflake';
-import { config } from '../../config/config';
 import { ParamService } from '../param.service';
 import { BizError } from '../../common/biz-error';
 import { AuthUser } from '../../common/request-context';
+import { STORAGE_DRIVER, StorageDriver } from '../../common/storage/storage.driver';
 
 @Injectable()
 export class AttachmentService {
   constructor(
     private db: DbService,
     private paramService: ParamService,
+    @Inject(STORAGE_DRIVER) private storage: StorageDriver,
   ) {}
 
   async list(objectCode: string, billId: number) {
     return this.db.q(
-      `SELECT id, file_name AS name, size, mime, uploader_id AS uploaderId, created_at AS time
+      `SELECT id, file_name AS name, size, mime, storage, uploader_id AS uploaderId, created_at AS time
        FROM sys_attachment WHERE object_code = ? AND bill_id = ? ORDER BY id DESC`,
       [objectCode, billId],
     );
@@ -40,32 +39,36 @@ export class AttachmentService {
     const id = nextId();
 
     const safeObj = objectCode.replace(/[^a-zA-Z0-9_]/g, '');
-    const relDir = path.join(safeObj, yyyy, mm);
-    const absDir = path.join(config.filesDir, relDir);
-    if (!fs.existsSync(absDir)) {
-      fs.mkdirSync(absDir, { recursive: true });
-    }
-
     const safeName = file.originalname.replace(/[/\\?%*:|"<>]/g, '_');
-    const diskFileName = `${id}-${safeName}`;
-    const absFilePath = path.join(absDir, diskFileName);
-    fs.writeFileSync(absFilePath, file.buffer);
-
-    const relPath = path.join(relDir, diskFileName).replace(/\\/g, '/');
+    const key = `${safeObj}/${yyyy}/${mm}/${id}-${safeName}`;
     const sha256 = crypto.createHash('sha256').update(file.buffer).digest('hex');
 
-    await this.db.exec(
-      `INSERT INTO sys_attachment (id, object_code, bill_id, file_name, path, size, mime, sha256, uploader_id)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [id, objectCode, billId, file.originalname, relPath, file.size, file.mimetype || null, sha256, user.id],
-    );
+    // 先 put 存储再插库
+    await this.storage.put(key, file.buffer, file.mimetype || null);
+
+    try {
+      await this.db.exec(
+        `INSERT INTO sys_attachment (id, object_code, bill_id, file_name, path, size, mime, sha256, uploader_id, storage)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [id, objectCode, billId, file.originalname, key, file.size, file.mimetype || null, sha256, user.id, this.storage.kind],
+      );
+    } catch (dbErr) {
+      // 插库失败时尝试删除已上传的对象
+      try {
+        await this.storage.delete(key);
+      } catch {
+        /* 忽略存储删除失败 */
+      }
+      throw dbErr;
+    }
 
     return {
       id,
       name: file.originalname,
       size: file.size,
       mime: file.mimetype,
-      path: relPath,
+      path: key,
+      storage: this.storage.kind,
       uploaderId: user.id,
       time: now,
     };
@@ -74,31 +77,33 @@ export class AttachmentService {
   async getFile(id: number) {
     const row = await this.db.one<any>(`SELECT * FROM sys_attachment WHERE id = ?`, [id]);
     if (!row) throw new BizError(ErrorCodes.SYS_NOT_FOUND, '附件不存在');
-    const absPath = path.resolve(config.filesDir, row.path);
-    if (!fs.existsSync(absPath)) {
-      throw new BizError(ErrorCodes.SYS_NOT_FOUND, '磁盘上的附件物理文件丢失');
+
+    const attachStorage = row.storage || 'local';
+    if (attachStorage !== this.storage.kind) {
+      throw new BizError(ErrorCodes.SYS_NOT_FOUND, '附件存储位置与当前存储配置不一致');
     }
-    return { row, absPath };
+
+    const stream = await this.storage.get(row.path);
+    return { row, stream };
   }
 
   async delete(id: number, user: AuthUser) {
-    const row = await this.db.one<any>(`SELECT id, path, uploader_id FROM sys_attachment WHERE id = ?`, [id]);
+    const row = await this.db.one<any>(`SELECT id, path, storage, uploader_id FROM sys_attachment WHERE id = ?`, [id]);
     if (!row) return { ok: true };
 
     if (!user.isSuper && Number(row.uploader_id) !== user.id) {
       throw new BizError(ErrorCodes.PERM_DENIED, '仅上传人或管理员可删除该附件');
     }
 
-    const absPath = path.resolve(config.filesDir, row.path);
-    if (fs.existsSync(absPath)) {
-      try {
-        fs.unlinkSync(absPath);
-      } catch {
-        /* 忽略物理文件删除失败 */
-      }
+    // 先删库再删对象（对象删除失败忽略）
+    await this.db.exec(`DELETE FROM sys_attachment WHERE id = ?`, [id]);
+
+    try {
+      await this.storage.delete(row.path);
+    } catch {
+      /* 忽略对象删除失败 */
     }
 
-    await this.db.exec(`DELETE FROM sys_attachment WHERE id = ?`, [id]);
     return { ok: true };
   }
 }

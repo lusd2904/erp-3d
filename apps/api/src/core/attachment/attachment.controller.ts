@@ -14,7 +14,6 @@ import {
 import { ApiBearerAuth, ApiBody, ApiConsumes, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Response } from 'express';
-import * as fs from 'fs';
 import { CurrentUser } from '../../common/decorators';
 import { AuthUser } from '../../common/request-context';
 import { AttachmentService } from './attachment.service';
@@ -33,7 +32,7 @@ export class AttachmentController {
   }
 
   @Post()
-  @UseInterceptors(FileInterceptor('file', { limits: { fileSize: 50 * 1024 * 1024 } })) // [人工修正 反重力] 内存落盘前先限 50MB
+  @UseInterceptors(FileInterceptor('file', { limits: { fileSize: 50 * 1024 * 1024 } }))
   @ApiConsumes('multipart/form-data')
   @ApiBody({
     schema: {
@@ -58,8 +57,7 @@ export class AttachmentController {
   @Get(':id/file')
   @ApiOperation({ summary: '下载附件文件' })
   async download(@Param('id') id: string, @Res({ passthrough: true }) res: Response) {
-    const { row, absPath } = await this.attachmentService.getFile(Number(id));
-    const stream = fs.createReadStream(absPath);
+    const { row, stream } = await this.attachmentService.getFile(Number(id));
     res.set({
       'Content-Type': row.mime || 'application/octet-stream',
       'Content-Disposition': `attachment; filename="${encodeURIComponent(row.file_name)}"`,
