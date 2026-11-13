@@ -109,6 +109,7 @@ export const FINANCE_RESERVED_COLUMNS = [
 export interface BillView {
   form: string;
   header: Record<string, unknown>;
+  /** 主分录行；子分录挂在行的 row[<子分录 key>] 数组上（T02，WP02 确认） */
   entries: Record<string, unknown>[];
   allowedOps: string[];
   lockedFields: { header: string[] | '*'; entry: string[] | '*' };

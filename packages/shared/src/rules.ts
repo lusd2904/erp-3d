@@ -52,8 +52,12 @@ export interface WritebackRuleConfig {
   srcField: string;
   /** 下游分录取值：字段名或公式（变量为下游分录字段），默认 'base_qty' */
   tgtValue?: string;
-  /** 下游 save：保存（非暂存、未作废、存在）即生效；audit：已审核（含已关闭）才生效 */
-  onEvent: 'save' | 'audit';
+  /**
+   * 下游 save：保存（非暂存、未作废、存在）即生效；audit：已审核（含已关闭）才生效；
+   * 其他字符串 = 下游单据注册的自定义业务事件代码（BillEventDef.code，如 'inspect_complete'），
+   * 事件执行时反写、对应撤销事件（如 'inspect_cancel'）执行时按 sys_writeback_log 冲回。[人工修正 反重力] WP02 扩展
+   */
+  onEvent: 'save' | 'audit' | (string & {});
   /** add 累加 / sub 扣减 / overwrite 覆盖（回滚时恢复原值） */
   mode: 'add' | 'sub' | 'overwrite';
   /** 超额控制：FORBID 禁止超额 / ONCE 允许超额一次（反写前未超、反写后可超）/ ALLOW 允许 */

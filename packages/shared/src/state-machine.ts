@@ -46,6 +46,8 @@ export interface RowTransition {
   hook?: string;
   /** 允许“执行至/反执行至”自动经过这一步（默认 true） */
   jumpable?: boolean;
+  /** 经过这一步时对该分录触发的自定义业务事件（或撤销事件）代码，见 BillEventDef。[人工修正 反重力] WP02 扩展 */
+  event?: string;
 }
 
 export interface RowStatusConfig {

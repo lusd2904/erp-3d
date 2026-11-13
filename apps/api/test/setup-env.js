@@ -12,3 +12,4 @@ process.env.JWT_REFRESH_TTL = process.env.JWT_REFRESH_TTL || '7d';
 process.env.FILES_DIR = process.env.FILES_DIR || path.resolve(__dirname, '../files-test');
 process.env.ENABLE_JOBS = 'false';
 process.env.DOTENV_PATH = path.resolve(__dirname, 'test.env');
+process.env.ENGINE_SAMPLES = 'true';
