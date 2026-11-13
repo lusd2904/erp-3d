@@ -1,5 +1,17 @@
 {
   "extends": "../../tsconfig.base.json",
-  "compilerOptions": { "outDir": "dist", "rootDir": "src", "baseUrl": "." },
-  "include": ["src", "test"]
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@erp3d/shared": [
+        "../../packages/shared/src"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "test"
+  ]
 }
