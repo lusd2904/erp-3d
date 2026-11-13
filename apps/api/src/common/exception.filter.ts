@@ -38,6 +38,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
       status = 500;
       this.log.error(`[${traceId}] ${e?.stack || e}`);
     }
+    if (res.headersSent) return; // [人工修正 反重力] 幂等回放已写出响应时避免二次写头
     res.status(status).json({ code, msg, data, traceId, ...(errors ? { errors } : {}) });
   }
 }

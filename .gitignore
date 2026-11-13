@@ -5,3 +5,4 @@ coverage/
 *.log
 /devdata/
 apps/api/files/
+apps/api/files-test/

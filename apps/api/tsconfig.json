@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
+    // [人工修正 反重力] 不设 rootDir：paths 映射到 packages/shared，设了会 TS6059
     "baseUrl": ".",
     "paths": {
       "@erp3d/shared": [
