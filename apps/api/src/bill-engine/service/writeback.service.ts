@@ -115,9 +115,25 @@ export class WritebackService {
     for (const tbl of sortedTables) {
       const ids = byTable.get(tbl)!.sort((a, b) => a - b);
       const placeholders = ids.map(() => '?').join(',');
+      const closeEntryIds = Array.from(
+        new Set(
+          items
+            .filter(
+              (it) =>
+                it.srcTable === tbl &&
+                (it.rule.closeScope === 'ALL' || it.rule.closeScope === 'ANY'),
+            )
+            .map((it) => it.srcEntryId),
+        ),
+      ).sort((a, b) => a - b);
+      const closePlaceholders = closeEntryIds.map(() => '?').join(',');
+      const closeCondition = closeEntryIds.length > 0
+        ? ` OR bill_id IN (SELECT close_src.bill_id FROM ${ident(tbl)} AS close_src WHERE close_src.id IN (${closePlaceholders}))`
+        : '';
+      // 整单关闭依赖全部分录；在任何数量更新前统一按主键顺序加锁。
       const lockedRows = await this.db.q<Row>(
-        `SELECT * FROM ${ident(tbl)} WHERE id IN (${placeholders}) ORDER BY id FOR UPDATE`,
-        ids,
+        `SELECT * FROM ${ident(tbl)} WHERE id IN (${placeholders})${closeCondition} ORDER BY id FOR UPDATE`,
+        [...ids, ...closeEntryIds],
       );
       const tableMap = new Map<number, Row>();
       for (const r of lockedRows) {
@@ -259,9 +275,9 @@ export class WritebackService {
       const srcMeta = this.registry.get(hInfo.form).meta;
       const entryTable = srcMeta.entry!.table;
       const headTable = srcMeta.table;
-      const entries = await this.db.q<{ biz_close: string }>(
-        `SELECT biz_close FROM ${ident(entryTable)} WHERE bill_id = ?`,
-        [hInfo.billId],
+      // 使用当前锁定版本及本事务内的更新结果，避免普通查询读取旧快照。
+      const entries = Array.from(srcRowMap.get(entryTable)!.values()).filter(
+        (entry) => Number(entry.bill_id) === hInfo.billId,
       );
       let needClose = false;
       if (hInfo.closeScope === 'ALL') {
@@ -327,9 +343,27 @@ export class WritebackService {
     for (const tbl of sortedTables) {
       const ids = byTable.get(tbl)!.sort((a, b) => a - b);
       const placeholders = ids.map(() => '?').join(',');
+      const closeEntryIds = Array.from(
+        new Set(
+          logs
+            .filter((log) => {
+              const rule = this.registry.writebackByCode(log.rule_code);
+              return (
+                this.registry.get(log.src_form).meta.entry!.table === tbl &&
+                (rule?.closeScope === 'ALL' || rule?.closeScope === 'ANY')
+              );
+            })
+            .map((log) => Number(log.src_entry_id)),
+        ),
+      ).sort((a, b) => a - b);
+      const closePlaceholders = closeEntryIds.map(() => '?').join(',');
+      const closeCondition = closeEntryIds.length > 0
+        ? ` OR bill_id IN (SELECT close_src.bill_id FROM ${ident(tbl)} AS close_src WHERE close_src.id IN (${closePlaceholders}))`
+        : '';
+      // 冲回同样依赖整单分录状态；在任何数量恢复前统一按主键顺序加锁。
       const lockedRows = await this.db.q<Row>(
-        `SELECT * FROM ${ident(tbl)} WHERE id IN (${placeholders}) ORDER BY id FOR UPDATE`,
-        ids,
+        `SELECT * FROM ${ident(tbl)} WHERE id IN (${placeholders})${closeCondition} ORDER BY id FOR UPDATE`,
+        [...ids, ...closeEntryIds],
       );
       const tableMap = new Map<number, Row>();
       for (const r of lockedRows) {
@@ -403,9 +437,9 @@ export class WritebackService {
       const srcMeta = this.registry.get(hInfo.form).meta;
       const entryTable = srcMeta.entry!.table;
       const headTable = srcMeta.table;
-      const entries = await this.db.q<{ biz_close: string }>(
-        `SELECT biz_close FROM ${ident(entryTable)} WHERE bill_id = ?`,
-        [hInfo.billId],
+      // 使用当前锁定版本及本事务内的更新结果，避免普通查询读取旧快照。
+      const entries = Array.from(srcRowMap.get(entryTable)!.values()).filter(
+        (entry) => Number(entry.bill_id) === hInfo.billId,
       );
       let needClose = false;
       if (hInfo.closeScope === 'ALL') {

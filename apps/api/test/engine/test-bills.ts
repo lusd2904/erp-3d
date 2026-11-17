@@ -1,5 +1,7 @@
 /** 引擎验收测试专用单据（tst_ 前缀，只在测试库建表），用于不依赖具体业务模块的规则验证 */
 import type { BillMeta, StateMachineConfig } from '@erp3d/shared';
+import { checkMoClose } from '../../../../packages/shared/src/close-ctrl';
+import type { MoCloseMaterial, MoCloseScope, MoCloseStrength } from '../../../../packages/shared/src/close-ctrl';
 import type { RegisterBillOptions } from '../../src/bill-engine/engine.types';
 import { BizError } from '../../src/common/biz-error';
 import { STD_STATE_MACHINE } from '../../src/bill-engine/state/std-state-machine';
@@ -94,7 +96,7 @@ const ROW_SM: StateMachineConfig = {
       { op: 'release', name: '下达', from: ['CONFIRMED'], to: 'RELEASED', direction: 'forward', hook: 'beforeRelease' },
       { op: 'start', name: '开工', from: ['RELEASED'], to: 'STARTED', direction: 'forward' },
       { op: 'finish', name: '完工', from: ['STARTED'], to: 'FINISHED', direction: 'forward', event: 'mo_finish' },
-      { op: 'close_row', name: '结案', from: ['FINISHED'], to: 'CLOSED', direction: 'forward' },
+      { op: 'close_row', name: '结案', from: ['FINISHED'], to: 'CLOSED', direction: 'forward', hook: 'beforeCloseRow' },
       { op: 'unclose_row', name: '反结案', from: ['CLOSED'], to: 'FINISHED', direction: 'backward', hook: 'beforeUnclose', jumpable: false },
       { op: 'unfinish', name: '反完工', from: ['FINISHED'], to: 'STARTED', direction: 'backward', event: 'mo_unfinish' },
       { op: 'unstart', name: '反开工', from: ['STARTED'], to: 'RELEASED', direction: 'backward', hook: 'beforeUnstart' },
@@ -117,6 +119,21 @@ export const TST_MO: RegisterBillOptions = {
       beforeUnstart: async (e) => {
         guardCalls.push(`unstart:${e.line_no}`);
         if (Number(e.reported_qty) > 0) throw new BizError('BIZ_ROW_STATE', `第${e.line_no}行已有汇报，不能反开工`);
+      },
+      beforeCloseRow: async (_entry, ctx) => {
+        const {
+          closeScope = 'ALL',
+          closeStrength = 'IN_SCRAP',
+          materials = [],
+        } = (ctx.extra ?? {}) as {
+          closeScope?: MoCloseScope;
+          closeStrength?: MoCloseStrength;
+          materials?: MoCloseMaterial[];
+        };
+        const violations = checkMoClose(closeScope, closeStrength, materials);
+        if (violations.length > 0) {
+          throw new BizError('BIZ_ROW_STATE', violations.map((v) => v.reason).join('；'));
+        }
       },
       beforeUnclose: async (e) => {
         if (Number(e.settled)) throw new BizError('BIZ_ROW_STATE', `第${e.line_no}行已结算，不能反结案`);
