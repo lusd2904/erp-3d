@@ -95,14 +95,36 @@ export class QualityService implements OnApplicationBootstrap {
   }
 
   async concessionStatistics(query: { dateFrom?: string; dateTo?: string; materialId?: number; page?: number; size?: number }) {
-    const page = Math.max(1, Math.floor(Number(query.page ?? 1)));
-    const size = Math.min(500, Math.max(1, Math.floor(Number(query.size ?? 50))));
+    const rawPage = Number(query.page ?? 1);
+    const rawSize = Number(query.size ?? 50);
+    if (!Number.isSafeInteger(rawPage) || rawPage < 1 || !Number.isSafeInteger(rawSize) || rawSize < 1 || rawSize > 500) {
+      throw new BizError('BIZ_QM_REPORT_PAGING_INVALID', '分页参数必须是 1 到 500 的正整数');
+    }
+    const page = rawPage;
+    const size = rawSize;
     const where: string[] = [];
     const params: unknown[] = [];
-    if (query.dateFrom) { where.push('bill_date >= ?'); params.push(query.dateFrom); }
-    if (query.dateTo) { where.push('bill_date < DATE_ADD(?, INTERVAL 1 DAY)'); params.push(query.dateTo); }
-    if (query.materialId) { where.push('material_id = ?'); params.push(query.materialId); }
+    if (query.dateFrom) {
+      if (!isSqlDate(query.dateFrom)) throw new BizError('BIZ_QM_REPORT_DATE_INVALID', '开始日期格式无效');
+      where.push('bill_date >= ?'); params.push(query.dateFrom);
+    }
+    if (query.dateTo) {
+      if (!isSqlDate(query.dateTo)) throw new BizError('BIZ_QM_REPORT_DATE_INVALID', '结束日期格式无效');
+      where.push('bill_date < DATE_ADD(?, INTERVAL 1 DAY)'); params.push(query.dateTo);
+    }
+    if (query.dateFrom && query.dateTo && query.dateFrom > query.dateTo) {
+      throw new BizError('BIZ_QM_REPORT_DATE_RANGE_INVALID', '开始日期不能晚于结束日期');
+    }
+    if (query.materialId !== undefined) {
+      if (!Number.isSafeInteger(query.materialId) || query.materialId <= 0) {
+        throw new BizError('BIZ_QM_REPORT_FILTER_INVALID', '物料编号必须是正整数');
+      }
+      where.push('material_id = ?'); params.push(query.materialId);
+    }
     const filter = where.length ? ` AND ${where.join(' AND ')}` : '';
+    if (!(await this.ensureConcessionView())) {
+      throw new BizError('BIZ_QM_CONCESSION_SOURCE_NOT_READY', '采购入库表尚未安装，暂不能查询让步接收入库统计');
+    }
     const rows = await this.db.q<any>(
       `SELECT instock_entry_id, bill_id, bill_no, bill_date, material_id, lot_no, concession_qty, base_unit_id
          FROM v_qm_concession_stat WHERE 1 = 1${filter} ORDER BY bill_date DESC, bill_id DESC LIMIT ? OFFSET ?`,
@@ -116,6 +138,12 @@ export class QualityService implements OnApplicationBootstrap {
   }
 
   async ensureConcessionView(): Promise<boolean> {
+    const existingView = await this.db.q<{ table_name: string }>(
+      `SELECT TABLE_NAME AS table_name FROM information_schema.TABLES
+        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_TYPE = 'VIEW' AND TABLE_NAME = ?`,
+      ['v_qm_concession_stat'],
+    );
+    if (existingView.length === 1) return true;
     const tables = await this.db.q<{ table_name: string }>(
       `SELECT TABLE_NAME AS table_name FROM information_schema.TABLES
         WHERE TABLE_SCHEMA = DATABASE() AND TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME IN (?, ?)`,
@@ -153,4 +181,10 @@ export class QualityService implements OnApplicationBootstrap {
       await this.db.q(`INSERT INTO qm_gb2828_table (${columns.join(',')}) VALUES ${batch.map(() => tuple).join(',')}`, values);
     }
   }
+}
+
+function isSqlDate(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const parsed = new Date(`${value}T00:00:00.000Z`);
+  return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
 }

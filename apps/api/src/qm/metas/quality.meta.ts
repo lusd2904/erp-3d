@@ -3,7 +3,9 @@ import type { BillMeta, FieldMeta } from '@erp3d/shared';
 const decisionFields: FieldMeta[] = [
   { key: 'decision', name: '使用决策', type: 'enum', required: true, enum: [
     { value: 'ACCEPT', label: '接收' }, { value: 'CONCESSION', label: '让步接收' },
-    { value: 'RETURN', label: '判退' }, { value: 'REWORK', label: '返修' }, { value: 'SCRAP', label: '报废' },
+    { value: 'RETURN', label: '判退' }, { value: 'NG', label: '不良' }, { value: 'REWORK', label: '返修' },
+    { value: 'REPAIR', label: '返工' }, { value: 'SCRAP', label: '报废' }, { value: 'SORT', label: '挑选全检' },
+    { value: 'HOLD', label: '保留' }, { value: 'WORK_SCRAP', label: '工废' }, { value: 'MATERIAL_SCRAP', label: '料废' },
   ] },
   { key: 'qty', name: '决策数量', type: 'qty', required: true },
   { key: 'base_qty', name: '基本单位数量', type: 'qty', required: true },

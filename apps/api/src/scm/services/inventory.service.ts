@@ -222,8 +222,14 @@ export class InventoryService {
     const barcode = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ?', [orgId, input.barcode.trim()]);
     if (!barcode) throw new BizError('BIZ_BC_BARCODE_NOT_FOUND', '条码不存在');
     if (barcode.msl_status === 'TIMEOUT_FROZEN') throw new BizError('BIZ_BC_MSL_FROZEN', '卷盘 MSL 已超时冻结，不能使用');
+    if (barcode.status !== 'IN' || new Decimal(barcode.base_qty).lte(0)) {
+      throw new BizError('BIZ_BC_BARCODE_UNAVAILABLE', '条码已出库、作废或数量为零，不能使用');
+    }
     if (!Number.isSafeInteger(input.billId) || input.billId <= 0 || !input.form || input.form.length > 50) {
       throw new BizError('BIZ_BC_SCAN_CONTEXT_INVALID', '扫描记录必须关联有效单据');
+    }
+    if (input.entryId !== undefined && (!Number.isSafeInteger(input.entryId) || input.entryId <= 0)) {
+      throw new BizError('BIZ_BC_SCAN_CONTEXT_INVALID', '扫描分录编号无效');
     }
     await this.db.tx(async () => {
       await this.db.exec(
@@ -267,10 +273,18 @@ export class InventoryService {
     );
     if (!updated.affectedRows) throw new BizError('BIZ_BC_SPLIT_CONFLICT', '主条码已被其他操作修改');
 
+    const lastChild = await this.db.one<{ serial: number }>(
+      `SELECT COALESCE(MAX(CAST(SUBSTRING_INDEX(barcode, '-', -1) AS UNSIGNED)), 0) AS serial
+         FROM bc_barcode_master WHERE org_id = ? AND parent_barcode = ?`,
+      [ctx.user.orgId, parent.barcode],
+    );
+    let serial = Number(lastChild?.serial ?? 0);
+
     for (const entry of ctx.entries) {
       const qty = new Decimal(entry.child_qty).toFixed();
       const baseQty = new Decimal(entry.child_base_qty).toFixed();
-      const childBarcode = `${parent.barcode}-${ctx.billId}-${entry.line_no}`;
+      serial += 1;
+      const childBarcode = `${parent.barcode}-${serial}`;
       await this.db.exec(
         `INSERT INTO bc_barcode_master (
           id, org_id, barcode, material_id, aux_prop_id, lot_no, prod_date, exp_date, warehouse_id, location_id,
@@ -301,6 +315,9 @@ export class InventoryService {
     );
     const total = Decimal.sum(...children.map((child) => new Decimal(child.child_base_qty)));
     const totalQty = Decimal.sum(...children.map((child) => new Decimal(child.child_qty)));
+    if (children.length !== ctx.entries.length) {
+      throw new BizError('BIZ_BC_SPLIT_CHILD_MISSING', '拆分单关联的子条码记录不完整，不能反审核');
+    }
     for (const child of children) {
       if (Number(child.scan_count) > 0 || !new Decimal(child.qty).eq(child.child_qty) || !new Decimal(child.base_qty).eq(child.child_base_qty)) {
         throw new BizError('BIZ_BC_SPLIT_HAS_USAGE', `子条码 ${child.child_barcode} 已被使用，不能反审核拆分单`);
@@ -324,8 +341,12 @@ export class InventoryService {
       if (!row || !row.msl_level || row.msl_status !== allowedFrom[String(entry.event)]) {
         throw new BizError('BIZ_BC_MSL_STATE_INVALID', `卷盘 ${entry.barcode} 的 MSL 状态不允许执行该事件`);
       }
-      if (entry.event === 'BAKE_FINISH' && (Number(entry.temp) <= 0 || Number(entry.hours) <= 0)) {
-        throw new BizError('BIZ_BC_BAKE_INVALID', '烘烤完成必须录入正数温度和时长');
+      if (entry.event === 'BAKE_FINISH') {
+        const temp = new Decimal(entry.temp ?? NaN);
+        const hours = new Decimal(entry.hours ?? NaN);
+        if (!temp.isFinite() || !hours.isFinite() || temp.lte(0) || hours.lte(0)) {
+          throw new BizError('BIZ_BC_BAKE_INVALID', '烘烤完成必须录入正数温度和时长');
+        }
       }
       const snapshot = {
         msl_status: row.msl_status,
