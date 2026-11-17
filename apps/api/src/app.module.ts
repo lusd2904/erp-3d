@@ -6,9 +6,11 @@ import { BillEngineModule } from './bill-engine/bill-engine.module';
 import { EngineSamplesModule } from './bill-engine/samples/engine-samples.module';
 import { TraceMiddleware } from './common/trace.middleware';
 import { WorkflowModule } from './workflow/workflow.module';
+import { ScmModule } from './scm/scm.module';
+import { QmModule } from './qm/qm.module';
 
 @Module({
-  imports: [DbModule, PlatformInfraModule, CoreModule, BillEngineModule, WorkflowModule, EngineSamplesModule],
+  imports: [DbModule, PlatformInfraModule, CoreModule, BillEngineModule, WorkflowModule, EngineSamplesModule, ScmModule, QmModule],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
