@@ -76,10 +76,30 @@ describe('部署约束', () => {
     const c = await lock.tryRun('t-lock', async () => 1);
     expect(c).toEqual({ ran: true, result: 1 });
     // 等待模式：第二个等第一个释放后执行
-    // [集成修正] 原写法两者同时抢锁，等待方可能先拿到导致不等待方失败（偶发）；先让 d 拿到锁再启动 e
-    const pd = lock.tryRun('t-wait', () => sleep(400));
-    await sleep(100);
-    const [d, e] = await Promise.all([pd, lock.tryRun('t-wait', async () => 2, { waitSec: 3 })]);
+    let signalWaitLockAcquired!: () => void;
+    let releaseWaitLock!: () => void;
+    const waitLockAcquired = new Promise<void>((resolve) => {
+      signalWaitLockAcquired = resolve;
+    });
+    const waitLockRelease = new Promise<void>((resolve) => {
+      releaseWaitLock = resolve;
+    });
+    const pd = lock.tryRun('t-wait', async () => {
+      signalWaitLockAcquired();
+      await waitLockRelease;
+    });
+    await Promise.race([
+      waitLockAcquired,
+      pd.then(() => {
+        throw new Error('首个任务未取得等待测试锁');
+      }),
+    ]);
+    // 确认首个任务持锁后启动等待方；延时仅用于保留持锁窗口。
+    const [d, e] = await Promise.all([
+      pd,
+      lock.tryRun('t-wait', async () => 2, { waitSec: 3 }),
+      sleep(200).then(() => releaseWaitLock()),
+    ]);
     expect(d.ran && e.ran).toBe(true);
     expect(lock.lockName('x'.repeat(100)).length).toBeLessThanOrEqual(64);
   });

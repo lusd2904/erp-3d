@@ -7,13 +7,20 @@ describe('引擎验收 2：并发反写', () => {
   beforeAll(async () => { c = await setup([TST_SRC, TST_DST]); });
   afterAll(async () => c.app.close());
 
-  // [集成修正] 测试账号无 PROCESS 权限时读不到 INNODB_METRICS，返回 null 跳过计数器比对（仍校验无 ER_LOCK_DEADLOCK 返回）
+  // 缺少读取计数器的权限时跳过计数比对；业务结果断言仍继续执行。
   async function deadlocks(): Promise<number | null> {
     try {
       const r = await c.db.one<any>(`SELECT COUNT AS n FROM information_schema.INNODB_METRICS WHERE NAME = 'lock_deadlocks'`);
       return Number(r?.n ?? 0);
-    } catch {
-      return null;
+    } catch (error: unknown) {
+      const mysqlError = error as { code?: unknown; errno?: unknown } | null;
+      if (
+        mysqlError?.code === 'ER_SPECIFIC_ACCESS_DENIED_ERROR' &&
+        mysqlError.errno === 1227
+      ) {
+        return null;
+      }
+      throw error;
     }
   }
 
