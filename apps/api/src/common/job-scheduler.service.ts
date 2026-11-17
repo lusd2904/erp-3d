@@ -23,18 +23,15 @@ export class JobScheduler implements OnApplicationBootstrap, OnModuleDestroy {
   ) {}
 
   /**
-   * 注册后台任务：记录到内存 Map；若已 bootstrap 则立即同步 sys_job 并按需启动定时器。
+   * 注册后台任务：启动前由 bootstrap 同步；启动后等待 sys_job 登记完成并按需启动定时器。
    */
-  register(def: JobDef) {
+  async register(def: JobDef): Promise<void> {
     this.jobs.set(def.handler, def);
     if (this.isBootstrapped) {
-      void this.syncJob(def)
-        .then(() => {
-          if (config.enableJobs) {
-            this.startTimer(def);
-          }
-        })
-        .catch(() => undefined);
+      await this.syncJob(def);
+      if (config.enableJobs) {
+        this.startTimer(def);
+      }
     }
   }
 

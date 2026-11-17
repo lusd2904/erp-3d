@@ -111,8 +111,7 @@ describe('部署约束', () => {
 
   it('定时任务：两台同时触发只跑一次；刚跑过的跳过；失败写日志', async () => {
     let count = 0;
-    jobs.register({ handler: 'test.job', name: '测试任务', intervalSec: 60, fn: async () => { count++; await sleep(300); return 'ok'; } });
-    await sleep(300); // register 在启动后登记时异步同步 sys_job
+    await jobs.register({ handler: 'test.job', name: '测试任务', intervalSec: 60, fn: async () => { count++; await sleep(300); return 'ok'; } });
     const r = await Promise.all([jobs.runOnce('test.job'), jobs.runOnce('test.job')]);
     expect(r.sort()).toEqual(['ran', 'skipped-locked']);
     expect(count).toBe(1);
@@ -123,8 +122,7 @@ describe('部署约束', () => {
     const logs = await db.q<any>(`SELECT status, msg FROM sys_job_log WHERE job_id = ? ORDER BY start_at`, [job.id]);
     expect(logs.map((l) => l.status)).toEqual(['OK', 'OK']);
 
-    jobs.register({ handler: 'test.fail', name: '失败任务', intervalSec: 60, fn: async () => { throw new Error('任务出错'); } });
-    await sleep(300);
+    await jobs.register({ handler: 'test.fail', name: '失败任务', intervalSec: 60, fn: async () => { throw new Error('任务出错'); } });
     expect(await jobs.runOnce('test.fail')).toBe('ran');
     const job2 = await db.one<any>(`SELECT id FROM sys_job WHERE handler = 'test.fail'`);
     const log2 = await db.one<any>(`SELECT status, msg FROM sys_job_log WHERE job_id = ?`, [job2.id]);
