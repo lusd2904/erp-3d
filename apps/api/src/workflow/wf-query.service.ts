@@ -71,6 +71,34 @@ export class WfQueryService {
     return this.pageTasks(user.id, ['DONE', 'TRANSFERRED'], q);
   }
 
+  async cc(
+    user: { id: number },
+    q: PageQuery,
+  ): Promise<{ rows: Record<string, unknown>[]; total: number }> {
+    return this.pageTasks(user.id, ['CC'], q);
+  }
+
+  async started(
+    user: { id: number },
+    q: PageQuery,
+  ): Promise<{ rows: Record<string, unknown>[]; total: number }> {
+    const pageValue = Number(q?.page);
+    const sizeValue = Number(q?.size);
+    const page = Number.isFinite(pageValue) && pageValue >= 1 ? Math.floor(pageValue) : 1;
+    const size = Number.isFinite(sizeValue) && sizeValue >= 1 ? Math.min(200, Math.floor(sizeValue)) : 20;
+    const params = [user.id];
+    const count = await this.db.one<{ total: number | string }>(
+      'SELECT COUNT(*) AS total FROM wf_instance WHERE starter_id = ?', params,
+    );
+    const rows = await this.db.q<Record<string, unknown>>(
+      `SELECT i.*, d.name AS definition_name, d.model_json
+         FROM wf_instance i JOIN wf_definition d ON d.id = i.definition_id
+        WHERE i.starter_id = ? ORDER BY i.started_at DESC, i.id DESC LIMIT ? OFFSET ?`,
+      [user.id, size, (page - 1) * size],
+    );
+    return { rows: rows.map((row) => ({ ...row, current_node_names: this.currentNodeNames(row) })), total: Number(count?.total ?? 0) };
+  }
+
   async flow(
     form: string,
     billId: number,
@@ -162,5 +190,25 @@ export class WfQueryService {
       rows: withNodeNames(rows),
       total: Number(count?.total ?? 0),
     };
+  }
+
+  private currentNodeNames(row: Record<string, unknown>): string[] {
+    const model = parseModel(row.model_json);
+    const raw = row.current_nodes_json;
+    let keys: string[] = [];
+    if (Array.isArray(raw)) keys = raw.map(String);
+    else if (typeof raw === 'string') {
+      try {
+        const parsed: unknown = JSON.parse(raw);
+        if (Array.isArray(parsed)) keys = parsed.map(String);
+      } catch { /* malformed historic JSON is rendered with no active node label */ }
+    }
+    if (!model) return [];
+    const nodes = model.nodes as Record<string, unknown> | undefined;
+    return keys.map((key) => {
+      const record = asRecord(nodes?.[key]);
+      const name = record?.name;
+      return typeof name === 'string' ? name : key;
+    });
   }
 }

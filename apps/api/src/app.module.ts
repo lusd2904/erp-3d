@@ -5,9 +5,10 @@ import { CoreModule } from './core/core.module';
 import { BillEngineModule } from './bill-engine/bill-engine.module';
 import { EngineSamplesModule } from './bill-engine/samples/engine-samples.module';
 import { TraceMiddleware } from './common/trace.middleware';
+import { WorkflowModule } from './workflow/workflow.module';
 
 @Module({
-  imports: [DbModule, PlatformInfraModule, CoreModule, BillEngineModule, EngineSamplesModule],
+  imports: [DbModule, PlatformInfraModule, CoreModule, BillEngineModule, WorkflowModule, EngineSamplesModule],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

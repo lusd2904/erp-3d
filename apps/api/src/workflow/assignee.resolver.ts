@@ -58,9 +58,10 @@ export class AssigneeResolver {
           `SELECT u.id
              FROM sys_user u
             WHERE u.status = 'ENABLED'
+              AND u.org_id = ?
               AND u.id IN (${placeholders})
             ORDER BY FIELD(u.id, ${placeholders})`,
-          [...ids, ...ids],
+          [starter.orgId, ...ids, ...ids],
         );
         return this.userIds(rows);
       }
@@ -159,8 +160,9 @@ export class AssigneeResolver {
           `SELECT u.id
              FROM sys_user u
             WHERE u.id = ?
+              AND u.org_id = ?
               AND u.status = 'ENABLED'`,
-          [starter.userId],
+          [starter.userId, starter.orgId],
         );
         return this.userIds(rows);
       }
@@ -189,13 +191,18 @@ export class AssigneeResolver {
     ownerId: number,
     form: string,
     at: string,
+    forUpdate = false,
   ): Promise<{ delegateId: number; delegateeId: number } | null> {
     // 只查询原处理人的直接代理，不继续解析代理人的委托。
     const row = await this.db.one<DelegateRow>(
       `SELECT d.id AS delegateId, d.delegatee_id AS delegateeId
          FROM wf_delegate d
+         JOIN sys_user owner
+           ON owner.id = d.delegator_id
+          AND owner.org_id = d.org_id
          JOIN sys_user u
            ON u.id = d.delegatee_id
+          AND u.org_id = d.org_id
           AND u.status = 'ENABLED'
         WHERE d.delegator_id = ?
           AND d.enabled = 1
@@ -208,7 +215,7 @@ export class AssigneeResolver {
             OR FIND_IN_SET(?, d.form_scope) > 0
           )
         ORDER BY d.eff_from DESC, d.id DESC
-        LIMIT 1`,
+        LIMIT 1${forUpdate ? ' FOR UPDATE' : ''}`,
       [ownerId, at, at, form],
     );
 

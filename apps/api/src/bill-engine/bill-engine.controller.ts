@@ -88,11 +88,6 @@ export class BillEngineController {
     return this.links.query(form, Number(id), dir === 'up' ? 'up' : 'down');
   }
 
-  @Get('bills/:form/:id/flow')
-  async getFlow(@Param('form') _form: string, @Param('id') _id: string) {
-    return { instance: null, history: [] };
-  }
-
   @Post('convert/:rule')
   async convertBill(@Param('rule') rule: string, @Body() body: PushRequest) {
     return this.db.tx(() => this.convert.push(rule, body));
