@@ -174,7 +174,7 @@ export class WritebackService {
       }
 
       // 超额控制校验
-      if (rule.overCtrl !== 'ALLOW' && rule.mode !== 'sub' && delta.gt(0)) {
+      if (rule.overCtrl !== 'ALLOW' && newDec.gt(oldDec)) {
         let limit: Decimal | undefined;
         if (rule.overExpr) {
           limit = compileExpr(rule.overExpr).evalDec({ ...row, entry: row, head: srcHeader });
@@ -302,7 +302,7 @@ export class WritebackService {
       sql += ` AND tgt_entry_id IN (${opts.entryIds.map(() => '?').join(',')})`;
       params.push(...opts.entryIds.map(Number));
     }
-    sql += ' ORDER BY src_form, src_entry_id, id';
+    sql += ' ORDER BY id DESC';
 
     const logs = await this.db.q<any>(sql, params);
     if (!logs || logs.length === 0) return;
