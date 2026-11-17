@@ -1,4 +1,5 @@
 import { QualityService } from '../src/qm/quality.service';
+import { InventoryService } from '../src/scm/services/inventory.service';
 import { api, ok, setup, type Ctx } from './engine/helpers';
 
 describe('WP10/WP11 垂直验收', () => {
@@ -98,5 +99,59 @@ describe('WP10/WP11 垂直验收', () => {
     const report = await ok(c, 'get', '/qm/reports/concession-statistics');
     expect(report.total).toBe(1);
     expect(report.rows[0]).toMatchObject({ instock_entry_id: 11, bill_id: 1, concession_qty: '5.0000000000' });
+  });
+
+  it('条码拆分保留总量，MSL 超时与烘烤状态变化生成 D46', async () => {
+    await c.db.exec(
+      `INSERT INTO bc_barcode_master (
+        id, org_id, barcode, material_id, aux_prop_id, lot_no, warehouse_id, location_id, stock_status_id,
+        owner_type, owner_id, qty, base_unit_id, base_qty, status, reel_id, msl_level, msl_status,
+        floor_life_h, exposed_min, bake_count, version, created_at, modified_at
+      ) VALUES (901, 1, 'REEL-PARENT', 701, 0, 'LOT-STOCK', 31, 0, 41, '', 0, 10, 1, 10, 'IN', 'REEL-PARENT', '3', 'SEALED', 1, 0, 0, 0, NOW(3), NOW(3))`,
+    );
+
+    const split = await ok(c, 'post', '/bills/bc_split', {
+      header: { parent_barcode: 'REEL-PARENT' },
+      entries: [
+        { child_qty: 3, child_base_qty: 3 },
+        { child_qty: 4, child_base_qty: 4 },
+      ],
+    });
+    const splitId = Number(split.header.id);
+    await ok(c, 'post', `/bills/bc_split/${splitId}/ops/submit`);
+    await ok(c, 'post', `/bills/bc_split/${splitId}/ops/audit`);
+    let parent = await c.db.one<any>("SELECT qty, base_qty FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect([Number(parent.qty), Number(parent.base_qty)]).toEqual([3, 3]);
+    const childRows = await c.db.q<any>('SELECT child_barcode FROM bc_split_entry WHERE bill_id = ? ORDER BY line_no', [splitId]);
+    expect(childRows).toHaveLength(2);
+    await ok(c, 'post', `/bills/bc_split/${splitId}/ops/unaudit`);
+    parent = await c.db.one<any>("SELECT qty, base_qty FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect([Number(parent.qty), Number(parent.base_qty)]).toEqual([10, 10]);
+
+    async function recordMsl(event: string, extra: Record<string, unknown> = {}) {
+      const bill = await ok(c, 'post', '/bills/bc_msl_record', {
+        header: {}, entries: [{ barcode: 'REEL-PARENT', event, ...extra }],
+      });
+      const id = Number(bill.header.id);
+      await ok(c, 'post', `/bills/bc_msl_record/${id}/ops/submit`);
+      await ok(c, 'post', `/bills/bc_msl_record/${id}/ops/audit`);
+      return id;
+    }
+
+    await recordMsl('OPEN');
+    const opened = await c.db.one<any>("SELECT msl_status FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect(opened.msl_status).toBe('OPENED');
+    await c.db.exec("UPDATE bc_barcode_master SET last_open_at = DATE_SUB(NOW(3), INTERVAL 61 MINUTE) WHERE barcode = 'REEL-PARENT'");
+    expect(await c.app.get(InventoryService).runMslTimeoutCheck()).toContain('1 个');
+    let reel = await c.db.one<any>("SELECT msl_status, stock_status_id FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect([reel.msl_status, Number(reel.stock_status_id)]).toEqual(['TIMEOUT_FROZEN', 42]);
+
+    await recordMsl('BAKE_START');
+    const bakeFinishId = await recordMsl('BAKE_FINISH', { temp: 120, hours: 4 });
+    reel = await c.db.one<any>("SELECT msl_status, stock_status_id, exposed_min, bake_count FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect([reel.msl_status, Number(reel.stock_status_id), Number(reel.exposed_min), Number(reel.bake_count)]).toEqual(['SEALED', 41, 0, 1]);
+    await ok(c, 'post', `/bills/bc_msl_record/${bakeFinishId}/ops/unaudit`);
+    reel = await c.db.one<any>("SELECT msl_status, stock_status_id, bake_count FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect([reel.msl_status, Number(reel.stock_status_id), Number(reel.bake_count)]).toEqual(['BAKING', 42, 0]);
   });
 });

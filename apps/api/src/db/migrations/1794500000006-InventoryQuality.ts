@@ -158,6 +158,16 @@ export class InventoryQuality1794500000006 implements MigrationInterface {
     });
 
     await ensureTable(qr, {
+      name: 'bc_msl_log', comment: '卷盘 MSL 生命周期事件',
+      columns: [ID, c('org_id', "BIGINT NOT NULL COMMENT '组织'"), c('barcode', "VARCHAR(128) NOT NULL COMMENT '卷盘条码'"),
+        c('event', "VARCHAR(30) NOT NULL COMMENT 'MSL 事件'"), c('at', "DATETIME(3) NOT NULL COMMENT '事件时间'"),
+        c('user_id', "BIGINT NOT NULL COMMENT '操作人'"), c('temp', "DECIMAL(23,10) NULL COMMENT '烘烤温度'"),
+        c('hours', "DECIMAL(23,10) NULL COMMENT '烘烤时长'"),
+      ],
+      indexes: [idx('ix_msl_log_barcode', ['org_id', 'barcode', 'at']), idx('ix_msl_log_event', ['org_id', 'event', 'at'])],
+    });
+
+    await ensureTable(qr, {
       name: 'qm_sampling_plan', comment: '抽样方案',
       columns: [ID, c('org_id', "BIGINT NOT NULL COMMENT '组织'"), c('code', "VARCHAR(64) NOT NULL COMMENT '方案编码'"),
         c('name', "VARCHAR(128) NOT NULL COMMENT '方案名称'"), c('sampling_type', "VARCHAR(20) NOT NULL COMMENT '抽样类型'"),

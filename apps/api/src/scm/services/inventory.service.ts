@@ -222,6 +222,9 @@ export class InventoryService {
     const barcode = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ?', [orgId, input.barcode.trim()]);
     if (!barcode) throw new BizError('BIZ_BC_BARCODE_NOT_FOUND', '条码不存在');
     if (barcode.msl_status === 'TIMEOUT_FROZEN') throw new BizError('BIZ_BC_MSL_FROZEN', '卷盘 MSL 已超时冻结，不能使用');
+    if (!Number.isSafeInteger(input.billId) || input.billId <= 0 || !input.form || input.form.length > 50) {
+      throw new BizError('BIZ_BC_SCAN_CONTEXT_INVALID', '扫描记录必须关联有效单据');
+    }
     await this.db.tx(async () => {
       await this.db.exec(
         'INSERT INTO bc_scan_log (id, org_id, barcode, form, bill_id, entry_id, op, user_id, device, at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(3))',
@@ -229,6 +232,196 @@ export class InventoryService {
       );
     });
     return barcode;
+  }
+
+  async validateBarcodeSplit(ctx: BillHookContext): Promise<void> {
+    const parent = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ? FOR UPDATE', [ctx.user.orgId, ctx.header.parent_barcode]);
+    if (!parent || parent.status !== 'IN' || parent.msl_status === 'TIMEOUT_FROZEN' || parent.msl_status === 'BAKING') {
+      throw new BizError('BIZ_BC_SPLIT_PARENT_INVALID', '主条码不存在、已出库或当前 MSL 状态不可拆分');
+    }
+    const requested = Decimal.sum(...ctx.entries.map((entry) => new Decimal(entry.child_base_qty ?? entry.child_qty ?? 0)));
+    const requestedQty = Decimal.sum(...ctx.entries.map((entry) => new Decimal(entry.child_qty ?? 0)));
+    if (requested.lte(0) || requested.gt(parent.base_qty) || requestedQty.lte(0) || requestedQty.gt(parent.qty)) {
+      throw new BizError('BIZ_BC_SPLIT_QTY_INVALID', '子条码数量之和必须大于零且不超过主条码数量');
+    }
+    for (const entry of ctx.entries) {
+      const qty = new Decimal(entry.child_base_qty ?? entry.child_qty ?? 0);
+      const unitQty = new Decimal(entry.child_qty ?? 0);
+      if (!qty.isFinite() || qty.lte(0) || !unitQty.isFinite() || unitQty.lte(0)) {
+        throw new BizError('BIZ_BC_SPLIT_QTY_INVALID', `第 ${entry.line_no} 行子条码数量无效`);
+      }
+    }
+  }
+
+  async applyBarcodeSplit(ctx: BillHookContext): Promise<void> {
+    const parent = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ? FOR UPDATE', [ctx.user.orgId, ctx.header.parent_barcode]);
+    if (!parent || parent.status !== 'IN') throw new BizError('BIZ_BC_SPLIT_PARENT_INVALID', '主条码已不可用');
+    const total = Decimal.sum(...ctx.entries.map((entry) => new Decimal(entry.child_base_qty ?? entry.child_qty ?? 0)));
+    const totalQty = Decimal.sum(...ctx.entries.map((entry) => new Decimal(entry.child_qty ?? 0)));
+    const parentQty = new Decimal(parent.qty).minus(totalQty);
+    const parentBaseQty = new Decimal(parent.base_qty).minus(total);
+    if (parentQty.lt(0) || parentBaseQty.lt(0)) throw new BizError('BIZ_BC_SPLIT_QTY_INVALID', '拆分数量超过主条码剩余数量');
+    const updated = await this.db.exec(
+      'UPDATE bc_barcode_master SET qty = ?, base_qty = ?, version = version + 1, modified_at = NOW(3) WHERE id = ? AND version = ? AND base_qty >= ?',
+      [parentQty.toFixed(), parentBaseQty.toFixed(), parent.id, parent.version, total.toFixed()],
+    );
+    if (!updated.affectedRows) throw new BizError('BIZ_BC_SPLIT_CONFLICT', '主条码已被其他操作修改');
+
+    for (const entry of ctx.entries) {
+      const qty = new Decimal(entry.child_qty).toFixed();
+      const baseQty = new Decimal(entry.child_base_qty).toFixed();
+      const childBarcode = `${parent.barcode}-${ctx.billId}-${entry.line_no}`;
+      await this.db.exec(
+        `INSERT INTO bc_barcode_master (
+          id, org_id, barcode, material_id, aux_prop_id, lot_no, prod_date, exp_date, warehouse_id, location_id,
+          stock_status_id, owner_type, owner_id, qty, base_unit_id, base_qty, status, reel_id, mpn, date_code,
+          msl_level, msl_status, opened_at, last_open_at, floor_life_h, exposed_min, bake_count, last_bake_at,
+          parent_barcode, src_form, src_bill_id, src_entry_id, version, created_at, modified_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'IN', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'bc_split', ?, ?, 0, NOW(3), NOW(3))`,
+        [
+          nextId(), parent.org_id, childBarcode, parent.material_id, parent.aux_prop_id, parent.lot_no, parent.prod_date, parent.exp_date,
+          parent.warehouse_id, parent.location_id, parent.stock_status_id, parent.owner_type, parent.owner_id, qty, parent.base_unit_id,
+          baseQty, parent.reel_id, parent.mpn, parent.date_code, parent.msl_level, parent.msl_status, parent.opened_at, parent.last_open_at,
+          parent.floor_life_h, parent.exposed_min, parent.bake_count, parent.last_bake_at, parent.barcode, ctx.billId, entry.id,
+        ],
+      );
+      await this.db.exec('UPDATE bc_split_entry SET child_barcode = ? WHERE id = ?', [childBarcode, entry.id]);
+    }
+  }
+
+  async reverseBarcodeSplit(ctx: BillHookContext): Promise<void> {
+    const parent = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ? FOR UPDATE', [ctx.user.orgId, ctx.header.parent_barcode]);
+    if (!parent) throw new BizError('BIZ_BC_SPLIT_PARENT_INVALID', '主条码不存在');
+    const children = await this.db.q<any>(
+      `SELECT e.child_barcode, e.child_qty, e.child_base_qty, b.id, b.status, b.qty, b.base_qty, b.version,
+              (SELECT COUNT(*) FROM bc_scan_log s WHERE s.org_id = b.org_id AND s.barcode = b.barcode) AS scan_count
+         FROM bc_split_entry e JOIN bc_barcode_master b ON b.org_id = ? AND b.barcode = e.child_barcode
+        WHERE e.bill_id = ? ORDER BY b.id FOR UPDATE`,
+      [ctx.user.orgId, ctx.billId],
+    );
+    const total = Decimal.sum(...children.map((child) => new Decimal(child.child_base_qty)));
+    const totalQty = Decimal.sum(...children.map((child) => new Decimal(child.child_qty)));
+    for (const child of children) {
+      if (Number(child.scan_count) > 0 || !new Decimal(child.qty).eq(child.child_qty) || !new Decimal(child.base_qty).eq(child.child_base_qty)) {
+        throw new BizError('BIZ_BC_SPLIT_HAS_USAGE', `子条码 ${child.child_barcode} 已被使用，不能反审核拆分单`);
+      }
+      const changed = await this.db.exec(
+        "UPDATE bc_barcode_master SET status = 'CANCELLED', qty = 0, base_qty = 0, version = version + 1, modified_at = NOW(3) WHERE id = ? AND status = 'IN' AND version = ?",
+        [child.id, child.version],
+      );
+      if (!changed.affectedRows) throw new BizError('BIZ_BC_SPLIT_HAS_USAGE', `子条码 ${child.child_barcode} 已被使用，不能反审核拆分单`);
+    }
+    await this.db.exec(
+      'UPDATE bc_barcode_master SET qty = qty + ?, base_qty = base_qty + ?, version = version + 1, modified_at = NOW(3) WHERE id = ?',
+      [totalQty.toFixed(), total.toFixed(), parent.id],
+    );
+  }
+
+  async validateMslRecord(ctx: BillHookContext): Promise<void> {
+    const allowedFrom: Record<string, string> = { OPEN: 'SEALED', BACK_TO_CABINET: 'OPENED', BAKE_START: 'TIMEOUT_FROZEN', BAKE_FINISH: 'BAKING' };
+    for (const entry of ctx.entries) {
+      const row = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ? FOR UPDATE', [ctx.user.orgId, entry.barcode]);
+      if (!row || !row.msl_level || row.msl_status !== allowedFrom[String(entry.event)]) {
+        throw new BizError('BIZ_BC_MSL_STATE_INVALID', `卷盘 ${entry.barcode} 的 MSL 状态不允许执行该事件`);
+      }
+      if (entry.event === 'BAKE_FINISH' && (Number(entry.temp) <= 0 || Number(entry.hours) <= 0)) {
+        throw new BizError('BIZ_BC_BAKE_INVALID', '烘烤完成必须录入正数温度和时长');
+      }
+      const snapshot = {
+        msl_status: row.msl_status,
+        opened_at: row.opened_at,
+        last_open_at: row.last_open_at,
+        exposed_min: row.exposed_min,
+        bake_count: row.bake_count,
+        last_bake_at: row.last_bake_at,
+        stock_status_id: row.stock_status_id,
+      };
+      await ctx.db.exec('UPDATE bc_msl_record_entry SET prior_state_json = ? WHERE id = ?', [JSON.stringify(snapshot), entry.id]);
+    }
+  }
+
+  async applyMslRecord(ctx: BillHookContext): Promise<void> {
+    for (const entry of ctx.entries) {
+      const row = await this.db.one<any>('SELECT * FROM bc_barcode_master WHERE org_id = ? AND barcode = ? FOR UPDATE', [ctx.user.orgId, entry.barcode]);
+      if (!row) throw new BizError('BIZ_BC_BARCODE_NOT_FOUND', '卷盘条码不存在');
+      let conversionId: number | null = null;
+      if (entry.event === 'OPEN') {
+        await this.db.exec("UPDATE bc_barcode_master SET msl_status = 'OPENED', opened_at = COALESCE(opened_at, NOW(3)), last_open_at = NOW(3), version = version + 1, modified_at = NOW(3) WHERE id = ?", [row.id]);
+      } else if (entry.event === 'BACK_TO_CABINET') {
+        const elapsed = await this.db.one<{ mins: number }>('SELECT GREATEST(0, TIMESTAMPDIFF(MINUTE, ?, NOW(3))) AS mins', [row.last_open_at]);
+        const exposed = new Decimal(row.exposed_min).plus(Number(elapsed?.mins ?? 0));
+        await this.db.exec("UPDATE bc_barcode_master SET msl_status = 'SEALED', exposed_min = ?, last_open_at = NULL, version = version + 1, modified_at = NOW(3) WHERE id = ?", [exposed.toFixed(), row.id]);
+      } else if (entry.event === 'BAKE_START') {
+        await this.db.exec("UPDATE bc_barcode_master SET msl_status = 'BAKING', version = version + 1, modified_at = NOW(3) WHERE id = ?", [row.id]);
+      } else if (entry.event === 'BAKE_FINISH') {
+        const availableId = await this.resolveStockStatus('AVAILABLE');
+        conversionId = await this.createStatusConversion(ctx.user.orgId, [{ from: row, toStatusId: availableId, qty: row.base_qty, sourceEntryId: Number(entry.id) }], `MSL 烘烤解冻：${entry.barcode}`);
+        await this.db.exec("UPDATE bc_barcode_master SET msl_status = 'SEALED', stock_status_id = ?, exposed_min = 0, bake_count = bake_count + 1, last_bake_at = NOW(3), version = version + 1, modified_at = NOW(3) WHERE id = ?", [availableId, row.id]);
+      }
+      await this.db.exec('UPDATE bc_msl_record_entry SET convert_bill_id = ? WHERE id = ?', [conversionId, entry.id]);
+      await this.insertMslLog(ctx.user.orgId, entry.barcode, String(entry.event), ctx.user.id, entry.temp, entry.hours);
+    }
+  }
+
+  async reverseMslRecord(ctx: BillHookContext): Promise<void> {
+    for (const entry of [...ctx.entries].reverse()) {
+      await this.reverseStatusConversion(Number(entry.convert_bill_id));
+      const row = await this.db.one<any>('SELECT id FROM bc_barcode_master WHERE org_id = ? AND barcode = ? FOR UPDATE', [ctx.user.orgId, entry.barcode]);
+      if (!row) throw new BizError('BIZ_BC_BARCODE_NOT_FOUND', '卷盘条码不存在');
+      const snapshot = typeof entry.prior_state_json === 'string' ? JSON.parse(entry.prior_state_json) : entry.prior_state_json;
+      if (!snapshot) throw new BizError('BIZ_BC_MSL_SNAPSHOT_MISSING', 'MSL 事件缺少反审核快照');
+      await ctx.db.exec(
+        'UPDATE bc_barcode_master SET msl_status = ?, opened_at = ?, last_open_at = ?, exposed_min = ?, bake_count = ?, last_bake_at = ?, stock_status_id = ?, version = version + 1, modified_at = NOW(3) WHERE id = ?',
+        [snapshot.msl_status, snapshot.opened_at, snapshot.last_open_at, snapshot.exposed_min, snapshot.bake_count, snapshot.last_bake_at, snapshot.stock_status_id, row.id],
+      );
+      await this.insertMslLog(ctx.user.orgId, entry.barcode, `UNDO_${entry.event}`, ctx.user.id, entry.temp, entry.hours);
+    }
+  }
+
+  async mslRemainingLife(orgId: number, barcode: string) {
+    const row = await this.db.one<any>(
+      `SELECT *, CASE WHEN msl_status = 'OPENED' AND last_open_at IS NOT NULL
+          THEN GREATEST(0, TIMESTAMPDIFF(MINUTE, last_open_at, NOW(3))) ELSE 0 END AS current_open_min
+         FROM bc_barcode_master WHERE org_id = ? AND barcode = ?`,
+      [orgId, barcode],
+    );
+    if (!row) throw new BizError('BIZ_BC_BARCODE_NOT_FOUND', '卷盘条码不存在');
+    const exposed = new Decimal(row.exposed_min ?? 0).plus(Number(row.current_open_min ?? 0));
+    const limit = row.floor_life_h === null ? null : new Decimal(row.floor_life_h).times(60);
+    return {
+      barcode: row.barcode,
+      mslStatus: row.msl_status,
+      exposedMinutes: exposed.toFixed(),
+      remainingMinutes: limit ? Decimal.max(0, limit.minus(exposed)).toFixed() : null,
+    };
+  }
+
+  async runMslTimeoutCheck(): Promise<string> {
+    let frozenCount = 0;
+    await this.db.tx(async () => {
+      const rows = await this.db.q<any>(
+        `SELECT *, exposed_min + GREATEST(0, TIMESTAMPDIFF(MINUTE, last_open_at, NOW(3))) AS current_exposed_min
+           FROM bc_barcode_master
+          WHERE msl_level IS NOT NULL AND msl_status = 'OPENED' AND floor_life_h > 0
+            AND last_open_at IS NOT NULL
+            AND exposed_min + GREATEST(0, TIMESTAMPDIFF(MINUTE, last_open_at, NOW(3))) >= floor_life_h * 60
+          ORDER BY id LIMIT 100 FOR UPDATE SKIP LOCKED`,
+      );
+      const frozenId = rows.length ? await this.resolveStockStatus('FROZEN') : 0;
+      for (const row of rows) {
+        if (!Number(row.stock_status_id) || !Number(row.warehouse_id) || !Number(row.base_qty)) continue;
+        await this.createStatusConversion( Number(row.org_id), [{ from: row, toStatusId: frozenId, qty: row.base_qty, sourceEntryId: Number(row.id) }], `MSL 超时冻结：${row.barcode}`);
+        const updated = await this.db.exec(
+          "UPDATE bc_barcode_master SET msl_status = 'TIMEOUT_FROZEN', stock_status_id = ?, exposed_min = ?, last_open_at = NULL, version = version + 1, modified_at = NOW(3) WHERE id = ? AND msl_status = 'OPENED' AND version = ?",
+          [frozenId, row.current_exposed_min, row.id, row.version],
+        );
+        if (updated.affectedRows) {
+          await this.insertMslLog(Number(row.org_id), row.barcode, 'TIMEOUT_FROZEN', 0, null, null);
+          frozenCount++;
+        }
+      }
+    });
+    return `已冻结 ${frozenCount} 个超时卷盘`;
   }
 
   async checkFifo(input: { barcode: string; materialId: number; warehouseId: number; orgId: number }) {
@@ -246,6 +439,10 @@ export class InventoryService {
       throw new BizError('BIZ_INV_FIFO_VIOLATION', `应先使用较早入库卷盘 ${first.barcode}`);
     }
     return { valid: true, firstBarcode: first?.barcode ?? null };
+  }
+
+  async getMslRemainingLife(orgId: number, barcode: string) {
+    return this.mslRemainingLife(orgId, barcode);
   }
 
   async createStatusConversion(orgId: number, groups: { from: Row; toStatusId: number; qty: string | number; sourceEntryId: number }[], remark: string): Promise<number | null> {
@@ -317,6 +514,13 @@ export class InventoryService {
       [nextId(), orgId, form, billId, auditBatch, currentUser()?.id ?? SYSTEM_USER.id],
     );
     return auditBatch;
+  }
+
+  private async insertMslLog(orgId: number, barcode: string, event: string, userId: number, temp: unknown, hours: unknown): Promise<void> {
+    await this.db.exec(
+      'INSERT INTO bc_msl_log (id, org_id, barcode, event, at, user_id, temp, hours) VALUES (?, ?, ?, ?, NOW(3), ?, ?, ?)',
+      [nextId(), orgId, barcode, event, userId, temp ?? null, hours ?? null],
+    );
   }
 
   private async applyMovements(ctx: BillHookContext, auditBatch: number, movements: any[], reversing: boolean): Promise<void> {

@@ -55,6 +55,13 @@ export class ScmController {
     }, user.id, user.orgId);
   }
 
+  @Get('barcode/msl/remain-life')
+  @RequirePerm('bc_barcode_master', 'view')
+  @ApiOperation({ summary: '查询卷盘 MSL 剩余寿命' })
+  mslRemainingLife(@Query('barcode') barcode: string, @CurrentUser() user: AuthUser) {
+    return this.inventory.getMslRemainingLife(user.orgId, barcode);
+  }
+
   @Post('inventory/date-code/parse')
   @RequirePerm('scm_inventory', 'view')
   @ApiOperation({ summary: '解析 ISO 周期码' })
