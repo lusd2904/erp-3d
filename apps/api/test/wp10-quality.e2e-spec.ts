@@ -123,7 +123,14 @@ describe('WP10/WP11 垂直验收', () => {
     let parent = await c.db.one<any>("SELECT qty, base_qty FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
     expect([Number(parent.qty), Number(parent.base_qty)]).toEqual([3, 3]);
     const childRows = await c.db.q<any>('SELECT child_barcode FROM bc_split_entry WHERE bill_id = ? ORDER BY line_no', [splitId]);
-    expect(childRows).toHaveLength(2);
+    expect(childRows.map((row) => row.child_barcode)).toEqual(['REEL-PARENT-1', 'REEL-PARENT-2']);
+    await ok(c, 'post', `/bills/bc_split/${splitId}/ops/unaudit`);
+    parent = await c.db.one<any>("SELECT qty, base_qty FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
+    expect([Number(parent.qty), Number(parent.base_qty)]).toEqual([10, 10]);
+    await ok(c, 'post', `/bills/bc_split/${splitId}/ops/submit`);
+    await ok(c, 'post', `/bills/bc_split/${splitId}/ops/audit`);
+    const reAuditedChildren = await c.db.q<any>('SELECT child_barcode FROM bc_split_entry WHERE bill_id = ? ORDER BY line_no', [splitId]);
+    expect(reAuditedChildren.map((row) => row.child_barcode)).toEqual(['REEL-PARENT-3', 'REEL-PARENT-4']);
     await ok(c, 'post', `/bills/bc_split/${splitId}/ops/unaudit`);
     parent = await c.db.one<any>("SELECT qty, base_qty FROM bc_barcode_master WHERE barcode = 'REEL-PARENT'");
     expect([Number(parent.qty), Number(parent.base_qty)]).toEqual([10, 10]);

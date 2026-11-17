@@ -3,7 +3,7 @@ import { BillEngineRegistry } from '../bill-engine/bill-engine.registry';
 import type { BillHookContext, BillHooks, Row } from '../bill-engine/engine.types';
 import { STD_STATE_MACHINE } from '../bill-engine/state/std-state-machine';
 import { BizError } from '../common/biz-error';
-import Decimal from 'decimal.js';
+import { assertInspectionDecisionQuantity } from './inspection-quantity';
 import { ScmModule } from '../scm/scm.module';
 import { InventoryService } from '../scm/services/inventory.service';
 import { QM_BILL_METAS } from './metas/quality.meta';
@@ -116,23 +116,11 @@ export class QmModule implements OnModuleInit {
   private async validateInspection(ctx: BillHookContext): Promise<void> {
     for (const entry of ctx.entries) {
       const decisions = (entry.decisions ?? []) as Row[];
-      const inspectedQty = new Decimal(entry.base_qty ?? entry.inspect_qty ?? entry.qty ?? 0);
-      if (!inspectedQty.isFinite() || inspectedQty.lte(0) || !decisions.length) {
-        throw new BizError('BIZ_QM_DECISION_REQUIRED', `第 ${entry.line_no} 行必须填写有效检验数量和使用决策`);
-      }
-      let decidedQty = new Decimal(0);
+      assertInspectionDecisionQuantity(Number(entry.line_no), entry.base_qty ?? entry.inspect_qty ?? entry.qty ?? 0, decisions);
       for (const decision of decisions) {
-        const decisionQty = new Decimal(decision.base_qty ?? decision.qty ?? 0);
-        if (!decisionQty.isFinite() || decisionQty.lte(0) || !DECISION_STOCK_STATUS.hasOwnProperty(String(decision.decision))) {
-          throw new BizError('BIZ_QM_DECISION_INVALID', `第 ${entry.line_no} 行存在无效使用决策或数量`);
+        if (!Object.prototype.hasOwnProperty.call(DECISION_STOCK_STATUS, String(decision.decision))) {
+          throw new BizError('BIZ_QM_DECISION_INVALID', `第 ${entry.line_no} 行存在无效使用决策`);
         }
-        decidedQty = decidedQty.plus(decisionQty);
-      }
-      if (decidedQty.gt(inspectedQty)) {
-        throw new BizError('BIZ_QM_DECISION_OVER_INSPECT', `第 ${entry.line_no} 行决策数量不能超过检验数量`);
-      }
-      if (!decidedQty.eq(inspectedQty)) {
-        throw new BizError('BIZ_QM_DECISION_QTY_INCOMPLETE', `第 ${entry.line_no} 行决策数量必须等于检验数量`);
       }
       if (ctx.header.biz_type === 'STOCK' || ctx.header.biz_type === 'OQC_SHIP') {
         for (const decision of decisions) {
