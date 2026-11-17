@@ -7,21 +7,13 @@ describe('引擎验收 2：并发反写', () => {
   beforeAll(async () => { c = await setup([TST_SRC, TST_DST]); });
   afterAll(async () => c.app.close());
 
-  // 缺少读取计数器的权限时跳过计数比对；业务结果断言仍继续执行。
-  async function deadlocks(): Promise<number | null> {
-    try {
-      const r = await c.db.one<any>(`SELECT COUNT AS n FROM information_schema.INNODB_METRICS WHERE NAME = 'lock_deadlocks'`);
-      return Number(r?.n ?? 0);
-    } catch (error: unknown) {
-      const mysqlError = error as { code?: unknown; errno?: unknown } | null;
-      if (
-        mysqlError?.code === 'ER_SPECIFIC_ACCESS_DENIED_ERROR' &&
-        mysqlError.errno === 1227
-      ) {
-        return null;
-      }
-      throw error;
-    }
+  async function deadlocks(): Promise<number> {
+    const row = await c.db.one<{ n: number | string }>(
+      `SELECT COUNT AS n FROM information_schema.INNODB_METRICS WHERE NAME = 'lock_deadlocks'`,
+    );
+    const count = Number(row?.n);
+    if (!Number.isFinite(count)) throw new Error('无法读取 InnoDB lock_deadlocks 计数器');
+    return count;
   }
 
   it('10 个并发审核：只有不超上限的成功，累计数量 = 成功张数 × 15，无死锁', async () => {
@@ -41,7 +33,7 @@ describe('引擎验收 2：并发反写', () => {
     expect(codes.every((x) => x === 'OK' || x === 'BIZ_OVER_LIMIT')).toBe(true);
     expect(okCount).toBe(6); // 6 × 15 = 90 ≤ 100，第 7 张 105 > 100
     const after = await deadlocks();
-    if (before !== null && after !== null) expect(after - before).toBe(0);
+    expect(after - before).toBe(0);
     const v = await ok(c, 'get', `/bills/tst_src/${src.header.id}`);
     expect(v.entries.map((e: any) => num(e.done_qty))).toEqual([90, 90]);
     const logSum = await c.db.one<any>(`SELECT SUM(delta) AS s FROM sys_writeback_log WHERE src_bill_id = ?`, [src.header.id]);
