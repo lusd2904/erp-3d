@@ -41,6 +41,14 @@ export interface AppConfig {
 }
 
 export function loadConfig(): AppConfig {
+  if (process.env.NODE_ENV === 'production') {
+    const missing = ['DB_PASSWORD', 'JWT_SECRET', 'JWT_REFRESH_SECRET']
+      .filter((key) => !process.env[key]?.trim());
+    if (missing.length > 0) {
+      throw new Error(`生产环境必须通过环境变量提供凭据：${missing.join(', ')}`);
+    }
+  }
+
   const poolMax = int(process.env.DB_POOL_MAX, 9);
   return {
     env: process.env.NODE_ENV || 'development',
@@ -50,15 +58,15 @@ export function loadConfig(): AppConfig {
       host: process.env.DB_HOST || '127.0.0.1',
       port: int(process.env.DB_PORT, 3307),
       user: process.env.DB_USER || 'erp3d',
-      password: process.env.DB_PASSWORD || 'erp3d_dev_pwd',
+      password: process.env.DB_PASSWORD || '',
       database: process.env.DB_NAME || 'erp3d',
-      // 三台 × 9 = 27 ≤ 30；交接时两台在线也不超（硬上限 10，默认 9）
-      poolMax: Math.max(1, Math.min(poolMax, 10)),
+      // 三台 × 9 = 27 ≤ 30；每台连接池不得超过 9。
+      poolMax: Math.max(1, Math.min(poolMax, 9)),
       timezone: process.env.DB_TIMEZONE || '+08:00',
     },
     jwt: {
-      secret: process.env.JWT_SECRET || 'dev-secret-change-me-dev-secret-change-me',
-      refreshSecret: process.env.JWT_REFRESH_SECRET || 'dev-refresh-change-me-dev-refresh-change-me',
+      secret: process.env.JWT_SECRET || '',
+      refreshSecret: process.env.JWT_REFRESH_SECRET || '',
       accessTtl: process.env.JWT_ACCESS_TTL || '2h',
       refreshTtl: process.env.JWT_REFRESH_TTL || '7d',
     },

@@ -4,6 +4,7 @@ import { ErrorCodes } from '@erp3d/shared';
 import { BizError } from '../common/biz-error';
 import { CurrentUser } from '../common/decorators';
 import type { AuthUser } from '../common/request-context';
+import { BillQueryService } from '../bill-engine/service/bill-query.service';
 import { WfAction2Service } from './wf-action2.service';
 import { WfActionService } from './wf-action.service';
 import { WfDefinitionService } from './wf-definition.service';
@@ -135,10 +136,14 @@ export class WfController {
 @ApiBearerAuth()
 @Controller('bills')
 export class WfBillController {
-  constructor(private readonly query: WfQueryService) {}
+  constructor(
+    private readonly query: WfQueryService,
+    private readonly bills: BillQueryService,
+  ) {}
 
   @Get(':form/:id/flow')
-  flow(@Param('form') form: string, @Param('id', ParseIntPipe) id: number) {
+  async flow(@Param('form') form: string, @Param('id', ParseIntPipe) id: number) {
+    await this.bills.view(form, id);
     return this.query.flow(form, id);
   }
 }

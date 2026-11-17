@@ -16,6 +16,7 @@ import { loadConfig } from '../src/config/config';
 import { LocalDiskDriver } from '../src/common/storage/local-disk.driver';
 import { S3Driver } from '../src/common/storage/s3.driver';
 import { createStorageDriver } from '../src/common/storage/storage.module';
+import { Workflow1794500000005 } from '../src/db/migrations/1794500000005-Workflow';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 async function readAll(s: Readable): Promise<string> {
@@ -40,7 +41,7 @@ describe('部署约束', () => {
     await app.close();
   });
 
-  it('配置默认值：端口 8080、连接池 9（上限 10）', () => {
+  it('配置默认值：端口 8080、连接池上限 9', () => {
     const keep = { ...process.env };
     try {
       delete process.env.PORT;
@@ -51,11 +52,41 @@ describe('部署约束', () => {
       expect(c.db.poolMax).toBe(9);
       process.env.DB_POOL_MAX = '50';
       c = loadConfig();
-      expect(c.db.poolMax).toBe(10);
+      expect(c.db.poolMax).toBe(9);
       expect(c.storage.driver).toBe('local');
       expect(c.storage.s3.bucket).toBe('erp3d-files');
     } finally {
       process.env = keep;
+    }
+  });
+
+  it('生产环境拒绝缺失的数据库及 JWT 凭据', () => {
+    const keep = { ...process.env };
+    try {
+      process.env.NODE_ENV = 'production';
+      process.env.DOTENV_PATH = '/nonexistent.env';
+      delete process.env.DB_PASSWORD;
+      delete process.env.JWT_SECRET;
+      delete process.env.JWT_REFRESH_SECRET;
+      expect(() => loadConfig()).toThrow('DB_PASSWORD, JWT_SECRET, JWT_REFRESH_SECRET');
+    } finally {
+      process.env = keep;
+    }
+  });
+
+  it('审批迁移可在现有结构上连续重复执行', async () => {
+    const qr = db.ds.createQueryRunner();
+    await qr.connect();
+    try {
+      const migration = new Workflow1794500000005();
+      await migration.up(qr);
+      await migration.up(qr);
+      const rows = await qr.query(
+        "SELECT COUNT(*) AS n FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME LIKE 'wf_%'",
+      );
+      expect(Number(rows[0]?.n)).toBeGreaterThanOrEqual(8);
+    } finally {
+      await qr.release();
     }
   });
 

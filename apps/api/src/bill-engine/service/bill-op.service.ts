@@ -275,7 +275,7 @@ export class BillOpService implements WorkflowBillOperations {
       const bridge = this.registry.workflowBridge();
       await bridge?.onUnsubmit?.(ctx);
     } else if (op === 'audit') {
-      if (meta.options?.sod?.auditorNotCreator && Number(h.creator_id) === user.id && !opts.internal) {
+      if (meta.options?.sod?.auditorNotCreator && Number(h.creator_id) === user.id) {
         throw new BizError(ErrorCodes.BIZ_SOD_VIOLATION, '审核人不能是制单人');
       }
       await this.db.exec(

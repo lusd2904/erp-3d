@@ -323,4 +323,71 @@ describe('引擎验收 6：审批流', () => {
     const bill = await ok(c, 'get', `/bills/scm_pur_req/${billId}`);
     expect(bill.header.status).toBe('REAUDIT');
   });
+
+  it('流程历史服从单据查看权限', async () => {
+    const viewer = await createUser();
+    const bill = await ok(c, 'post', '/bills/scm_pur_req', {
+      header: { remark: '流程历史权限验收' },
+      entries: [{ material_id: 701, qty: 10, apply_qty: 10, approve_qty: 10 }],
+    });
+
+    const result = await asUser(viewer.token, 'get', `/bills/scm_pur_req/${bill.header.id}/flow`);
+    expect(result.code).toBe('PERM_DENIED');
+  });
+
+  it('工作流终审仍执行审核人与制单人分离校验', async () => {
+    const admin = await c.db.one<{ id: number }>("SELECT id FROM sys_user WHERE account = 'admin'");
+    const meta = c.registry.get('scm_pur_req').meta;
+    const originalOptions = meta.options;
+    meta.options = {
+      ...originalOptions,
+      sod: { ...originalOptions?.sod, auditorNotCreator: true },
+    };
+
+    try {
+      await createFlow(
+        'wf_sod_final_audit',
+        () => `erp:assigneeType="user" erp:assignees="${admin!.id}" erp:multi="any"`,
+        ['Approval'],
+      );
+      const { id: billId } = await createBillAndSubmit('终审 SOD 验收');
+      const pending = (await tasks(billId)).find((task) => task.status === 'PENDING')!;
+
+      const result = await asUser(c.access, 'post', `/wf/tasks/${pending.id}/approve`, {});
+      expect(result.code).toBe('BIZ_SOD_VIOLATION');
+
+      const bill = await ok(c, 'get', `/bills/scm_pur_req/${billId}`);
+      expect(bill.header.status).toBe('AUDITING');
+      expect((await tasks(billId)).find((task) => task.id === pending.id)?.status).toBe('PENDING');
+    } finally {
+      meta.options = originalOptions;
+    }
+  });
+
+  it('终审与单据撤回并发时流程和单据状态保持一致', async () => {
+    const admin = await c.db.one<{ id: number }>("SELECT id FROM sys_user WHERE account = 'admin'");
+    await createFlow(
+      'wf_approve_withdraw_race',
+      () => `erp:assigneeType="user" erp:assignees="${admin!.id}" erp:multi="any" erp:allowWithdraw="true"`,
+      ['Approval'],
+    );
+    const { id: billId } = await createBillAndSubmit('终审撤回并发验收');
+    const pending = (await tasks(billId)).find((task) => task.status === 'PENDING')!;
+
+    const [approval, withdrawal] = await Promise.all([
+      asUser(c.access, 'post', `/wf/tasks/${pending.id}/approve`, {}),
+      api(c, 'post', `/bills/scm_pur_req/${billId}/ops/unsubmit`),
+    ]);
+    expect([approval.code, withdrawal.code].filter((code) => code === 'OK')).toHaveLength(1);
+
+    const instance = await c.db.one<any>(
+      'SELECT status FROM wf_instance WHERE form = ? AND bill_id = ?',
+      ['scm_pur_req', billId],
+    );
+    const bill = await ok(c, 'get', `/bills/scm_pur_req/${billId}`);
+    expect([
+      ['COMPLETED', 'AUDITED'],
+      ['WITHDRAWN', 'REAUDIT'],
+    ]).toContainEqual([instance.status, bill.header.status]);
+  });
 });

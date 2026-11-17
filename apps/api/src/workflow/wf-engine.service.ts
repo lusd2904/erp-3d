@@ -222,6 +222,18 @@ export class WfEngine {
   }
 
   async lockInstance(id: number): Promise<WfInstanceRow> {
+    const candidate = await this.db.one<WfInstanceRow>(
+      'SELECT * FROM wf_instance WHERE id = ?',
+      [id],
+    );
+    if (!candidate) throw new BizError(ErrorCodes.WF_TASK_NOT_FOUND, '流程实例不存在');
+
+    // L1 单据操作锁单据头后再访问流程实例；所有工作流动作遵循相同顺序。
+    const billTable = ident(this.registry.get(candidate.form).meta.table);
+    await this.db.one(
+      `SELECT id FROM ${billTable} WHERE id = ? FOR UPDATE`,
+      [candidate.bill_id],
+    );
     const row = await this.db.one<WfInstanceRow>(
       'SELECT * FROM wf_instance WHERE id = ? FOR UPDATE',
       [id],
