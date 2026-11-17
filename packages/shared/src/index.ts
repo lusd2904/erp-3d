@@ -5,3 +5,4 @@ export * from './state-machine';
 export * from './rules';
 export * from './workflow';
 export * from './expr';
+export * from './close-ctrl';

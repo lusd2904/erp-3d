@@ -9,7 +9,7 @@ import {
 import { DbService, ident } from '../../db/db.service';
 import { nextId } from '../../db/snowflake';
 import { BizError } from '../../common/biz-error';
-import { currentUser, SYSTEM_USER } from '../../common/request-context';
+import { currentUser, SYSTEM_USER, type AuthUser } from '../../common/request-context';
 import { PermService } from '../../core/perm.service';
 import { OpLogService } from '../../core/oplog.service';
 import { WsGateway } from '../../core/ws/ws.gateway';
@@ -20,7 +20,7 @@ import { ConvertService } from './convert.service';
 import { BillQueryService } from './bill-query.service';
 import { BillEngineRegistry } from '../bill-engine.registry';
 import { BillStore } from '../store/bill-store';
-import type { Row, OpParams, BillHookContext, BillEventDef } from '../engine.types';
+import type { Row, OpParams, BillHookContext, BillEventDef, WorkflowBillOperations } from '../engine.types';
 import type { RowTransition } from '@erp3d/shared';
 import { nowStr } from '../meta/meta-util';
 
@@ -28,7 +28,7 @@ import { nowStr } from '../meta/meta-util';
  * 单据通用操作服务：负责状态机流转调度、前置校验、事务控制、工作流联动、自定义事件与行级状态机。
  */
 @Injectable()
-export class BillOpService {
+export class BillOpService implements WorkflowBillOperations {
   constructor(
     private readonly db: DbService,
     private readonly registry: BillEngineRegistry,
@@ -120,17 +120,39 @@ export class BillOpService {
     return { results };
   }
 
+  /** 审批通过：复用 L2 的审批动作事务。 */
+  async auditByWorkflow(form: string, id: number, user: AuthUser): Promise<void> {
+    await this.execByWorkflow(form, id, 'audit', user);
+  }
+
+  /** 审批驳回：复用 L2 的审批动作事务。 */
+  async rejectByWorkflow(form: string, id: number, user: AuthUser): Promise<void> {
+    await this.execByWorkflow(form, id, 'reject', user);
+  }
+
+  private async execByWorkflow(
+    form: string,
+    id: number,
+    op: 'audit' | 'reject',
+    user: AuthUser,
+  ): Promise<void> {
+    if (!this.db.inTx) {
+      throw new BizError(ErrorCodes.SYS_INTERNAL, '审批结果回调必须在审批动作事务内执行');
+    }
+    await this.execInTx(form, id, op, {}, { internal: true, user });
+  }
+
   /**
-   * 事务内执行操作。
+   * 事务内执行操作，由调用方提供当前事务。
    */
   async execInTx(
     form: string,
     id: number,
     op: string,
     params: OpParams = {},
-    opts: { internal?: boolean } = {},
+    opts: { internal?: boolean; user?: AuthUser } = {},
   ): Promise<void> {
-    const user = currentUser() ?? SYSTEM_USER;
+    const user = opts.user ?? currentUser() ?? SYSTEM_USER;
     const reg = this.registry.get(form);
     const meta = reg.meta;
     const h = await this.store.mustHeader(form, id, { forUpdate: true });
@@ -167,11 +189,12 @@ export class BillOpService {
       await this.perm.assert(user, form, def.perm, meta.name);
     }
 
+    if (op === 'cancel' && h.status === 'AUDITED') {
+      throw new BizError(ErrorCodes.BIZ_STATE_NOT_ALLOWED, '已审核的单据须先反审核才能作废');
+    }
+
     if (def.from !== '*') {
       if (!def.from.includes(h.status)) {
-        if (op === 'cancel' && h.status === 'AUDITED') {
-          throw new BizError(ErrorCodes.BIZ_STATE_NOT_ALLOWED, '已审核的单据须先反审核才能作废');
-        }
         const statusName = BillStatusName[h.status as keyof typeof BillStatusName] ?? h.status;
         throw new BizError(
           ErrorCodes.BIZ_STATE_NOT_ALLOWED,
@@ -240,7 +263,7 @@ export class BillOpService {
         [user.id, now, id],
       );
       const bridge = this.registry.workflowBridge();
-      const r = bridge ? await bridge.onSubmit(ctx) : 'none';
+      const r = bridge ? await bridge.onSubmit(ctx, this) : 'none';
       if (r === 'none' && meta.options?.autoAuditAfterSubmit) {
         await this.execInTx(form, id, 'audit', {}, { internal: true });
       }
@@ -282,7 +305,7 @@ export class BillOpService {
       );
     } else if (op === 'unaudit') {
       const down = await this.link.validDownstream(form, id);
-      if (meta.options?.forbidUnauditWithDownstream !== false && down.length > 0) {
+      if (down.length > 0) {
         throw new BizError(
           ErrorCodes.BIZ_HAS_DOWNSTREAM,
           `存在下游单据：${down.map((d) => d.billNo).join('、')}，不能反审核`,

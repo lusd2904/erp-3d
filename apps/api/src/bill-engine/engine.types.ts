@@ -78,9 +78,29 @@ export interface RegisteredBill {
   events: BillEventDef[];
 }
 
+/**
+ * L1 提供给 L2 的审批结果回调。
+ * L2 必须在审批动作的 DbService.tx 及相同用户上下文内调用。
+ * 回调复用当前事务，不开启独立事务；失败应向外抛出，使审批动作一并回滚。
+ */
+export interface WorkflowBillOperations {
+  /** 最后一个审批人通过时调用，执行标准审核及其回写、钩子。 */
+  auditByWorkflow(form: string, id: number, user: AuthUser): Promise<void>;
+  /** 审批驳回时调用，执行标准 reject 操作。 */
+  rejectByWorkflow(form: string, id: number, user: AuthUser): Promise<void>;
+}
+
 /** 审批流桥（WP03 注册）。未注册时 submit 不启动流程 */
 export interface WorkflowBridge {
-  onSubmit(ctx: BillHookContext): Promise<'started' | 'none'>;
+  /**
+   * 在提交单据的当前事务内启动审批。
+   * started：审批流已接管后续审核/驳回，L1 不再自动审核。
+   * 若流程即时结束，L2 应先 await 对应回调，再返回 started。
+   * none：未启动流程且未执行审批结果回调，L1 可按配置自动审核。
+   * 异常须向外抛出，使单据提交与流程创建一并回滚。
+   * 后续审批动作应由 L2 注入实现 WorkflowBillOperations 的 L1 服务调用。
+   */
+  onSubmit(ctx: BillHookContext, bills: WorkflowBillOperations): Promise<'started' | 'none'>;
   onUnsubmit?(ctx: BillHookContext): Promise<void>;
 }
 
