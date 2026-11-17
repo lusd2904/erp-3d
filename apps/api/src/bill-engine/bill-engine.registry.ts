@@ -29,6 +29,10 @@ export class BillEngineRegistry {
 
     const form = meta.form;
     const sm = opts.stateMachine ?? STD_STATE_MACHINE;
+    // [集成修正] 行状态机的物理列须进入分录 DDL：元数据未声明 rowStatusField 时按状态机补齐
+    if (sm.rowStatus && meta.entry && !meta.entry.rowStatusField) {
+      meta.entry.rowStatusField = sm.rowStatus.field;
+    }
     const converts = opts.converts ?? [];
     const writebacks = opts.writebacks ?? [];
     const events = opts.events ?? [];

@@ -249,7 +249,7 @@ export class BillQueryService {
 
     if (withEntry && reg.meta.entry) {
       fromClause += ` LEFT JOIN ${ident(reg.meta.entry.table)} e ON e.bill_id = h.id`;
-      const entrySelects = Array.from(entryCols).map((col) => `e.${ident(col)} AS ${ident(`entry.${col}`)}`);
+      const entrySelects = Array.from(entryCols).map((col) => `e.${ident(col)} AS \`entry.${col}\``);
       if (entrySelects.length > 0) {
         selectClause += ', ' + entrySelects.join(', ');
       }

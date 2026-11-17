@@ -76,7 +76,10 @@ describe('部署约束', () => {
     const c = await lock.tryRun('t-lock', async () => 1);
     expect(c).toEqual({ ran: true, result: 1 });
     // 等待模式：第二个等第一个释放后执行
-    const [d, e] = await Promise.all([lock.tryRun('t-wait', () => sleep(200)), lock.tryRun('t-wait', async () => 2, { waitSec: 3 })]);
+    // [集成修正] 原写法两者同时抢锁，等待方可能先拿到导致不等待方失败（偶发）；先让 d 拿到锁再启动 e
+    const pd = lock.tryRun('t-wait', () => sleep(400));
+    await sleep(100);
+    const [d, e] = await Promise.all([pd, lock.tryRun('t-wait', async () => 2, { waitSec: 3 })]);
     expect(d.ran && e.ran).toBe(true);
     expect(lock.lockName('x'.repeat(100)).length).toBeLessThanOrEqual(64);
   });

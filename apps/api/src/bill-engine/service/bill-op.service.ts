@@ -288,19 +288,20 @@ export class BillOpService {
           `存在下游单据：${down.map((d) => d.billNo).join('、')}，不能反审核`,
         );
       }
-      const evStateRow = await this.db.one<{ cnt: number }>(
-        `SELECT COUNT(*) AS cnt FROM sys_bill_event_state WHERE form = ? AND bill_id = ?`,
-        [form, id],
-      );
-      if (Number(evStateRow?.cnt ?? 0) > 0) {
-        throw new BizError(ErrorCodes.BIZ_STATE_NOT_ALLOWED, '请先撤销已执行的业务事件');
-      }
+      // [集成修正] 先查行状态（更具体的提示），再查业务事件
       if (sm.rowStatus) {
         const field = sm.rowStatus.field;
         const initial = sm.rowStatus.initial;
         if (entries.some((e) => e[field] && e[field] !== initial)) {
           throw new BizError(ErrorCodes.BIZ_ROW_STATE, '分录已执行，请先反执行');
         }
+      }
+      const evStateRow = await this.db.one<{ cnt: number }>(
+        `SELECT COUNT(*) AS cnt FROM sys_bill_event_state WHERE form = ? AND bill_id = ?`,
+        [form, id],
+      );
+      if (Number(evStateRow?.cnt ?? 0) > 0) {
+        throw new BizError(ErrorCodes.BIZ_STATE_NOT_ALLOWED, '请先撤销已执行的业务事件');
       }
       if (meta.options?.sod?.unauditBySameAuditor && h.auditor_id && Number(h.auditor_id) !== user.id) {
         throw new BizError(ErrorCodes.BIZ_SOD_VIOLATION, '反审核人必须与原审核人一致');
