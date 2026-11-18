@@ -1,0 +1,12 @@
+ID: 文件导入日志
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%97%A5%E5%BF%97
+
+**使用说明**
+
+文件导入日志：
+
+系统提供文件导入日志，可以查看到导入状态以及失败原因；
+
+支持进行导入文件的下载；
+
+{{:sfs_文件导入日志.png?600|}}

@@ -1,0 +1,4 @@
+ID: 采购操作手册
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C
+
+采购操作手册

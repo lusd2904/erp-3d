@@ -1,0 +1,4 @@
+业务场景：
+无源单寄售退回调拔匹配寄售直接调拔单，未结算数量扣减退回数量。
+详细内容：
+https:vip.kingdee.com/article/279640051624567296?productLineId=1&isKnowledge=2

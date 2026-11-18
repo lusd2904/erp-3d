@@ -1,0 +1,4 @@
+ID: 报表接收
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E6%8E%A5%E6%94%B6
+
+此界面显示的为当前合并范围下，已上报未接收的报表。个别报表需要操作【接收】操作，以便后续抵消或工作底稿的产生。

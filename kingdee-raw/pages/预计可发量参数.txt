@@ -1,0 +1,10 @@
+ID: 预计可发量参数
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%A2%84%E8%AE%A1%E5%8F%AF%E5%8F%91%E9%87%8F%E5%8F%82%E6%95%B0
+
+===== 可发量参数 =====
+
+适用场景
+
+通过即时库存+预计入—预计出计算出预计可用库存，从而为出库业务做出准确的预测判断。
+
+详细参数说明可参考金蝶云社区预计可发量使用介绍：[[https://vip.kingdee.com/article/3644]]

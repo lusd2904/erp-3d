@@ -1,0 +1,9 @@
+ID: 房台信息列表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%88%BF%E5%8F%B0%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8
+
+[[<<门店营业设置]]
+====== 房台信息列表 ======
+
+功能简介：展示创建的房台信息
+
+{{:图2.4.7 房台信息列表.png?nolink1000|}}

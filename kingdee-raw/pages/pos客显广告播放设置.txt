@@ -1,0 +1,10 @@
+ID: pos客显广告播放设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pos%E5%AE%A2%E6%98%BE%E5%B9%BF%E5%91%8A%E6%92%AD%E6%94%BE%E8%AE%BE%E7%BD%AE
+
+====  POS客显广告播放设置====
+
+  *  cloud连锁档案增加【POS客显广告播放设置】；
+  *  设置POS机双屏客显的播放图片、视频文件、及跑马灯广告语；
+  *  PC POS客户双屏客显可通过cloud统一配置。
+
+{{POS客显设置.png?400}}

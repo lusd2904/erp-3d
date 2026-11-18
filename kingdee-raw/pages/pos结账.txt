@@ -1,0 +1,11 @@
+ID: pos结账
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pos%E7%BB%93%E8%B4%A6
+
+  *功能说明
+
+对账单进行结账，同时所在房台变为红色。
+
+  *界面展示
+{{:结账.png}}
+
+

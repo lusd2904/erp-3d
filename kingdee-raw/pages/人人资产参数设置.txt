@@ -1,0 +1,4 @@
+ID: 人人资产参数设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE
+
+资产退转单-人人资产退库单参数，设置资产退库时默认接收人、接收部门和接收后资产位置，默认值为空，空值时由管理员审核单据时手工维护。

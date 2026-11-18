@@ -1,0 +1,246 @@
+{
+  "errors": [],
+  "demoHits": {},
+  "layout": {
+    "inventory_1920": {
+      "vw": 1920,
+      "vh": 1080,
+      "dock": null,
+      "charts": [],
+      "lg": {
+        "cls": "rk-lg",
+        "top": 506.9,
+        "bottom": 524.1,
+        "h": 17.3,
+        "inView": true,
+        "cutBottom": false
+      },
+      "rack": {
+        "cls": "rack",
+        "top": 331.1,
+        "bottom": 498.9,
+        "h": 167.8,
+        "inView": true,
+        "cutBottom": false
+      },
+      "stk": {
+        "cls": "bm-card stk",
+        "top": 603.1,
+        "bottom": 1068,
+        "h": 464.9,
+        "inView": true,
+        "cutBottom": false
+      },
+      "detail": null,
+      "graph": null
+    },
+    "trace_1920": {
+      "vw": 1920,
+      "vh": 1080,
+      "qcard": {
+        "top": 137.5,
+        "bottom": 187.5,
+        "h": 50,
+        "inView": true,
+        "cutBottom": false
+      },
+      "sum": {
+        "top": 199.5,
+        "bottom": 320,
+        "h": 120.5,
+        "inView": true,
+        "cutBottom": false
+      },
+      "gcard": {
+        "top": 330,
+        "bottom": 858,
+        "h": 528,
+        "inView": true,
+        "cutBottom": false
+      },
+      "graph": {
+        "top": 401,
+        "bottom": 845,
+        "h": 444,
+        "inView": true,
+        "cutBottom": false
+      },
+      "detail": {
+        "top": 868,
+        "bottom": 1160,
+        "h": 292,
+        "inView": false,
+        "cutBottom": true
+      },
+      "visRows": 3,
+      "partRows": 0,
+      "rowCount": 8
+    },
+    "sales_1366": {
+      "vw": 1366,
+      "vh": 768,
+      "dock": {
+        "cls": "row3 bm-dock",
+        "top": 532,
+        "bottom": 760,
+        "h": 228,
+        "inView": true,
+        "cutBottom": false
+      },
+      "charts": [
+        {
+          "cls": "ch c1",
+          "top": 579,
+          "bottom": 747,
+          "h": 168,
+          "inView": true,
+          "cutBottom": false
+        },
+        {
+          "cls": "ch c2",
+          "top": 579,
+          "bottom": 747,
+          "h": 168,
+          "inView": true,
+          "cutBottom": false
+        },
+        {
+          "cls": "ch c3",
+          "top": 579,
+          "bottom": 747,
+          "h": 168,
+          "inView": true,
+          "cutBottom": false
+        }
+      ],
+      "lg": null,
+      "rack": null,
+      "stk": null,
+      "detail": null,
+      "graph": null
+    },
+    "mo_1366": {
+      "vw": 1366,
+      "vh": 768,
+      "dock": {
+        "cls": "lay2 bm-dock",
+        "top": 514,
+        "bottom": 760,
+        "h": 246,
+        "inView": true,
+        "cutBottom": false
+      },
+      "charts": [
+        {
+          "cls": "pie",
+          "top": 561,
+          "bottom": 729,
+          "h": 168,
+          "inView": true,
+          "cutBottom": false
+        },
+        {
+          "cls": "gantt",
+          "top": 579,
+          "bottom": 747,
+          "h": 168,
+          "inView": true,
+          "cutBottom": false
+        },
+        {
+          "cls": "load",
+          "top": 561,
+          "bottom": 729,
+          "h": 168,
+          "inView": true,
+          "cutBottom": false
+        }
+      ],
+      "lg": null,
+      "rack": null,
+      "stk": null,
+      "detail": null,
+      "graph": null
+    },
+    "inventory_1366": {
+      "vw": 1366,
+      "vh": 768,
+      "dock": null,
+      "charts": [],
+      "lg": {
+        "cls": "rk-lg",
+        "top": 476.8,
+        "bottom": 494.1,
+        "h": 17.3,
+        "inView": true,
+        "cutBottom": false
+      },
+      "rack": {
+        "cls": "rack",
+        "top": 301.1,
+        "bottom": 468.8,
+        "h": 167.8,
+        "inView": true,
+        "cutBottom": false
+      },
+      "stk": {
+        "cls": "bm-card stk",
+        "top": 573.1,
+        "bottom": 760,
+        "h": 186.9,
+        "inView": true,
+        "cutBottom": false
+      },
+      "detail": null,
+      "graph": null
+    },
+    "trace_1366": {
+      "vw": 1366,
+      "vh": 768,
+      "qcard": {
+        "top": 123,
+        "bottom": 165,
+        "h": 42,
+        "inView": true,
+        "cutBottom": false
+      },
+      "sum": {
+        "top": 173,
+        "bottom": 257.5,
+        "h": 84.5,
+        "inView": true,
+        "cutBottom": false
+      },
+      "gcard": {
+        "top": 265.5,
+        "bottom": 756.5,
+        "h": 491,
+        "inView": true,
+        "cutBottom": false
+      },
+      "graph": {
+        "top": 331.5,
+        "bottom": 743.5,
+        "h": 412,
+        "inView": true,
+        "cutBottom": false
+      },
+      "detail": {
+        "top": 764.5,
+        "bottom": 964.5,
+        "h": 200,
+        "inView": false,
+        "cutBottom": true
+      },
+      "visRows": 0,
+      "partRows": 0,
+      "rowCount": 8
+    }
+  },
+  "file": {
+    "ok": true,
+    "hash": "#/workshop",
+    "canvas": true,
+    "errors": []
+  }
+}

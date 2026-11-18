@@ -1,0 +1,4 @@
+ID: 出品监控
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%87%BA%E5%93%81%E7%9B%91%E6%8E%A7
+
+[[餐饮出品监控|出品监控]]

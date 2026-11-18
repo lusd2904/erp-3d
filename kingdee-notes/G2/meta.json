@@ -1,0 +1,6131 @@
+[
+{
+"mod": "库存管理",
+"page": "abc分析",
+"raw": 1270,
+"clean": 1127,
+"imgs": 0,
+"dup_of": null,
+"textlen": 877
+},
+{
+"mod": "库存管理",
+"page": "abc分配组",
+"raw": 1454,
+"clean": 1275,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1036
+},
+{
+"mod": "库存管理",
+"page": "仓位值集",
+"raw": 528,
+"clean": 463,
+"imgs": 0,
+"dup_of": null,
+"textlen": 372
+},
+{
+"mod": "库存管理",
+"page": "仓库",
+"raw": 1385,
+"clean": 1235,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1046
+},
+{
+"mod": "库存管理",
+"page": "仓库最大最小安全库存",
+"raw": 407,
+"clean": 297,
+"imgs": 0,
+"dup_of": null,
+"textlen": 227
+},
+{
+"mod": "库存管理",
+"page": "仓库最大最小安全库存_新增",
+"raw": 28,
+"clean": 10,
+"imgs": 0,
+"dup_of": null,
+"textlen": 10
+},
+{
+"mod": "库存管理",
+"page": "位置-库存组表",
+"raw": 166,
+"clean": 136,
+"imgs": 0,
+"dup_of": null,
+"textlen": 110
+},
+{
+"mod": "库存管理",
+"page": "保质期预警",
+"raw": 931,
+"clean": 695,
+"imgs": 0,
+"dup_of": null,
+"textlen": 464
+},
+{
+"mod": "库存管理",
+"page": "关账_反关账",
+"raw": 918,
+"clean": 820,
+"imgs": 0,
+"dup_of": null,
+"textlen": 644
+},
+{
+"mod": "库存管理",
+"page": "其他入库单",
+"raw": 3948,
+"clean": 3473,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2866
+},
+{
+"mod": "库存管理",
+"page": "其他出库单",
+"raw": 932,
+"clean": 808,
+"imgs": 0,
+"dup_of": null,
+"textlen": 667
+},
+{
+"mod": "库存管理",
+"page": "出入库列表",
+"raw": 195,
+"clean": 166,
+"imgs": 0,
+"dup_of": null,
+"textlen": 133
+},
+{
+"mod": "库存管理",
+"page": "出库清单",
+"raw": 71,
+"clean": 60,
+"imgs": 0,
+"dup_of": null,
+"textlen": 54
+},
+{
+"mod": "库存管理",
+"page": "出库申请单",
+"raw": 2046,
+"clean": 1731,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1387
+},
+{
+"mod": "库存管理",
+"page": "分步式调入单",
+"raw": 338,
+"clean": 294,
+"imgs": 0,
+"dup_of": null,
+"textlen": 237
+},
+{
+"mod": "库存管理",
+"page": "分步式调出单",
+"raw": 2503,
+"clean": 2261,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1850
+},
+{
+"mod": "库存管理",
+"page": "初始库存",
+"raw": 2542,
+"clean": 2155,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1739
+},
+{
+"mod": "库存管理",
+"page": "删除备份表数据",
+"raw": 245,
+"clean": 178,
+"imgs": 0,
+"dup_of": null,
+"textlen": 135
+},
+{
+"mod": "库存管理",
+"page": "单据选项库存通用业务参数",
+"raw": 468,
+"clean": 405,
+"imgs": 0,
+"dup_of": null,
+"textlen": 347
+},
+{
+"mod": "库存管理",
+"page": "即时库存同步",
+"raw": 532,
+"clean": 472,
+"imgs": 0,
+"dup_of": null,
+"textlen": 381
+},
+{
+"mod": "库存管理",
+"page": "即时库存校对",
+"raw": 328,
+"clean": 293,
+"imgs": 0,
+"dup_of": null,
+"textlen": 229
+},
+{
+"mod": "库存管理",
+"page": "即时库存汇总数据查询",
+"raw": 752,
+"clean": 656,
+"imgs": 0,
+"dup_of": null,
+"textlen": 544
+},
+{
+"mod": "库存管理",
+"page": "受托加工材料入库单",
+"raw": 3404,
+"clean": 2981,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2482
+},
+{
+"mod": "库存管理",
+"page": "受托加工材料收料单",
+"raw": 2064,
+"clean": 1817,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1511
+},
+{
+"mod": "库存管理",
+"page": "受托加工材料退料单",
+"raw": 525,
+"clean": 455,
+"imgs": 0,
+"dup_of": null,
+"textlen": 375
+},
+{
+"mod": "库存管理",
+"page": "启用库存管理",
+"raw": 254,
+"clean": 211,
+"imgs": 0,
+"dup_of": null,
+"textlen": 169
+},
+{
+"mod": "库存管理",
+"page": "呆滞料分析",
+"raw": 2976,
+"clean": 2750,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2336
+},
+{
+"mod": "库存管理",
+"page": "周期盘点计划",
+"raw": 2996,
+"clean": 2613,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2160
+},
+{
+"mod": "库存管理",
+"page": "在途库存查询",
+"raw": 196,
+"clean": 159,
+"imgs": 0,
+"dup_of": null,
+"textlen": 118
+},
+{
+"mod": "库存管理",
+"page": "备份还原数据表",
+"raw": 874,
+"clean": 667,
+"imgs": 0,
+"dup_of": null,
+"textlen": 528
+},
+{
+"mod": "库存管理",
+"page": "安全库存预警",
+"raw": 725,
+"clean": 578,
+"imgs": 0,
+"dup_of": null,
+"textlen": 457
+},
+{
+"mod": "库存管理",
+"page": "已调出未调入统计表",
+"raw": 1167,
+"clean": 995,
+"imgs": 0,
+"dup_of": null,
+"textlen": 824
+},
+{
+"mod": "库存管理",
+"page": "序列号串号查询",
+"raw": 123,
+"clean": 107,
+"imgs": 0,
+"dup_of": null,
+"textlen": 80
+},
+{
+"mod": "库存管理",
+"page": "序列号主档",
+"raw": 2551,
+"clean": 2182,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1769
+},
+{
+"mod": "库存管理",
+"page": "序列号系统参数和设置",
+"raw": 1576,
+"clean": 1425,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1190
+},
+{
+"mod": "库存管理",
+"page": "库存业务专题_库存维度",
+"raw": 1881,
+"clean": 1757,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1450
+},
+{
+"mod": "库存管理",
+"page": "库存业务专题_库存调整业务",
+"raw": 414,
+"clean": 362,
+"imgs": 0,
+"dup_of": null,
+"textlen": 319
+},
+{
+"mod": "库存管理",
+"page": "库存业务专题_盘点",
+"raw": 690,
+"clean": 633,
+"imgs": 0,
+"dup_of": null,
+"textlen": 532
+},
+{
+"mod": "库存管理",
+"page": "库存云巡检",
+"raw": 657,
+"clean": 604,
+"imgs": 0,
+"dup_of": null,
+"textlen": 517
+},
+{
+"mod": "库存管理",
+"page": "库存余额单",
+"raw": 467,
+"clean": 384,
+"imgs": 0,
+"dup_of": null,
+"textlen": 293
+},
+{
+"mod": "库存管理",
+"page": "库存初始化指引",
+"raw": 132,
+"clean": 116,
+"imgs": 0,
+"dup_of": null,
+"textlen": 92
+},
+{
+"mod": "库存管理",
+"page": "库存台账",
+"raw": 222,
+"clean": 163,
+"imgs": 0,
+"dup_of": null,
+"textlen": 128
+},
+{
+"mod": "库存管理",
+"page": "库存同步",
+"raw": 292,
+"clean": 262,
+"imgs": 0,
+"dup_of": null,
+"textlen": 216
+},
+{
+"mod": "库存管理",
+"page": "库存同步列表",
+"raw": 293,
+"clean": 262,
+"imgs": 0,
+"dup_of": "库存同步",
+"textlen": 216
+},
+{
+"mod": "库存管理",
+"page": "库存同步管易",
+"raw": 78,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 24
+},
+{
+"mod": "库存管理",
+"page": "库存工作台",
+"raw": 1023,
+"clean": 903,
+"imgs": 0,
+"dup_of": null,
+"textlen": 759
+},
+{
+"mod": "库存管理",
+"page": "库存汇总统计表",
+"raw": 2209,
+"clean": 1985,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1656
+},
+{
+"mod": "库存管理",
+"page": "库存流水同步",
+"raw": 776,
+"clean": 703,
+"imgs": 0,
+"dup_of": null,
+"textlen": 591
+},
+{
+"mod": "库存管理",
+"page": "库存流水表",
+"raw": 399,
+"clean": 333,
+"imgs": 0,
+"dup_of": null,
+"textlen": 269
+},
+{
+"mod": "库存管理",
+"page": "库存状态",
+"raw": 702,
+"clean": 595,
+"imgs": 0,
+"dup_of": null,
+"textlen": 458
+},
+{
+"mod": "库存管理",
+"page": "库存状态转换",
+"raw": 753,
+"clean": 700,
+"imgs": 0,
+"dup_of": null,
+"textlen": 571
+},
+{
+"mod": "库存管理",
+"page": "库存盘点差异报告",
+"raw": 104,
+"clean": 88,
+"imgs": 0,
+"dup_of": null,
+"textlen": 65
+},
+{
+"mod": "库存管理",
+"page": "库存盘点方案",
+"raw": 1653,
+"clean": 1472,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1249
+},
+{
+"mod": "库存管理",
+"page": "库存管理",
+"raw": 3210,
+"clean": 2025,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1581
+},
+{
+"mod": "库存管理",
+"page": "库存管理系统参数",
+"raw": 6021,
+"clean": 5344,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4579
+},
+{
+"mod": "库存管理",
+"page": "库存调整",
+"raw": 593,
+"clean": 552,
+"imgs": 0,
+"dup_of": null,
+"textlen": 451
+},
+{
+"mod": "库存管理",
+"page": "库存负结余预警",
+"raw": 1111,
+"clean": 944,
+"imgs": 0,
+"dup_of": null,
+"textlen": 777
+},
+{
+"mod": "库存管理",
+"page": "库存账龄分析表",
+"raw": 2234,
+"clean": 2077,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1760
+},
+{
+"mod": "库存管理",
+"page": "库存锁库",
+"raw": 885,
+"clean": 800,
+"imgs": 0,
+"dup_of": null,
+"textlen": 651
+},
+{
+"mod": "库存管理",
+"page": "库存预警分析表",
+"raw": 1776,
+"clean": 1663,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1324
+},
+{
+"mod": "库存管理",
+"page": "库存预警报表",
+"raw": 2149,
+"clean": 1942,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1573
+},
+{
+"mod": "库存管理",
+"page": "库存预警方案",
+"raw": 750,
+"clean": 629,
+"imgs": 0,
+"dup_of": null,
+"textlen": 527
+},
+{
+"mod": "库存管理",
+"page": "归档序列号",
+"raw": 259,
+"clean": 212,
+"imgs": 0,
+"dup_of": null,
+"textlen": 172
+},
+{
+"mod": "库存管理",
+"page": "形态转换单",
+"raw": 381,
+"clean": 334,
+"imgs": 0,
+"dup_of": null,
+"textlen": 267
+},
+{
+"mod": "库存管理",
+"page": "批号_序列号属性",
+"raw": 710,
+"clean": 639,
+"imgs": 0,
+"dup_of": null,
+"textlen": 515
+},
+{
+"mod": "库存管理",
+"page": "批号_序列号编码规则",
+"raw": 2022,
+"clean": 1811,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1500
+},
+{
+"mod": "库存管理",
+"page": "批号主档",
+"raw": 273,
+"clean": 242,
+"imgs": 0,
+"dup_of": null,
+"textlen": 186
+},
+{
+"mod": "库存管理",
+"page": "批号调整单",
+"raw": 953,
+"clean": 851,
+"imgs": 0,
+"dup_of": null,
+"textlen": 686
+},
+{
+"mod": "库存管理",
+"page": "拣配管理",
+"raw": 16355,
+"clean": 7534,
+"imgs": 0,
+"dup_of": null,
+"textlen": 6452
+},
+{
+"mod": "库存管理",
+"page": "按库存生产模式-成品",
+"raw": 1145,
+"clean": 1085,
+"imgs": 0,
+"dup_of": null,
+"textlen": 874
+},
+{
+"mod": "库存管理",
+"page": "收货管理",
+"raw": 336,
+"clean": 299,
+"imgs": 0,
+"dup_of": null,
+"textlen": 246
+},
+{
+"mod": "库存管理",
+"page": "清除零库存记录",
+"raw": 325,
+"clean": 290,
+"imgs": 0,
+"dup_of": null,
+"textlen": 238
+},
+{
+"mod": "库存管理",
+"page": "物料-库存组表",
+"raw": 59,
+"clean": 44,
+"imgs": 0,
+"dup_of": null,
+"textlen": 38
+},
+{
+"mod": "库存管理",
+"page": "物料分组-库存组对应表",
+"raw": 48,
+"clean": 37,
+"imgs": 0,
+"dup_of": null,
+"textlen": 31
+},
+{
+"mod": "库存管理",
+"page": "物料周期盘点表",
+"raw": 2099,
+"clean": 1820,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1519
+},
+{
+"mod": "库存管理",
+"page": "物料批号规则设置",
+"raw": 720,
+"clean": 610,
+"imgs": 0,
+"dup_of": null,
+"textlen": 495
+},
+{
+"mod": "库存管理",
+"page": "物料收发分类统计表",
+"raw": 930,
+"clean": 770,
+"imgs": 0,
+"dup_of": null,
+"textlen": 622
+},
+{
+"mod": "库存管理",
+"page": "物料收发明细表",
+"raw": 755,
+"clean": 665,
+"imgs": 0,
+"dup_of": null,
+"textlen": 538
+},
+{
+"mod": "库存管理",
+"page": "物料收发汇总表",
+"raw": 4523,
+"clean": 3897,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3130
+},
+{
+"mod": "库存管理",
+"page": "物料盘点作业",
+"raw": 2530,
+"clean": 2224,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1831
+},
+{
+"mod": "库存管理",
+"page": "生产追溯序列号主档",
+"raw": 197,
+"clean": 169,
+"imgs": 0,
+"dup_of": null,
+"textlen": 139
+},
+{
+"mod": "库存管理",
+"page": "盘亏单",
+"raw": 294,
+"clean": 253,
+"imgs": 0,
+"dup_of": null,
+"textlen": 203
+},
+{
+"mod": "库存管理",
+"page": "盘点情况报表过滤",
+"raw": 52,
+"clean": 41,
+"imgs": 0,
+"dup_of": null,
+"textlen": 32
+},
+{
+"mod": "库存管理",
+"page": "盘盈单",
+"raw": 725,
+"clean": 623,
+"imgs": 0,
+"dup_of": null,
+"textlen": 508
+},
+{
+"mod": "库存管理",
+"page": "直接调拨单",
+"raw": 1390,
+"clean": 1216,
+"imgs": 0,
+"dup_of": null,
+"textlen": 990
+},
+{
+"mod": "库存管理",
+"page": "组装拆卸单",
+"raw": 1624,
+"clean": 1383,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1153
+},
+{
+"mod": "库存管理",
+"page": "结束初始化_反初始化",
+"raw": 342,
+"clean": 274,
+"imgs": 0,
+"dup_of": null,
+"textlen": 212
+},
+{
+"mod": "库存管理",
+"page": "警示灯方案",
+"raw": 631,
+"clean": 521,
+"imgs": 0,
+"dup_of": null,
+"textlen": 427
+},
+{
+"mod": "库存管理",
+"page": "调拨申请单",
+"raw": 2488,
+"clean": 2120,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1705
+},
+{
+"mod": "库存管理",
+"page": "锁库日志",
+"raw": 262,
+"clean": 222,
+"imgs": 0,
+"dup_of": null,
+"textlen": 176
+},
+{
+"mod": "库存管理",
+"page": "门店库存查询及盘点业务",
+"raw": 302,
+"clean": 246,
+"imgs": 0,
+"dup_of": null,
+"textlen": 188
+},
+{
+"mod": "库存管理",
+"page": "门店库存考核表",
+"raw": 69,
+"clean": 58,
+"imgs": 0,
+"dup_of": null,
+"textlen": 48
+},
+{
+"mod": "库存管理",
+"page": "门店收货管理",
+"raw": 467,
+"clean": 374,
+"imgs": 0,
+"dup_of": null,
+"textlen": 305
+},
+{
+"mod": "条码管理",
+"page": "gs1条码解析规则",
+"raw": 425,
+"clean": 397,
+"imgs": 0,
+"dup_of": null,
+"textlen": 334
+},
+{
+"mod": "条码管理",
+"page": "pc打包执行清单",
+"raw": 35,
+"clean": 24,
+"imgs": 0,
+"dup_of": null,
+"textlen": 19
+},
+{
+"mod": "条码管理",
+"page": "pc装箱设置",
+"raw": 494,
+"clean": 428,
+"imgs": 0,
+"dup_of": null,
+"textlen": 351
+},
+{
+"mod": "条码管理",
+"page": "pda无箱号装箱模板设置",
+"raw": 141,
+"clean": 109,
+"imgs": 0,
+"dup_of": null,
+"textlen": 92
+},
+{
+"mod": "条码管理",
+"page": "pda条码主档打印配置",
+"raw": 195,
+"clean": 161,
+"imgs": 0,
+"dup_of": null,
+"textlen": 135
+},
+{
+"mod": "条码管理",
+"page": "pda条码模板设置",
+"raw": 152,
+"clean": 120,
+"imgs": 0,
+"dup_of": null,
+"textlen": 100
+},
+{
+"mod": "条码管理",
+"page": "pda装箱设置",
+"raw": 156,
+"clean": 127,
+"imgs": 0,
+"dup_of": null,
+"textlen": 112
+},
+{
+"mod": "条码管理",
+"page": "pda转发地址",
+"raw": 171,
+"clean": 156,
+"imgs": 0,
+"dup_of": null,
+"textlen": 138
+},
+{
+"mod": "条码管理",
+"page": "不参与拣货库位设置",
+"raw": 165,
+"clean": 133,
+"imgs": 0,
+"dup_of": null,
+"textlen": 108
+},
+{
+"mod": "条码管理",
+"page": "产品条码追溯报表",
+"raw": 39,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 23
+},
+{
+"mod": "条码管理",
+"page": "位置-库存组对应表",
+"raw": 166,
+"clean": 136,
+"imgs": 0,
+"dup_of": "位置-库存组表",
+"textlen": 110
+},
+{
+"mod": "条码管理",
+"page": "位置-用户对应表",
+"raw": 37,
+"clean": 26,
+"imgs": 0,
+"dup_of": null,
+"textlen": 21
+},
+{
+"mod": "条码管理",
+"page": "供应商协同条码主档",
+"raw": 108,
+"clean": 87,
+"imgs": 0,
+"dup_of": null,
+"textlen": 79
+},
+{
+"mod": "条码管理",
+"page": "先进先出条码清单",
+"raw": 37,
+"clean": 26,
+"imgs": 0,
+"dup_of": null,
+"textlen": 21
+},
+{
+"mod": "条码管理",
+"page": "出货清单",
+"raw": 71,
+"clean": 60,
+"imgs": 0,
+"dup_of": "出库清单",
+"textlen": 54
+},
+{
+"mod": "条码管理",
+"page": "函数解析规则",
+"raw": 329,
+"clean": 300,
+"imgs": 0,
+"dup_of": null,
+"textlen": 258
+},
+{
+"mod": "条码管理",
+"page": "单据条码清单",
+"raw": 35,
+"clean": 24,
+"imgs": 0,
+"dup_of": null,
+"textlen": 19
+},
+{
+"mod": "条码管理",
+"page": "原材料条码追溯报表",
+"raw": 46,
+"clean": 35,
+"imgs": 0,
+"dup_of": null,
+"textlen": 29
+},
+{
+"mod": "条码管理",
+"page": "复核单",
+"raw": 78,
+"clean": 67,
+"imgs": 0,
+"dup_of": null,
+"textlen": 57
+},
+{
+"mod": "条码管理",
+"page": "定时清理移动条码日志",
+"raw": 37,
+"clean": 26,
+"imgs": 0,
+"dup_of": null,
+"textlen": 21
+},
+{
+"mod": "条码管理",
+"page": "客户-条码模板对应关系表",
+"raw": 168,
+"clean": 135,
+"imgs": 0,
+"dup_of": null,
+"textlen": 103
+},
+{
+"mod": "条码管理",
+"page": "客户-条码模板表",
+"raw": 168,
+"clean": 135,
+"imgs": 0,
+"dup_of": "客户-条码模板对应关系表",
+"textlen": 103
+},
+{
+"mod": "条码管理",
+"page": "工序号-用户对应表",
+"raw": 138,
+"clean": 106,
+"imgs": 0,
+"dup_of": null,
+"textlen": 83
+},
+{
+"mod": "条码管理",
+"page": "工程项目装箱单",
+"raw": 45,
+"clean": 34,
+"imgs": 0,
+"dup_of": null,
+"textlen": 29
+},
+{
+"mod": "条码管理",
+"page": "库位拣货优先级设置",
+"raw": 210,
+"clean": 154,
+"imgs": 0,
+"dup_of": null,
+"textlen": 117
+},
+{
+"mod": "条码管理",
+"page": "库位条码",
+"raw": 353,
+"clean": 308,
+"imgs": 0,
+"dup_of": null,
+"textlen": 257
+},
+{
+"mod": "条码管理",
+"page": "库位条码生成",
+"raw": 353,
+"clean": 308,
+"imgs": 0,
+"dup_of": "库位条码",
+"textlen": 257
+},
+{
+"mod": "条码管理",
+"page": "异步生成数据",
+"raw": 409,
+"clean": 339,
+"imgs": 0,
+"dup_of": null,
+"textlen": 277
+},
+{
+"mod": "条码管理",
+"page": "归档扫描记录",
+"raw": 36,
+"clean": 25,
+"imgs": 0,
+"dup_of": null,
+"textlen": 20
+},
+{
+"mod": "条码管理",
+"page": "归档条码主档",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "归档条码打印日志",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "归档条码拆装箱",
+"raw": 37,
+"clean": 26,
+"imgs": 0,
+"dup_of": null,
+"textlen": 21
+},
+{
+"mod": "条码管理",
+"page": "扫描记录",
+"raw": 74,
+"clean": 63,
+"imgs": 0,
+"dup_of": null,
+"textlen": 54
+},
+{
+"mod": "条码管理",
+"page": "扫描配置",
+"raw": 18435,
+"clean": 17849,
+"imgs": 0,
+"dup_of": null,
+"textlen": 15833
+},
+{
+"mod": "条码管理",
+"page": "批量报备单",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "报备汇报单",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "拣货单",
+"raw": 88,
+"clean": 77,
+"imgs": 0,
+"dup_of": null,
+"textlen": 68
+},
+{
+"mod": "条码管理",
+"page": "拣货单生成失败记录",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "拣货安排清单",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "拣货方案",
+"raw": 675,
+"clean": 606,
+"imgs": 0,
+"dup_of": null,
+"textlen": 483
+},
+{
+"mod": "条码管理",
+"page": "拣货条码清单",
+"raw": 56,
+"clean": 45,
+"imgs": 0,
+"dup_of": null,
+"textlen": 38
+},
+{
+"mod": "条码管理",
+"page": "拣货策略",
+"raw": 152,
+"clean": 124,
+"imgs": 0,
+"dup_of": null,
+"textlen": 102
+},
+{
+"mod": "条码管理",
+"page": "数据获取",
+"raw": 609,
+"clean": 498,
+"imgs": 0,
+"dup_of": null,
+"textlen": 404
+},
+{
+"mod": "条码管理",
+"page": "条码主档",
+"raw": 1082,
+"clean": 899,
+"imgs": 0,
+"dup_of": null,
+"textlen": 671
+},
+{
+"mod": "条码管理",
+"page": "条码功能配置",
+"raw": 310,
+"clean": 278,
+"imgs": 0,
+"dup_of": null,
+"textlen": 199
+},
+{
+"mod": "条码管理",
+"page": "条码备货汇总",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "条码备货清单",
+"raw": 39,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 23
+},
+{
+"mod": "条码管理",
+"page": "条码字段规则",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "条码属性",
+"raw": 908,
+"clean": 778,
+"imgs": 0,
+"dup_of": null,
+"textlen": 622
+},
+{
+"mod": "条码管理",
+"page": "条码属性列表",
+"raw": 908,
+"clean": 778,
+"imgs": 0,
+"dup_of": "条码属性",
+"textlen": 622
+},
+{
+"mod": "条码管理",
+"page": "条码库存报表",
+"raw": 59,
+"clean": 48,
+"imgs": 0,
+"dup_of": null,
+"textlen": 41
+},
+{
+"mod": "条码管理",
+"page": "条码库存报表过滤条件",
+"raw": 60,
+"clean": 49,
+"imgs": 0,
+"dup_of": "条码库存报表",
+"textlen": 41
+},
+{
+"mod": "条码管理",
+"page": "条码应用配置向导",
+"raw": 75,
+"clean": 65,
+"imgs": 0,
+"dup_of": null,
+"textlen": 57
+},
+{
+"mod": "条码管理",
+"page": "条码归档",
+"raw": 71,
+"clean": 60,
+"imgs": 0,
+"dup_of": null,
+"textlen": 51
+},
+{
+"mod": "条码管理",
+"page": "条码打印",
+"raw": 802,
+"clean": 647,
+"imgs": 0,
+"dup_of": null,
+"textlen": 479
+},
+{
+"mod": "条码管理",
+"page": "条码扫描",
+"raw": 1876,
+"clean": 1608,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1239
+},
+{
+"mod": "条码管理",
+"page": "条码扫描任务",
+"raw": 32,
+"clean": 21,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "条码扫描任务方案",
+"raw": 43,
+"clean": 32,
+"imgs": 0,
+"dup_of": null,
+"textlen": 27
+},
+{
+"mod": "条码管理",
+"page": "条码扫描任务生成日志",
+"raw": 39,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 23
+},
+{
+"mod": "条码管理",
+"page": "条码扫描执行清单",
+"raw": 58,
+"clean": 47,
+"imgs": 0,
+"dup_of": null,
+"textlen": 39
+},
+{
+"mod": "条码管理",
+"page": "条码扫描物料管理",
+"raw": 69,
+"clean": 58,
+"imgs": 0,
+"dup_of": null,
+"textlen": 49
+},
+{
+"mod": "条码管理",
+"page": "条码扫描物料管理列表",
+"raw": 69,
+"clean": 58,
+"imgs": 0,
+"dup_of": "条码扫描物料管理",
+"textlen": 49
+},
+{
+"mod": "条码管理",
+"page": "条码扫描记录查询",
+"raw": 74,
+"clean": 63,
+"imgs": 0,
+"dup_of": "扫描记录",
+"textlen": 54
+},
+{
+"mod": "条码管理",
+"page": "条码拆分",
+"raw": 384,
+"clean": 337,
+"imgs": 0,
+"dup_of": null,
+"textlen": 281
+},
+{
+"mod": "条码管理",
+"page": "条码拆装箱",
+"raw": 166,
+"clean": 155,
+"imgs": 0,
+"dup_of": null,
+"textlen": 137
+},
+{
+"mod": "条码管理",
+"page": "条码接口服务",
+"raw": 1137,
+"clean": 1033,
+"imgs": 0,
+"dup_of": null,
+"textlen": 841
+},
+{
+"mod": "条码管理",
+"page": "条码核对信息表",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "条码模块设置",
+"raw": 356,
+"clean": 247,
+"imgs": 0,
+"dup_of": null,
+"textlen": 191
+},
+{
+"mod": "条码管理",
+"page": "条码物料管理",
+"raw": 254,
+"clean": 225,
+"imgs": 0,
+"dup_of": null,
+"textlen": 187
+},
+{
+"mod": "条码管理",
+"page": "条码生成",
+"raw": 501,
+"clean": 388,
+"imgs": 0,
+"dup_of": null,
+"textlen": 304
+},
+{
+"mod": "条码管理",
+"page": "条码盘点执行",
+"raw": 83,
+"clean": 72,
+"imgs": 0,
+"dup_of": null,
+"textlen": 65
+},
+{
+"mod": "条码管理",
+"page": "条码盘点清单",
+"raw": 1575,
+"clean": 1407,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1152
+},
+{
+"mod": "条码管理",
+"page": "条码盘点设置",
+"raw": 967,
+"clean": 468,
+"imgs": 0,
+"dup_of": null,
+"textlen": 383
+},
+{
+"mod": "条码管理",
+"page": "条码称重打印",
+"raw": 42,
+"clean": 31,
+"imgs": 0,
+"dup_of": null,
+"textlen": 26
+},
+{
+"mod": "条码管理",
+"page": "条码管理",
+"raw": 12268,
+"clean": 10520,
+"imgs": 0,
+"dup_of": null,
+"textlen": 8756
+},
+{
+"mod": "条码管理",
+"page": "条码管理系统参数",
+"raw": 3627,
+"clean": 3455,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2981
+},
+{
+"mod": "条码管理",
+"page": "条码自动归档方案",
+"raw": 55,
+"clean": 44,
+"imgs": 0,
+"dup_of": null,
+"textlen": 36
+},
+{
+"mod": "条码管理",
+"page": "条码规则",
+"raw": 2296,
+"clean": 1983,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1594
+},
+{
+"mod": "条码管理",
+"page": "条码规则-字段对应表",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": "条码字段规则",
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "条码规则与客户对应表",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "条码解析记录",
+"raw": 31,
+"clean": 20,
+"imgs": 0,
+"dup_of": null,
+"textlen": 15
+},
+{
+"mod": "条码管理",
+"page": "条码重装箱",
+"raw": 526,
+"clean": 515,
+"imgs": 0,
+"dup_of": null,
+"textlen": 455
+},
+{
+"mod": "条码管理",
+"page": "物料-库存组对应表",
+"raw": 58,
+"clean": 43,
+"imgs": 0,
+"dup_of": null,
+"textlen": 37
+},
+{
+"mod": "条码管理",
+"page": "物料-用户对应表",
+"raw": 50,
+"clean": 39,
+"imgs": 0,
+"dup_of": null,
+"textlen": 33
+},
+{
+"mod": "条码管理",
+"page": "物料sn条码管理",
+"raw": 346,
+"clean": 307,
+"imgs": 0,
+"dup_of": null,
+"textlen": 257
+},
+{
+"mod": "条码管理",
+"page": "物料分组-库存分组对应表",
+"raw": 48,
+"clean": 37,
+"imgs": 0,
+"dup_of": "物料分组-库存组对应表",
+"textlen": 31
+},
+{
+"mod": "条码管理",
+"page": "物料分组-用户对应表",
+"raw": 37,
+"clean": 26,
+"imgs": 0,
+"dup_of": null,
+"textlen": 21
+},
+{
+"mod": "条码管理",
+"page": "物料拣货策略设置",
+"raw": 152,
+"clean": 124,
+"imgs": 0,
+"dup_of": "拣货策略",
+"textlen": 102
+},
+{
+"mod": "条码管理",
+"page": "物料编码解析对应表",
+"raw": 226,
+"clean": 190,
+"imgs": 0,
+"dup_of": null,
+"textlen": 152
+},
+{
+"mod": "条码管理",
+"page": "用户-条码模板对应关系表",
+"raw": 118,
+"clean": 92,
+"imgs": 0,
+"dup_of": null,
+"textlen": 76
+},
+{
+"mod": "条码管理",
+"page": "用户-条码模板表",
+"raw": 118,
+"clean": 92,
+"imgs": 0,
+"dup_of": "用户-条码模板对应关系表",
+"textlen": 76
+},
+{
+"mod": "条码管理",
+"page": "电子秤型号",
+"raw": 106,
+"clean": 91,
+"imgs": 0,
+"dup_of": null,
+"textlen": 80
+},
+{
+"mod": "条码管理",
+"page": "盘点情况报表",
+"raw": 52,
+"clean": 41,
+"imgs": 0,
+"dup_of": "盘点情况报表过滤",
+"textlen": 32
+},
+{
+"mod": "条码管理",
+"page": "码上查平台同步日志",
+"raw": 36,
+"clean": 25,
+"imgs": 0,
+"dup_of": null,
+"textlen": 20
+},
+{
+"mod": "条码管理",
+"page": "码上查组织对应",
+"raw": 38,
+"clean": 27,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "条码管理",
+"page": "离线数据库配置",
+"raw": 35,
+"clean": 24,
+"imgs": 0,
+"dup_of": null,
+"textlen": 19
+},
+{
+"mod": "条码管理",
+"page": "移动条码日志",
+"raw": 39,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 24
+},
+{
+"mod": "条码管理",
+"page": "组织-条码模关系对应表",
+"raw": 117,
+"clean": 91,
+"imgs": 0,
+"dup_of": null,
+"textlen": 75
+},
+{
+"mod": "条码管理",
+"page": "组织-条码模板关系对应表",
+"raw": 117,
+"clean": 91,
+"imgs": 0,
+"dup_of": "组织-条码模关系对应表",
+"textlen": 75
+},
+{
+"mod": "条码管理",
+"page": "组织-条码模板对应关系表",
+"raw": 117,
+"clean": 91,
+"imgs": 0,
+"dup_of": "组织-条码模关系对应表",
+"textlen": 75
+},
+{
+"mod": "条码管理",
+"page": "组织-条码模板表",
+"raw": 117,
+"clean": 91,
+"imgs": 0,
+"dup_of": "组织-条码模关系对应表",
+"textlen": 75
+},
+{
+"mod": "条码管理",
+"page": "自动生成条码基础设置",
+"raw": 54,
+"clean": 43,
+"imgs": 0,
+"dup_of": null,
+"textlen": 38
+},
+{
+"mod": "条码管理",
+"page": "自定义条码打印",
+"raw": 899,
+"clean": 726,
+"imgs": 0,
+"dup_of": null,
+"textlen": 585
+},
+{
+"mod": "条码管理",
+"page": "资产报修单",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "资产报备单",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "资产报废单",
+"raw": 33,
+"clean": 22,
+"imgs": 0,
+"dup_of": null,
+"textlen": 17
+},
+{
+"mod": "条码管理",
+"page": "辅助属性前缀设置",
+"raw": 142,
+"clean": 109,
+"imgs": 0,
+"dup_of": null,
+"textlen": 82
+},
+{
+"mod": "条码管理",
+"page": "辅助资料-条码模板对应关系表",
+"raw": 200,
+"clean": 167,
+"imgs": 0,
+"dup_of": null,
+"textlen": 137
+},
+{
+"mod": "条码管理",
+"page": "辅助资料-条码模板表",
+"raw": 200,
+"clean": 167,
+"imgs": 0,
+"dup_of": "辅助资料-条码模板对应关系表",
+"textlen": 137
+},
+{
+"mod": "条码管理",
+"page": "配件装箱单",
+"raw": 92,
+"clean": 77,
+"imgs": 0,
+"dup_of": null,
+"textlen": 69
+},
+{
+"mod": "条码管理",
+"page": "重置条码流水号",
+"raw": 72,
+"clean": 61,
+"imgs": 0,
+"dup_of": null,
+"textlen": 49
+},
+{
+"mod": "条码管理",
+"page": "防伪查询记录表",
+"raw": 29,
+"clean": 18,
+"imgs": 0,
+"dup_of": null,
+"textlen": 13
+},
+{
+"mod": "条码管理",
+"page": "防伪防窜组织对应",
+"raw": 36,
+"clean": 25,
+"imgs": 0,
+"dup_of": null,
+"textlen": 20
+},
+{
+"mod": "条码管理",
+"page": "防伪防窜货配置",
+"raw": 32,
+"clean": 21,
+"imgs": 0,
+"dup_of": null,
+"textlen": 16
+},
+{
+"mod": "条码管理",
+"page": "防窜货查询记录表",
+"raw": 30,
+"clean": 19,
+"imgs": 0,
+"dup_of": null,
+"textlen": 14
+},
+{
+"mod": "条码管理",
+"page": "预装箱清单",
+"raw": 42,
+"clean": 32,
+"imgs": 0,
+"dup_of": null,
+"textlen": 26
+},
+{
+"mod": "采购管理",
+"page": "1688集成",
+"raw": 4,
+"clean": 1,
+"imgs": 0,
+"dup_of": null,
+"textlen": 0
+},
+{
+"mod": "采购管理",
+"page": "vmi物料出入库明细表",
+"raw": 1800,
+"clean": 1162,
+"imgs": 0,
+"dup_of": null,
+"textlen": 939
+},
+{
+"mod": "采购管理",
+"page": "vmi物料出入库汇总表",
+"raw": 1631,
+"clean": 1068,
+"imgs": 0,
+"dup_of": null,
+"textlen": 864
+},
+{
+"mod": "采购管理",
+"page": "vmi物料消耗明细表",
+"raw": 1439,
+"clean": 1215,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1017
+},
+{
+"mod": "采购管理",
+"page": "vmi物料消耗结算明细表",
+"raw": 1457,
+"clean": 1227,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1014
+},
+{
+"mod": "采购管理",
+"page": "vmi采购流程图",
+"raw": 34,
+"clean": 31,
+"imgs": 0,
+"dup_of": null,
+"textlen": 25
+},
+{
+"mod": "采购管理",
+"page": "vmi采购订单",
+"raw": 1378,
+"clean": 1305,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1091
+},
+{
+"mod": "采购管理",
+"page": "业务员",
+"raw": 2943,
+"clean": 1248,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1013
+},
+{
+"mod": "采购管理",
+"page": "业务组",
+"raw": 933,
+"clean": 765,
+"imgs": 0,
+"dup_of": null,
+"textlen": 595
+},
+{
+"mod": "采购管理",
+"page": "供应商",
+"raw": 4527,
+"clean": 3719,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2998
+},
+{
+"mod": "采购管理",
+"page": "供应商交货及时率报表",
+"raw": 1066,
+"clean": 887,
+"imgs": 0,
+"dup_of": null,
+"textlen": 746
+},
+{
+"mod": "采购管理",
+"page": "供应商信息管理",
+"raw": 279,
+"clean": 242,
+"imgs": 0,
+"dup_of": null,
+"textlen": 206
+},
+{
+"mod": "采购管理",
+"page": "供应商到货及时率",
+"raw": 2228,
+"clean": 1219,
+"imgs": 0,
+"dup_of": null,
+"textlen": 996
+},
+{
+"mod": "采购管理",
+"page": "供应商协同vmi物料收发明细表",
+"raw": 75,
+"clean": 72,
+"imgs": 0,
+"dup_of": null,
+"textlen": 63
+},
+{
+"mod": "采购管理",
+"page": "供应商协同参数设置",
+"raw": 1274,
+"clean": 617,
+"imgs": 0,
+"dup_of": null,
+"textlen": 518
+},
+{
+"mod": "采购管理",
+"page": "供应商协同数据集成",
+"raw": 484,
+"clean": 367,
+"imgs": 0,
+"dup_of": null,
+"textlen": 302
+},
+{
+"mod": "采购管理",
+"page": "供应商协同用户",
+"raw": 124,
+"clean": 108,
+"imgs": 0,
+"dup_of": null,
+"textlen": 100
+},
+{
+"mod": "采购管理",
+"page": "供应商评估",
+"raw": 61,
+"clean": 34,
+"imgs": 0,
+"dup_of": null,
+"textlen": 30
+},
+{
+"mod": "采购管理",
+"page": "供应商评分表",
+"raw": 1087,
+"clean": 986,
+"imgs": 0,
+"dup_of": null,
+"textlen": 825
+},
+{
+"mod": "采购管理",
+"page": "供应商配额管理",
+"raw": 840,
+"clean": 787,
+"imgs": 0,
+"dup_of": null,
+"textlen": 659
+},
+{
+"mod": "采购管理",
+"page": "供应商采购追料交货报表",
+"raw": 1223,
+"clean": 1026,
+"imgs": 0,
+"dup_of": null,
+"textlen": 817
+},
+{
+"mod": "采购管理",
+"page": "分散采购_分散收货_集中结算",
+"raw": 53,
+"clean": 50,
+"imgs": 0,
+"dup_of": null,
+"textlen": 42
+},
+{
+"mod": "采购管理",
+"page": "创建供应商评分表",
+"raw": 542,
+"clean": 492,
+"imgs": 0,
+"dup_of": null,
+"textlen": 417
+},
+{
+"mod": "采购管理",
+"page": "单据状态通用说明",
+"raw": 505,
+"clean": 327,
+"imgs": 0,
+"dup_of": null,
+"textlen": 284
+},
+{
+"mod": "采购管理",
+"page": "卡信息管理",
+"raw": 2382,
+"clean": 2005,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1644
+},
+{
+"mod": "采购管理",
+"page": "定时创建消耗汇总",
+"raw": 79,
+"clean": 54,
+"imgs": 0,
+"dup_of": null,
+"textlen": 47
+},
+{
+"mod": "采购管理",
+"page": "定时智能采购",
+"raw": 69,
+"clean": 44,
+"imgs": 0,
+"dup_of": null,
+"textlen": 37
+},
+{
+"mod": "采购管理",
+"page": "批量创建消耗汇总",
+"raw": 2272,
+"clean": 1021,
+"imgs": 0,
+"dup_of": null,
+"textlen": 851
+},
+{
+"mod": "采购管理",
+"page": "换卡管理",
+"raw": 894,
+"clean": 670,
+"imgs": 0,
+"dup_of": null,
+"textlen": 544
+},
+{
+"mod": "采购管理",
+"page": "收料待检库存查询",
+"raw": 818,
+"clean": 727,
+"imgs": 0,
+"dup_of": null,
+"textlen": 536
+},
+{
+"mod": "采购管理",
+"page": "收料通知单",
+"raw": 4998,
+"clean": 4373,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3576
+},
+{
+"mod": "采购管理",
+"page": "智能采购向导",
+"raw": 631,
+"clean": 552,
+"imgs": 0,
+"dup_of": null,
+"textlen": 433
+},
+{
+"mod": "采购管理",
+"page": "期初采购入库单",
+"raw": 2816,
+"clean": 2333,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1872
+},
+{
+"mod": "采购管理",
+"page": "期初采购订单",
+"raw": 5588,
+"clean": 4882,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3954
+},
+{
+"mod": "采购管理",
+"page": "期初采购退料单",
+"raw": 3429,
+"clean": 2631,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2126
+},
+{
+"mod": "采购管理",
+"page": "标准采购业务类型",
+"raw": 734,
+"clean": 682,
+"imgs": 0,
+"dup_of": null,
+"textlen": 557
+},
+{
+"mod": "采购管理",
+"page": "标准采购流程图",
+"raw": 36,
+"clean": 33,
+"imgs": 0,
+"dup_of": null,
+"textlen": 27
+},
+{
+"mod": "采购管理",
+"page": "消耗汇总表",
+"raw": 3427,
+"clean": 2179,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1769
+},
+{
+"mod": "采购管理",
+"page": "清账销卡",
+"raw": 1405,
+"clean": 1185,
+"imgs": 0,
+"dup_of": null,
+"textlen": 990
+},
+{
+"mod": "采购管理",
+"page": "物权转移单",
+"raw": 1785,
+"clean": 1458,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1161
+},
+{
+"mod": "采购管理",
+"page": "直运采购流程图",
+"raw": 36,
+"clean": 33,
+"imgs": 0,
+"dup_of": null,
+"textlen": 27
+},
+{
+"mod": "采购管理",
+"page": "直运采购订单",
+"raw": 644,
+"clean": 597,
+"imgs": 0,
+"dup_of": null,
+"textlen": 482
+},
+{
+"mod": "采购管理",
+"page": "订单到货及时率报表",
+"raw": 2947,
+"clean": 1930,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1524
+},
+{
+"mod": "采购管理",
+"page": "评估等级",
+"raw": 350,
+"clean": 314,
+"imgs": 0,
+"dup_of": null,
+"textlen": 268
+},
+{
+"mod": "采购管理",
+"page": "货源清单",
+"raw": 1793,
+"clean": 1454,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1163
+},
+{
+"mod": "采购管理",
+"page": "货源清单_基础资料",
+"raw": 96,
+"clean": 77,
+"imgs": 0,
+"dup_of": null,
+"textlen": 63
+},
+{
+"mod": "采购管理",
+"page": "货源清单管理",
+"raw": 301,
+"clean": 263,
+"imgs": 0,
+"dup_of": null,
+"textlen": 216
+},
+{
+"mod": "采购管理",
+"page": "货源统计服务程序",
+"raw": 421,
+"clean": 244,
+"imgs": 0,
+"dup_of": null,
+"textlen": 191
+},
+{
+"mod": "采购管理",
+"page": "货源统计程序",
+"raw": 421,
+"clean": 244,
+"imgs": 0,
+"dup_of": "货源统计服务程序",
+"textlen": 191
+},
+{
+"mod": "采购管理",
+"page": "费用采购流程图",
+"raw": 31,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "采购管理",
+"page": "费用采购订单",
+"raw": 837,
+"clean": 780,
+"imgs": 0,
+"dup_of": null,
+"textlen": 635
+},
+{
+"mod": "采购管理",
+"page": "资产采购流程图",
+"raw": 37,
+"clean": 34,
+"imgs": 0,
+"dup_of": null,
+"textlen": 28
+},
+{
+"mod": "采购管理",
+"page": "资产采购订单",
+"raw": 894,
+"clean": 834,
+"imgs": 0,
+"dup_of": null,
+"textlen": 685
+},
+{
+"mod": "采购管理",
+"page": "退料申请单",
+"raw": 2431,
+"clean": 2092,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1696
+},
+{
+"mod": "采购管理",
+"page": "配套材料采购申请",
+"raw": 1325,
+"clean": 1261,
+"imgs": 0,
+"dup_of": null,
+"textlen": 999
+},
+{
+"mod": "采购管理",
+"page": "配额下单",
+"raw": 772,
+"clean": 720,
+"imgs": 0,
+"dup_of": null,
+"textlen": 602
+},
+{
+"mod": "采购管理",
+"page": "采购与其它系统接口",
+"raw": 578,
+"clean": 541,
+"imgs": 0,
+"dup_of": null,
+"textlen": 478
+},
+{
+"mod": "采购管理",
+"page": "采购业务对账",
+"raw": 1180,
+"clean": 1079,
+"imgs": 0,
+"dup_of": null,
+"textlen": 914
+},
+{
+"mod": "采购管理",
+"page": "采购业务汇总表",
+"raw": 1495,
+"clean": 1271,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1073
+},
+{
+"mod": "采购管理",
+"page": "采购云巡检",
+"raw": 89,
+"clean": 63,
+"imgs": 0,
+"dup_of": null,
+"textlen": 51
+},
+{
+"mod": "采购管理",
+"page": "采购价格分析表",
+"raw": 3030,
+"clean": 1425,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1179
+},
+{
+"mod": "采购管理",
+"page": "采购价格管理",
+"raw": 1584,
+"clean": 1407,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1146
+},
+{
+"mod": "采购管理",
+"page": "采购价目表",
+"raw": 2807,
+"clean": 2409,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1973
+},
+{
+"mod": "采购管理",
+"page": "采购价目表分发方案",
+"raw": 244,
+"clean": 201,
+"imgs": 0,
+"dup_of": null,
+"textlen": 158
+},
+{
+"mod": "采购管理",
+"page": "采购价目表调价",
+"raw": 278,
+"clean": 269,
+"imgs": 0,
+"dup_of": null,
+"textlen": 204
+},
+{
+"mod": "采购管理",
+"page": "采购入库单",
+"raw": 5043,
+"clean": 4336,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3528
+},
+{
+"mod": "采购管理",
+"page": "采购入库结算汇总表",
+"raw": 1745,
+"clean": 1079,
+"imgs": 0,
+"dup_of": null,
+"textlen": 870
+},
+{
+"mod": "采购管理",
+"page": "采购初始化指引",
+"raw": 147,
+"clean": 129,
+"imgs": 0,
+"dup_of": null,
+"textlen": 114
+},
+{
+"mod": "采购管理",
+"page": "采购初始化指引工作台",
+"raw": 147,
+"clean": 129,
+"imgs": 0,
+"dup_of": "采购初始化指引",
+"textlen": 114
+},
+{
+"mod": "采购管理",
+"page": "采购合同",
+"raw": 5180,
+"clean": 4658,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3770
+},
+{
+"mod": "采购管理",
+"page": "采购合同变更单",
+"raw": 177,
+"clean": 162,
+"imgs": 0,
+"dup_of": null,
+"textlen": 147
+},
+{
+"mod": "采购管理",
+"page": "采购合同执行明细表",
+"raw": 2701,
+"clean": 2386,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1991
+},
+{
+"mod": "采购管理",
+"page": "采购合同执行汇总表",
+"raw": 2671,
+"clean": 1601,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1308
+},
+{
+"mod": "采购管理",
+"page": "采购员",
+"raw": 576,
+"clean": 467,
+"imgs": 0,
+"dup_of": null,
+"textlen": 371
+},
+{
+"mod": "采购管理",
+"page": "采购对账单",
+"raw": 1203,
+"clean": 1098,
+"imgs": 0,
+"dup_of": null,
+"textlen": 906
+},
+{
+"mod": "采购管理",
+"page": "采购对账方案",
+"raw": 748,
+"clean": 704,
+"imgs": 0,
+"dup_of": null,
+"textlen": 556
+},
+{
+"mod": "采购管理",
+"page": "采购工作台",
+"raw": 1150,
+"clean": 1025,
+"imgs": 0,
+"dup_of": null,
+"textlen": 827
+},
+{
+"mod": "采购管理",
+"page": "采购应用流程图",
+"raw": 35,
+"clean": 32,
+"imgs": 0,
+"dup_of": null,
+"textlen": 26
+},
+{
+"mod": "采购管理",
+"page": "采购快速下单",
+"raw": 650,
+"clean": 597,
+"imgs": 0,
+"dup_of": null,
+"textlen": 515
+},
+{
+"mod": "采购管理",
+"page": "采购折扣管理",
+"raw": 1716,
+"clean": 1565,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1297
+},
+{
+"mod": "采购管理",
+"page": "采购折扣表",
+"raw": 1879,
+"clean": 1491,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1168
+},
+{
+"mod": "采购管理",
+"page": "采购操作手册",
+"raw": 9,
+"clean": 6,
+"imgs": 0,
+"dup_of": null,
+"textlen": 6
+},
+{
+"mod": "采购管理",
+"page": "采购条款",
+"raw": 596,
+"clean": 417,
+"imgs": 0,
+"dup_of": null,
+"textlen": 318
+},
+{
+"mod": "采购管理",
+"page": "采购条款列表",
+"raw": 242,
+"clean": 197,
+"imgs": 0,
+"dup_of": null,
+"textlen": 149
+},
+{
+"mod": "采购管理",
+"page": "采购申请单",
+"raw": 6023,
+"clean": 5095,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4109
+},
+{
+"mod": "采购管理",
+"page": "采购申请执行明细表",
+"raw": 3424,
+"clean": 2270,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1896
+},
+{
+"mod": "采购管理",
+"page": "采购申请执行汇总表",
+"raw": 2963,
+"clean": 1777,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1499
+},
+{
+"mod": "采购管理",
+"page": "采购管理",
+"raw": 11894,
+"clean": 10503,
+"imgs": 0,
+"dup_of": null,
+"textlen": 8998
+},
+{
+"mod": "采购管理",
+"page": "采购管理总体流程图",
+"raw": 38,
+"clean": 35,
+"imgs": 0,
+"dup_of": null,
+"textlen": 29
+},
+{
+"mod": "采购管理",
+"page": "采购管理概述",
+"raw": 313,
+"clean": 288,
+"imgs": 0,
+"dup_of": null,
+"textlen": 261
+},
+{
+"mod": "采购管理",
+"page": "采购管理系统参数",
+"raw": 8606,
+"clean": 7560,
+"imgs": 0,
+"dup_of": null,
+"textlen": 6015
+},
+{
+"mod": "采购管理",
+"page": "采购系统特性",
+"raw": 803,
+"clean": 792,
+"imgs": 0,
+"dup_of": null,
+"textlen": 710
+},
+{
+"mod": "采购管理",
+"page": "采购组",
+"raw": 476,
+"clean": 375,
+"imgs": 0,
+"dup_of": null,
+"textlen": 303
+},
+{
+"mod": "采购管理",
+"page": "采购组织管理",
+"raw": 154,
+"clean": 118,
+"imgs": 0,
+"dup_of": null,
+"textlen": 106
+},
+{
+"mod": "采购管理",
+"page": "采购计划方案",
+"raw": 605,
+"clean": 551,
+"imgs": 0,
+"dup_of": null,
+"textlen": 439
+},
+{
+"mod": "采购管理",
+"page": "采购订单",
+"raw": 13821,
+"clean": 9506,
+"imgs": 0,
+"dup_of": null,
+"textlen": 7737
+},
+{
+"mod": "采购管理",
+"page": "采购订单变更单",
+"raw": 3607,
+"clean": 3117,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2534
+},
+{
+"mod": "采购管理",
+"page": "采购订单执行明细表",
+"raw": 3623,
+"clean": 2395,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1977
+},
+{
+"mod": "采购管理",
+"page": "采购订单执行汇总表",
+"raw": 4156,
+"clean": 2939,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2518
+},
+{
+"mod": "采购管理",
+"page": "采购订单新变更单",
+"raw": 3240,
+"clean": 2287,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1859
+},
+{
+"mod": "采购管理",
+"page": "采购订单样例",
+"raw": 6575,
+"clean": 6005,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4873
+},
+{
+"mod": "采购管理",
+"page": "采购评估指标",
+"raw": 636,
+"clean": 580,
+"imgs": 0,
+"dup_of": null,
+"textlen": 459
+},
+{
+"mod": "采购管理",
+"page": "采购评估方案",
+"raw": 504,
+"clean": 445,
+"imgs": 0,
+"dup_of": null,
+"textlen": 361
+},
+{
+"mod": "采购管理",
+"page": "采购调价方案",
+"raw": 1624,
+"clean": 1367,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1122
+},
+{
+"mod": "采购管理",
+"page": "采购调价表",
+"raw": 1745,
+"clean": 1425,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1165
+},
+{
+"mod": "采购管理",
+"page": "采购辅助资料",
+"raw": 963,
+"clean": 743,
+"imgs": 0,
+"dup_of": null,
+"textlen": 562
+},
+{
+"mod": "采购管理",
+"page": "采购追料交货报表",
+"raw": 717,
+"clean": 659,
+"imgs": 0,
+"dup_of": null,
+"textlen": 518
+},
+{
+"mod": "采购管理",
+"page": "采购退料业务",
+"raw": 689,
+"clean": 599,
+"imgs": 0,
+"dup_of": null,
+"textlen": 539
+},
+{
+"mod": "采购管理",
+"page": "采购退料单",
+"raw": 4737,
+"clean": 3674,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2987
+},
+{
+"mod": "采购管理",
+"page": "集中化采购业务",
+"raw": 2385,
+"clean": 2183,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1828
+},
+{
+"mod": "采购管理",
+"page": "集中管理_分散采购",
+"raw": 43,
+"clean": 40,
+"imgs": 0,
+"dup_of": null,
+"textlen": 33
+},
+{
+"mod": "采购管理",
+"page": "集中管理分散采购",
+"raw": 434,
+"clean": 404,
+"imgs": 0,
+"dup_of": null,
+"textlen": 330
+},
+{
+"mod": "采购管理",
+"page": "集中采购_分散收货_集中结算",
+"raw": 53,
+"clean": 50,
+"imgs": 0,
+"dup_of": null,
+"textlen": 42
+},
+{
+"mod": "采购管理",
+"page": "集中采购_集中收货_集中结算",
+"raw": 53,
+"clean": 50,
+"imgs": 0,
+"dup_of": null,
+"textlen": 42
+},
+{
+"mod": "采购管理",
+"page": "零散采购流程图",
+"raw": 31,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 22
+},
+{
+"mod": "采购管理",
+"page": "零散采购订单",
+"raw": 655,
+"clean": 598,
+"imgs": 0,
+"dup_of": null,
+"textlen": 482
+},
+{
+"mod": "采购管理",
+"page": "预计供应量查询",
+"raw": 2288,
+"clean": 946,
+"imgs": 0,
+"dup_of": null,
+"textlen": 753
+},
+{
+"mod": "销售管理",
+"page": "gui客户端卡片主页",
+"raw": 267,
+"clean": 247,
+"imgs": 0,
+"dup_of": null,
+"textlen": 195
+},
+{
+"mod": "销售管理",
+"page": "业务流程和单据类型设置",
+"raw": 290,
+"clean": 236,
+"imgs": 0,
+"dup_of": null,
+"textlen": 193
+},
+{
+"mod": "销售管理",
+"page": "价格携带",
+"raw": 150,
+"clean": 143,
+"imgs": 0,
+"dup_of": null,
+"textlen": 113
+},
+{
+"mod": "销售管理",
+"page": "价格条件修改",
+"raw": 155,
+"clean": 148,
+"imgs": 0,
+"dup_of": null,
+"textlen": 127
+},
+{
+"mod": "销售管理",
+"page": "价格综合查询",
+"raw": 451,
+"clean": 396,
+"imgs": 0,
+"dup_of": null,
+"textlen": 322
+},
+{
+"mod": "销售管理",
+"page": "会员商品账户销售分析报表",
+"raw": 107,
+"clean": 96,
+"imgs": 0,
+"dup_of": null,
+"textlen": 82
+},
+{
+"mod": "销售管理",
+"page": "发货通知单",
+"raw": 2178,
+"clean": 2017,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1629
+},
+{
+"mod": "销售管理",
+"page": "取价规则",
+"raw": 524,
+"clean": 512,
+"imgs": 0,
+"dup_of": null,
+"textlen": 442
+},
+{
+"mod": "销售管理",
+"page": "受托加工材料清单",
+"raw": 183,
+"clean": 150,
+"imgs": 0,
+"dup_of": null,
+"textlen": 130
+},
+{
+"mod": "销售管理",
+"page": "可发量查询",
+"raw": 337,
+"clean": 277,
+"imgs": 0,
+"dup_of": null,
+"textlen": 218
+},
+{
+"mod": "销售管理",
+"page": "可销控制-客户物料",
+"raw": 888,
+"clean": 770,
+"imgs": 0,
+"dup_of": null,
+"textlen": 629
+},
+{
+"mod": "销售管理",
+"page": "可销控制-销售员客户",
+"raw": 929,
+"clean": 812,
+"imgs": 0,
+"dup_of": null,
+"textlen": 673
+},
+{
+"mod": "销售管理",
+"page": "可销控制-销售员物料",
+"raw": 913,
+"clean": 798,
+"imgs": 0,
+"dup_of": null,
+"textlen": 661
+},
+{
+"mod": "销售管理",
+"page": "可销设置",
+"raw": 68,
+"clean": 38,
+"imgs": 0,
+"dup_of": null,
+"textlen": 30
+},
+{
+"mod": "销售管理",
+"page": "员工销售明细报表",
+"raw": 1882,
+"clean": 1620,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1323
+},
+{
+"mod": "销售管理",
+"page": "员工销售汇总报表",
+"raw": 1625,
+"clean": 1390,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1143
+},
+{
+"mod": "销售管理",
+"page": "商品销售出库汇总表",
+"raw": 80,
+"clean": 69,
+"imgs": 0,
+"dup_of": null,
+"textlen": 58
+},
+{
+"mod": "销售管理",
+"page": "商品销售对比分析表",
+"raw": 78,
+"clean": 67,
+"imgs": 0,
+"dup_of": null,
+"textlen": 54
+},
+{
+"mod": "销售管理",
+"page": "套件销售",
+"raw": 784,
+"clean": 701,
+"imgs": 0,
+"dup_of": null,
+"textlen": 570
+},
+{
+"mod": "销售管理",
+"page": "套件销售业务",
+"raw": 1863,
+"clean": 1680,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1348
+},
+{
+"mod": "销售管理",
+"page": "定时模拟报价",
+"raw": 59,
+"clean": 44,
+"imgs": 0,
+"dup_of": null,
+"textlen": 38
+},
+{
+"mod": "销售管理",
+"page": "客户",
+"raw": 487,
+"clean": 414,
+"imgs": 0,
+"dup_of": null,
+"textlen": 308
+},
+{
+"mod": "销售管理",
+"page": "客户_餐饮",
+"raw": 762,
+"clean": 673,
+"imgs": 0,
+"dup_of": null,
+"textlen": 548
+},
+{
+"mod": "销售管理",
+"page": "客户中心使用流程",
+"raw": 415,
+"clean": 378,
+"imgs": 0,
+"dup_of": null,
+"textlen": 325
+},
+{
+"mod": "销售管理",
+"page": "客户中心概述",
+"raw": 158,
+"clean": 144,
+"imgs": 0,
+"dup_of": null,
+"textlen": 132
+},
+{
+"mod": "销售管理",
+"page": "客户中心系统特性",
+"raw": 340,
+"clean": 318,
+"imgs": 0,
+"dup_of": null,
+"textlen": 282
+},
+{
+"mod": "销售管理",
+"page": "客户交易分析",
+"raw": 849,
+"clean": 458,
+"imgs": 0,
+"dup_of": null,
+"textlen": 374
+},
+{
+"mod": "销售管理",
+"page": "客户关系管理概述",
+"raw": 115,
+"clean": 31,
+"imgs": 0,
+"dup_of": null,
+"textlen": 28
+},
+{
+"mod": "销售管理",
+"page": "客户分析",
+"raw": 730,
+"clean": 663,
+"imgs": 0,
+"dup_of": null,
+"textlen": 530
+},
+{
+"mod": "销售管理",
+"page": "客户分析应用场景",
+"raw": 106,
+"clean": 102,
+"imgs": 0,
+"dup_of": null,
+"textlen": 89
+},
+{
+"mod": "销售管理",
+"page": "客户分析操作说明",
+"raw": 238,
+"clean": 231,
+"imgs": 0,
+"dup_of": null,
+"textlen": 187
+},
+{
+"mod": "销售管理",
+"page": "客户发货及时率报表",
+"raw": 1365,
+"clean": 1285,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1082
+},
+{
+"mod": "销售管理",
+"page": "客户多方交易业务",
+"raw": 547,
+"clean": 490,
+"imgs": 0,
+"dup_of": null,
+"textlen": 416
+},
+{
+"mod": "销售管理",
+"page": "客户物料对应表",
+"raw": 840,
+"clean": 712,
+"imgs": 0,
+"dup_of": null,
+"textlen": 573
+},
+{
+"mod": "销售管理",
+"page": "客户维护",
+"raw": 363,
+"clean": 305,
+"imgs": 0,
+"dup_of": null,
+"textlen": 250
+},
+{
+"mod": "销售管理",
+"page": "客户资料维护",
+"raw": 429,
+"clean": 362,
+"imgs": 0,
+"dup_of": null,
+"textlen": 301
+},
+{
+"mod": "销售管理",
+"page": "寄售业务",
+"raw": 2010,
+"clean": 1817,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1531
+},
+{
+"mod": "销售管理",
+"page": "寄售仓库余额表",
+"raw": 878,
+"clean": 781,
+"imgs": 0,
+"dup_of": null,
+"textlen": 567
+},
+{
+"mod": "销售管理",
+"page": "寄售发货结算报表",
+"raw": 1380,
+"clean": 1272,
+"imgs": 0,
+"dup_of": null,
+"textlen": 956
+},
+{
+"mod": "销售管理",
+"page": "寄售结算单",
+"raw": 1844,
+"clean": 1708,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1310
+},
+{
+"mod": "销售管理",
+"page": "寄售订单发货及时率报表",
+"raw": 112,
+"clean": 106,
+"imgs": 0,
+"dup_of": null,
+"textlen": 83
+},
+{
+"mod": "销售管理",
+"page": "寄售调拔退回_无源单_结算冲销方案",
+"raw": 131,
+"clean": 122,
+"imgs": 0,
+"dup_of": null,
+"textlen": 106
+},
+{
+"mod": "销售管理",
+"page": "寄售调拔退回冲销记录",
+"raw": 131,
+"clean": 122,
+"imgs": 0,
+"dup_of": "寄售调拔退回_无源单_结算冲销方案",
+"textlen": 106
+},
+{
+"mod": "销售管理",
+"page": "寄售调拨退回_无源单_结算冲销方案",
+"raw": 127,
+"clean": 122,
+"imgs": 0,
+"dup_of": "寄售调拔退回_无源单_结算冲销方案",
+"textlen": 106
+},
+{
+"mod": "销售管理",
+"page": "寄售调拨退回冲销记录",
+"raw": 127,
+"clean": 122,
+"imgs": 0,
+"dup_of": "寄售调拔退回_无源单_结算冲销方案",
+"textlen": 106
+},
+{
+"mod": "销售管理",
+"page": "快递100参数设置",
+"raw": 152,
+"clean": 123,
+"imgs": 0,
+"dup_of": null,
+"textlen": 96
+},
+{
+"mod": "销售管理",
+"page": "快递100参数配置",
+"raw": 125,
+"clean": 118,
+"imgs": 0,
+"dup_of": null,
+"textlen": 98
+},
+{
+"mod": "销售管理",
+"page": "快递100物流公司",
+"raw": 176,
+"clean": 134,
+"imgs": 0,
+"dup_of": null,
+"textlen": 100
+},
+{
+"mod": "销售管理",
+"page": "批量调价单",
+"raw": 312,
+"clean": 243,
+"imgs": 0,
+"dup_of": null,
+"textlen": 182
+},
+{
+"mod": "销售管理",
+"page": "折扣",
+"raw": 376,
+"clean": 357,
+"imgs": 0,
+"dup_of": null,
+"textlen": 298
+},
+{
+"mod": "销售管理",
+"page": "折扣携带",
+"raw": 145,
+"clean": 138,
+"imgs": 0,
+"dup_of": null,
+"textlen": 121
+},
+{
+"mod": "销售管理",
+"page": "折扣条件修改",
+"raw": 158,
+"clean": 151,
+"imgs": 0,
+"dup_of": null,
+"textlen": 130
+},
+{
+"mod": "销售管理",
+"page": "折扣码管理",
+"raw": 531,
+"clean": 470,
+"imgs": 0,
+"dup_of": null,
+"textlen": 373
+},
+{
+"mod": "销售管理",
+"page": "折扣获取规则",
+"raw": 1119,
+"clean": 1081,
+"imgs": 0,
+"dup_of": null,
+"textlen": 878
+},
+{
+"mod": "销售管理",
+"page": "按交货计划出货",
+"raw": 551,
+"clean": 489,
+"imgs": 0,
+"dup_of": null,
+"textlen": 401
+},
+{
+"mod": "销售管理",
+"page": "收款计划及预收",
+"raw": 674,
+"clean": 596,
+"imgs": 0,
+"dup_of": null,
+"textlen": 492
+},
+{
+"mod": "销售管理",
+"page": "新增销售时段分析报表",
+"raw": 21,
+"clean": 11,
+"imgs": 0,
+"dup_of": null,
+"textlen": 8
+},
+{
+"mod": "销售管理",
+"page": "最新价格查询",
+"raw": 55,
+"clean": 40,
+"imgs": 0,
+"dup_of": null,
+"textlen": 35
+},
+{
+"mod": "销售管理",
+"page": "服务类销售业务",
+"raw": 1079,
+"clean": 990,
+"imgs": 0,
+"dup_of": null,
+"textlen": 808
+},
+{
+"mod": "销售管理",
+"page": "期初销售出库单",
+"raw": 1090,
+"clean": 943,
+"imgs": 0,
+"dup_of": null,
+"textlen": 749
+},
+{
+"mod": "销售管理",
+"page": "标准销售业务",
+"raw": 1117,
+"clean": 975,
+"imgs": 0,
+"dup_of": null,
+"textlen": 844
+},
+{
+"mod": "销售管理",
+"page": "模拟报价",
+"raw": 7623,
+"clean": 5480,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4721
+},
+{
+"mod": "销售管理",
+"page": "模拟报价单",
+"raw": 4548,
+"clean": 2664,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2300
+},
+{
+"mod": "销售管理",
+"page": "模拟报价向导",
+"raw": 1872,
+"clean": 1741,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1550
+},
+{
+"mod": "销售管理",
+"page": "物料",
+"raw": 35387,
+"clean": 9446,
+"imgs": 0,
+"dup_of": null,
+"textlen": 7996
+},
+{
+"mod": "销售管理",
+"page": "物料分组标准费率",
+"raw": 82,
+"clean": 79,
+"imgs": 0,
+"dup_of": null,
+"textlen": 74
+},
+{
+"mod": "销售管理",
+"page": "物流跟踪_快递100",
+"raw": 444,
+"clean": 381,
+"imgs": 0,
+"dup_of": null,
+"textlen": 300
+},
+{
+"mod": "销售管理",
+"page": "直运销售业务",
+"raw": 904,
+"clean": 797,
+"imgs": 0,
+"dup_of": null,
+"textlen": 687
+},
+{
+"mod": "销售管理",
+"page": "第三方卡券销售分析报表",
+"raw": 89,
+"clean": 78,
+"imgs": 0,
+"dup_of": null,
+"textlen": 65
+},
+{
+"mod": "销售管理",
+"page": "自动发货方案设置",
+"raw": 239,
+"clean": 193,
+"imgs": 0,
+"dup_of": null,
+"textlen": 166
+},
+{
+"mod": "销售管理",
+"page": "营业员销售日报表",
+"raw": 69,
+"clean": 56,
+"imgs": 0,
+"dup_of": null,
+"textlen": 45
+},
+{
+"mod": "销售管理",
+"page": "订单表头-客户信息页签",
+"raw": 86,
+"clean": 29,
+"imgs": 0,
+"dup_of": "1688集成",
+"textlen": 0
+},
+{
+"mod": "销售管理",
+"page": "订单进度跟踪",
+"raw": 3581,
+"clean": 1576,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1249
+},
+{
+"mod": "销售管理",
+"page": "跨组织销售的应用",
+"raw": 1518,
+"clean": 1429,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1212
+},
+{
+"mod": "销售管理",
+"page": "辅助资料",
+"raw": 274,
+"clean": 195,
+"imgs": 0,
+"dup_of": null,
+"textlen": 153
+},
+{
+"mod": "销售管理",
+"page": "返利管理销售数据准备",
+"raw": 1116,
+"clean": 994,
+"imgs": 0,
+"dup_of": null,
+"textlen": 853
+},
+{
+"mod": "销售管理",
+"page": "退货通知单",
+"raw": 809,
+"clean": 718,
+"imgs": 0,
+"dup_of": null,
+"textlen": 541
+},
+{
+"mod": "销售管理",
+"page": "销售云巡检",
+"raw": 93,
+"clean": 65,
+"imgs": 0,
+"dup_of": null,
+"textlen": 52
+},
+{
+"mod": "销售管理",
+"page": "销售价格分析表",
+"raw": 137,
+"clean": 128,
+"imgs": 0,
+"dup_of": null,
+"textlen": 111
+},
+{
+"mod": "销售管理",
+"page": "销售价格管理",
+"raw": 2391,
+"clean": 2273,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1934
+},
+{
+"mod": "销售管理",
+"page": "销售价目表",
+"raw": 2139,
+"clean": 1947,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1540
+},
+{
+"mod": "销售管理",
+"page": "销售保证金",
+"raw": 459,
+"clean": 410,
+"imgs": 0,
+"dup_of": null,
+"textlen": 337
+},
+{
+"mod": "销售管理",
+"page": "销售信用",
+"raw": 509,
+"clean": 445,
+"imgs": 0,
+"dup_of": null,
+"textlen": 342
+},
+{
+"mod": "销售管理",
+"page": "销售出库利润估算分析表",
+"raw": 982,
+"clean": 891,
+"imgs": 0,
+"dup_of": null,
+"textlen": 677
+},
+{
+"mod": "销售管理",
+"page": "销售出库单",
+"raw": 2308,
+"clean": 2127,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1691
+},
+{
+"mod": "销售管理",
+"page": "销售出库开票跟踪报表",
+"raw": 132,
+"clean": 123,
+"imgs": 0,
+"dup_of": null,
+"textlen": 104
+},
+{
+"mod": "销售管理",
+"page": "销售出库开票跟踪表",
+"raw": 128,
+"clean": 123,
+"imgs": 0,
+"dup_of": "销售出库开票跟踪报表",
+"textlen": 104
+},
+{
+"mod": "销售管理",
+"page": "销售出库明细报表",
+"raw": 725,
+"clean": 642,
+"imgs": 0,
+"dup_of": null,
+"textlen": 500
+},
+{
+"mod": "销售管理",
+"page": "销售出库汇总报表",
+"raw": 815,
+"clean": 730,
+"imgs": 0,
+"dup_of": null,
+"textlen": 569
+},
+{
+"mod": "销售管理",
+"page": "销售出库退货未应收冲销",
+"raw": 618,
+"clean": 560,
+"imgs": 0,
+"dup_of": null,
+"textlen": 465
+},
+{
+"mod": "销售管理",
+"page": "销售分析",
+"raw": 1045,
+"clean": 873,
+"imgs": 0,
+"dup_of": null,
+"textlen": 693
+},
+{
+"mod": "销售管理",
+"page": "销售初始化指引工作台",
+"raw": 196,
+"clean": 175,
+"imgs": 0,
+"dup_of": null,
+"textlen": 157
+},
+{
+"mod": "销售管理",
+"page": "销售利润估算分析表",
+"raw": 1541,
+"clean": 1434,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1135
+},
+{
+"mod": "销售管理",
+"page": "销售助手轻应用",
+"raw": 385,
+"clean": 338,
+"imgs": 0,
+"dup_of": null,
+"textlen": 269
+},
+{
+"mod": "销售管理",
+"page": "销售发货检验",
+"raw": 215,
+"clean": 171,
+"imgs": 0,
+"dup_of": null,
+"textlen": 138
+},
+{
+"mod": "销售管理",
+"page": "销售合同",
+"raw": 16,
+"clean": 13,
+"imgs": 0,
+"dup_of": null,
+"textlen": 12
+},
+{
+"mod": "销售管理",
+"page": "销售合同变更单",
+"raw": 113,
+"clean": 91,
+"imgs": 0,
+"dup_of": null,
+"textlen": 68
+},
+{
+"mod": "销售管理",
+"page": "销售合同执行明细表",
+"raw": 99,
+"clean": 84,
+"imgs": 0,
+"dup_of": null,
+"textlen": 72
+},
+{
+"mod": "销售管理",
+"page": "销售合同执行汇总表",
+"raw": 116,
+"clean": 113,
+"imgs": 0,
+"dup_of": null,
+"textlen": 102
+},
+{
+"mod": "销售管理",
+"page": "销售地图",
+"raw": 467,
+"clean": 403,
+"imgs": 0,
+"dup_of": null,
+"textlen": 315
+},
+{
+"mod": "销售管理",
+"page": "销售地图应用场景",
+"raw": 97,
+"clean": 93,
+"imgs": 0,
+"dup_of": null,
+"textlen": 81
+},
+{
+"mod": "销售管理",
+"page": "销售地图操作说明",
+"raw": 152,
+"clean": 144,
+"imgs": 0,
+"dup_of": null,
+"textlen": 108
+},
+{
+"mod": "销售管理",
+"page": "销售对比分析表",
+"raw": 61,
+"clean": 50,
+"imgs": 0,
+"dup_of": null,
+"textlen": 39
+},
+{
+"mod": "销售管理",
+"page": "销售工作台",
+"raw": 2087,
+"clean": 1924,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1573
+},
+{
+"mod": "销售管理",
+"page": "销售快速下单",
+"raw": 783,
+"clean": 730,
+"imgs": 0,
+"dup_of": null,
+"textlen": 630
+},
+{
+"mod": "销售管理",
+"page": "销售折扣管理",
+"raw": 983,
+"clean": 914,
+"imgs": 0,
+"dup_of": null,
+"textlen": 784
+},
+{
+"mod": "销售管理",
+"page": "销售折扣表",
+"raw": 3026,
+"clean": 1361,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1033
+},
+{
+"mod": "销售管理",
+"page": "销售报价",
+"raw": 7,
+"clean": 4,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4
+},
+{
+"mod": "销售管理",
+"page": "销售报价单",
+"raw": 1913,
+"clean": 1769,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1394
+},
+{
+"mod": "销售管理",
+"page": "销售报价变更单",
+"raw": 116,
+"clean": 94,
+"imgs": 0,
+"dup_of": null,
+"textlen": 71
+},
+{
+"mod": "销售管理",
+"page": "销售排名明细表",
+"raw": 52,
+"clean": 49,
+"imgs": 0,
+"dup_of": null,
+"textlen": 45
+},
+{
+"mod": "销售管理",
+"page": "销售排名表",
+"raw": 1207,
+"clean": 1104,
+"imgs": 0,
+"dup_of": null,
+"textlen": 850
+},
+{
+"mod": "销售管理",
+"page": "销售收入",
+"raw": 953,
+"clean": 843,
+"imgs": 0,
+"dup_of": null,
+"textlen": 661
+},
+{
+"mod": "销售管理",
+"page": "销售收入应用场景",
+"raw": 124,
+"clean": 120,
+"imgs": 0,
+"dup_of": null,
+"textlen": 104
+},
+{
+"mod": "销售管理",
+"page": "销售收入操作说明",
+"raw": 236,
+"clean": 228,
+"imgs": 0,
+"dup_of": null,
+"textlen": 175
+},
+{
+"mod": "销售管理",
+"page": "销售收款轻应用",
+"raw": 328,
+"clean": 275,
+"imgs": 0,
+"dup_of": null,
+"textlen": 211
+},
+{
+"mod": "销售管理",
+"page": "销售条款",
+"raw": 177,
+"clean": 122,
+"imgs": 0,
+"dup_of": null,
+"textlen": 89
+},
+{
+"mod": "销售管理",
+"page": "销售物流信息",
+"raw": 123,
+"clean": 118,
+"imgs": 0,
+"dup_of": null,
+"textlen": 105
+},
+{
+"mod": "销售管理",
+"page": "销售物流信息列表",
+"raw": 127,
+"clean": 118,
+"imgs": 0,
+"dup_of": "销售物流信息",
+"textlen": 105
+},
+{
+"mod": "销售管理",
+"page": "销售管理",
+"raw": 2178,
+"clean": 1447,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1159
+},
+{
+"mod": "销售管理",
+"page": "销售管理使用流程",
+"raw": 670,
+"clean": 627,
+"imgs": 0,
+"dup_of": null,
+"textlen": 469
+},
+{
+"mod": "销售管理",
+"page": "销售管理导航页",
+"raw": 1406,
+"clean": 973,
+"imgs": 0,
+"dup_of": null,
+"textlen": 736
+},
+{
+"mod": "销售管理",
+"page": "销售管理总体流程图",
+"raw": 40,
+"clean": 37,
+"imgs": 0,
+"dup_of": null,
+"textlen": 28
+},
+{
+"mod": "销售管理",
+"page": "销售管理系统参数",
+"raw": 12925,
+"clean": 5447,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4779
+},
+{
+"mod": "销售管理",
+"page": "销售系统参数",
+"raw": 12259,
+"clean": 5066,
+"imgs": 0,
+"dup_of": null,
+"textlen": 4432
+},
+{
+"mod": "销售管理",
+"page": "销售自动发货",
+"raw": 239,
+"clean": 193,
+"imgs": 0,
+"dup_of": "自动发货方案设置",
+"textlen": 166
+},
+{
+"mod": "销售管理",
+"page": "销售订单",
+"raw": 8463,
+"clean": 7939,
+"imgs": 0,
+"dup_of": null,
+"textlen": 6432
+},
+{
+"mod": "销售管理",
+"page": "销售订单交期预警",
+"raw": 304,
+"clean": 251,
+"imgs": 0,
+"dup_of": null,
+"textlen": 192
+},
+{
+"mod": "销售管理",
+"page": "销售订单发货及时率报表",
+"raw": 1656,
+"clean": 1550,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1260
+},
+{
+"mod": "销售管理",
+"page": "销售订单变更单",
+"raw": 211,
+"clean": 167,
+"imgs": 0,
+"dup_of": null,
+"textlen": 121
+},
+{
+"mod": "销售管理",
+"page": "销售订单执行明细表",
+"raw": 2090,
+"clean": 1970,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1551
+},
+{
+"mod": "销售管理",
+"page": "销售订单执行汇总表",
+"raw": 2186,
+"clean": 2060,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1568
+},
+{
+"mod": "销售管理",
+"page": "销售订单新变更单",
+"raw": 457,
+"clean": 385,
+"imgs": 0,
+"dup_of": null,
+"textlen": 304
+},
+{
+"mod": "销售管理",
+"page": "销售订单新变更单查询",
+"raw": 270,
+"clean": 214,
+"imgs": 0,
+"dup_of": null,
+"textlen": 173
+},
+{
+"mod": "销售管理",
+"page": "销售订单锁库和预留",
+"raw": 1727,
+"clean": 1579,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1303
+},
+{
+"mod": "销售管理",
+"page": "销售调价方案",
+"raw": 1305,
+"clean": 1113,
+"imgs": 0,
+"dup_of": null,
+"textlen": 880
+},
+{
+"mod": "销售管理",
+"page": "销售赠品",
+"raw": 211,
+"clean": 152,
+"imgs": 0,
+"dup_of": null,
+"textlen": 121
+},
+{
+"mod": "销售管理",
+"page": "销售退货业务",
+"raw": 1255,
+"clean": 1126,
+"imgs": 0,
+"dup_of": null,
+"textlen": 937
+},
+{
+"mod": "销售管理",
+"page": "销售退货单",
+"raw": 1200,
+"clean": 1084,
+"imgs": 0,
+"dup_of": null,
+"textlen": 837
+},
+{
+"mod": "销售管理",
+"page": "销售退货检验",
+"raw": 253,
+"clean": 208,
+"imgs": 0,
+"dup_of": null,
+"textlen": 169
+},
+{
+"mod": "销售管理",
+"page": "门店协同销售管理",
+"raw": 337,
+"clean": 294,
+"imgs": 0,
+"dup_of": null,
+"textlen": 227
+},
+{
+"mod": "销售管理",
+"page": "门店要货",
+"raw": 1406,
+"clean": 973,
+"imgs": 0,
+"dup_of": "销售管理导航页",
+"textlen": 736
+},
+{
+"mod": "销售管理",
+"page": "门店销售对比分析表",
+"raw": 83,
+"clean": 71,
+"imgs": 0,
+"dup_of": null,
+"textlen": 57
+},
+{
+"mod": "销售管理",
+"page": "预算报表客户端取数公式",
+"raw": 2938,
+"clean": 2569,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2121
+},
+{
+"mod": "销售管理",
+"page": "预计可发量参数",
+"raw": 135,
+"clean": 113,
+"imgs": 0,
+"dup_of": null,
+"textlen": 98
+},
+{
+"mod": "销售管理",
+"page": "预计可发量查询报表",
+"raw": 185,
+"clean": 165,
+"imgs": 0,
+"dup_of": null,
+"textlen": 137
+},
+{
+"mod": "销售管理",
+"page": "食品折扣优惠方案",
+"raw": 981,
+"clean": 912,
+"imgs": 0,
+"dup_of": null,
+"textlen": 713
+},
+{
+"mod": "信用管理",
+"page": "临时信用档案",
+"raw": 2012,
+"clean": 841,
+"imgs": 0,
+"dup_of": null,
+"textlen": 691
+},
+{
+"mod": "信用管理",
+"page": "信用初始化",
+"raw": 912,
+"clean": 850,
+"imgs": 0,
+"dup_of": null,
+"textlen": 705
+},
+{
+"mod": "信用管理",
+"page": "信用占用表数据反清理",
+"raw": 260,
+"clean": 252,
+"imgs": 0,
+"dup_of": null,
+"textlen": 216
+},
+{
+"mod": "信用管理",
+"page": "信用占用表数据清理",
+"raw": 298,
+"clean": 290,
+"imgs": 0,
+"dup_of": null,
+"textlen": 236
+},
+{
+"mod": "信用管理",
+"page": "信用占用表数据清理单据查询",
+"raw": 357,
+"clean": 336,
+"imgs": 0,
+"dup_of": null,
+"textlen": 280
+},
+{
+"mod": "信用管理",
+"page": "信用变更",
+"raw": 641,
+"clean": 581,
+"imgs": 0,
+"dup_of": null,
+"textlen": 465
+},
+{
+"mod": "信用管理",
+"page": "信用异常检查工具",
+"raw": 1300,
+"clean": 810,
+"imgs": 0,
+"dup_of": null,
+"textlen": 702
+},
+{
+"mod": "信用管理",
+"page": "信用总额特批",
+"raw": 3319,
+"clean": 1233,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1015
+},
+{
+"mod": "信用管理",
+"page": "信用总额特批情况查询",
+"raw": 1361,
+"clean": 779,
+"imgs": 0,
+"dup_of": null,
+"textlen": 651
+},
+{
+"mod": "信用管理",
+"page": "信用总额特批报表",
+"raw": 643,
+"clean": 554,
+"imgs": 0,
+"dup_of": null,
+"textlen": 458
+},
+{
+"mod": "信用管理",
+"page": "信用月结控制计算",
+"raw": 836,
+"clean": 770,
+"imgs": 0,
+"dup_of": null,
+"textlen": 656
+},
+{
+"mod": "信用管理",
+"page": "信用档案",
+"raw": 6415,
+"clean": 1769,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1480
+},
+{
+"mod": "信用管理",
+"page": "信用检查规则",
+"raw": 5195,
+"clean": 1962,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1677
+},
+{
+"mod": "信用管理",
+"page": "信用特批权限",
+"raw": 1632,
+"clean": 763,
+"imgs": 0,
+"dup_of": null,
+"textlen": 633
+},
+{
+"mod": "信用管理",
+"page": "信用状况查询",
+"raw": 3645,
+"clean": 1216,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1012
+},
+{
+"mod": "信用管理",
+"page": "信用等级方案",
+"raw": 503,
+"clean": 454,
+"imgs": 0,
+"dup_of": null,
+"textlen": 385
+},
+{
+"mod": "信用管理",
+"page": "信用管理",
+"raw": 4916,
+"clean": 4085,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3281
+},
+{
+"mod": "信用管理",
+"page": "信用管理系统参数",
+"raw": 7674,
+"clean": 2398,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2068
+},
+{
+"mod": "信用管理",
+"page": "信用评估",
+"raw": 61,
+"clean": 34,
+"imgs": 0,
+"dup_of": null,
+"textlen": 30
+},
+{
+"mod": "信用管理",
+"page": "信用评估指标",
+"raw": 696,
+"clean": 649,
+"imgs": 0,
+"dup_of": null,
+"textlen": 515
+},
+{
+"mod": "信用管理",
+"page": "信用评估模型",
+"raw": 583,
+"clean": 523,
+"imgs": 0,
+"dup_of": null,
+"textlen": 430
+},
+{
+"mod": "信用管理",
+"page": "信用评分表",
+"raw": 2970,
+"clean": 1384,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1165
+},
+{
+"mod": "信用管理",
+"page": "信用超标记录查询",
+"raw": 1681,
+"clean": 1006,
+"imgs": 0,
+"dup_of": null,
+"textlen": 851
+},
+{
+"mod": "信用管理",
+"page": "信用重算",
+"raw": 1284,
+"clean": 1214,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1014
+},
+{
+"mod": "信用管理",
+"page": "信用重算冲突操作列表",
+"raw": 183,
+"clean": 172,
+"imgs": 0,
+"dup_of": null,
+"textlen": 135
+},
+{
+"mod": "信用管理",
+"page": "信用额度占用明细查询",
+"raw": 2146,
+"clean": 554,
+"imgs": 0,
+"dup_of": null,
+"textlen": 480
+},
+{
+"mod": "信用管理",
+"page": "信用额度占用表数据反清理",
+"raw": 256,
+"clean": 248,
+"imgs": 0,
+"dup_of": "信用占用表数据反清理",
+"textlen": 216
+},
+{
+"mod": "信用管理",
+"page": "信用额度占用表数据清理",
+"raw": 295,
+"clean": 287,
+"imgs": 0,
+"dup_of": "信用占用表数据清理",
+"textlen": 236
+},
+{
+"mod": "信用管理",
+"page": "创建信用评分表",
+"raw": 1363,
+"clean": 548,
+"imgs": 0,
+"dup_of": null,
+"textlen": 461
+},
+{
+"mod": "信用管理",
+"page": "客户物料临时信用档案",
+"raw": 1701,
+"clean": 864,
+"imgs": 0,
+"dup_of": null,
+"textlen": 698
+},
+{
+"mod": "信用管理",
+"page": "客户物料信用档案",
+"raw": 2396,
+"clean": 966,
+"imgs": 0,
+"dup_of": null,
+"textlen": 791
+},
+{
+"mod": "信用管理",
+"page": "销售员客户信用档案",
+"raw": 757,
+"clean": 723,
+"imgs": 0,
+"dup_of": null,
+"textlen": 606
+},
+{
+"mod": "信用管理",
+"page": "销售组客户临时信用档案",
+"raw": 1191,
+"clean": 605,
+"imgs": 0,
+"dup_of": null,
+"textlen": 493
+},
+{
+"mod": "信用管理",
+"page": "销售组客户信用档案",
+"raw": 754,
+"clean": 721,
+"imgs": 0,
+"dup_of": null,
+"textlen": 604
+},
+{
+"mod": "供应商协同",
+"page": "企业公告",
+"raw": 692,
+"clean": 586,
+"imgs": 0,
+"dup_of": null,
+"textlen": 444
+},
+{
+"mod": "供应商协同",
+"page": "供应商到货及时率报表",
+"raw": 2249,
+"clean": 1219,
+"imgs": 0,
+"dup_of": "供应商到货及时率",
+"textlen": 996
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同",
+"raw": 8821,
+"clean": 7909,
+"imgs": 0,
+"dup_of": null,
+"textlen": 6788
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同vmi出入库汇总表",
+"raw": 1699,
+"clean": 1066,
+"imgs": 0,
+"dup_of": null,
+"textlen": 862
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同vmi消耗汇总表",
+"raw": 2544,
+"clean": 2178,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1772
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同vmi消耗结算明细表",
+"raw": 1444,
+"clean": 1220,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1011
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同vmi物料出入库明细表",
+"raw": 2269,
+"clean": 1214,
+"imgs": 0,
+"dup_of": null,
+"textlen": 982
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同即时库存查询",
+"raw": 392,
+"clean": 312,
+"imgs": 0,
+"dup_of": null,
+"textlen": 258
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同平台付款申请单列表",
+"raw": 1472,
+"clean": 673,
+"imgs": 0,
+"dup_of": null,
+"textlen": 577
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同条码打印",
+"raw": 807,
+"clean": 652,
+"imgs": 0,
+"dup_of": null,
+"textlen": 484
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同条码扫描",
+"raw": 18,
+"clean": 11,
+"imgs": 0,
+"dup_of": null,
+"textlen": 11
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同系统特性",
+"raw": 911,
+"clean": 862,
+"imgs": 0,
+"dup_of": null,
+"textlen": 703
+},
+{
+"mod": "供应商协同",
+"page": "供应商协同采购追料交货报表",
+"raw": 1223,
+"clean": 1026,
+"imgs": 0,
+"dup_of": "供应商采购追料交货报表",
+"textlen": 817
+},
+{
+"mod": "供应商协同",
+"page": "供应商注册资料",
+"raw": 681,
+"clean": 322,
+"imgs": 0,
+"dup_of": null,
+"textlen": 249
+},
+{
+"mod": "供应商协同",
+"page": "供应商用户",
+"raw": 357,
+"clean": 251,
+"imgs": 0,
+"dup_of": null,
+"textlen": 193
+},
+{
+"mod": "供应商协同",
+"page": "供应商角色",
+"raw": 377,
+"clean": 281,
+"imgs": 0,
+"dup_of": null,
+"textlen": 230
+},
+{
+"mod": "供应商协同",
+"page": "供应商评估报告",
+"raw": 482,
+"clean": 272,
+"imgs": 0,
+"dup_of": null,
+"textlen": 211
+},
+{
+"mod": "供应商协同",
+"page": "报价单",
+"raw": 1996,
+"clean": 1349,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1020
+},
+{
+"mod": "供应商协同",
+"page": "来料检验单",
+"raw": 6210,
+"clean": 2322,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1844
+},
+{
+"mod": "供应商协同",
+"page": "比价单",
+"raw": 2058,
+"clean": 1655,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1314
+},
+{
+"mod": "供应商协同",
+"page": "第三方消息",
+"raw": 2007,
+"clean": 1781,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1455
+},
+{
+"mod": "供应商协同",
+"page": "第三方消息设置",
+"raw": 516,
+"clean": 428,
+"imgs": 0,
+"dup_of": null,
+"textlen": 344
+},
+{
+"mod": "供应商协同",
+"page": "询价单",
+"raw": 3028,
+"clean": 2657,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2071
+},
+{
+"mod": "供应商协同",
+"page": "退料通知单",
+"raw": 352,
+"clean": 272,
+"imgs": 0,
+"dup_of": null,
+"textlen": 223
+},
+{
+"mod": "供应商协同",
+"page": "送货通知单",
+"raw": 414,
+"clean": 328,
+"imgs": 0,
+"dup_of": null,
+"textlen": 260
+},
+{
+"mod": "组织间结算",
+"page": "内部交易单据报表",
+"raw": 1128,
+"clean": 862,
+"imgs": 0,
+"dup_of": null,
+"textlen": 718
+},
+{
+"mod": "组织间结算",
+"page": "内部客户内部供应商设置",
+"raw": 500,
+"clean": 489,
+"imgs": 0,
+"dup_of": null,
+"textlen": 424
+},
+{
+"mod": "组织间结算",
+"page": "内部往来通知单勾稽",
+"raw": 393,
+"clean": 288,
+"imgs": 0,
+"dup_of": null,
+"textlen": 237
+},
+{
+"mod": "组织间结算",
+"page": "内部抵消查询",
+"raw": 1837,
+"clean": 1773,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1337
+},
+{
+"mod": "组织间结算",
+"page": "创建结算清单",
+"raw": 5567,
+"clean": 3729,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3209
+},
+{
+"mod": "组织间结算",
+"page": "定时结算",
+"raw": 568,
+"clean": 545,
+"imgs": 0,
+"dup_of": null,
+"textlen": 447
+},
+{
+"mod": "组织间结算",
+"page": "应付结算清单_物料",
+"raw": 299,
+"clean": 284,
+"imgs": 0,
+"dup_of": null,
+"textlen": 225
+},
+{
+"mod": "组织间结算",
+"page": "应付结算清单_费用",
+"raw": 523,
+"clean": 505,
+"imgs": 0,
+"dup_of": null,
+"textlen": 406
+},
+{
+"mod": "组织间结算",
+"page": "应付结算清单_资产",
+"raw": 533,
+"clean": 506,
+"imgs": 0,
+"dup_of": null,
+"textlen": 407
+},
+{
+"mod": "组织间结算",
+"page": "应收结算清单_物料",
+"raw": 1225,
+"clean": 1147,
+"imgs": 0,
+"dup_of": null,
+"textlen": 953
+},
+{
+"mod": "组织间结算",
+"page": "应收结算清单_费用",
+"raw": 523,
+"clean": 505,
+"imgs": 0,
+"dup_of": "应付结算清单_费用",
+"textlen": 406
+},
+{
+"mod": "组织间结算",
+"page": "应收结算清单_资产",
+"raw": 533,
+"clean": 506,
+"imgs": 0,
+"dup_of": "应付结算清单_资产",
+"textlen": 407
+},
+{
+"mod": "组织间结算",
+"page": "批量创建内部交易单据",
+"raw": 513,
+"clean": 480,
+"imgs": 0,
+"dup_of": null,
+"textlen": 395
+},
+{
+"mod": "组织间结算",
+"page": "批量生成内部交易单据",
+"raw": 490,
+"clean": 471,
+"imgs": 0,
+"dup_of": "批量创建内部交易单据",
+"textlen": 395
+},
+{
+"mod": "组织间结算",
+"page": "抵消分录",
+"raw": 205,
+"clean": 198,
+"imgs": 0,
+"dup_of": null,
+"textlen": 173
+},
+{
+"mod": "组织间结算",
+"page": "未生成内部交易单据查询",
+"raw": 110,
+"clean": 100,
+"imgs": 0,
+"dup_of": null,
+"textlen": 72
+},
+{
+"mod": "组织间结算",
+"page": "未生成内部交易单据跨组织业务查询",
+"raw": 929,
+"clean": 812,
+"imgs": 0,
+"dup_of": null,
+"textlen": 685
+},
+{
+"mod": "组织间结算",
+"page": "未生成结算清单跨组织业务查询",
+"raw": 978,
+"clean": 858,
+"imgs": 0,
+"dup_of": null,
+"textlen": 727
+},
+{
+"mod": "组织间结算",
+"page": "模拟组织间需求单",
+"raw": 97,
+"clean": 73,
+"imgs": 0,
+"dup_of": null,
+"textlen": 63
+},
+{
+"mod": "组织间结算",
+"page": "组织间交易利润分析表",
+"raw": 5035,
+"clean": 1587,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1321
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算",
+"raw": 2372,
+"clean": 2004,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1671
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算价目表",
+"raw": 1527,
+"clean": 1137,
+"imgs": 0,
+"dup_of": null,
+"textlen": 932
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算关系",
+"raw": 1190,
+"clean": 719,
+"imgs": 0,
+"dup_of": null,
+"textlen": 612
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算冲突操作列表",
+"raw": 171,
+"clean": 158,
+"imgs": 0,
+"dup_of": null,
+"textlen": 127
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算分析报告",
+"raw": 1553,
+"clean": 1370,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1132
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算取价指引",
+"raw": 3772,
+"clean": 3092,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2477
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算对账明细表",
+"raw": 4376,
+"clean": 2002,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1700
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算系统参数",
+"raw": 5539,
+"clean": 1931,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1709
+},
+{
+"mod": "组织间结算",
+"page": "组织间结算结账检查",
+"raw": 1245,
+"clean": 894,
+"imgs": 0,
+"dup_of": null,
+"textlen": 809
+},
+{
+"mod": "组织间结算",
+"page": "组织间需求单",
+"raw": 949,
+"clean": 809,
+"imgs": 0,
+"dup_of": null,
+"textlen": 655
+},
+{
+"mod": "组织间结算",
+"page": "组织间需求单批量维护",
+"raw": 1495,
+"clean": 1259,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1015
+},
+{
+"mod": "组织间结算",
+"page": "结算业务单据选择方案",
+"raw": 480,
+"clean": 372,
+"imgs": 0,
+"dup_of": null,
+"textlen": 302
+},
+{
+"mod": "组织间结算",
+"page": "结算调价表",
+"raw": 464,
+"clean": 420,
+"imgs": 0,
+"dup_of": null,
+"textlen": 326
+},
+{
+"mod": "组织间结算",
+"page": "获取组织间结算价目表自定义字段匹配设置",
+"raw": 1872,
+"clean": 984,
+"imgs": 0,
+"dup_of": null,
+"textlen": 865
+},
+{
+"mod": "组织间结算",
+"page": "跨组织业务全程跟踪查询",
+"raw": 790,
+"clean": 699,
+"imgs": 0,
+"dup_of": null,
+"textlen": 563
+},
+{
+"mod": "组织间结算",
+"page": "跨组织业务类型",
+"raw": 1531,
+"clean": 952,
+"imgs": 0,
+"dup_of": null,
+"textlen": 764
+},
+{
+"mod": "质量管理",
+"page": "aql",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": null,
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "mrb评审单",
+"raw": 7551,
+"clean": 3321,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2682
+},
+{
+"mod": "质量管理",
+"page": "不良品处理单",
+"raw": 13460,
+"clean": 6307,
+"imgs": 0,
+"dup_of": null,
+"textlen": 5234
+},
+{
+"mod": "质量管理",
+"page": "不良品处理统计表",
+"raw": 2234,
+"clean": 1160,
+"imgs": 0,
+"dup_of": null,
+"textlen": 891
+},
+{
+"mod": "质量管理",
+"page": "不良汇报_包装",
+"raw": 189,
+"clean": 168,
+"imgs": 0,
+"dup_of": null,
+"textlen": 114
+},
+{
+"mod": "质量管理",
+"page": "严格度转换记录日志",
+"raw": 877,
+"clean": 451,
+"imgs": 0,
+"dup_of": null,
+"textlen": 370
+},
+{
+"mod": "质量管理",
+"page": "产品条码追溯报表过滤条件",
+"raw": 39,
+"clean": 28,
+"imgs": 0,
+"dup_of": "产品条码追溯报表",
+"textlen": 23
+},
+{
+"mod": "质量管理",
+"page": "产品检验",
+"raw": 2250,
+"clean": 2153,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1869
+},
+{
+"mod": "质量管理",
+"page": "供应商不良率控制图",
+"raw": 1175,
+"clean": 769,
+"imgs": 0,
+"dup_of": null,
+"textlen": 642
+},
+{
+"mod": "质量管理",
+"page": "供应商质量统计表",
+"raw": 1894,
+"clean": 1248,
+"imgs": 0,
+"dup_of": null,
+"textlen": 974
+},
+{
+"mod": "质量管理",
+"page": "其他检验",
+"raw": 580,
+"clean": 467,
+"imgs": 0,
+"dup_of": null,
+"textlen": 397
+},
+{
+"mod": "质量管理",
+"page": "其他检验质量统计表",
+"raw": 2254,
+"clean": 1179,
+"imgs": 0,
+"dup_of": null,
+"textlen": 924
+},
+{
+"mod": "质量管理",
+"page": "其他请检单",
+"raw": 3449,
+"clean": 1253,
+"imgs": 0,
+"dup_of": null,
+"textlen": 997
+},
+{
+"mod": "质量管理",
+"page": "原材料条码追溯过滤",
+"raw": 46,
+"clean": 35,
+"imgs": 0,
+"dup_of": "原材料条码追溯报表",
+"textlen": 29
+},
+{
+"mod": "质量管理",
+"page": "发货检验",
+"raw": 736,
+"clean": 683,
+"imgs": 0,
+"dup_of": null,
+"textlen": 561
+},
+{
+"mod": "质量管理",
+"page": "受托材料检验",
+"raw": 698,
+"clean": 651,
+"imgs": 0,
+"dup_of": null,
+"textlen": 525
+},
+{
+"mod": "质量管理",
+"page": "委外工序检验",
+"raw": 677,
+"clean": 629,
+"imgs": 0,
+"dup_of": null,
+"textlen": 505
+},
+{
+"mod": "质量管理",
+"page": "委外退料检验",
+"raw": 860,
+"clean": 740,
+"imgs": 0,
+"dup_of": null,
+"textlen": 622
+},
+{
+"mod": "质量管理",
+"page": "委外退料请检单",
+"raw": 4744,
+"clean": 2102,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1727
+},
+{
+"mod": "质量管理",
+"page": "宽严度转换规则",
+"raw": 874,
+"clean": 339,
+"imgs": 0,
+"dup_of": null,
+"textlen": 266
+},
+{
+"mod": "质量管理",
+"page": "工序巡检",
+"raw": 481,
+"clean": 443,
+"imgs": 0,
+"dup_of": null,
+"textlen": 377
+},
+{
+"mod": "质量管理",
+"page": "工序检验质量统计表",
+"raw": 1489,
+"clean": 1335,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1051
+},
+{
+"mod": "质量管理",
+"page": "库存检验",
+"raw": 1090,
+"clean": 821,
+"imgs": 0,
+"dup_of": null,
+"textlen": 693
+},
+{
+"mod": "质量管理",
+"page": "库存检验控制码",
+"raw": 5187,
+"clean": 1667,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1448
+},
+{
+"mod": "质量管理",
+"page": "库存检验质量统计表",
+"raw": 1719,
+"clean": 1100,
+"imgs": 0,
+"dup_of": null,
+"textlen": 863
+},
+{
+"mod": "质量管理",
+"page": "库存物料复检到期查询",
+"raw": 3960,
+"clean": 1431,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1170
+},
+{
+"mod": "质量管理",
+"page": "库存请检单",
+"raw": 5107,
+"clean": 2630,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2150
+},
+{
+"mod": "质量管理",
+"page": "抽样方案",
+"raw": 1916,
+"clean": 1154,
+"imgs": 0,
+"dup_of": null,
+"textlen": 899
+},
+{
+"mod": "质量管理",
+"page": "抽样方案检索表",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "来料检验",
+"raw": 1979,
+"clean": 1892,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1586
+},
+{
+"mod": "质量管理",
+"page": "样本字码表",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "检测值",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "检验仪器",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "检验依据",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "检验单",
+"raw": 43408,
+"clean": 10458,
+"imgs": 0,
+"dup_of": null,
+"textlen": 7960
+},
+{
+"mod": "质量管理",
+"page": "检验方法",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "检验项目",
+"raw": 1025,
+"clean": 610,
+"imgs": 0,
+"dup_of": null,
+"textlen": 494
+},
+{
+"mod": "质量管理",
+"page": "检验项目对应检测值",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "物料不良率控制图",
+"raw": 1150,
+"clean": 731,
+"imgs": 0,
+"dup_of": null,
+"textlen": 613
+},
+{
+"mod": "质量管理",
+"page": "物料别供应商质量比较表",
+"raw": 6353,
+"clean": 2125,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1741
+},
+{
+"mod": "质量管理",
+"page": "物料别生产车间质量比较表",
+"raw": 4970,
+"clean": 1726,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1423
+},
+{
+"mod": "质量管理",
+"page": "物料待检明细表",
+"raw": 8243,
+"clean": 2267,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1802
+},
+{
+"mod": "质量管理",
+"page": "物料来源质检规则",
+"raw": 1115,
+"clean": 651,
+"imgs": 0,
+"dup_of": null,
+"textlen": 552
+},
+{
+"mod": "质量管理",
+"page": "生产线检验",
+"raw": 283,
+"clean": 258,
+"imgs": 0,
+"dup_of": null,
+"textlen": 196
+},
+{
+"mod": "质量管理",
+"page": "生产车间不良率控制图",
+"raw": 1173,
+"clean": 769,
+"imgs": 0,
+"dup_of": null,
+"textlen": 643
+},
+{
+"mod": "质量管理",
+"page": "生产车间质量统计表",
+"raw": 1807,
+"clean": 1194,
+"imgs": 0,
+"dup_of": null,
+"textlen": 938
+},
+{
+"mod": "质量管理",
+"page": "生产退料检验",
+"raw": 876,
+"clean": 760,
+"imgs": 0,
+"dup_of": null,
+"textlen": 642
+},
+{
+"mod": "质量管理",
+"page": "生产退料请检单",
+"raw": 4436,
+"clean": 1798,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1465
+},
+{
+"mod": "质量管理",
+"page": "移动质检_参数设置",
+"raw": 227,
+"clean": 214,
+"imgs": 0,
+"dup_of": null,
+"textlen": 169
+},
+{
+"mod": "质量管理",
+"page": "移动质检参数设置",
+"raw": 258,
+"clean": 237,
+"imgs": 0,
+"dup_of": null,
+"textlen": 187
+},
+{
+"mod": "质量管理",
+"page": "缺陷原因",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "缺陷原因分析表",
+"raw": 1987,
+"clean": 1143,
+"imgs": 0,
+"dup_of": null,
+"textlen": 915
+},
+{
+"mod": "质量管理",
+"page": "缺陷后果",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "缺陷类型",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "自制工序检验",
+"raw": 715,
+"clean": 661,
+"imgs": 0,
+"dup_of": null,
+"textlen": 540
+},
+{
+"mod": "质量管理",
+"page": "质检方案",
+"raw": 1745,
+"clean": 1543,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1249
+},
+{
+"mod": "质量管理",
+"page": "质量参数设置",
+"raw": 14759,
+"clean": 2896,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2457
+},
+{
+"mod": "质量管理",
+"page": "质量工作台",
+"raw": 756,
+"clean": 652,
+"imgs": 0,
+"dup_of": null,
+"textlen": 557
+},
+{
+"mod": "质量管理",
+"page": "质量标准",
+"raw": 50,
+"clean": 23,
+"imgs": 0,
+"dup_of": "aql",
+"textlen": 20
+},
+{
+"mod": "质量管理",
+"page": "质量管理",
+"raw": 2466,
+"clean": 1744,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1367
+},
+{
+"mod": "质量管理",
+"page": "质量管理使用流程",
+"raw": 1417,
+"clean": 1253,
+"imgs": 0,
+"dup_of": null,
+"textlen": 821
+},
+{
+"mod": "质量管理",
+"page": "质量管理参数",
+"raw": 6688,
+"clean": 4292,
+"imgs": 0,
+"dup_of": null,
+"textlen": 3668
+},
+{
+"mod": "质量管理",
+"page": "质量追溯参数设置",
+"raw": 394,
+"clean": 224,
+"imgs": 0,
+"dup_of": null,
+"textlen": 186
+},
+{
+"mod": "质量管理",
+"page": "辅助基础资料",
+"raw": 506,
+"clean": 476,
+"imgs": 0,
+"dup_of": null,
+"textlen": 407
+},
+{
+"mod": "质量管理",
+"page": "退货检验",
+"raw": 625,
+"clean": 572,
+"imgs": 0,
+"dup_of": null,
+"textlen": 469
+},
+{
+"mod": "质量管理",
+"page": "销售发货质量统计表",
+"raw": 1866,
+"clean": 1267,
+"imgs": 0,
+"dup_of": null,
+"textlen": 998
+},
+{
+"mod": "质量管理",
+"page": "销售退货质量统计表",
+"raw": 2215,
+"clean": 1611,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1248
+},
+{
+"mod": "质量追溯",
+"page": "单据追溯逻辑",
+"raw": 57,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 24
+},
+{
+"mod": "质量追溯",
+"page": "批号序列号关系",
+"raw": 10593,
+"clean": 2589,
+"imgs": 0,
+"dup_of": null,
+"textlen": 2196
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯",
+"raw": 10895,
+"clean": 6136,
+"imgs": 0,
+"dup_of": null,
+"textlen": 5261
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯业务专题",
+"raw": 705,
+"clean": 673,
+"imgs": 0,
+"dup_of": null,
+"textlen": 567
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯参数",
+"raw": 394,
+"clean": 224,
+"imgs": 0,
+"dup_of": "质量追溯参数设置",
+"textlen": 186
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯导航页",
+"raw": 871,
+"clean": 730,
+"imgs": 0,
+"dup_of": null,
+"textlen": 606
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯操作手册",
+"raw": 811,
+"clean": 660,
+"imgs": 0,
+"dup_of": null,
+"textlen": 493
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯方案",
+"raw": 57,
+"clean": 28,
+"imgs": 0,
+"dup_of": null,
+"textlen": 24
+},
+{
+"mod": "质量追溯",
+"page": "质量追溯树方案",
+"raw": 58,
+"clean": 30,
+"imgs": 0,
+"dup_of": null,
+"textlen": 26
+},
+{
+"mod": "孤立页",
+"page": "订单表体-交货明细页签",
+"raw": 396,
+"clean": 367,
+"imgs": 0,
+"dup_of": null,
+"textlen": 306
+},
+{
+"mod": "孤立页",
+"page": "订单表体-其他信息页签",
+"raw": 1098,
+"clean": 1037,
+"imgs": 0,
+"dup_of": null,
+"textlen": 883
+},
+{
+"mod": "孤立页",
+"page": "订单表体-明细信息页签",
+"raw": 2906,
+"clean": 939,
+"imgs": 0,
+"dup_of": null,
+"textlen": 796
+},
+{
+"mod": "孤立页",
+"page": "订单表体-物料数据页签",
+"raw": 520,
+"clean": 481,
+"imgs": 0,
+"dup_of": null,
+"textlen": 398
+},
+{
+"mod": "孤立页",
+"page": "订单表体-税务明细页签",
+"raw": 80,
+"clean": 80,
+"imgs": 0,
+"dup_of": null,
+"textlen": 53
+},
+{
+"mod": "孤立页",
+"page": "订单表体-财务信息页签",
+"raw": 775,
+"clean": 720,
+"imgs": 0,
+"dup_of": null,
+"textlen": 584
+},
+{
+"mod": "孤立页",
+"page": "订单表头-其他信息页签",
+"raw": 313,
+"clean": 268,
+"imgs": 0,
+"dup_of": null,
+"textlen": 217
+},
+{
+"mod": "孤立页",
+"page": "订单表头-基本信息页签",
+"raw": 734,
+"clean": 684,
+"imgs": 0,
+"dup_of": null,
+"textlen": 589
+},
+{
+"mod": "孤立页",
+"page": "订单表头-订单条款页签",
+"raw": 141,
+"clean": 114,
+"imgs": 0,
+"dup_of": null,
+"textlen": 92
+},
+{
+"mod": "孤立页",
+"page": "订单表头-财务信息页签",
+"raw": 782,
+"clean": 741,
+"imgs": 0,
+"dup_of": null,
+"textlen": 654
+},
+{
+"mod": "孤立页",
+"page": "订单管理",
+"raw": 326,
+"clean": 295,
+"imgs": 0,
+"dup_of": null,
+"textlen": 235
+},
+{
+"mod": "孤立页",
+"page": "订单准时率分析",
+"raw": 698,
+"clean": 601,
+"imgs": 0,
+"dup_of": null,
+"textlen": 469
+},
+{
+"mod": "孤立页",
+"page": "取消原因",
+"raw": 644,
+"clean": 514,
+"imgs": 0,
+"dup_of": null,
+"textlen": 417
+},
+{
+"mod": "孤立页",
+"page": "退货管理",
+"raw": 346,
+"clean": 309,
+"imgs": 0,
+"dup_of": null,
+"textlen": 251
+},
+{
+"mod": "孤立页",
+"page": "首检",
+"raw": 1277,
+"clean": 1100,
+"imgs": 5,
+"dup_of": null,
+"textlen": 850
+},
+{
+"mod": "孤立页",
+"page": "自动发货方案",
+"raw": 236,
+"clean": 193,
+"imgs": 0,
+"dup_of": "自动发货方案设置",
+"textlen": 166
+},
+{
+"mod": "孤立页",
+"page": "结算价目表自定义字段匹配设置",
+"raw": 1074,
+"clean": 983,
+"imgs": 0,
+"dup_of": null,
+"textlen": 865
+},
+{
+"mod": "孤立页",
+"page": "未生成结算清单跨组织业务单据查询",
+"raw": 1015,
+"clean": 893,
+"imgs": 0,
+"dup_of": null,
+"textlen": 748
+},
+{
+"mod": "孤立页",
+"page": "预留关系",
+"raw": 79,
+"clean": 79,
+"imgs": 0,
+"dup_of": null,
+"textlen": 75
+},
+{
+"mod": "孤立页",
+"page": "预留类型",
+"raw": 76,
+"clean": 75,
+"imgs": 0,
+"dup_of": null,
+"textlen": 68
+},
+{
+"mod": "孤立页",
+"page": "其他调减",
+"raw": 163,
+"clean": 125,
+"imgs": 1,
+"dup_of": null,
+"textlen": 88
+},
+{
+"mod": "孤立页",
+"page": "其他调增",
+"raw": 163,
+"clean": 125,
+"imgs": 1,
+"dup_of": null,
+"textlen": 88
+},
+{
+"mod": "孤立页",
+"page": "工序检验",
+"raw": 495,
+"clean": 363,
+"imgs": 3,
+"dup_of": null,
+"textlen": 248
+},
+{
+"mod": "孤立页",
+"page": "移动质检_工序检验",
+"raw": 1043,
+"clean": 898,
+"imgs": 4,
+"dup_of": null,
+"textlen": 702
+},
+{
+"mod": "孤立页",
+"page": "移动质检_委外检验",
+"raw": 1027,
+"clean": 906,
+"imgs": 4,
+"dup_of": null,
+"textlen": 706
+},
+{
+"mod": "孤立页",
+"page": "工序不良品原因分析",
+"raw": 4263,
+"clean": 1781,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1408
+},
+{
+"mod": "孤立页",
+"page": "柔性生产_报不良",
+"raw": 324,
+"clean": 249,
+"imgs": 3,
+"dup_of": null,
+"textlen": 210
+},
+{
+"mod": "孤立页",
+"page": "柔性生产_报不良_返修方式_返修汇报",
+"raw": 324,
+"clean": 249,
+"imgs": 3,
+"dup_of": "柔性生产_报不良",
+"textlen": 210
+},
+{
+"mod": "孤立页",
+"page": "柔性生产_批次上料",
+"raw": 445,
+"clean": 411,
+"imgs": 0,
+"dup_of": null,
+"textlen": 364
+},
+{
+"mod": "孤立页",
+"page": "生产_委外退料检验质量统计表",
+"raw": 2403,
+"clean": 1307,
+"imgs": 0,
+"dup_of": null,
+"textlen": 1025
+},
+{
+"mod": "孤立页",
+"page": "采购价款核算业务流程图",
+"raw": 25,
+"clean": 3,
+"imgs": 1,
+"dup_of": null,
+"textlen": 0
+},
+{
+"mod": "孤立页",
+"page": "采购费用分配业务流程图",
+"raw": 25,
+"clean": 3,
+"imgs": 1,
+"dup_of": "采购价款核算业务流程图",
+"textlen": 0
+},
+{
+"mod": "孤立页",
+"page": "出库成本核算业务流程图",
+"raw": 25,
+"clean": 3,
+"imgs": 1,
+"dup_of": "采购价款核算业务流程图",
+"textlen": 0
+},
+{
+"mod": "孤立页",
+"page": "防伪防窜货组织对应",
+"raw": 33,
+"clean": 25,
+"imgs": 0,
+"dup_of": "防伪防窜组织对应",
+"textlen": 20
+},
+{
+"mod": "孤立页",
+"page": "配货向导之订单选择",
+"raw": 473,
+"clean": 443,
+"imgs": 0,
+"dup_of": null,
+"textlen": 363
+},
+{
+"mod": "孤立页",
+"page": "规格要求",
+"raw": 796,
+"clean": 438,
+"imgs": 0,
+"dup_of": null,
+"textlen": 357
+},
+{
+"mod": "孤立页",
+"page": "采购入库核算应用介绍",
+"raw": 145,
+"clean": 105,
+"imgs": 0,
+"dup_of": null,
+"textlen": 80
+}
+]

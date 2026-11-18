@@ -1,0 +1,6 @@
+ID: 采购初始化指引工作台
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8C%87%E5%BC%95%E5%B7%A5%E4%BD%9C%E5%8F%B0
+
+====== 采购初始化指引 ======
+
+提供采购模块的应用与初始化指引工作台，以任务列表的方式指引新用户学习视频课件、微课件、向导式课件以及相关知识对本模块的功能和流程进行学习，并逐步完成初始化工作。 详细参考https://vip.kingdee.com/link/s/lpCbP

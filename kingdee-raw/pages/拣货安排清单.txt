@@ -1,0 +1,5 @@
+ID: 拣货安排清单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%8B%A3%E8%B4%A7%E5%AE%89%E6%8E%92%E6%B8%85%E5%8D%95
+
+==== 1.功能说明 ====
+用于支持多个源单合并拣货出库的场景。

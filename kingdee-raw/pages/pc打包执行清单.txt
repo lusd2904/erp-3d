@@ -1,0 +1,5 @@
+ID: pc打包执行清单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pc%E6%89%93%E5%8C%85%E6%89%A7%E8%A1%8C%E6%B8%85%E5%8D%95
+
+==== 1.功能说明 ====
+通过PC打包程序执行提交生成。

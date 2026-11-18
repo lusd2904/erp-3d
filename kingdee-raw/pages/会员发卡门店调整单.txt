@@ -1,0 +1,8 @@
+ID: 会员发卡门店调整单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E5%8F%91%E5%8D%A1%E9%97%A8%E5%BA%97%E8%B0%83%E6%95%B4%E5%8D%95
+
+==== 会员发卡门店调整单====
+
+     *  会员发卡门店调整单：支持调整会员的发卡门店。
+
+{{卡调整3.png?400}}

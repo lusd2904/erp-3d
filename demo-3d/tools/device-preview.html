@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>设备预览</title>
+<style>html,body{margin:0;height:100%;background:linear-gradient(#eef3f9,#f8fafc);font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif}#info{position:fixed;left:12px;top:10px;color:#1f2a3d;font-size:14px;background:#fffc;padding:6px 10px;border-radius:6px}</style>
+<script type="importmap">{"imports":{"three":"../vendor/three/three.module.js","three/addons/":"../vendor/three/addons/"}}</script>
+</head><body><div id="info">加载中…</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+const q = new URLSearchParams(location.search);
+const type = q.get('type') || 'mounter', view = q.get('view') || 'iso', status = q.get('status') || 'run';
+const r = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+r.setPixelRatio(1); r.setSize(innerWidth, innerHeight); r.shadowMap.enabled = true; r.toneMapping = THREE.ACESFilmicToneMapping;
+document.body.appendChild(r.domElement);
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0xeef3f9);
+scene.environment = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
+scene.add(new THREE.HemisphereLight(0xffffff, 0xdfe6ee, 0.8));
+const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(4, 8, 5); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6 }); scene.add(sun);
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshStandardMaterial({ color: 0xe9edf2, roughness: 0.9 }));
+floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; scene.add(floor);
+scene.add(new THREE.GridHelper(20, 40, 0xc8d0da, 0xdbe1e8));
+const cam = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, 0.05, 200);
+const ctl = new OrbitControls(cam, r.domElement);
+const info = document.getElementById('info'); const errs = [];
+addEventListener('error', e => errs.push(String(e.message)));
+try {
+  const mod = await import(`../src/three/devices/${type}.js`);
+  const g = mod.build({ id: 'PREVIEW-' + type, name: mod.meta?.name || type, status });
+  scene.add(g);
+  const box = new THREE.Box3().setFromObject(g), c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+  const R = Math.max(s.x, s.y, s.z) * 1.35 + 0.5;
+  const dir = view === 'front' ? new THREE.Vector3(0, 0.25, 1) : view === 'top' ? new THREE.Vector3(0.001, 1, 0.001) : new THREE.Vector3(1, 0.8, 1.1);
+  cam.position.copy(c).add(dir.normalize().multiplyScalar(R)); ctl.target.copy(c); ctl.update();
+  let calls = 0; g.traverse(o => { if (o.isMesh) calls++; });
+  info.textContent = `${mod.meta?.name || type}（${type}）· 尺寸 ${s.x.toFixed(2)}×${s.z.toFixed(2)}×${s.y.toFixed(2)} m · 网格 ${calls} · 状态 ${status}`;
+  window.__meshes = calls; window.__size = s;
+  const clock = new THREE.Clock();
+  r.setAnimationLoop(() => { const dt = clock.getDelta(), t = clock.elapsedTime; g.userData.animate?.(t, dt, status); r.render(scene, cam); });
+  window.__ready = true;
+} catch (e) { info.textContent = '加载失败：' + e.message; console.error(e); window.__ready = true; window.__error = String(e); }
+</script></body></html>

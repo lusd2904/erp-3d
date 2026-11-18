@@ -1,0 +1,10 @@
+ID: 快递100参数设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%BF%AB%E9%80%92100%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE
+
+===== 1 应用场景 =====
+
+设置快递100与星空云产品对接相关参数
+
+===== 2 使用前提及路径 ===== 
+管理员登陆系统，并设置：【系统参数】->【快递100参数配置】
+  * 更多配置和操作可以参考：https://vip.kingdee.com/article/12309

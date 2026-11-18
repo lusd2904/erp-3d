@@ -1,0 +1,6 @@
+ID: 我的出差申请
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%88%91%E7%9A%84%E5%87%BA%E5%B7%AE%E7%94%B3%E8%AF%B7
+
+我的出差申请
+
+显示创建人、申请人、往来单位其中一个等于当前用户关联员工的所有出差申请单。

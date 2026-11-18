@@ -1,0 +1,4 @@
+ID: 用户占用情况
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%94%A8%E6%88%B7%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5
+
+具体见【[[许可使用状况|许可使用状况]]】的介绍。

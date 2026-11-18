@@ -1,0 +1,6 @@
+ID: webapi接口白名单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=webapi%E6%8E%A5%E5%8F%A3%E7%99%BD%E5%90%8D%E5%8D%95
+
+====== 概述 ======
+
+WebAPI白名单用于控制在WebAPI在线测试页面业务对象哪些操作可以显示出来，只有在白名单列表里面的操作才会在WebAPI在线测试页面显示。

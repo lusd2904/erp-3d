@@ -1,0 +1,7 @@
+ID: 常规设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE
+
+==== 常规设置 ====
+常规设置：主要设置POS收银系统使用的界面模式：是否全屏、触屏；数据更新模式，锁定时间设置等；
+
+{{POS常规设置.png?400}}

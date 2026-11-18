@@ -1,0 +1,5 @@
+ID: 条码库存报表过滤条件
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E5%BA%93%E5%AD%98%E6%8A%A5%E8%A1%A8%E8%BF%87%E6%BB%A4%E6%9D%A1%E4%BB%B6
+
+==== 1.功能说明 ====
+用于记录条码主档中按过滤条件需满足物料、批号、仓库、仓位同时存在值方可查询显示。

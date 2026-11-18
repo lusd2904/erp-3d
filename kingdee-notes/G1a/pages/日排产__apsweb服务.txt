@@ -1,0 +1,9 @@
+功能概述
+APS排程时要通过调用APS webservice通知APS进行数据的下载解析，并根据webservice中的配置文件来更新到对应的数据库。
+功能路径
+【基础资料】—>【APS集成】—>【APSWeb服务列表】—>【新增】
+字段说明
+|字段|说明|
+|Web服务地址|录入APS程序web服务的请求地址|
+|命名空间|统一默认为APSWebService，不可编辑。|
+|类名|统一默认为APSWebService，不可编辑。|

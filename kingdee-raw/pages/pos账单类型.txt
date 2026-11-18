@@ -1,0 +1,10 @@
+ID: pos账单类型
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pos%E8%B4%A6%E5%8D%95%E7%B1%BB%E5%9E%8B
+
+[[<<门店营业设置]]
+====== POS账单类型 ======
+====== 1.功能概述 ======
+描述账单的来源，如打包、堂食、外卖等。POS账单类型可以由用户新建、修改，可以在POS账单功能中利用POS账单类型来过滤账单。
+
+{{:2.2-17 pos账单类型.png?nolink1000|}}
+{{:2.2-18 pos账单类型新增.png?nolink1000|}}

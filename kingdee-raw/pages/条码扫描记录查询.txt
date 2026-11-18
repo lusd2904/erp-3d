@@ -1,0 +1,5 @@
+ID: 条码扫描记录查询
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E6%89%AB%E6%8F%8F%E8%AE%B0%E5%BD%95%E6%9F%A5%E8%AF%A2
+
+==== 1.功能说明 ====
+查询扫描过的条码的相关的扫描信息，例如单据类型，单据对象，业务日期等。以及更新条码扫描记录中条码的库存状态。

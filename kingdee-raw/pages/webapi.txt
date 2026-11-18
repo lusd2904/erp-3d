@@ -1,0 +1,18 @@
+ID: webapi
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=webapi
+
+====== 功能概述 ======
+
+系统提供WebAPI在线测试功能，支持对WebAPI各个接口进行测试调用。在WebAPI测试页面同样可以查看各个接口的参数说明以及调用示例。
+
+====== 操作步骤 ======
+
+1.系统管理员登录主控台【公共设置】-【动态服务定义】-【WebAPI】；
+
+2.选择业务对象以后，在操作列表里面切换操作，可以查看对应接口的参数说明以及调用示例； 
+
+{{:webapi.png?600|}}
+
+3.点击【在线测试WebAPI】，在弹出的WebAPI测试页面可以对WebAPI各个接口进行测试调用；
+
+{{:webapi在线测试.png?600|}}}

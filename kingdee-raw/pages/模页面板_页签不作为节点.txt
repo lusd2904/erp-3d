@@ -1,0 +1,4 @@
+ID: 模页面板_页签不作为节点
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%A8%A1%E9%A1%B5%E9%9D%A2%E6%9D%BF_%E9%A1%B5%E7%AD%BE%E4%B8%8D%E4%BD%9C%E4%B8%BA%E8%8A%82%E7%82%B9
+
+页面模板（页签不做节点）

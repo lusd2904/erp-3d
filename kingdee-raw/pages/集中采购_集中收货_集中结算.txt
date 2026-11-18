@@ -1,0 +1,5 @@
+ID: 集中采购_集中收货_集中结算
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%9B%86%E4%B8%AD%E9%87%87%E8%B4%AD_%E9%9B%86%E4%B8%AD%E6%94%B6%E8%B4%A7_%E9%9B%86%E4%B8%AD%E7%BB%93%E7%AE%97
+
+集中采购、集中收货、集中结算流程图见下：
+{{::pur_集中采购_集中收货_集中结算_1_.png?200|}}

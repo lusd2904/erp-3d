@@ -1,0 +1,8 @@
+ID: 商品返利计算
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9%E8%AE%A1%E7%AE%97
+
+==== 商品返利计算 ====
+
+返利计算：分步式返利计算平台，根据返利业务数据及返利政策的执行进行返利计算。
+
+{{FLJS.png?400}}

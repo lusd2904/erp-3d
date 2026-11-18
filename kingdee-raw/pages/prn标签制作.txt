@@ -1,0 +1,22 @@
+ID: prn标签制作
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=prn%E6%A0%87%E7%AD%BE%E5%88%B6%E4%BD%9C
+
+如果需要通过HMI在线打印条码标签，则需要制作打印机专属的标签，通过附件的形式上传服务器，在HMI上按需下载，目前支持的打印机只限于斑马（Zebra）。
+
+下面详细介绍标签的制作方式：
+
+1、 从网上下载BarTender，安装；
+
+2、 安装BarTender斑马打印机驱动，可参考http://www.bartender.cc/xinshou/dayinji-qudongchengxu.html
+
+3、 通过BarTender制作标签，需要特别注意的是，所有的变量只能使用斑马打印机特有字体，每个打印机支持的字体不完全一样，只要选择Zebra开头的字体就行。
+
+如果之前是通过别的品牌打印机制作的标签，那么在通过斑马打印机打开标签后，所有的变量字体会自动调整成Windows的系统字体，所以一定要重新调整后保存。Bartender的标签保存后，文件后缀是.btw。
+
+{{:sfs_标签样板1.png|}}
+
+4、 在Bartender打印，打印机选择斑马打印机，选择“打印到文件”方式，生成Prn后缀的文件。
+
+{{:sfs_斑马打印机设置截图.png|}}
+
+5、 把该文件在通过金蝶云中工程数据/标签模板中上传服务器。

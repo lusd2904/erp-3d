@@ -1,0 +1,7 @@
+ID: 门店库存考核报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%BA%93%E5%AD%98%E8%80%83%E6%A0%B8%E6%8A%A5%E8%A1%A8
+
+====门店库存考核报表====
+门店库存考核表：查询法人组织下各个门店库存商品的数量、成本金额。
+
+{{门店库存考核表.png?400}}

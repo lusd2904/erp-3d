@@ -1,0 +1,7 @@
+ID: 生产工序质量
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%BA%8F%E8%B4%A8%E9%87%8F
+
+“生产工序质量”按物料类别统计生产合格率信息。
+
+
+{{:sfc_掌上生产_生产工序质量.jpg?100|}}

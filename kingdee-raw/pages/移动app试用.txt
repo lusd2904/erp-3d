@@ -1,0 +1,14 @@
+ID: 移动app试用
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8app%E8%AF%95%E7%94%A8
+
+[[移动平台|<<返回移动平台]]
+
+
+**移动工作台**
+
+将金蝶云移动工作台安装到手机上，登录时输入企业服务器地址以及对应Cloud数据中心的用户和密码就可以使用。
+
+下载（手机浏览器中输入以下地址）：http://3g.k3cloud.kingdee.com/m/AppDowload.htm
+
+
+

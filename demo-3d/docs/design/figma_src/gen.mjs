@@ -1,0 +1,199 @@
+// 生成：设备详情弹窗.svg / 登录页.svg   (node gen.mjs)
+import fs from 'fs';
+const src = fs.readFileSync('build.js', 'utf8');
+const eng = src.slice(src.indexOf('// ---------- iso engine'), src.indexOf('// ================= PAGE 1'));
+const E = new Function(eng + '; return {C30,WH,GR,BL,BLD,CY,GL,OR,LT,STK,bx,fy,fx,ft,ln,circ,cyl,render,mk,tower,printer,spi,mounter,reflow,aoi,conveyor,taping,tester,stacker,agv,rack};')();
+const { bx, fy, fx, ft, ln, render, mk, printer, spi, mounter, reflow, aoi, conveyor, taping, tester, stacker, agv, rack, WH, GR, BL, LT, OR, CY, GL } = E;
+const ADV = JSON.parse(fs.readFileSync('adv.json', 'utf8'));
+const W = (s, size, w = 400) => { let t = 0; for (const c of String(s)) t += (ADV[w][c] ?? 1) * size; return t; };
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const FF = 'Noto Sans SC';
+// T: 以文字垂直中心 cy 定位；anchor 手动换算成左对齐 x，保证 Figma 导入一致
+const T = (s, x, cy, size, w = 400, col = '#1E293B', anchor = 'start', extra = '') => { const wd = W(s, size, w); const x0 = anchor === 'middle' ? x - wd / 2 : anchor === 'end' ? x - wd : x;
+  return `<text x="${x0.toFixed(1)}" y="${(cy + size * 0.36).toFixed(1)}" font-family="${FF}" font-size="${size}" font-weight="${w}" fill="${col}"${extra}>${esc(s)}</text>`; };
+const R = (x, y, w, h, f, r = 0, ex = '') => `<rect x="${x}" y="${y}" width="${w}" height="${h}"${r ? ` rx="${r}"` : ''} fill="${f}"${ex}/>`;
+const pill = (s, x, cy, fg, bg, size = 13, w = 500, px = 10, h = size + 10, anchor = 'start') => { const wd = W(s, size, w) + px * 2; const x0 = anchor === 'end' ? x - wd : x; return { w: wd, svg: R(x0.toFixed(1), (cy - h / 2).toFixed(1), wd.toFixed(1), h, bg, h / 2) + T(s, x0 + px, cy, size, w, fg) }; };
+const bar = (x, y, w, h, p, col, bgc = '#E2E8F0') => R(x, y, w, h, bgc, h / 2) + R(x, y, Math.max(h, w * p).toFixed(1), h, col, h / 2);
+const ring = (cx, cy, r, sw, p, col, bgc = '#E2E8F0') => { const a0 = -Math.PI / 2, a1 = a0 + p * Math.PI * 2; return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${bgc}" stroke-width="${sw}"/><path d="M ${cx} ${cy - r} A ${r} ${r} 0 ${p > 0.5 ? 1 : 0} 1 ${(cx + r * Math.cos(a1)).toFixed(2)} ${(cy + r * Math.sin(a1)).toFixed(2)}" fill="none" stroke="${col}" stroke-width="${sw}" stroke-linecap="round"/>`; };
+const g = (x, y, s) => `<g transform="translate(${x},${y})">${s}</g>`;
+const DEFS = `<defs>
+<filter id="sh" x="-10%" y="-10%" width="120%" height="125%" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="6"/><feGaussianBlur stdDeviation="12"/><feColorMatrix type="matrix" values="0 0 0 0 0.12 0 0 0 0 0.25 0 0 0 0 0.45 0 0 0 0.10 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="ds"/><feBlend mode="normal" in="SourceGraphic" in2="ds" result="shape"/></filter>
+<filter id="shL" x="-20%" y="-10%" width="140%" height="120%" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="-8" dy="8"/><feGaussianBlur stdDeviation="20"/><feColorMatrix type="matrix" values="0 0 0 0 0.10 0 0 0 0 0.20 0 0 0 0 0.35 0 0 0 0.18 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="ds"/><feBlend mode="normal" in="SourceGraphic" in2="ds" result="shape"/></filter>
+<linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FAFCFE"/><stop offset="1" stop-color="#E3ECF6"/></linearGradient>
+<linearGradient id="logoG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#EF4444" stop-opacity="0.35"/><stop offset="1" stop-color="#EF4444" stop-opacity="0"/></radialGradient>
+</defs>`;
+const SVG = body => `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">${DEFS}${body}</svg>`;
+const secH = (x, cy, s, extraR = '') => R(x, cy - 9, 4, 18, '#2563EB', 2) + T(s, x + 12, cy, 16, 700, '#0F172A') + extraR;
+const logo = (x, y, s = 40) => g(x, y, `<rect width="${s}" height="${s}" rx="${s * 0.25}" fill="url(#logoG)"/><g transform="scale(${s / 40})"><rect x="11" y="11" width="18" height="18" rx="3" fill="none" stroke="#FFFFFF" stroke-width="2.2"/><rect x="16" y="16" width="8" height="8" rx="1.5" fill="#67E8F9"/>${[15, 20, 25].map(v => `<line x1="${v}" y1="6" x2="${v}" y2="11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><line x1="${v}" y1="29" x2="${v}" y2="34" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="${v}" x2="11" y2="${v}" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><line x1="29" y1="${v}" x2="34" y2="${v}" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>`).join('')}</g>`);
+
+// ======================= 1. 设备详情弹窗 =======================
+function detail() {
+  const b = [];
+  const bg64 = fs.readFileSync('bg_blur.jpg').toString('base64');
+  b.push(`<image x="0" y="0" width="1920" height="1080" preserveAspectRatio="none" xlink:href="data:image/jpeg;base64,${bg64}" href="data:image/jpeg;base64,${bg64}"/>`);
+  b.push(R(0, 0, 1920, 1080, '#F3F7FB', 0, ' fill-opacity="0.36"'));
+  // 选中设备：清晰重绘 + 红色高亮
+  const pr = mk(843, 298, 12.6), L = [];
+  mounter(L, 24.6, 20.5);
+  const [mx, my] = pr([28.6, 20.5, 0]);
+  b.push(`<ellipse cx="${mx.toFixed(1)}" cy="${(my + 4).toFixed(1)}" rx="150" ry="86" fill="url(#glow)"/>`);
+  const fl = [[24.3, 17.2], [32.9, 17.2], [32.9, 24.0], [24.3, 24.0]].map(([X, Y]) => pr([X, Y, 0.02]).map(v => v.toFixed(1)).join(',')).join(' ');
+  b.push(`<polygon points="${fl}" fill="#FEE2E2" fill-opacity="0.85" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="8 5"/>`);
+  b.push(render(L, pr));
+  const [tx0, ty0] = pr([28.6, 20.5, 7.4]);
+  b.push(`<line x1="${tx0.toFixed(1)}" y1="${(ty0 - 2).toFixed(1)}" x2="${tx0.toFixed(1)}" y2="${(ty0 - 34).toFixed(1)}" stroke="#EF4444" stroke-width="2"/><circle cx="${tx0.toFixed(1)}" cy="${ty0.toFixed(1)}" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>`);
+  { const s1 = '贴片机 SMT-2-02', s2 = '故障', wd = W(s1, 15, 700) + W(s2, 12, 700) + 16 + 24 + 20 + 18, x0 = tx0 - wd / 2, cy = ty0 - 56;
+    b.push(R(x0.toFixed(1), cy - 19, wd.toFixed(1), 38, '#FFFFFF', 10, ' stroke="#EF4444" stroke-width="1.5" filter="url(#sh)"'));
+    b.push(`<circle cx="${(x0 + 18).toFixed(1)}" cy="${cy}" r="6" fill="#EF4444"/><circle cx="${(x0 + 18).toFixed(1)}" cy="${cy}" r="10" fill="none" stroke="#EF4444" stroke-opacity="0.35" stroke-width="3"/>`);
+    b.push(T(s1, x0 + 34, cy, 15, 700, '#0F172A'));
+    b.push(pill(s2, x0 + 34 + W(s1, 15, 700) + 10, cy, '#FFFFFF', '#EF4444', 12, 700, 8, 20).svg); }
+  // 顶栏（清晰）
+  b.push(R(0, 0, 1920, 76, '#FFFFFF') + R(0, 75, 1920, 1, '#E2E8F0'));
+  b.push(g(24, 18, '<rect width="40" height="40" rx="10" fill="#2563EB"/><path d="M10 26 L20 12 L30 26 Z" fill="#67E8F9"/><rect x="10" y="27" width="20" height="3" rx="1.5" fill="#FFFFFF"/>') + T('电子元器件生产管理ERP · 三维驾驶舱', 78, 38, 24, 700, '#0F172A'));
+  // 演示徽标已按要求去掉
+  { let x = 1896; const p1 = pill('系统运行正常', x, 38, '#15803D', '#E5F6EC', 13, 500, 12, 26, 'end'); b.push(p1.svg); x -= p1.w + 18;
+    const t2 = '2026-11-12 星期四 14:58:36'; b.push(T(t2, x, 38, 15, 500, '#334155', 'end')); x -= W(t2, 15, 500) + 16; b.push(R(x.toFixed(1), 30, 1, 16, '#CBD5E1')); x -= 16;
+    b.push(T('一号厂区 · 白班', x, 38, 15, 500, '#334155', 'end')); }
+  // 详情卡
+  const CX = 1336, CY = 88, CW = 560, CH = 976, P = 28, IW = CW - P * 2;
+  const c = [];
+  c.push(R(0, 0, CW, CH, '#FFFFFF', 16, ' stroke="#D6E2EF" filter="url(#shL)"'));
+  // 头部
+  c.push(g(P, 20, `<rect width="52" height="52" rx="12" fill="#FEF2F2" stroke="#FECACA"/><g transform="translate(8,10)"><rect x="2" y="14" width="32" height="14" rx="3" fill="#FFFFFF" stroke="#EF4444" stroke-width="1.8"/><rect x="6" y="6" width="24" height="8" rx="2" fill="#FCA5A5"/><rect x="15" y="0" width="6" height="8" rx="1.5" fill="#EF4444"/></g>`));
+  c.push(T('贴片机 SMT-2-02', P + 66, 34, 24, 700, '#0F172A'));
+  c.push(pill('故障', P + 66 + W('贴片机 SMT-2-02', 24, 700) + 12, 34, '#DC2626', '#FDECEC', 14, 700, 12, 26).svg);
+  c.push(T('编号 EQ-SMT2-0402  ·  SMT-2 线第 4 工位  ·  高速贴片机', P + 66, 62, 13, 400, '#64748B'));
+  c.push(g(CW - 28 - 32, 20, `<rect width="32" height="32" rx="8" fill="#F1F5F9"/><path d="M11 11 L21 21 M21 11 L11 21" stroke="#475569" stroke-width="2" stroke-linecap="round"/>`));
+  c.push(R(P, 86, IW, 38, '#FEF2F2', 8, ' stroke="#FECACA"'));
+  c.push(`<circle cx="${P + 20}" cy="105" r="8" fill="#EF4444"/><rect x="${P + 19}" y="100" width="2" height="6" fill="#FFFFFF"/><rect x="${P + 19}" y="108" width="2" height="2" fill="#FFFFFF"/>`);
+  c.push(T('14:13 起停机 · 已持续 45 分钟 · 吸嘴站真空异常', P + 36, 105, 14, 500, '#B91C1C'));
+  c.push(T('维修：李工', P + IW - 14, 105, 13, 500, '#B91C1C', 'end'));
+  c.push(R(0, 140, CW, 1, '#E2E8F0'));
+  // OEE
+  let y = 164; c.push(secH(P, y, 'OEE 综合效率') + T('统计区间：近 24 小时', P + IW, y, 13, 400, '#94A3B8', 'end'));
+  const A = 0.78, Pf = 0.92, Q = 0.985, O = A * Pf * Q;
+  c.push(ring(P + 62, y + 82, 50, 12, O, '#F97316'));
+  c.push(T((O * 100).toFixed(1) + '%', P + 62, y + 76, 22, 700, '#0F172A', 'middle'));
+  c.push(T('OEE', P + 62, y + 100, 13, 400, '#64748B', 'middle'));
+  [['可用率', A, '#3B82F6'], ['性能', Pf, '#22D3EE'], ['良率', Q, '#10B981']].forEach(([n, v, col], i) => { const yy = y + 40 + i * 34, x0 = P + 148;
+    c.push(T(n, x0, yy, 14, 500, '#334155') + bar(x0 + 56, yy - 4, 232, 8, v, col) + T((v * 100).toFixed(1) + '%', P + IW, yy, 14, 700, '#1E293B', 'end')); });
+  c.push(T('78.0% × 92.0% × 98.5% ≈ 70.7%  ·  目标 80.0%', P + 148, y + 142, 13, 400, '#64748B'));
+  // 当前工单
+  y = 336; c.push(secH(P, y, '当前工单') + pill('已暂停', P + 12 + W('当前工单', 16, 700) + 12, y, '#C2410C', '#FFF1E6', 12, 700, 8, 20).svg + T('预计延误 1.2 h', P + IW, y, 13, 500, '#C2410C', 'end'));
+  c.push(R(P, y + 18, IW, 92, '#F8FAFC', 10, ' stroke="#E2E8F0"'));
+  c.push(T('MO-20261112-002', P + 16, y + 40, 16, 700, '#1D4ED8'));
+  c.push(T('BLE5.0 蓝牙模块 BT-52', P + IW - 16, y + 40, 14, 500, '#1E293B', 'end'));
+  c.push(T('产品料号 BT52-PCBA-V2.3', P + 16, y + 65, 13, 400, '#64748B'));
+  c.push(T('完成 5,120 / 计划 8,000 pcs', P + IW - 16, y + 65, 13, 500, '#334155', 'end'));
+  c.push(bar(P + 16, y + 84, IW - 32 - 48, 8, 0.64, '#3B82F6') + T('64%', P + IW - 16, y + 88, 14, 700, '#1D4ED8', 'end'));
+  // 24h 时间线
+  y = 474; c.push(secH(P, y, '近 24 小时状态'));
+  const ST = { 运行: '#10B981', 待机: '#3B82F6', 故障: '#EF4444', 保养: '#F59E0B' };
+  { let lx = P + IW; for (const k of ['保养', '故障', '待机', '运行']) { c.push(T(k, lx, y, 13, 400, '#475569', 'end')); lx -= W(k, 13); c.push(R((lx - 18).toFixed(1), y - 5, 12, 10, ST[k], 2)); lx -= 32; } }
+  const seg = [['运行', 15, 20], ['待机', 20, 20.667], ['运行', 20.667, 26], ['保养', 26, 28], ['运行', 28, 32], ['待机', 32, 32.667], ['运行', 32.667, 35.167], ['故障', 35.167, 35.833], ['运行', 35.833, 37.5], ['待机', 37.5, 38], ['运行', 38, 38.217], ['故障', 38.217, 39]];
+  const bx0 = P, bw = IW, by = y + 20, bh = 24, X = h => bx0 + (h - 15) / 24 * bw;
+  c.push(`<clipPath id="tlc"><rect x="${bx0}" y="${by}" width="${bw}" height="${bh}" rx="6"/></clipPath><g clip-path="url(#tlc)">` + seg.map(([k, a, z]) => R(X(a).toFixed(1), by, (X(z) - X(a) + 0.4).toFixed(1), bh, ST[k])).join('') + '</g>');
+  [15, 19, 23, 27, 31, 35, 39].forEach((h, i) => { const x = X(h), lab = i === 6 ? '现在' : String(h % 24).padStart(2, '0') + ':00'; c.push(R((x - 0.5).toFixed(1), by + bh + 2, 1, 6, '#94A3B8') + T(lab, x, by + bh + 18, 12, 400, '#64748B', i === 0 ? 'start' : i === 6 ? 'end' : 'middle')); });
+  c.push(T('运行 18.7 h  ·  待机 1.8 h  ·  故障 1.5 h  ·  保养 2.0 h', P, by + bh + 42, 13, 500, '#334155'));
+  c.push(T('11-11 15:00 至 11-12 15:00', P + IW, by + bh + 42, 12, 400, '#94A3B8', 'end'));
+  // 告警记录
+  y = 592; c.push(secH(P, y, '告警记录') + T('今日 4 条 · 未处理 2 条', P + IW, y, 13, 400, '#94A3B8', 'end'));
+  const LV = { 严重: ['#DC2626', '#FDECEC'], 警告: ['#C2410C', '#FFF1E6'], 提示: ['#1D4ED8', '#E6F0FF'] };
+  const al = [['14:13', '严重', '吸嘴站 3 号吸嘴真空异常，贴装停止', '未处理'], ['14:12', '警告', '供料器 F-12 抛料率 3.8%，超过阈值 1.5%', '未处理'], ['11:10', '严重', 'Z 轴伺服过载报警，复位后恢复', '已处理'], ['08:05', '提示', '0402 料盘剩余 500 pcs，请及时备料', '已处理']];
+  const RH = 36; c.push(R(P, y + 18, IW, 4 * RH, '#FFFFFF', 10, ' stroke="#E2E8F0"'));
+  al.forEach(([t, lv, s, st], i) => { const yy = y + 18 + i * RH + RH / 2; if (i) c.push(R(P + 1, y + 18 + i * RH, IW - 2, 1, '#EEF2F7'));
+    c.push(T(t, P + 14, yy, 13, 500, '#475569') + pill(lv, P + 62, yy, LV[lv][0], LV[lv][1], 12, 700, 8, 20).svg + T(s, P + 118, yy, 13, 400, '#1E293B') + T(st, P + IW - 14, yy, 12, 500, st === '未处理' ? '#DC2626' : '#94A3B8', 'end')); });
+  // 保养计划
+  y = 776; c.push(secH(P, y, '保养计划') + T('上次保养 11-12 02:00 已完成', P + IW, y, 13, 400, '#94A3B8', 'end'));
+  const mt = [['日常点检', '每日', '11-13 08:00', '待执行', '#1D4ED8', '#E6F0FF'], ['吸嘴清洗与真空检测', '每周', '11-14 08:00', '建议提前', '#C2410C', '#FFF1E6'], ['贴装精度校准', '每季度', '12-05 08:00', '已排期', '#475569', '#EEF2F6']];
+  const MH = 31;
+  mt.forEach(([n, f, d, s, fg, bgc], i) => { const yy = y + 18 + i * MH + MH / 2;
+    c.push(`<circle cx="${P + 6}" cy="${yy}" r="4" fill="${fg}"/>` + T(n, P + 20, yy, 14, 500, '#1E293B') + T(f, P + 220, yy, 13, 400, '#64748B') + T('下次 ' + d, P + 290, yy, 13, 500, '#334155') + pill(s, P + IW, yy, fg, bgc, 12, 700, 8, 20, 'end').svg);
+    if (i < 2) c.push(R(P + 20, y + 18 + (i + 1) * MH, IW - 20, 1, '#EEF2F7')); });
+  // 底部按钮
+  const by2 = CH - 64;
+  c.push(R(0, by2 - 14, CW, 1, '#E2E8F0'));
+  const bwid = (IW - 12) / 2;
+  c.push(R(P, by2, bwid, 44, '#FFFFFF', 8, ' stroke="#CBD5E1"') + T('查看工单', P + bwid / 2, by2 + 22, 15, 500, '#334155', 'middle'));
+  c.push(R(P + bwid + 12, by2, bwid, 44, '#2563EB', 8) + T('创建维修单', P + bwid + 12 + bwid / 2, by2 + 22, 15, 700, '#FFFFFF', 'middle'));
+  b.push(g(CX, CY, c.join('')));
+  return SVG(b.join(''));
+}
+
+// ======================= 2. 登录页 =======================
+function login() {
+  const b = [];
+  b.push(R(0, 0, 1920, 1080, 'url(#bgG)'));
+  b.push(`<circle cx="560" cy="560" r="520" fill="#DBEAFE" fill-opacity="0.35"/><circle cx="1600" cy="180" r="260" fill="#E0F2FE" fill-opacity="0.5"/>`);
+  // 标题区
+  b.push(logo(64, 48, 40) + T('芯程电子', 116, 68, 20, 700, '#0F172A'));
+  b.push(T('数字化车间  ·  透明化生产', 64, 150, 36, 700, '#0F172A'));
+  // 三维厂区
+  const S = 12.2, pr = mk(600, 420, S);
+  const BG = [], IT = [];
+  const add = (k, fn) => { const L = []; fn(L); IT.push({ k, L }); };
+  // 地台
+  bx(BG, -1, -1, -1.2, 47, 33, 1.2, ['#FFFFFF', '#E2EAF3', '#C9D6E4'], 1, '#B9CDE2');
+  for (let x = 3; x < 46; x += 4) ln(BG, [[x, -1, 0.01], [x, 32, 0.01]], '#E6EEF6', 0.8);
+  for (let y = 3; y < 32; y += 4) ln(BG, [[-1, y, 0.01], [46, y, 0.01]], '#E6EEF6', 0.8);
+  // 厂房后墙（左后 x=-1 面、右后 y=-1 面）+ 窗带
+  fx(BG, -1, -1, 32, 0, 9, '#EEF3F9', 1, '#B9CDE2');
+  fy(BG, -1, 46, -1, 0, 9, '#F4F7FB', 1, '#B9CDE2');
+  for (let i = 0; i < 9; i++) fy(BG, 1 + i * 5, 4.4 + i * 5, -0.98, 5.2, 7.8, '#BFDBFE', 0.9, '#93C5FD');
+  for (let i = 0; i < 6; i++) fx(BG, -0.98, 2 + i * 5, 5.4 + i * 5, 5.2, 7.8, '#BAE6FD', 0.9, '#7DD3FC');
+  fy(BG, -1, 46, -0.97, 3.6, 4, '#2563EB', 0.9); fx(BG, -0.97, -1, 32, 3.6, 4, '#2563EB', 0.9);
+  // 区域与 AGV 路线
+  ft(BG, 2.5, 22.5, -0.6, 4.4, 0.02, '#E0F2FE', 0.7, '#7DD3FC', '6 4');
+  ft(BG, 2.6, 45, 6.2, 14.8, 0.02, '#DBEAFE', 0.45, '#93C5FD', '6 4');
+  ft(BG, 2.6, 30, 19.8, 26.6, 0.02, '#CFFAFE', 0.45, '#67E8F9', '6 4');
+  for (const l of [[[1.2, 5.3, 0.03], [45.6, 5.3, 0.03]], [[1.2, 17.2, 0.03], [45.6, 17.2, 0.03]], [[1.2, 29.2, 0.03], [45.6, 29.2, 0.03]], [[1.2, 5.3, 0.03], [1.2, 29.2, 0.03]], [[45.6, 5.3, 0.03], [45.6, 29.2, 0.03]]]) ln(BG, l, '#06B6D4', 2.4, '9 6');
+  // 立体仓库
+  add(-100, L => rack(L, 3, 22, -0.3, 3.2, 10.8));
+  add(-99, L => stacker(L, 12, 4.4, 10.5, 5.2, 3, 22));
+  // 成品托盘区
+  for (let i = 0; i < 3; i++) for (let j = 0; j < 2; j++) add(26 + i * 3 + j * 3 + 1, L => { const x = 25 + i * 3.6, y = 0 + j * 2.6; bx(L, x, y, 0, 2.8, 2, 0.3, GR); bx(L, x + 0.2, y + 0.2, 0.3, 2.4, 1.6, (i + j) % 2 ? 1.4 : 2.2, OR); });
+  // SMT 产线
+  { const yc = 10.5; let x = 3; const ds = [printer, spi, mounter, reflow, aoi]; ds.forEach((d, i) => { const x0 = x, Lm = []; const w = d === reflow ? d(Lm, x0, yc, 12) : d(Lm, x0, yc); IT.push({ k: x0 + w / 2 + yc, L: Lm }); x += w; if (i < ds.length - 1) { const a = x, z = x + 1.2; add(a + 0.6 + yc, L => conveyor(L, a, z, yc)); x = z; } }); }
+  // 测试编带线
+  { const yc = 23.2; let x = 3; [tester, taping].forEach((d, i) => { const x0 = x, Lm = []; const w = d(Lm, x0, yc); IT.push({ k: x0 + w / 2 + yc, L: Lm }); x += w; if (!i) { const a = x, z = x + 1.2; add(a + 0.6 + yc, L => conveyor(L, a, z, yc, 1.6)); x = z; } }); }
+  // 物料暂存货架
+  add(36 + 23, L => { bx(L, 33, 20.5, 0, 9, 3.5, 0.3, GR); for (let i = 0; i < 3; i++) bx(L, 33.4 + i * 2.9, 20.9, 0.3, 2.4, 2.7, 1.2 + (i % 2) * 0.8, i === 1 ? ['#BFDBFE', '#93C5FD', '#60A5FA'] : OR); });
+  // AGV
+  add(32 + 17.2, L => agv(L, 30, 15.8, 1, 0));
+  add(14 + 29.2, L => agv(L, 12, 27.8, 0, 0));
+  add(45.6 + 9, L => agv(L, 44.2, 7.5, 1, 1));
+  add(40 + 5.3, L => agv(L, 38, 3.9, 1, 0));
+  IT.sort((a, c) => a.k - c.k);
+  b.push(`<ellipse cx="${pr([22.5, 16, 0])[0].toFixed(0)}" cy="${(pr([46, 32, 0])[1] + 6).toFixed(0)}" rx="470" ry="36" fill="#C7D7EA" fill-opacity="0.35"/>`);
+  b.push('<g>' + render(BG, pr) + IT.map(i => render(i.L, pr)).join('') + '</g>');
+  // 场景标签
+  const lbl = (s, X, Y, Z, blue) => { const [px, py] = pr([X, Y, Z]); const p = pill(s, 0, 0, blue ? '#FFFFFF' : '#1E3A8A', blue ? '#2563EB' : '#FFFFFF', 13, blue ? 700 : 500, 9, 24); const x0 = px - p.w / 2; return R(x0.toFixed(1), (py - 12).toFixed(1), p.w.toFixed(1), 24, blue ? '#2563EB' : '#FFFFFF', 12, blue ? '' : ' stroke="#93C5FD"') + T(s, x0 + 9, py, 13, blue ? 700 : 500, blue ? '#FFFFFF' : '#1E3A8A'); };
+  if (0) b.push(lbl('立体仓库', 6, 1.5, 12.2) + lbl('SMT 产线', 2.6, 13.8, 0, 1) + lbl('测试编带线', 2.6, 26.6, 0, 1) + lbl('贴片机', 18.4, 10.5, 6.6) + lbl('回流焊', 34.6, 10.5, 5.8) + lbl('成品暂存', 31, 1.3, 3.4) + lbl('AGV', 32, 17.2, 3.2));
+  // 浮动数据卡
+  const chip = (x, y, k, v, col) => g(x, y, R(0, 0, 176, 64, '#FFFFFF', 12, ' stroke="#D6E2EF" filter="url(#sh)"') + R(14, 18, 4, 28, col, 2) + T(k, 28, 22, 13, 400, '#64748B') + T(v, 28, 44, 20, 700, '#0F172A'));
+  if (0) b.push(chip(900, 262, '今日产量', '128,460 pcs', '#2563EB') + chip(1000, 520, '综合良率', '98.6%', '#10B981') + chip(72, 700, 'AGV 在线', '6 / 6 台', '#06B6D4'));
+  // 登录卡
+  const LX = 1264, LY = 300, LW = 536, LH = 480, P = 48, IW = LW - P * 2;
+  const c = [];
+  c.push(R(0, 0, LW, LH, '#FFFFFF', 20, ' stroke="#D6E2EF" filter="url(#shL)"'));
+  c.push(logo(P, 48, 44));
+  c.push(T('芯程电子元器件生产管理 ERP', P + 64, 80, 24, 700, '#0F172A'));
+  const field = (y, label, icon, val, pwd) => { let s = T(label, P, y, 14, 500, '#334155') + R(P, y + 16, IW, 50, '#F8FAFC', 10, ' stroke="#CBD5E1"') + g(P + 16, y + 32, icon);
+    s += pwd ? Array.from({ length: 10 }, (_, i) => `<circle cx="${P + 52 + i * 14}" cy="${y + 41}" r="4" fill="#334155"/>`).join('') + g(P + IW - 38, y + 31, '<path d="M1 10 C5 3 15 3 19 10 C15 17 5 17 1 10 Z" fill="none" stroke="#94A3B8" stroke-width="1.8"/><circle cx="10" cy="10" r="3" fill="none" stroke="#94A3B8" stroke-width="1.8"/><line x1="3" y1="18" x2="17" y2="2" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>') : T(val, P + 48, y + 41, 15, 400, '#1E293B');
+    return s; };
+  const icUser = '<circle cx="9" cy="6" r="4" fill="none" stroke="#64748B" stroke-width="1.8"/><path d="M1.5 18 C2.5 12.5 15.5 12.5 16.5 18" fill="none" stroke="#64748B" stroke-width="1.8" stroke-linecap="round"/>';
+  const icLock = '<rect x="2" y="8" width="14" height="10" rx="2.5" fill="none" stroke="#64748B" stroke-width="1.8"/><path d="M5 8 V5.5 A4 4 0 0 1 13 5.5 V8" fill="none" stroke="#64748B" stroke-width="1.8"/><circle cx="9" cy="13" r="1.5" fill="#64748B"/>';
+  c.push(field(140, '账号', icUser, 'zhang.gong'));
+  c.push(field(234, '密码', icLock, '', 1));
+  c.push(R(P, 332, 18, 18, '#2563EB', 4) + '<path d="M' + (P + 4) + ' 341 L' + (P + 8) + ' 345 L' + (P + 14) + ' 337" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' + T('记住我', P + 28, 341, 14, 400, '#334155'));
+  c.push(T('忘记密码？', P + IW, 341, 14, 500, '#2563EB', 'end'));
+  c.push(R(P, 384, IW, 52, '#2563EB', 10) + T('登 录', P + IW / 2, 410, 17, 700, '#FFFFFF', 'middle'));
+  b.push(g(LX, LY, c.join('')));
+  // 演示徽标已按要求去掉
+  // 底部
+  // 演示系统已去掉
+  return SVG(b.join(''));
+}
+fs.writeFileSync('设备详情弹窗.svg', detail());
+fs.writeFileSync('登录页.svg', login());

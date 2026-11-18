@@ -1,0 +1,4 @@
+ID: 销售排名明细表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%94%80%E5%94%AE%E6%8E%92%E5%90%8D%E6%98%8E%E7%BB%86%E8%A1%A8
+
+销售排名明细表是销售排名表的具体明细，按业务单据展开详细取数逻辑。具体字段说明可参考《销售排名表》

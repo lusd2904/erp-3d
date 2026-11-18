@@ -1,0 +1,22 @@
+ID: 拆分开票
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%8B%86%E5%88%86%E5%BC%80%E7%A5%A8
+
+====== 拆分开票参数 ======
+销项开票时，若开票申请金额超单张发票允许的最高可开票不含税限额时，系统将自动进行拆分开票。
+
+拆分条件设置中，拆分参数包含以下4种：
+  - 保持单价不变
+  - 保持数量不变
+  - 保持总数量不变
+  - 保持单价、总数量不变  
+
+=====  拆分参数解析 ====== 
+
+
+  - 金税开票自动拆分前三种方式解析：https://vip.kingdee.com/article/12216 
+  - 金税开票自动拆分第四种方式解析https://vip.kingdee.com/article/192948151160700672?productLineId=1&isKnowledge=2
+  - 超限额拆分开票，支持按照价税合计的限额进行自动拆分https://vip.kingdee.com/article/344836472652325376?productLineId=1&isKnowledge=2
+
+===== 拆分开票问题汇总 =====
+拆分开票的汇总贴（4种拆分条件说明、拆分数量精度显示等问题合集） https://vip.kingdee.com/article/174580779957993216?productLineId=1&isKnowledge=2
+

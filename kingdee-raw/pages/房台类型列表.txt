@@ -1,0 +1,9 @@
+ID: 房台类型列表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%88%BF%E5%8F%B0%E7%B1%BB%E5%9E%8B%E5%88%97%E8%A1%A8
+
+[[<<门店营业设置]]
+====== 房台类型列表 ======
+
+功能简介：可以查询创建好的房台类型状态，并且可以发布O2O，发布到CRM,此功能用于线上点餐
+
+{{:图2.4.5 房台类型列表.png?nolink1000|}}

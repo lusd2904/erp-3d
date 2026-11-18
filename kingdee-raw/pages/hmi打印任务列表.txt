@@ -1,0 +1,8 @@
+ID: hmi打印任务列表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=hmi%E6%89%93%E5%8D%B0%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8
+
+通过星空系统PC端的菜单“HMI打印任务表”，可以随时查看打印任务的状态和主要信息，如图：
+
+其中：系统支持对单据中某些行号进行打印，行号信息记录在“行号”字段。
+
+{{:sfs_打印_打印任务表.png|}}

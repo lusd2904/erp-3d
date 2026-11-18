@@ -1,0 +1,6 @@
+ID: 样本字码表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%A0%B7%E6%9C%AC%E5%AD%97%E7%A0%81%E8%A1%A8
+
+====== 质量管理辅助基础资料 ======
+
+[[辅助基础资料|质量管理辅助基础资料]]

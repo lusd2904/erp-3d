@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>线B 业务模块测试台（演示数据）</title>
+<link rel="stylesheet" href="../src/styles/theme.css">
+<style>
+ body{margin:0;display:flex;height:100vh;font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif}
+ #side{width:196px;background:#fff;border-right:1px solid #e3e8f0;overflow:auto;flex:none;padding-top:56px;position:relative}
+ #side .hd{position:absolute;top:0;left:0;right:0;height:56px;display:flex;align-items:center;padding:0 14px;font-weight:700;color:#1677ff}
+ #side .g{font-size:11px;color:#8a96a8;padding:10px 14px 4px}
+ #side a{display:flex;align-items:center;gap:8px;padding:7px 14px;font-size:13px;color:#1f2a3d;cursor:pointer;text-decoration:none}
+ #side a svg{width:16px;height:16px;color:#56637a}
+ #side a.on{background:#e8f2ff;color:#1677ff;border-right:3px solid #1677ff}
+ #main{flex:1;display:flex;flex-direction:column;min-width:0}
+ #top{height:56px;flex:none;background:#fff;border-bottom:1px solid #e3e8f0;display:flex;align-items:center;padding:0 16px;gap:12px;font-size:13px;color:#56637a}
+ #log{margin-left:auto;font-family:monospace;font-size:12px;color:#0b5ed7;max-width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ #host{flex:1;min-height:0;position:relative}
+</style></head>
+<body><nav id="side"><div class="hd">测试台 · 线B</div></nav><div id="main"><div id="top">假 ctx 测试台（模拟外壳 196px 侧栏 + 56px 顶栏）<span id="log"></span></div><div id="host"></div></div>
+<script type="module">
+import * as echarts from '../vendor/echarts/echarts.esm.min.js';
+import mods from '../src/modules/index.js';
+import { ICON, ICON_KEY } from '../src/modules/_ui.js';
+echarts.registerTheme('erpLight', { backgroundColor: 'transparent', color: ['#1677ff', '#0fb5c9', '#16b364', '#f5a623', '#7a5af8', '#f04438'] });
+window.__calls = []; window.echarts = echarts;
+const log = (k, v) => { window.__calls.push([k, v]); document.getElementById('log').textContent = `${k}(${JSON.stringify(v)})`; };
+const host = document.getElementById('host'); let un = null, cur = null;
+const ctx = {
+  echarts,
+  focusDevice: id => log('focusDevice', id), locateBin: id => log('locateBin', id),
+  navigate: (m, p) => { log('navigate', [m, p]); mount(m, p); }, toast: msg => log('toast', msg), params: {},
+};
+const side = document.getElementById('side'); let g = '';
+mods.forEach(m => { if (m.meta.group !== g) { g = m.meta.group; side.insertAdjacentHTML('beforeend', `<div class="g">${g}</div>`); } side.insertAdjacentHTML('beforeend', `<a data-id="${m.meta.id}">${ICON[ICON_KEY[m.meta.icon]] || ICON[m.meta.icon] || ''}${m.meta.title}</a>`); });
+side.addEventListener('click', e => { const a = e.target.closest('a'); if (a) mount(a.dataset.id); });
+function mount(id, params = {}) {
+  const m = mods.find(x => x.meta.id === id) || mods[0]; if (un) { try { un(); } catch (e) { console.error(e); } }
+  host.innerHTML = ''; cur = m.meta.id; ctx.params = params;
+  side.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.dataset.id === cur));
+  un = m.mount(host, ctx, params);
+  window.__mounted = cur;
+}
+window.__mount = mount;
+mount(new URLSearchParams(location.search).get('m') || mods[0].meta.id);
+window.__ready = true;
+</script></body></html>

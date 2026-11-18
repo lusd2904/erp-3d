@@ -1,0 +1,7 @@
+ID: 门店缴款单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E7%BC%B4%E6%AC%BE%E5%8D%95
+
+==== 门店缴款单 ====
+门店缴款单：零售门店收银员根据每天缴款情况，在POS端进行缴款登记，生成后台单据，以便进行门店长短款对账处理。
+
+{{MDJKD.png?400}}{{门店缴款单2.png?400}}

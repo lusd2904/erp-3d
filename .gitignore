@@ -6,3 +6,12 @@ coverage/
 /devdata/
 apps/api/files/
 apps/api/files-test/
+
+# 测试与本地凭据（apps/api/test/test.env 曾进入历史，新提交起不再跟踪）
+apps/api/test/test.env
+.pnpm-store/
+.npm-cache/
+.tmp/
+*.pem
+id_rsa
+id_rsa.*

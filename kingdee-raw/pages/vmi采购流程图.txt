@@ -1,0 +1,5 @@
+ID: vmi采购流程图
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=vmi%E9%87%87%E8%B4%AD%E6%B5%81%E7%A8%8B%E5%9B%BE
+
+VMI采购流程图见下：
+{{::vmi采购流程图_1_.png?200|}}

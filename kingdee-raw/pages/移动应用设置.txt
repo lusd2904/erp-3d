@@ -1,0 +1,7 @@
+ID: 移动应用设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E8%AE%BE%E7%BD%AE
+
+====== 1 功能描述 ====== 
+
+数据中心启用移动应用后，该数据中心可以支持移动相关业务应用。详见[[http://club.kingdee.com/forum.php?mod=viewthread&tid=1062359|移动审批]]的介绍。
+

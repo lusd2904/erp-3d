@@ -1,0 +1,4 @@
+ID: 仓库最大最小安全库存_新增
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BB%93%E5%BA%93%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%AE%89%E5%85%A8%E5%BA%93%E5%AD%98_%E6%96%B0%E5%A2%9E
+
+[[仓库最大最小安全库存|仓库最大最小安全库存]]

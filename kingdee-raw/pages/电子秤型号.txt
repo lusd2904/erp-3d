@@ -1,0 +1,5 @@
+ID: 电子秤型号
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E7%A7%A4%E5%9E%8B%E5%8F%B7
+
+====== 1功能说明 ======
+系统预制设置，用来定义条码称重打印中所选择的电子秤，目前支持型号：METTLERIND570、METTLERIND880、耐克斯TDP-A、上海耀华XK3190-A9

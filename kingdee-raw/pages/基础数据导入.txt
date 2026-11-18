@@ -1,0 +1,9 @@
+ID: 基础数据导入
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5
+
+====  基础数据导入====
+  *  通过初始化向导可以快速进行系统初始化作业；
+  *  基础数据导入：快速导入员工数据、库存数据；
+
+
+{{初始化向导1.png?400}}

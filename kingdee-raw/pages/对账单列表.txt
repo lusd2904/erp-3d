@@ -1,0 +1,10 @@
+ID: 对账单列表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AF%B9%E8%B4%A6%E5%8D%95%E5%88%97%E8%A1%A8
+
+==== 对账单列表 ====
+
+  *    满足异构系统会员消费数据对接业务。
+
+
+
+{{对账单列表.png?400}}

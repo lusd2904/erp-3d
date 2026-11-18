@@ -1,0 +1,9 @@
+ID: 旗舰版oauth2配置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%97%97%E8%88%B0%E7%89%88oauth2%E9%85%8D%E7%BD%AE
+
+ ====== 功能描述 ====== 
+金蝶AI套件的环境获取相关认证信息，在企业版进行配置集成。从编码为：BOS_OAuth2config的配置中获取客户端ID和客户端密钥。
+
+**功能路径**
+
+【基础管理】—>【特性集成】—>【金蝶AI套件OAuth2配置】。

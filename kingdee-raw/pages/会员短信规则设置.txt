@@ -1,0 +1,11 @@
+ID: 会员短信规则设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E7%9F%AD%E4%BF%A1%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE
+
+
+====  会员短信规则设置====
+ 
+
+  *  会员短信规则设置：根据定义的短信模板，会员短信功能之后，可以根据模板规则向会员发送相关短信通知；
+ 
+
+{{会员第三方.png?400}}

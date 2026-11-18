@@ -1,0 +1,6 @@
+ID: 工作台app下载地址
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%9C%E5%8F%B0app%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80
+
+智慧终端工作台APP下载地址如下，点击下载，在HMI上进行安装：
+
+https://mobile.open.kingdee.com/m/

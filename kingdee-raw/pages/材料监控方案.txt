@@ -1,0 +1,6 @@
+ID: 材料监控方案
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%9D%90%E6%96%99%E7%9B%91%E6%8E%A7%E6%96%B9%E6%A1%88
+
+====== 材料监控方案 ======
+
+用于采购订单风险预警-价格风险-材料行情风险监控中设置物料关联的原材料用于查询指定材料的期货价格波动风险，详细可以参考采购订单风险预警说明：https://vip.kingdee.com/link/s/lpDmt

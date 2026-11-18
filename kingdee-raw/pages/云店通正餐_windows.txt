@@ -1,0 +1,4 @@
+ID: 云店通正餐_windows
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BA%91%E5%BA%97%E9%80%9A%E6%AD%A3%E9%A4%90_windows
+
+====== 云店通正餐Windows ======

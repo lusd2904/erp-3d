@@ -1,0 +1,9 @@
+ID: 酒席
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%85%92%E5%B8%AD
+
+  *  功能说明
+  为客人预订的酒席开台。在POS房台界面点击【酒席】后会显示相应的门店后台的酒席预订信息，选择酒席名称后点击【确定】即可。
+
+  *  界面展示
+
+{{:酒席.png}}

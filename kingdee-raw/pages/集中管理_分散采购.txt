@@ -1,0 +1,5 @@
+ID: 集中管理_分散采购
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%9B%86%E4%B8%AD%E7%AE%A1%E7%90%86_%E5%88%86%E6%95%A3%E9%87%87%E8%B4%AD
+
+集中管理、分散采购流程图见下：
+{{::pur_集中管理_分散采购_1_.png?200|}}

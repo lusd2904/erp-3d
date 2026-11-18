@@ -1,0 +1,9 @@
+ID: 门店主档信息查询
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E4%B8%BB%E6%A1%A3%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2
+
+====  门店主档信息查询====
+
+  *  门店主档信息查询：查询组织的门店信息、POS机数、已注册数、是否完成初始化、门店开业日期、关店日期；
+
+
+{{初始化向导2.png?400}}

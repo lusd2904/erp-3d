@@ -1,0 +1,5 @@
+ID: wiki:copyright
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=wiki%3Acopyright
+
+﻿
+1993 - 2021 金蝶国际软件集团有限公司版权所有

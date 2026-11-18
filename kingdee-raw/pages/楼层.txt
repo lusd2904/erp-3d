@@ -1,0 +1,9 @@
+ID: 楼层
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%A5%BC%E5%B1%82
+
+[[<<门店营业设置]]
+====== 楼层 ======
+
+====== 1.功能概述 ======
+
+{{:图2.4.1 楼层.png?nolink1000|}}

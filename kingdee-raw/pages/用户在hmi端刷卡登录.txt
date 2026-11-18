@@ -1,0 +1,11 @@
+ID: 用户在hmi端刷卡登录
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%94%A8%E6%88%B7%E5%9C%A8hmi%E7%AB%AF%E5%88%B7%E5%8D%A1%E7%99%BB%E5%BD%95
+
+**功能概述**
+
+**HMI刷卡登录：**
+
+
+车间现场智慧终端登录时勾选刷卡登录后，直接刷卡即可登录，无需输入用户名和密码；
+
+{{:sfs_大屏刷卡登录界面.png|}}

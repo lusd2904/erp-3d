@@ -1,0 +1,11 @@
+ID: 移动平台参数设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE
+
+====== 功能描述 ======
+
+互联网+”时代，金蝶AI星空移动轻应用使得客户能够充分利用碎片化时间移动办公，加快企业的经营决策和信息流转，给企业带来很大的效益，而且很多轻应用是免费使用的，
+越来越多的金蝶AI星空用户非常愿意使用云之家轻应用。
+
+老版本配置云之家轻应用时，需要完成移动平台参数设置，配置过程详见[[http://club.kisdee.com/forum.php?mod=viewthread&tid=698754&extra=page%3D1%26filter%3Dtypeid%26typeid%3D280|玩转金蝶轻应用]]的介绍。
+
+有关新版本快速部署云之家轻应用，具体见[[云之家集成new|云之家集成]]的介绍。

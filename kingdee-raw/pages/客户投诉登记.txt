@@ -1,0 +1,8 @@
+ID: 客户投诉登记
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AE%A2%E6%88%B7%E6%8A%95%E8%AF%89%E7%99%BB%E8%AE%B0
+
+==== 客户投诉登记====
+
+客户投诉登记：对于零售门店存在客户投诉的，可以通过投诉登记进行记录，记录后上传后台，以便统计分析；
+
+{{KSDJ.png?400}}

@@ -1,0 +1,5 @@
+ID: 原材料条码追溯报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8E%9F%E6%9D%90%E6%96%99%E6%9D%A1%E7%A0%81%E8%BF%BD%E6%BA%AF%E6%8A%A5%E8%A1%A8
+
+==== 1.功能说明 ====
+根据维护业务日期的的范围，查询原材料条码的生成记录。

@@ -1,0 +1,4 @@
+ID: 全方位的勾稽检查
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%85%A8%E6%96%B9%E4%BD%8D%E7%9A%84%E5%8B%BE%E7%A8%BD%E6%A3%80%E6%9F%A5
+
+提供表内和基于报表项目的勾稽检查，全面保证报表数据的合规性和正确性。 

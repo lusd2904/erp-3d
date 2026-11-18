@@ -1,0 +1,9 @@
+ID: mcp服务注册
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=mcp%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C
+
+====== MCP集成服务 ======
+
+MCP集成服务，提供已发布 OpenAPI 向 MCP服务器推送 Swagger 文档的能力。管理员可以将已发布 OpenAPI 的 Swagger定义推送至 MCP 服务注册中心，使MCP能够发现并调用发布的OpenAPI业务接口，实现灵基智能助手等场景对业务数据的无缝访问。
+
+  * 推送：将选中的 OpenAPI 接口推送至 MCP 服务注册中心
+  * 取消推送：将选中的 OpenAPI 接口从 MCP 服务注册中心移除

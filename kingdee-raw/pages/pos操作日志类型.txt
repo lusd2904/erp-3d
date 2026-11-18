@@ -1,0 +1,9 @@
+ID: pos操作日志类型
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pos%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97%E7%B1%BB%E5%9E%8B
+
+[[<<门店营业设置]]
+====== POS操作日志类型 ======
+====== 1.功能概述 ======
+pos操作日志类型就是操作场景，比如打印埋脚单，查询pos日志时会根据这些操作场景来分组查看。
+
+{{:图2.9.3 pos操作日志类型.png?nolink|}}

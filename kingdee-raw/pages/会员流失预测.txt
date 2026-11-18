@@ -1,0 +1,7 @@
+ID: 会员流失预测
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E6%B5%81%E5%A4%B1%E9%A2%84%E6%B5%8B
+
+====会员流失预测====
+会员流失预测表：按照会员未消费天数统计所有会员销售情况表。
+
+{{会员流失预测表.png?400}}

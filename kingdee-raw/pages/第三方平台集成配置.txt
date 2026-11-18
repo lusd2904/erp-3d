@@ -1,0 +1,4 @@
+ID: 第三方平台集成配置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE
+
+在第三方系统中，集成金蝶AI星空的轻应用如业务审批，例如查看业务审批列表，接受待办消息推送，点击待办消息进行审批等。具体可参考：https://vip.kingdee.com/article/45810419437731840。

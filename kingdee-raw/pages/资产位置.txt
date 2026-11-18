@@ -1,0 +1,4 @@
+ID: 资产位置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E8%B5%84%E4%BA%A7%E4%BD%8D%E7%BD%AE
+
+本节点提供资产位置功能，用以记录资产的存放位置。方便用户进行资产实物管理。

@@ -1,0 +1,7 @@
+ID: 定时智能采购
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AE%9A%E6%97%B6%E6%99%BA%E8%83%BD%E9%87%87%E8%B4%AD
+
+====== 定时智能采购 ======
+===== 功能说明 =====
+定时智能采购功能用户定期按指定范围创建智能采购定时任务。
+

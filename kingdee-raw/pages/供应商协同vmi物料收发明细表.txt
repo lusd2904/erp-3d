@@ -1,0 +1,5 @@
+ID: 供应商协同vmi物料收发明细表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BE%9B%E5%BA%94%E5%95%86%E5%8D%8F%E5%90%8Cvmi%E7%89%A9%E6%96%99%E6%94%B6%E5%8F%91%E6%98%8E%E7%BB%86%E8%A1%A8
+
+供应商协同新增VMI物料收发明细表，支持查看物料的期初，期末结存，收入，发出库存数量，按供应商进行数据隔离查询。
+字段逻辑参考[物料收发明细表]

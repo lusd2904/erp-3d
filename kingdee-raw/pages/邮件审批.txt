@@ -1,0 +1,28 @@
+ID: 邮件审批
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%82%AE%E4%BB%B6%E5%AE%A1%E6%89%B9
+
+ [[工作流|返回工作流概述]]
+
+====== 邮件审批的配置 ======
+ 
+ 
+概述：邮件审批主要应用在工作流在进行超时醒发送邮件时，用户可以在查看提醒邮件时，通过点击链接直接进行任务处理。
+
+===== 配置方法： =====
+
+
+第一： 参数设置-流程中心-工作流下的邮件审批配置项
+  - 启用邮件审批选项，不勾选，不启用邮件审批；
+  -   勾选后下面的选项可配置：
+  -   服务器地址：勾选启用邮件审批选项后，服务器地址自动获取；
+  -   审批有效时间：设置收到邮件后X天不处理该邮件，关联的任务链接会失效；失效后的邮件链接将不能正常处理流程；
+  -   审批链接类型：Html5和Silverlight,两个选项互斥，如果勾选H5，则邮件审批会打开H5的任务处理界面；反之打开Silverlight任务处理界面。
+第二：流程节点设置的基本信息页签，内容设置中通过大括号“{”可以添加任务处理链接，系统会根据当前启用的多语言加载出不同语言的任务链接，添加该项后，流程超时提醒邮件中就会有该链接显示，根据配置的多语言链接打开相应的语言的任务处理界面，如果不添加任务处理链接，启用了邮件审批也不会有链接显示；
+
+第三：如果在系统启用了邮件审批，会在第三方系统登录授权(管理员登录金蝶AI星空配置第三方系统登录)中自动新增一条记录，通过修改配置文件实现点击链接直接打，如果没有配置第三方系统登录授权，则需要登录金蝶AI星空系统后打开任务处理界面。
+邮件审批无登录审批的配置：
+安装目录下，在WebSite\App_Data\Common.config中修改配置文件common.config的appSettings里加上：（目前支持两种协议，根据需要添加）
+    <!--启动服务插件(V1 默认,使用|拼接字符串协议格式)-->
+    <add key ="StartAppPlugin" value="Kingdee.BOS.ServiceFacade.StartApp.MacVerify,Kingdee.BOS.ServiceFacade.StartApp" />
+      <!--启动服务插件(V2 参数协议为JSON格式)-->
+    <add key ="StartAppPlugin" value="Kingdee.BOS.ServiceFacade.StartApp.MacVerify_V2,Kingdee.BOS.ServiceFacade.StartApp" />

@@ -1,0 +1,6 @@
+ID: aql
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=aql
+
+====== 质量管理辅助基础资料 ======
+
+[[辅助基础资料|质量管理辅助基础资料]]

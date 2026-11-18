@@ -1,0 +1,9 @@
+ID: 第三方消费记录单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%AC%AC%E4%B8%89%E6%96%B9%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95%E5%8D%95
+
+==== 第三方消费记录单 ====
+
+
+  *    满足异构系统会员消费数据对接业务。
+
+{{第三方消费记录单.png?400}}

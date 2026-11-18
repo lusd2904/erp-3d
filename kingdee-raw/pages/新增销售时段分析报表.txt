@@ -1,0 +1,4 @@
+ID: 新增销售时段分析报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%96%B0%E5%A2%9E%E9%94%80%E5%94%AE%E6%97%B6%E6%AE%B5%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8
+
+==== 销售时段分析报表 ====

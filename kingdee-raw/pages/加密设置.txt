@@ -1,0 +1,4 @@
+ID: 加密设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8A%A0%E5%AF%86%E8%AE%BE%E7%BD%AE
+
+[[隐私中心|<<参见隐私中心-加密管理]]

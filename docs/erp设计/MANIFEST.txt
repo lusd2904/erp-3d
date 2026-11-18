@@ -1,0 +1,13 @@
+云盘「erp设计」文件夹清点（2026-11-18 08:06 Asia/Shanghai）
+来源：https://drive.google.com/drive/folders/1gDBKE2zU0CGCPXZn7IfgdWyw5WmkdZC2
+文件夹 ID：1gDBKE2zU0CGCPXZn7IfgdWyw5WmkdZC2
+说明：Google 文档已导出为 docx（仓库无法直接存放 Google 原生文档）。zip 保持原样。
+
+01-需求说明书.docx          292K    原为 Google 文档  1VhQ3n2m-syNN8azQw2yqWDiM6qGna_szuOSqhv9SWMI
+02-技术方案与分工.docx      258K    原为 Google 文档  18EUWx0wFlRYp2WxDxwZBWGY_aYgmzR7kFChlbnRQKNs
+03-待老板确认事项.docx       15K    原为 Google 文档  1jOnke1ZjtrjZ-lDku49HugOzRmzsVgol34OZAZUtDU0
+04-流程引擎调研.docx        227K    原为 Google 文档  1LyGox4ZxqL1PJYbIHiVy1dB3JUX-io2VLixb3CXUo0w
+05-平台开发约定.docx        283K    原为 Google 文档  1ziBu2CNAfWlETs7yWU4mJf7Sk5YpG4GRwviLSbPLhD0
+06-各模块详细设计.zip       375K    原文件            1i1jHVAA694CuJtoK5K2E0DgUXtRbxcsT
+07-界面设计图.zip            30M    原文件            1gNdu6B7TSGOziPHn4lFUr6CBXLDKuXE9
+08-规划原文件md.zip         105K    原文件            1bHRt4XwjPc8eYarEuzm2Mk-RdvUI5uc8

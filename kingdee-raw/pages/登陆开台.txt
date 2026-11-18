@@ -1,0 +1,12 @@
+ID: 登陆开台
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%99%BB%E9%99%86%E5%BC%80%E5%8F%B0
+
+[[中餐模式|>>中餐模式]]
+
+
+  - 在移动安卓设备上打开应用（服务器配置正确）
+  - 选择对应的房台进行开台
+  - 输入就餐人数开台完成，进入点餐页面
+{{:pos收银登陆.png?direct&400 |}}
+{{:pos开台界面.png?direct&400 |}}
+{{:开台人数.png?direct&400 |}}
