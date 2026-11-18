@@ -1,0 +1,8 @@
+ID: 会员消费记录查询
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95%E6%9F%A5%E8%AF%A2
+
+====会员消费记录查询报表====
+会员消费记录查询：查询会员消费的商品明细报表。
+
+{{会员消费记录查询.png?400}}
+

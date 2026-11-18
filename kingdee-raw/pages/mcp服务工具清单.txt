@@ -1,0 +1,7 @@
+ID: mcp服务工具清单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=mcp%E6%9C%8D%E5%8A%A1%E5%B7%A5%E5%85%B7%E6%B8%85%E5%8D%95
+
+====== MCP服务工具清单 ======
+
+用于查看MCP工具清单，详情包含工具标识、工具名称、启用状态、请求参数、返回参数等。
+

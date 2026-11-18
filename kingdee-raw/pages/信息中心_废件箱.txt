@@ -1,0 +1,6 @@
+ID: 信息中心_废件箱
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%BF%83_%E5%BA%9F%E4%BB%B6%E7%AE%B1
+
+====== 信息中心_废件箱 ======
+ 
+普通消息、流程消息、发件箱中移到废件箱的消息都存在废件箱目录下。

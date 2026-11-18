@@ -1,0 +1,21 @@
+ID: 信用评估
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BF%A1%E7%94%A8%E8%AF%84%E4%BC%B0
+
+
+[[信用评估指标]]
+
+[[信用等级方案]]
+
+[[信用评估模型]]
+
+[[创建信用评分表]]
+
+[[信用评分表]]
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+ID: 应收坏账风险监控
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%BA%94%E6%94%B6%E5%9D%8F%E8%B4%A6%E9%A3%8E%E9%99%A9%E7%9B%91%E6%8E%A7
+
+智能数据服务 - 应收坏账风险预测及催收管理   https://vip.kingdee.com/article/236821068445723136

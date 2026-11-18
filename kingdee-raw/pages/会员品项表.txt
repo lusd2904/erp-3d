@@ -1,0 +1,8 @@
+ID: 会员品项表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E5%93%81%E9%A1%B9%E8%A1%A8
+
+====会员品项表====
+会员品项报表：门店、卡号统计会员购买的商品类型、销售分组情况。
+
+{{会员品项报表.png?400}}
+

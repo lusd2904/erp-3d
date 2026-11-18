@@ -1,0 +1,6 @@
+ID: 缺陷原因
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%BC%BA%E9%99%B7%E5%8E%9F%E5%9B%A0
+
+====== 质量管理辅助基础资料 ======
+
+[[辅助基础资料|质量管理辅助基础资料]]

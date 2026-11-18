@@ -1,0 +1,5 @@
+ID: 条码备货汇总
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E5%A4%87%E8%B4%A7%E6%B1%87%E6%80%BB
+
+==== 1.功能说明 ====
+用于多单汇总生成目标单据。

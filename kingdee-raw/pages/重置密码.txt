@@ -1,0 +1,12 @@
+ID: 重置密码
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81
+
+**功能说明**
+
+Administrator登录管理中心后，可以为业务数据中心管理员重置密码，进入【设置】→【重置密码】，即可打开重置密码界面进行设置。
+
+管理中心的Administrator修改自己的密码，需在【其用户下拉菜单】→【修改密码】进行设置。
+
+管理中心默认唯一用户Administrator，可以重置密码，不可新增用户
+
+数据中心中有关重置密码，详见修改密码中的描述。

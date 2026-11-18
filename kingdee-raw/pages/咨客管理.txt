@@ -1,0 +1,10 @@
+ID: 咨客管理
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%92%A8%E5%AE%A2%E7%AE%A1%E7%90%86
+
+[[公司简介]]
+
+[[厅房介绍]]
+
+[[近期推介]]
+ 
+[[排位管理]]

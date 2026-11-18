@@ -1,0 +1,27 @@
+ID: 数据中心关联业务站点
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E5%85%B3%E8%81%94%E4%B8%9A%E5%8A%A1%E7%AB%99%E7%82%B9
+
+====== 1 功能描述 ====== 
+
+客户环境中一个管理站点，会管理多个业务站点（多套环境，比如：生产环境，测试环境，开发环境），而在管理中心中建立的数据中心也有生产数据中心，测试数据中心，开发数据中心，我们需要把数据环境和站点进行一个关联，这样用户访问生产环境（站点），数据中心只能选到生产数据中心，访问测试环境和开发环境也是同样的道理。
+
+**功能路径**
+
+【数据中心列表】→【关联站点】 
+ ====== 2 功能操作 ======
+
+选中数据中心，点击【关联站点】按钮，系统带出当前数据中心的全部业务站点，用户通过“允许访问”为数据中心设置可选择的访问站点。
+
+
+ ====== 3 业务说明 ======
+
+管理站点下加入一个新的应用服务器步骤：
+
+  配置应用服务器的{产品安装目录}\WebSite\App_Data\Common.config，设置isManagementSite的值为false，managementSiteUrl的值为管理站点的URL。例如：管理站点的URl是http://172.19.66.48:8000/，设置如下：
+  <!--是否为管理站点-->
+  <add key="isManagementSite" value="false" />
+  <!--管理中心Url-->
+  <add key="managementSiteUrl" value="http://172.19.66.48:8000/" /> 
+  在管理中心注册目标应用服务器（如果是同一台机则不需要再次注册）。在管理中心的{产品安装目录}\MangeSite\App_Data\Envermement.xml 
+  将目标站点加入服务中，{安装目录}\Service\MangementService\app_data\siteengent.xml
+

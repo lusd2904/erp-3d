@@ -1,0 +1,4 @@
+ID: en:k3cloud综述
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=en%3Ak3cloud%E7%BB%BC%E8%BF%B0
+
+test

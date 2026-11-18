@@ -1,0 +1,8 @@
+ID: 零售门店初始化向导
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%9B%B6%E5%94%AE%E9%97%A8%E5%BA%97%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%91%E5%AF%BC
+
+====  零售门店初始化向导====
+
+  * 零售门店初始化向导：提供中间件部署安装文档下载、明确初始化步骤、查看POS注册验证情况。
+
+{{初始化向导3.png?400}}

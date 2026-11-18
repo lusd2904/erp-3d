@@ -1,0 +1,7 @@
+ID: 寄售调拔退回_无源单_结算冲销方案
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AF%84%E5%94%AE%E8%B0%83%E6%8B%94%E9%80%80%E5%9B%9E_%E6%97%A0%E6%BA%90%E5%8D%95_%E7%BB%93%E7%AE%97%E5%86%B2%E9%94%80%E6%96%B9%E6%A1%88
+
+业务场景：
+无源单寄售退回调拔匹配寄售直接调拔单，未结算数量扣减退回数量。
+详细内容：
+[[https://vip.kingdee.com/article/279640051624567296?productLineId=1&isKnowledge=2]]

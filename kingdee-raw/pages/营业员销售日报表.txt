@@ -1,0 +1,8 @@
+ID: 营业员销售日报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E8%90%A5%E4%B8%9A%E5%91%98%E9%94%80%E5%94%AE%E6%97%A5%E6%8A%A5%E8%A1%A8
+
+==== 营业员销售日报 ====
+
+营业员销售日报：按照营业员维度统计时间端内，每日的收银情况。
+
+{{YYYXSRB.png?400}}

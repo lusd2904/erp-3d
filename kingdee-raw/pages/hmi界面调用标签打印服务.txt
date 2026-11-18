@@ -1,0 +1,32 @@
+ID: hmi界面调用标签打印服务
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=hmi%E7%95%8C%E9%9D%A2%E8%B0%83%E7%94%A8%E6%A0%87%E7%AD%BE%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1
+
+HMI界面调用标签打印服务
+
+适用场景：在没有预配置打印服务的单据界面调用标签打印服务，比如在复杂工序HMI的工序汇报界面调用标签打印服务，用于打印产品标签。
+
+二开说明：
+
+一、基于工序汇报单进行标签打印
+
+1、 适用单据：工序汇报单，按汇报单号、分录号打印
+
+2、 描述：根据汇报单号查找汇报单对象根据汇报单对象获取产品id根据产品id获取标签模板
+
+3、 方法名：ISFCMobilePrintService.GetDataByRptBillNo
+
+4、 参数Context ctx：上下文string rptBillNo,：汇报单号int rptBillSeq：汇报单分录序号string tempType：标签模板组号
+
+5、 返回结果：返回IOperationResult。先判断IsSuccess，如果为true，则获取FuncResult，将其转换为List<string>，其中第0个元素为待打印的字符串指令，直接发送给打印机即可，只有打印箱号时，如果传入了跟踪号未传入箱号，第1个元素会返回箱号，其他情况下，List<string>只有一个元素。当IsSuccess为false时，将FuncResult转换为List<string>，第0个元素为错误信息。
+
+二、基于工序转移单进行标签打印
+
+1、 适用单据： 工序汇报单，按转移单号打印
+
+2、 描述：根据转移单号查找转移单对象根据转移单对象获取产品id根据产品id获取标签模板
+
+3、 方法名：ISFCMobilePrintService.GetDataByTransBillNo
+
+4、 参数：Context ctx,：上下文string transBillNo：转移单号string tempType：标签模板组号
+
+5、 返回结果：返回IOperationResult。先判断IsSuccess，如果为true，则获取FuncResult，将其转换为List<string>，其中第0个元素为待打印的字符串指令，直接发送给打印机即可，只有打印箱号时，如果传入了跟踪号未传入箱号，第1个元素会返回箱号，其他情况下，List<string>只有一个元素。当IsSuccess为false时，将FuncResult转换为List<string>，第0个元素为错误信息。

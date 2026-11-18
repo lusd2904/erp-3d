@@ -1,0 +1,15 @@
+ID: 整体框图
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%95%B4%E4%BD%93%E6%A1%86%E5%9B%BE
+
+[[网点运营管理|>>网点运营管理]]
+
+== 1）启用餐饮团餐管理（新） ==
+
+      - 使用administrator账号登陆，搜索“餐饮参数设置”
+      - 基本参数：启用餐饮团餐管理（新）；启用该参数后，则显示餐饮团餐管理子系统及其下方功能模块和功能菜单
+{{:cloud:base:1.png?direct&400 |}}
+
+== 2）整体框图 ==
+
+{{:cloud:base:2.png?direct&400 |}}
+{{:cloud:base:3.png?direct&400 |}}

@@ -1,0 +1,16 @@
+ID: 车间移动质检_功能介绍
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D
+
+PT-146869 [7.6.0.202103]
+
+**应用场景**
+
+使用终端设备对车间现场的质量检验结果进行记录，可处理首检、巡检、工序检验、委外检验业务；
+
+{{:sfs_移动质检业务图.png|}}
+
+推荐使用安卓系统10寸触摸屏设备；
+
+APP下载地址：https://mobile.open.kingdee.com/m/
+
+{{:sfs_hmi下载页面截图.png|}}

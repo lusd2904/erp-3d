@@ -1,0 +1,6 @@
+ID: 看板加密_功能概述
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%9C%8B%E6%9D%BF%E5%8A%A0%E5%AF%86_%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0
+
+PT-146876 [7.6.0.202105]
+
+根据国家信息安全要求，智慧车间MES看板只允许合法设备播放，对“看板盒子白名单”管理员授权。

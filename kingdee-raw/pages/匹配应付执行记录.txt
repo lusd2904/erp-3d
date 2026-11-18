@@ -1,0 +1,6 @@
+ID: 匹配应付执行记录
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8C%B9%E9%85%8D%E5%BA%94%E4%BB%98%E6%89%A7%E8%A1%8C%E8%AE%B0%E5%BD%95
+
+====== 匹配应付执行记录 ======
+
+详细操作参见：[[https://vip.kingdee.com/article/256119163658721280]]

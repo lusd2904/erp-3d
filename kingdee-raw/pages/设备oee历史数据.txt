@@ -1,0 +1,14 @@
+ID: 设备oee历史数据
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87oee%E5%8E%86%E5%8F%B2%E6%95%B0%E6%8D%AE
+
+**功能概述**
+
+系统提供设备每个历史计算时刻当时对应的OEE数据表。
+
+**功能路径**
+
+【智慧车间MES】->【设备云】->【OEE分析】->【设备OEE历史数据列表】
+
+**具体如下：**
+
+{{:sfs_oee历史表.png?500|}}

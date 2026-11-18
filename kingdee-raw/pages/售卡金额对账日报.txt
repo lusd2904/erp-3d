@@ -1,0 +1,8 @@
+ID: 售卡金额对账日报
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%94%AE%E5%8D%A1%E9%87%91%E9%A2%9D%E5%AF%B9%E8%B4%A6%E6%97%A5%E6%8A%A5
+
+====售卡对账日报====
+
+售卡金额对账日报：查询统计每日的储值卡售卡明细报表。
+
+{{售卡金额对账日报.png?400}}

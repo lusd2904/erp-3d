@@ -1,0 +1,9 @@
+ID: 房台厨师对应表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%88%BF%E5%8F%B0%E5%8E%A8%E5%B8%88%E5%AF%B9%E5%BA%94%E8%A1%A8
+
+[[<<门店营业设置]]
+====== 房台厨师对应表 ======
+
+功能简介：查询房台和对应厨师信息
+
+{{:图2.4.9 房台厨师对应表.png?nolink1000|}}

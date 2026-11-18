@@ -1,0 +1,10 @@
+ID: 零售api访问白名单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%9B%B6%E5%94%AEapi%E8%AE%BF%E9%97%AE%E7%99%BD%E5%90%8D%E5%8D%95
+
+====  零售API访问白名单 ====
+
+  *   限制调用零售webservice接口的客户端；
+  *  启用时只有白名单里面IP才允许访问接口；
+
+
+{{零售api.png?400}}

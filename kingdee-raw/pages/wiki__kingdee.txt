@@ -1,0 +1,5 @@
+ID: wiki:kingdee
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=wiki%3Akingdee
+
+金蝶软件（中国）有限公司版权所有©1993 - 2023 [[http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502002324|粤公网安备 44030502002324号]]
+[[https://beian.miit.gov.cn/#/Integrated/index|粤ICP备05041751号]]

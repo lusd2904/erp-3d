@@ -1,0 +1,5 @@
+ID: 物料分组-库存组对应表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E5%88%86%E7%BB%84-%E5%BA%93%E5%AD%98%E7%BB%84%E5%AF%B9%E5%BA%94%E8%A1%A8
+
+==== 1.功能说明 ====
+维护物料分组与库存组之间的关系，多用于拣货时的自动分配。

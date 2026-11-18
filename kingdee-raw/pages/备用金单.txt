@@ -1,0 +1,7 @@
+ID: 备用金单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%A4%87%E7%94%A8%E9%87%91%E5%8D%95
+
+==== 备用金单 ====
+ 备用金单：对于零售门店备用金管理。
+
+{{BYJD.png?400}}{{备用金单.png?400}}

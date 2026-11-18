@@ -1,0 +1,5 @@
+ID: 防伪查询记录表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%98%B2%E4%BC%AA%E6%9F%A5%E8%AF%A2%E8%AE%B0%E5%BD%95%E8%A1%A8
+
+==== 1.功能说明 ====
+用于防伪查询记录。

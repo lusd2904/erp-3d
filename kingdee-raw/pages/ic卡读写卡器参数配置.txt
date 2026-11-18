@@ -1,0 +1,8 @@
+ID: ic卡读写卡器参数配置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=ic%E5%8D%A1%E8%AF%BB%E5%86%99%E5%8D%A1%E5%99%A8%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE
+
+====  IC卡读写卡器参数配置====
+  *  IC卡读写卡器参数配置：根据硬件设备，设置后台读写参数，注意：读写功能只有使用金蝶AI星空（X86）客户端才能生效；
+ 
+{{公共参数配置2.png?400}}
+

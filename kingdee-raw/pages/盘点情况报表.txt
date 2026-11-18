@@ -1,0 +1,5 @@
+ID: 盘点情况报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%9B%98%E7%82%B9%E6%83%85%E5%86%B5%E6%8A%A5%E8%A1%A8
+
+==== 1.功能说明 ====
+可通过组织、单据编号、盘点单据、物料编码等，对盘点情况进行查询。

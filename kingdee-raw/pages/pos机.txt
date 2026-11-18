@@ -1,0 +1,7 @@
+ID: pos机
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pos%E6%9C%BA
+
+==== POS机 ====
+  * POS机维护：根据门店信息维护POS机信息，POS机类型分固定POS机与移动POS机，自助POS机，固定POS机适用与PC-POS系统，移动POS机适用与APP-POS，自助POS机适用于大屏导购，POS机需要选择对应的仓库，那些仓库可以参与POS开单收银。
+
+{{POS机定义2.png?400}}

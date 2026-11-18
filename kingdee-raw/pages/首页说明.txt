@@ -1,0 +1,4 @@
+ID: 首页说明
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%A6%96%E9%A1%B5%E8%AF%B4%E6%98%8E
+
+{{:cloud:1.png?200|}}

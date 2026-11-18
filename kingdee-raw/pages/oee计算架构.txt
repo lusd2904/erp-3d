@@ -1,0 +1,12 @@
+ID: oee计算架构
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=oee%E8%AE%A1%E7%AE%97%E6%9E%B6%E6%9E%84
+
+**OEE计算架构**
+
+OEE计算通过提取系统内的与设备相关的基础数据、生产数据和生产事件数据等，按照公式模型计算出时间稼动率、性能稼动率、良品率、OEE指标。
+
+系统可以自定义计算间隔，每个固定的时间间隔自动计算一次OEE，形成每个时刻的OEE数据。
+
+具体架构如下：
+
+{{:sfs_oee计算架构.png?600|}}

@@ -1,0 +1,4 @@
+ID: 辅助工时_功能介绍
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E8%BE%85%E5%8A%A9%E5%B7%A5%E6%97%B6_%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D
+
+PC端和屏端两个辅助工时录入端，提供人员工时记录，按直接工时、间接工时、异常工时分类，从人员、车间两个维度，提供工时分析报表。

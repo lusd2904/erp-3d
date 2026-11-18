@@ -1,0 +1,10 @@
+ID: 门店电子秤传秤设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E7%94%B5%E5%AD%90%E7%A7%A4%E4%BC%A0%E7%A7%A4%E8%AE%BE%E7%BD%AE
+
+====  门店电子秤传秤设置====
+
+  *  cloud连锁档案增加【门店电子秤传秤设置】；
+  *  设置门店的电子秤IP地址、自动传秤；
+  *  用于PC POS秤重商品自动传秤。
+
+{{门店电子秤传秤设置.png?400}}

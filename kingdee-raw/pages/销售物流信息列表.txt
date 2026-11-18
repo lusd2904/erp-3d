@@ -1,0 +1,6 @@
+ID: 销售物流信息列表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%94%80%E5%94%AE%E7%89%A9%E6%B5%81%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8
+
+销售物流信息列表统一管理销售订单，发货通知单，销售出库单，销售退货单上的物流单号对应的物流详情。
+详细参考
+[[https://vip.kingdee.com/article/223033855618894592?productLineId=1]]

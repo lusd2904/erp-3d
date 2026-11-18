@@ -1,0 +1,8 @@
+ID: 转台
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E8%BD%AC%E5%8F%B0
+
+  *  功能说明
+  为客人进行转台或并台操作。如果要转的新台是空台，则进行开台操作；否则进行并台操作。
+
+  *  界面展示
+   {{:转台.png}}

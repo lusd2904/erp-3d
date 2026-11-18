@@ -1,0 +1,7 @@
+ID: 门店abc销售分析报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97abc%E9%94%80%E5%94%AE%E5%88%86%E6%9E%90%E6%8A%A5%E8%A1%A8
+
+====门店ABC销售分析报表====
+门店ABC销售分析报表：按照门店登记统计时间段的销售情况表。
+
+{{门店ABC销售分析报表.png?400}}

@@ -1,0 +1,5 @@
+ID: 定时模拟报价
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AE%9A%E6%97%B6%E6%A8%A1%E6%8B%9F%E6%8A%A5%E4%BB%B7
+
+====== 定时模拟报价 ======
+设置定时执行模拟报价方案，按执行计划方案，系统定时自动创建模拟报价单。

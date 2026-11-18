@@ -1,0 +1,6 @@
+ID: 单据下推
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8D%95%E6%8D%AE%E4%B8%8B%E6%8E%A8
+
+销售订单下推生成采购申请单或采购订单时，销售订单会生成与采购申请单/采购订单的预留关系。
+
+单据下推生成的预留关系是强预留。

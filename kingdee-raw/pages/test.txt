@@ -1,0 +1,4 @@
+ID: test
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=test
+
+错误报告 然后雷电窗口就关闭了 不知道怎么回事 是不是纯净版的W10不支持雷电 我用的1.8.6

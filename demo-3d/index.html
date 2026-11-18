@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>芯程电子 · 电子元器件生产管理 ERP</title>
+<link rel="stylesheet" href="src/styles/theme.css" />
+<link rel="stylesheet" href="src/app/app.css" />
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/three.module.js",
+  "three/addons/": "./vendor/three/addons/",
+  "echarts": "./vendor/echarts/echarts.esm.min.js"
+} }
+</script>
+</head>
+<body>
+<div style="display:grid;place-content:center;height:100vh;color:#56637a;font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif">正在加载…</div>
+<script>
+  // http(s) 下使用原生 ES modules（便于迭代调试）；双击 file:// 打开时使用打包产物 dist/app.js（无 CORS 限制）
+  (function () {
+    var s = document.createElement('script');
+    if (location.protocol === 'file:' || /[?&]bundle=1/.test(location.search)) { s.src = 'dist/app.js'; }
+    else { s.type = 'module'; s.src = 'src/app/main.js'; }
+    document.body.appendChild(s);
+  })();
+</script>
+</body>
+</html>

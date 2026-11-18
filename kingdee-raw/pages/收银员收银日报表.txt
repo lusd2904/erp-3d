@@ -1,0 +1,8 @@
+ID: 收银员收银日报表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%94%B6%E9%93%B6%E5%91%98%E6%94%B6%E9%93%B6%E6%97%A5%E6%8A%A5%E8%A1%A8
+
+==== 收银员日报表 ====
+
+收银员收银日报表：按照收银员维度查询时间段内，每日的收银情况。
+
+{{syyrbb.png?400}}

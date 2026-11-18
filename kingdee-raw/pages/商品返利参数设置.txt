@@ -1,0 +1,10 @@
+ID: 商品返利参数设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE
+
+==== 商品返利参数设置 ====
+
+1.  返利参数设置，是否可以进行叠加执行返利政策。
+
+2.  按组织进行过滤设置
+
+{{FLCSSZ.png?400}}

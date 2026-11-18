@@ -1,0 +1,5 @@
+ID: 条码归档
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E5%BD%92%E6%A1%A3
+
+==== 1.功能说明 ====
+针对条码适用量越来越多，需要针对条码主档、扫描记录、装拆箱列表进行归档，以提升数据扫描采集查询的性能。

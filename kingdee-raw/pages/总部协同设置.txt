@@ -1,0 +1,7 @@
+ID: 总部协同设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%80%BB%E9%83%A8%E5%8D%8F%E5%90%8C%E8%AE%BE%E7%BD%AE
+
+==== 总部协同设置 ====
+总部（中间件链接）服务器设置与（POS机自动）升级服务器地址；
+
+{{POS总部设置.png?400}}

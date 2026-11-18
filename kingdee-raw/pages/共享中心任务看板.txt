@@ -1,0 +1,4 @@
+ID: 共享中心任务看板
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%85%B1%E4%BA%AB%E4%B8%AD%E5%BF%83%E4%BB%BB%E5%8A%A1%E7%9C%8B%E6%9D%BF
+
+共享中心任务看板用来设置共享中心任务看板的URL地址。

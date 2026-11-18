@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>DokuWiki Setup Error</title></head>
+<body style="font-family: Arial, sans-serif">
+    <div style="width:60%; margin: auto; background-color: #fcc;
+                border: 1px solid #faa; padding: 0.5em 1em;">
+        <h1 style="font-size: 120%">DokuWiki Setup Error</h1>
+        <p>Something unforeseen has happened: Sitemap generation is disabled</p>
+    </div>
+</body>
+</html>

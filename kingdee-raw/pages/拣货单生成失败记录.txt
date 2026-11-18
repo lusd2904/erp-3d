@@ -1,0 +1,5 @@
+ID: 拣货单生成失败记录
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%8B%A3%E8%B4%A7%E5%8D%95%E7%94%9F%E6%88%90%E5%A4%B1%E8%B4%A5%E8%AE%B0%E5%BD%95
+
+==== 1.功能说明 ====
+用于查询拣货单生成失败原因记录查询。

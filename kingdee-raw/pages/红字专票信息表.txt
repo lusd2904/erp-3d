@@ -1,0 +1,7 @@
+ID: 红字专票信息表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%BA%A2%E5%AD%97%E4%B8%93%E7%A5%A8%E4%BF%A1%E6%81%AF%E8%A1%A8
+
+====== 红字专票信息表 ======
+
+
+操作详见：[[https://vip.kingdee.com/article/12182]]

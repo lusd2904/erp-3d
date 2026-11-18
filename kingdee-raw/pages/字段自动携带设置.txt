@@ -1,0 +1,4 @@
+ID: 字段自动携带设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AD%97%E6%AE%B5%E8%87%AA%E5%8A%A8%E6%90%BA%E5%B8%A6%E8%AE%BE%E7%BD%AE
+
+字段自动携带设置详见帖子：https://vip-admin.kingdee.com/article/325290575845467648；https://vip.kingdee.com/article/315066638259042048?productLineId=1

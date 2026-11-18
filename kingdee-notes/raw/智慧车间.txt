@@ -1,0 +1,1110 @@
+https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4
+
+1 智慧车间概述
+1.1 智慧车间概述
+智慧车间模块是在原车间管理模块基础上发展而来，增加了对生产订单执行、生产工序执行和柔性产线执行三种模式的支持，增加了与设备的集成接口，结合智慧终端、智慧看板等设备，可实现柔性产线订单有限产能排程、柔性产线和离散作业现场各种数据的采集与汇报，可满足新形势下的多品种、小批量、个性化需求生产模式。
+应用智慧车间模块，建议配套购买智慧终端、智慧看板等硬件设备。
+三种生产模式：
+1.2 总体应用流程
+1.3 应用场景
+支持企业生产订单执行、生产工序执行和柔性产线执行三种业务模式，满足小批量、多品种、个性化的需求。
+支持计划的有限产能排程
+通过智慧终端实时采集车间数据并进行事中控制
+现场异常情况的及时报警与灵活处理
+生产现场看板应用
+SMT与非SMT关键件PDA上料防错
+1.4 应用流程
+柔性产线执行流程
+生产订单执行流程
+生产工序执行流程
+工序过程记录流程
+刷卡登录应用
+APS集成应用
+现场看板管理应用
+安灯呼叫应用流程
+设备联网
+OEE分析
+PDA上料防错
+2 智慧车间操作手册
+2.1 APP下载与登录
+工作台设置
+工作台APP下载地址
+HMI工作台APP自定义主页
+HMI刷卡登录
+刷卡登录第三方登录授权
+职员—工卡绑定
+用户在HMI端刷卡登录
+2.2 MES参数配置
+车间管理参数
+车间调度汇报权限
+设备监控权限
+HMI配置项
+HMI界面配置
+HMI注册信息
+HMI加密设置配置
+HMI加密设置
+HMI界面按钮配置
+日志清除控制
+授权工作台
+2.3 工艺建模
+基础数据
+工序控制码
+作业
+设备类别
+设备
+资源
+标签模板
+生产事件管理
+工装
+基本活动
+车间公式
+临时日历
+工艺路线（工序）
+工作中心
+工艺路线
+工艺路线（产线）
+物料单箱标准数量
+物料启用序列号管理
+柔性产线
+柔性产线与物料关系
+柔性工艺路线
+2.4 柔性产线执行
+PC：车间作业计划执行
+柔性生产-生产订单
+柔性生产-工序计划
+柔性生产-工序汇报
+工序投入物料
+返修工作台
+单件返修变更（产线）
+工位上料剩余数量
+上下料流水表
+扫描接口缓存管理
+消息队列
+扫描接口请求日志
+单件产品加工过程追溯
+柔性生产-硬件接口
+HMI智慧终端业务应用
+2.4.1 登录
+产线登录
+2.4.2 工单任务
+工单列表
+生产BOM
+技术文档（柔性产线）
+2.4.3 批次物料管理
+批次物料扫描
+批次物料扫描
+批次物料上料
+挪料
+上料
+自动消耗
+下料
+工位在制缓存
+消息队列（上料、挪料、下料）
+工位上料剩余数量表
+上下料流水
+2.4.4 柔性单件（组装类）
+首序绑定产品
+中间绑定产品
+根据出库单扫描关键件
+未完工切换产品(PT-146884)
+不良汇报
+预装汇报
+替换料扫描
+关键件解绑
+首检（柔性单件）
+手动报工工时录入
+返修中心
+产品查询
+完工汇报
+产品报废
+产品重置工序
+2.4.5 柔性单件（包装类）
+包装扫描
+换箱
+混线包装
+打包清零
+不良汇报（包装）
+尾箱完工
+完工送检
+拆箱
+条码补打
+箱单列表
+箱签打印_套打模板
+2.4.6 柔性批量汇报
+批次物料管理
+批量报工
+批量不良汇报
+批量返修汇报
+返修工作台
+批量包装
+2.4.7 柔性产线执行报表分析
+柔性产线产量日汇总表
+柔性产线维修记录查询表
+柔性产线在制品统计表
+柔性生产日志分析
+消息执行日志
+2.4.8 无工单替换件
+无工单替换件_功能介绍
+无工单替换件_详细说明
+2.5 生产工序执行
+生产工序执行_场景介绍
+HMI主控台
+2.5.1 启用派工
+派工明细
+工序派工
+派工工作台
+派工工序开工
+派工工序反开工
+派工工序报工
+派工工序返修
+派工工序扫描报工
+2.5.1.1 工序任务超市
+工序任务超市流程
+PC-人员代理范围规则
+PC-派工单标签设置
+HMI-工序任务超市认领
+HMI-扫描工票报工
+HMI-支持代理操作功能
+2.5.2 不启用派工
+工序开工
+工序报工
+工序报工直接完工
+工序返修
+工序汇报扫描报工
+2.5.3 工序转移
+转移申请
+转移确认
+2.5.4 车间检验
+车间检验
+复杂工序_首检
+2.5.5 工序入库
+入库申请
+修改仓库
+2.5.6 现场物料管理
+BOM
+齐套领料
+领料
+退料
+其他退料
+调拨
+作业不良补料
+超额补料
+其他补料
+2.5.7 技术文档
+技术文档
+2.5.9 工序委外
+扫描委外发出
+委外接收
+委外入库
+2.5.10 辅助工时
+辅助工时_功能介绍
+辅助工时
+HMI辅助工时
+人员工时分析表
+车间工时分析表
+2.5.11 人员作业区执行工作台（PT-146922）
+人员作业区执行工作台-功能介绍
+界面按钮授权
+人员作业区执行工作台
+2.5.12 生产工序执行报表分析
+离散工序产量日汇总表
+离散工序在制品统计表
+2.6 生产订单执行
+生产订单执行_场景介绍
+HMI主控台
+2.6.1 生产执行
+生产开工
+生产报工
+扫描报工
+入库申请
+2.6.2 现场物料管理
+现场物料管理
+2.6.3 技术文档
+技术文档
+2.7 ESOP
+应用场景及价值
+技术文档_基础设置
+技术文档_应用介绍
+2.8 电子看板
+看板定义
+看板方案
+预设轻分析看板：柔性产线车间综合看板
+2.8.1 交互式看板
+功能概述
+功能说明
+2.8.2 看板加密
+看板加密_功能概述
+看板盒子白名单
+看板加密_功能说明
+2.9 过程及检测记录
+2.9.1基础数据
+过程控制检测项目
+过程控制检测方案
+过程控制检测方案-检测步骤批量授权
+过程控制检测方案-检测步骤授权查询和删除
+工艺路线
+（工艺路线中对应参数）
+柔性工艺路线
+（柔性工艺路线中对应参数）
+工序计划
+（工序计划中对应参数）
+2.9.2业务执行
+检测结果记录
+生产过程记录
+HMI端九宫格配置项
+HMI端待检测工序计划
+HMI端检测结果记录录入
+HMI端生产过程记录录入
+HMI端过程记录查询和审核
+工序过程检测打印
+文件导入配置方案
+文件导入日志
+2.10 安灯呼叫
+2.10.1基础数据
+辅助资料-安灯处理阶段
+辅助资料-异常严重程度
+辅助资料-预防措施跟踪类型
+三色灯控制指令
+生产事件管理
+生产异常原因
+2.10.2业务执行
+现场异常处理单
+HMI安灯呼叫
+HMI安灯处理
+三色灯亮灯特性
+PC端安灯处理和查询
+异常升级报警机制
+预防措施跟踪单
+车间异常处理绩效统计表
+2.11 SMT上料
+2.11.1 SMT基础设置
+PDA界面配置
+飞达规格型号
+飞达明细
+零件位置号
+站位表
+生产SMT上料表
+上下料流水表
+2.11.2 SMT生产执行工作台
+SMT上料
+SMT续料
+SMT换料
+SMT批量下料
+SMT挪料
+SMT上料表查询
+生产上料
+生产下料
+已上料不良退料
+工位数量查询
+2.12设备联网
+2.12.1基础数据
+设备
+生产事件管理
+设备自动补录事件规则
+2.12.2设备联网配置
+设备联网方案
+设备联网工程配置
+设备联网同步向导
+设备采集执行计划配置
+2.12.3复杂工序联网场景
+复杂工序联网-场景1-监控多台设备总体工况
+复杂工序联网-场景2-监控单台设备具体工况
+复杂工序联网-场景3-设备无任务时切换生产事件
+复杂工序联网-场景4-设备工序任务开工
+复杂工序联网-场景5-设备生产中切换事件
+复杂工序联网-场景6-生产过程中人员变更
+复杂工序联网-场景7-切换监控设备
+复杂工序联网-场景8-不停机交接班
+复杂工序联网-场景9-设备状态实时联动（SCADA主动推送）
+复杂工序联网-场景10-设备联网异常消息三色灯亮灯提醒
+复杂工序联网-场景11-补录生产事件
+复杂工序联网-场景12-查看BOM
+复杂工序联网-场景13-查看技术文档
+复杂工序联网-场景14.1-联网采集自动报工-原始点值方式
+复杂工序联网-场景14.2-联网采集自动报工-计算后直接传入方式
+复杂工序联网-场景15-数据可视化-设备状态监控看板
+2.12.4柔性产线联网场景
+柔性产线联网-设备监控
+柔性产线联网-组装设备生产
+柔性产线联网-包装设备生产
+2.12.5设备联网查询和日志
+设备联网任务实时表
+设备联网任务历史表
+仪表采集值查询
+设备联网采集综合查询
+设备点值业务归档
+设备状态变更日志
+设备联网同步日志
+设备联网消息日志
+设备联网监控链接
+2.13 OEE分析
+OEE计算架构
+设备OEE计算日志
+设备OEE实时数据
+设备OEE历史数据
+设备时间统计表
+设备停机原因分析表
+电子看板-设备状态监控
+电子看板-实时OEE分析
+掌上工厂-OEE分析
+2.14 雾端部署
+应用场景
+1、云边缘断网后不影边缘端短期生产；
+2、每个边缘端独立运行，不相互影响，即使一个边缘端出现问题，不影响其他边缘；
+3、根据客户需求，业务数据云边缘分开存储；
+云雾业务流程
+雾平台同步管理
+雾平台同步日志
+2.15 车间移动质检
+车间移动质检_功能介绍
+车间移动质检_参数设置
+车间移动质检_首检
+车间移动质检_巡检
+车间移动质检_工序检验
+车间移动质检_委外检验
+2.16 PDA轻报工
+PDA轻报工_功能介绍
+PDA轻报工_初始化设置
+PDA轻报工_单件扫描报工
+PDA轻报工_批量报工
+PDA轻报工_非单件报工
+PDA轻报工_关键件解绑
+PDA轻报工__报工查询
+PDA轻报工__实作工时统计
+2.17 打印专题
+总体介绍
+2.17.1 HMI直连斑马打印服务(PRN文件方式)
+标签应用场景
+标签打印机
+标签初始化和制作应用步骤
+PRN标签制作
+标签模板配置
+标签二开插件应用
+HMI界面调用标签打印服务
+HMI斑马打印机调试
+2.17.2 MES打印服务方案(PC服务)
+MES打印服务介绍
+定义车间工作区
+导出打印服务应用包
+PC打印服务器注册打印机
+PC端启动打印服务
+定义标签模板
+工业屏进行终端注册
+HMI端打印业务应用
+HMI打印任务表
+2.18 APS集成
+标准产品预置与第三方伙伴APS产品的集成，具体实施需与第三方进行沟通。
+2.19 智慧车间云巡检
+智慧车间云巡检_整体介绍
+智慧车间云巡检服务配置
+智慧车间云巡检结果报告
+3 查询与报表
+生产订单工时对比分析表
+工序汇报缺陷分析表
+人员任务工时统计表
+车间MES异常工作台
+清除日志流水记录
+4 学习资源和实施指南手册
+金蝶AI•星空智慧工厂知识合辑FAQ
+https://vip.kingdee.com/article/147498
+金蝶AI 星空 智慧车间MES云 电子看板 知识合辑
+https://vip.kingdee.com/article/122037871820760832
+您的足迹:
+•
+智慧车间
+文章
+讨论
+阅读
+显示源文件
+修订记录
+搜索
+导航
+新特性汇总
+金蝶AI星空新特性
+金蝶AI星空企业版综述
+综述
+员工服务
+人人资产
+人人报销
+财务会计
+总账
+内部往来协同
+智能会计平台
+应收款管理
+应付款管理
+出纳管理
+票据管理
+资金管理
+网上银行
+开放银行
+费用管理
+报表系统
+合并报表系统
+阿米巴报表
+电子会计档案集成
+电子凭证池
+税务管理
+发票管理
+纳税申报
+成本管理
+存货核算
+产品成本核算
+食品成本核算
+标准成本分析
+资产管理
+固定资产
+租赁资产
+人人资产管理
+管理会计
+预算管理
+经营会计
+经营会计分析
+供应链
+采购管理
+销售管理
+信用管理
+库存管理
+组织间结算
+条码管理
+供应商协同
+全渠道营销
+BBC业务中心
+BBC分销商门户
+BBC门店门户
+掌上订货
+B2C电商中心
+要补货管理
+全网会员
+促销管理
+返利管理
+营销费用管理
+B2B电商管理（旧版）
+渠道资金池管理
+零售管理
+连锁档案
+价格促销
+会员管理
+礼券管理
+门店协同
+门店收银
+商品返利
+报表中心
+PLM
+安装部署
+文档管理
+项目管理
+研发物料管理
+设计BOM管理
+超级BOM管理
+设计工艺管理
+流程管理
+研发智库
+Catia集成
+系统建模
+SolidWorks集成
+AutoCAD集成
+CAXA集成
+Cadence集成
+Altium Designer集成
+NX集成
+Creo集成
+中望CAD集成
+Inventor集成
+ZWCAD机械版集成
+PADS集成
+Eplan集成
+设计变更管理
+产品管理
+TR管理
+PDM对象扩展
+生产制造
+工程数据
+计划管理
+生产管理
+委外管理
+日排产
+生产线生产
+车间管理
+智慧车间
+质量管理
+质量管理
+质量追溯
+共享服务中心
+任务共享中心
+财务共享
+流程中心
+信息中心
+工作流
+业务流程
+星空云服务
+数据智能服务
+增值云服务
+经营分析
+轻分析
+数字大屏
+RPA机器人
+星空RPA机器人
+基础管理
+基础资料
+公共设置
+业务监控预警
+消息平台
+实施平台
+翻译平台
+移动设置
+系统工具
+安全登录
+s-HR集成
+云之家集成
+星空卫士
+系统管理
+数据中心管理
+组织管理
+系统管理
+集成平台
+门户管理
+隐私中心
+移动应用
+星空Live
+星空工作台
+BOS平台
+BOS平台
+套打平台
+报表平台
+移动平台
+附录
+协同开发云
+协同开发云
+食品加工管理
+产品数据管理
+产品加工管理
+加工车间管理
+加工成本管理
+云调度指挥中心
+智慧物联
+餐饮加工管理
+加工基础数据
+加工订单管理
+加工车间管理
+餐饮团餐管理
+网点运营管理
+菜谱综合管理
+餐饮配送管理
+加工数据管理
+餐饮加工管理
+总部配送管理
+配送路线管理
+餐饮门店管理
+门店营业设置
+门店营业分析
+门店营业对账
+门店外卖管理
+门店销售预测
+门店订货预估
+门店订货管理
+餐饮团餐管理
+门店库存管理
+餐饮客户关系
+协议客户管理
+会员卡务管理
+营销策划管理
+基础设置
+餐饮终端产品
+门店移动订货
+前台POS
+移动POS
+微信点餐
+云店通
+电子秤
+智慧车间.txt
+· 最后更改: 2026/07/15 02:38 由
+127.0.0.1
+金蝶软件（中国）有限公司版权所有©1993 - 2023
+粤公网安备 44030502002324号
+粤ICP备05041751号
+
+=== LINKS ===
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B	柔性产线执行流程
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E8%AE%A2%E5%8D%95%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B	生产订单执行流程
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B	生产工序执行流程
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95%E6%B5%81%E7%A8%8B	工序过程记录流程
+/dokuwiki/doku.php?id=%E5%88%B7%E5%8D%A1%E7%99%BB%E5%BD%95%E5%BA%94%E7%94%A8	刷卡登录应用
+/dokuwiki/doku.php?id=aps%E9%9B%86%E6%88%90%E5%BA%94%E7%94%A8	APS集成应用
+/dokuwiki/doku.php?id=%E7%8E%B0%E5%9C%BA%E7%9C%8B%E6%9D%BF%E7%AE%A1%E7%90%86%E5%BA%94%E7%94%A8	现场看板管理应用
+/dokuwiki/doku.php?id=%E5%AE%89%E7%81%AF%E5%91%BC%E5%8F%AB%E5%BA%94%E7%94%A8%E6%B5%81%E7%A8%8B	安灯呼叫应用流程
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91	设备联网
+/dokuwiki/doku.php?id=oee%E5%88%86%E6%9E%90	OEE分析
+/dokuwiki/doku.php?id=pda%E4%B8%8A%E6%96%99%E9%98%B2%E9%94%99	PDA上料防错
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%9C%E5%8F%B0app%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80	工作台APP下载地址
+/dokuwiki/doku.php?id=hmi%E5%B7%A5%E4%BD%9C%E5%8F%B0app%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A1%B5	HMI工作台APP自定义主页
+/dokuwiki/doku.php?id=%E5%88%B7%E5%8D%A1%E7%99%BB%E5%BD%95%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E6%8E%88%E6%9D%83	刷卡登录第三方登录授权
+/dokuwiki/doku.php?id=%E8%81%8C%E5%91%98_%E5%B7%A5%E5%8D%A1%E7%BB%91%E5%AE%9A	职员—工卡绑定
+/dokuwiki/doku.php?id=%E7%94%A8%E6%88%B7%E5%9C%A8hmi%E7%AB%AF%E5%88%B7%E5%8D%A1%E7%99%BB%E5%BD%95	用户在HMI端刷卡登录
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86%E5%8F%82%E6%95%B0	车间管理参数
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E8%B0%83%E5%BA%A6%E6%B1%87%E6%8A%A5%E6%9D%83%E9%99%90	车间调度汇报权限
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E7%9B%91%E6%8E%A7%E6%9D%83%E9%99%90	设备监控权限
+/dokuwiki/doku.php?id=hmi%E9%85%8D%E7%BD%AE%E9%A1%B9	HMI配置项
+/dokuwiki/doku.php?id=hmi%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE	HMI界面配置
+/dokuwiki/doku.php?id=hmi%E6%B3%A8%E5%86%8C%E4%BF%A1%E6%81%AF	HMI注册信息
+/dokuwiki/doku.php?id=hmi%E5%8A%A0%E5%AF%86%E8%AE%BE%E7%BD%AE%E9%85%8D%E7%BD%AE	HMI加密设置配置
+/dokuwiki/doku.php?id=hmi%E5%8A%A0%E5%AF%86%E8%AE%BE%E7%BD%AE	HMI加密设置
+/dokuwiki/doku.php?id=hmi%E7%95%8C%E9%9D%A2%E6%8C%89%E9%92%AE%E9%85%8D%E7%BD%AE	HMI界面按钮配置
+/dokuwiki/doku.php?id=%E6%97%A5%E5%BF%97%E6%B8%85%E9%99%A4%E6%8E%A7%E5%88%B6	日志清除控制
+/dokuwiki/doku.php?id=%E6%8E%88%E6%9D%83%E5%B7%A5%E4%BD%9C%E5%8F%B0	授权工作台
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%8E%A7%E5%88%B6%E7%A0%81	工序控制码
+/dokuwiki/doku.php?id=%E4%BD%9C%E4%B8%9A	作业
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E7%B1%BB%E5%88%AB	设备类别
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87	设备
+/dokuwiki/doku.php?id=%E8%B5%84%E6%BA%90	资源
+/dokuwiki/doku.php?id=%E6%A0%87%E7%AD%BE%E6%A8%A1%E6%9D%BF	标签模板
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86	生产事件管理
+/dokuwiki/doku.php?id=%E5%B7%A5%E8%A3%85	工装
+/dokuwiki/doku.php?id=%E5%9F%BA%E6%9C%AC%E6%B4%BB%E5%8A%A8	基本活动
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E5%85%AC%E5%BC%8F	车间公式
+/dokuwiki/doku.php?id=%E4%B8%B4%E6%97%B6%E6%97%A5%E5%8E%86	临时日历
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%BF%83	工作中心
+/dokuwiki/doku.php?id=%E5%B7%A5%E8%89%BA%E8%B7%AF%E7%BA%BF	工艺路线
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E5%8D%95%E7%AE%B1%E6%A0%87%E5%87%86%E6%95%B0%E9%87%8F	物料单箱标准数量
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E5%90%AF%E7%94%A8%E5%BA%8F%E5%88%97%E5%8F%B7%E7%AE%A1%E7%90%86	物料启用序列号管理
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF	柔性产线
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E4%B8%8E%E7%89%A9%E6%96%99%E5%85%B3%E7%B3%BB	柔性产线与物料关系
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E5%B7%A5%E8%89%BA%E8%B7%AF%E7%BA%BF	柔性工艺路线
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E7%94%9F%E4%BA%A7-%E7%94%9F%E4%BA%A7%E8%AE%A2%E5%8D%95	柔性生产-生产订单
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E7%94%9F%E4%BA%A7-%E5%B7%A5%E5%BA%8F%E8%AE%A1%E5%88%92	柔性生产-工序计划
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E7%94%9F%E4%BA%A7-%E5%B7%A5%E5%BA%8F%E6%B1%87%E6%8A%A5	柔性生产-工序汇报
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%8A%95%E5%85%A5%E7%89%A9%E6%96%99	工序投入物料
+/dokuwiki/doku.php?id=%E8%BF%94%E4%BF%AE%E5%B7%A5%E4%BD%9C%E5%8F%B0	返修工作台
+/dokuwiki/doku.php?id=%E5%8D%95%E4%BB%B6%E8%BF%94%E4%BF%AE%E5%8F%98%E6%9B%B4_%E4%BA%A7%E7%BA%BF	单件返修变更（产线）
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%8D%E4%B8%8A%E6%96%99%E5%89%A9%E4%BD%99%E6%95%B0%E9%87%8F	工位上料剩余数量
+/dokuwiki/doku.php?id=%E4%B8%8A%E4%B8%8B%E6%96%99%E6%B5%81%E6%B0%B4%E8%A1%A8	上下料流水表
+/dokuwiki/doku.php?id=%E6%89%AB%E6%8F%8F%E6%8E%A5%E5%8F%A3%E7%BC%93%E5%AD%98%E7%AE%A1%E7%90%86	扫描接口缓存管理
+/dokuwiki/doku.php?id=%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97	消息队列
+/dokuwiki/doku.php?id=%E6%89%AB%E6%8F%8F%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E6%97%A5%E5%BF%97	扫描接口请求日志
+/dokuwiki/doku.php?id=%E5%8D%95%E4%BB%B6%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E8%BF%87%E7%A8%8B%E8%BF%BD%E6%BA%AF	单件产品加工过程追溯
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E7%94%9F%E4%BA%A7-%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3	柔性生产-硬件接口
+/dokuwiki/doku.php?id=%E4%BA%A7%E7%BA%BF%E7%99%BB%E5%BD%95	产线登录
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%8D%95%E5%88%97%E8%A1%A8	工单列表
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7bom	生产BOM
+/dokuwiki/doku.php?id=%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3_%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF	技术文档（柔性产线）
+/dokuwiki/doku.php?id=%E6%89%B9%E6%AC%A1%E7%89%A9%E6%96%99%E6%89%AB%E6%8F%8F	批次物料扫描
+/dokuwiki/doku.php?id=%E6%8C%AA%E6%96%99	挪料
+/dokuwiki/doku.php?id=%E4%B8%8A%E6%96%99	上料
+/dokuwiki/doku.php?id=%E8%87%AA%E5%8A%A8%E6%B6%88%E8%80%97	自动消耗
+/dokuwiki/doku.php?id=%E4%B8%8B%E6%96%99	下料
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%8D%E5%9C%A8%E5%88%B6%E7%BC%93%E5%AD%98	工位在制缓存
+/dokuwiki/doku.php?id=%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97_%E4%B8%8A%E6%96%99_%E6%8C%AA%E6%96%99_%E4%B8%8B%E6%96%99	消息队列（上料、挪料、下料）
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%8D%E4%B8%8A%E6%96%99%E5%89%A9%E4%BD%99%E6%95%B0%E9%87%8F%E8%A1%A8	工位上料剩余数量表
+/dokuwiki/doku.php?id=%E4%B8%8A%E4%B8%8B%E6%96%99%E6%B5%81%E6%B0%B4	上下料流水
+/dokuwiki/doku.php?id=%E9%A6%96%E5%BA%8F%E7%BB%91%E5%AE%9A%E4%BA%A7%E5%93%81	首序绑定产品
+/dokuwiki/doku.php?id=%E4%B8%AD%E9%97%B4%E7%BB%91%E5%AE%9A%E4%BA%A7%E5%93%81	中间绑定产品
+/dokuwiki/doku.php?id=%E6%A0%B9%E6%8D%AE%E5%87%BA%E5%BA%93%E5%8D%95%E6%89%AB%E6%8F%8F%E5%85%B3%E9%94%AE%E4%BB%B6	根据出库单扫描关键件
+/dokuwiki/doku.php?id=%E6%9C%AA%E5%AE%8C%E5%B7%A5%E5%88%87%E6%8D%A2%E4%BA%A7%E5%93%81_pt-146884	未完工切换产品(PT-146884)
+/dokuwiki/doku.php?id=%E4%B8%8D%E8%89%AF%E6%B1%87%E6%8A%A5	不良汇报
+/dokuwiki/doku.php?id=%E9%A2%84%E8%A3%85%E6%B1%87%E6%8A%A5	预装汇报
+/dokuwiki/doku.php?id=%E6%9B%BF%E6%8D%A2%E6%96%99%E6%89%AB%E6%8F%8F	替换料扫描
+/dokuwiki/doku.php?id=%E5%85%B3%E9%94%AE%E4%BB%B6%E8%A7%A3%E7%BB%91	关键件解绑
+/dokuwiki/doku.php?id=%E9%A6%96%E6%A3%80_%E6%9F%94%E6%80%A7%E5%8D%95%E4%BB%B6	首检（柔性单件）
+/dokuwiki/doku.php?id=%E6%89%8B%E5%8A%A8%E6%8A%A5%E5%B7%A5%E5%B7%A5%E6%97%B6%E5%BD%95%E5%85%A5	手动报工工时录入
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%9F%A5%E8%AF%A2	产品查询
+/dokuwiki/doku.php?id=%E5%AE%8C%E5%B7%A5%E6%B1%87%E6%8A%A5	完工汇报
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%8A%A5%E5%BA%9F	产品报废
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E9%87%8D%E7%BD%AE%E5%B7%A5%E5%BA%8F	产品重置工序
+/dokuwiki/doku.php?id=%E5%8C%85%E8%A3%85%E6%89%AB%E6%8F%8F	包装扫描
+/dokuwiki/doku.php?id=%E6%8D%A2%E7%AE%B1	换箱
+/dokuwiki/doku.php?id=%E6%B7%B7%E7%BA%BF%E5%8C%85%E8%A3%85	混线包装
+/dokuwiki/doku.php?id=%E6%89%93%E5%8C%85%E6%B8%85%E9%9B%B6	打包清零
+/dokuwiki/doku.php?id=%E4%B8%8D%E8%89%AF%E6%B1%87%E6%8A%A5_%E5%8C%85%E8%A3%85	不良汇报（包装）
+/dokuwiki/doku.php?id=%E5%B0%BE%E7%AE%B1%E5%AE%8C%E5%B7%A5	尾箱完工
+/dokuwiki/doku.php?id=%E5%AE%8C%E5%B7%A5%E9%80%81%E6%A3%80	完工送检
+/dokuwiki/doku.php?id=%E6%8B%86%E7%AE%B1	拆箱
+/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E8%A1%A5%E6%89%93	条码补打
+/dokuwiki/doku.php?id=%E7%AE%B1%E5%8D%95%E5%88%97%E8%A1%A8	箱单列表
+/dokuwiki/doku.php?id=%E7%AE%B1%E7%AD%BE%E6%89%93%E5%8D%B0_%E5%A5%97%E6%89%93%E6%A8%A1%E6%9D%BF	箱签打印_套打模板
+/dokuwiki/doku.php?id=%E6%89%B9%E6%AC%A1%E7%89%A9%E6%96%99%E7%AE%A1%E7%90%86	批次物料管理
+/dokuwiki/doku.php?id=%E6%89%B9%E9%87%8F%E6%8A%A5%E5%B7%A5	批量报工
+/dokuwiki/doku.php?id=%E6%89%B9%E9%87%8F%E4%B8%8D%E8%89%AF%E6%B1%87%E6%8A%A5	批量不良汇报
+/dokuwiki/doku.php?id=%E6%89%B9%E9%87%8F%E8%BF%94%E4%BF%AE%E6%B1%87%E6%8A%A5	批量返修汇报
+/dokuwiki/doku.php?id=%E8%BF%94%E4%BF%AE%E5%B7%A5%E4%BD%9C%E5%8F%B0	返修工作台
+/dokuwiki/doku.php?id=%E6%89%B9%E9%87%8F%E5%8C%85%E8%A3%85	批量包装
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E4%BA%A7%E9%87%8F%E6%97%A5%E6%B1%87%E6%80%BB%E8%A1%A8	柔性产线产量日汇总表
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E7%BB%B4%E4%BF%AE%E8%AE%B0%E5%BD%95%E6%9F%A5%E8%AF%A2%E8%A1%A8	柔性产线维修记录查询表
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E5%9C%A8%E5%88%B6%E5%93%81%E7%BB%9F%E8%AE%A1%E8%A1%A8	柔性产线在制品统计表
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E7%94%9F%E4%BA%A7%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90	柔性生产日志分析
+/dokuwiki/doku.php?id=%E6%B6%88%E6%81%AF%E6%89%A7%E8%A1%8C%E6%97%A5%E5%BF%97	消息执行日志
+/dokuwiki/doku.php?id=%E6%97%A0%E5%B7%A5%E5%8D%95%E6%9B%BF%E6%8D%A2%E4%BB%B6_%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D	无工单替换件_功能介绍
+/dokuwiki/doku.php?id=%E6%97%A0%E5%B7%A5%E5%8D%95%E6%9B%BF%E6%8D%A2%E4%BB%B6_%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E	无工单替换件_详细说明
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%BA%8F%E6%89%A7%E8%A1%8C_%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D	生产工序执行_场景介绍
+/dokuwiki/doku.php?id=%E4%B8%BB%E6%8E%A7%E5%8F%B0	HMI主控台
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E6%98%8E%E7%BB%86	派工明细
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%B4%BE%E5%B7%A5	工序派工
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E5%B7%A5%E4%BD%9C%E5%8F%B0	派工工作台
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E5%B7%A5%E5%BA%8F%E5%BC%80%E5%B7%A5	派工工序开工
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E5%B7%A5%E5%BA%8F%E5%8F%8D%E5%BC%80%E5%B7%A5	派工工序反开工
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E5%B7%A5%E5%BA%8F%E6%8A%A5%E5%B7%A5	派工工序报工
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E5%B7%A5%E5%BA%8F%E8%BF%94%E4%BF%AE	派工工序返修
+/dokuwiki/doku.php?id=%E6%B4%BE%E5%B7%A5%E5%B7%A5%E5%BA%8F%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%B7%A5	派工工序扫描报工
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E4%BB%BB%E5%8A%A1%E8%B6%85%E5%B8%82%E6%B5%81%E7%A8%8B	工序任务超市流程
+/dokuwiki/doku.php?id=pc-%E4%BA%BA%E5%91%98%E4%BB%A3%E7%90%86%E8%8C%83%E5%9B%B4%E8%A7%84%E5%88%99	PC-人员代理范围规则
+/dokuwiki/doku.php?id=pc-%E6%B4%BE%E5%B7%A5%E5%8D%95%E6%A0%87%E7%AD%BE%E8%AE%BE%E7%BD%AE	PC-派工单标签设置
+/dokuwiki/doku.php?id=hmi-%E5%B7%A5%E5%BA%8F%E4%BB%BB%E5%8A%A1%E8%B6%85%E5%B8%82%E8%AE%A4%E9%A2%86	HMI-工序任务超市认领
+/dokuwiki/doku.php?id=hmi-%E6%89%AB%E6%8F%8F%E5%B7%A5%E7%A5%A8%E6%8A%A5%E5%B7%A5	HMI-扫描工票报工
+/dokuwiki/doku.php?id=hmi-%E6%94%AF%E6%8C%81%E4%BB%A3%E7%90%86%E6%93%8D%E4%BD%9C%E5%8A%9F%E8%83%BD	HMI-支持代理操作功能
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E5%BC%80%E5%B7%A5	工序开工
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%8A%A5%E5%B7%A5	工序报工
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%8A%A5%E5%B7%A5%E7%9B%B4%E6%8E%A5%E5%AE%8C%E5%B7%A5	工序报工直接完工
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E8%BF%94%E4%BF%AE	工序返修
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%B1%87%E6%8A%A5%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%B7%A5	工序汇报扫描报工
+/dokuwiki/doku.php?id=%E8%BD%AC%E7%A7%BB%E7%94%B3%E8%AF%B7	转移申请
+/dokuwiki/doku.php?id=%E8%BD%AC%E7%A7%BB%E7%A1%AE%E8%AE%A4	转移确认
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E6%A3%80%E9%AA%8C	车间检验
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F_%E9%A6%96%E6%A3%80	复杂工序_首检
+/dokuwiki/doku.php?id=%E5%85%A5%E5%BA%93%E7%94%B3%E8%AF%B7	入库申请
+/dokuwiki/doku.php?id=%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93	修改仓库
+/dokuwiki/doku.php?id=bom	BOM
+/dokuwiki/doku.php?id=%E9%BD%90%E5%A5%97%E9%A2%86%E6%96%99	齐套领料
+/dokuwiki/doku.php?id=%E9%A2%86%E6%96%99	领料
+/dokuwiki/doku.php?id=%E9%80%80%E6%96%99	退料
+/dokuwiki/doku.php?id=%E5%85%B6%E4%BB%96%E9%80%80%E6%96%99	其他退料
+/dokuwiki/doku.php?id=%E8%B0%83%E6%8B%A8	调拨
+/dokuwiki/doku.php?id=%E4%BD%9C%E4%B8%9A%E4%B8%8D%E8%89%AF%E8%A1%A5%E6%96%99	作业不良补料
+/dokuwiki/doku.php?id=%E8%B6%85%E9%A2%9D%E8%A1%A5%E6%96%99	超额补料
+/dokuwiki/doku.php?id=%E5%85%B6%E4%BB%96%E8%A1%A5%E6%96%99	其他补料
+/dokuwiki/doku.php?id=%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3-%E5%B7%A5%E5%BA%8F%E4%BB%BB%E5%8A%A1	技术文档
+/dokuwiki/doku.php?id=%E6%89%AB%E6%8F%8F%E5%A7%94%E5%A4%96%E5%8F%91%E5%87%BA	扫描委外发出
+/dokuwiki/doku.php?id=%E5%A7%94%E5%A4%96%E6%8E%A5%E6%94%B6	委外接收
+/dokuwiki/doku.php?id=%E5%A7%94%E5%A4%96%E5%85%A5%E5%BA%93	委外入库
+/dokuwiki/doku.php?id=%E8%BE%85%E5%8A%A9%E5%B7%A5%E6%97%B6_%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D	辅助工时_功能介绍
+/dokuwiki/doku.php?id=%E8%BE%85%E5%8A%A9%E5%B7%A5%E6%97%B6	辅助工时
+/dokuwiki/doku.php?id=hmi%E8%BE%85%E5%8A%A9%E5%B7%A5%E6%97%B6	HMI辅助工时
+/dokuwiki/doku.php?id=%E4%BA%BA%E5%91%98%E5%B7%A5%E6%97%B6%E5%88%86%E6%9E%90%E8%A1%A8	人员工时分析表
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E5%B7%A5%E6%97%B6%E5%88%86%E6%9E%90%E8%A1%A8	车间工时分析表
+/dokuwiki/doku.php?id=%E4%BA%BA%E5%91%98%E4%BD%9C%E4%B8%9A%E5%8C%BA%E6%89%A7%E8%A1%8C%E5%B7%A5%E4%BD%9C%E5%8F%B0-%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D	人员作业区执行工作台-功能介绍
+/dokuwiki/doku.php?id=%E7%95%8C%E9%9D%A2%E6%8C%89%E9%92%AE%E6%8E%88%E6%9D%83	界面按钮授权
+/dokuwiki/doku.php?id=%E4%BA%BA%E5%91%98%E4%BD%9C%E4%B8%9A%E5%8C%BA%E6%89%A7%E8%A1%8C%E5%B7%A5%E4%BD%9C%E5%8F%B0	人员作业区执行工作台
+/dokuwiki/doku.php?id=%E7%A6%BB%E6%95%A3%E5%B7%A5%E5%BA%8F%E4%BA%A7%E9%87%8F%E6%97%A5%E6%B1%87%E6%80%BB%E8%A1%A8	离散工序产量日汇总表
+/dokuwiki/doku.php?id=%E7%A6%BB%E6%95%A3%E5%B7%A5%E5%BA%8F%E5%9C%A8%E5%88%B6%E5%93%81%E7%BB%9F%E8%AE%A1%E8%A1%A8	离散工序在制品统计表
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E8%AE%A2%E5%8D%95%E6%89%A7%E8%A1%8C_%E5%9C%BA%E6%99%AF%E4%BB%8B%E7%BB%8D	生产订单执行_场景介绍
+/dokuwiki/doku.php?id=hmi%E4%B8%BB%E6%8E%A7%E5%8F%B0	HMI主控台
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E5%BC%80%E5%B7%A5	生产开工
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E6%8A%A5%E5%B7%A5	生产报工
+/dokuwiki/doku.php?id=%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%B7%A5	扫描报工
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E5%85%A5%E5%BA%93	入库申请
+/dokuwiki/doku.php?id=%E7%8E%B0%E5%9C%BA%E7%89%A9%E6%96%99%E7%AE%A1%E7%90%86	现场物料管理
+/dokuwiki/doku.php?id=%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3-%E7%94%9F%E4%BA%A7	技术文档
+/dokuwiki/doku.php?id=%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%8F%8A%E4%BB%B7%E5%80%BC	应用场景及价值
+/dokuwiki/doku.php?id=%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3_%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	技术文档_基础设置
+/dokuwiki/doku.php?id=%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3_%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D	技术文档_应用介绍
+/dokuwiki/doku.php?id=%E7%9C%8B%E6%9D%BF%E5%AE%9A%E4%B9%89	看板定义
+/dokuwiki/doku.php?id=%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%A1%88	看板方案
+/dokuwiki/doku.php?id=%E9%A2%84%E8%AE%BE%E8%BD%BB%E5%88%86%E6%9E%90%E7%9C%8B%E6%9D%BF_%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E8%BD%A6%E9%97%B4%E7%BB%BC%E5%90%88%E7%9C%8B%E6%9D%BF	预设轻分析看板：柔性产线车间综合看板
+/dokuwiki/doku.php?id=%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0	功能概述
+/dokuwiki/doku.php?id=%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E	功能说明
+/dokuwiki/doku.php?id=%E7%9C%8B%E6%9D%BF%E5%8A%A0%E5%AF%86_%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0	看板加密_功能概述
+/dokuwiki/doku.php?id=%E7%9C%8B%E6%9D%BF%E7%9B%92%E5%AD%90%E7%99%BD%E5%90%8D%E5%8D%95	看板盒子白名单
+/dokuwiki/doku.php?id=%E7%9C%8B%E6%9D%BF%E5%8A%A0%E5%AF%86_%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E	看板加密_功能说明
+/dokuwiki/doku.php?id=%E8%BF%87%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A3%80%E6%B5%8B%E9%A1%B9%E7%9B%AE	过程控制检测项目
+/dokuwiki/doku.php?id=%E8%BF%87%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A3%80%E6%B5%8B%E6%96%B9%E6%A1%88	过程控制检测方案
+/dokuwiki/doku.php?id=%E8%BF%87%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A3%80%E6%B5%8B%E6%96%B9%E6%A1%88-%E6%A3%80%E6%B5%8B%E6%AD%A5%E9%AA%A4%E6%89%B9%E9%87%8F%E6%8E%88%E6%9D%83	过程控制检测方案-检测步骤批量授权
+/dokuwiki/doku.php?id=%E8%BF%87%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A3%80%E6%B5%8B%E6%96%B9%E6%A1%88-%E6%A3%80%E6%B5%8B%E6%AD%A5%E9%AA%A4%E6%8E%88%E6%9D%83%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%88%A0%E9%99%A4	过程控制检测方案-检测步骤授权查询和删除
+/dokuwiki/doku.php?id=%E5%B7%A5%E8%89%BA%E8%B7%AF%E7%BA%BF	工艺路线
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E5%B7%A5%E8%89%BA%E8%B7%AF%E7%BA%BF	柔性工艺路线
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E8%AE%A1%E5%88%92	工序计划
+/dokuwiki/doku.php?id=%E6%A3%80%E6%B5%8B%E7%BB%93%E6%9E%9C%E8%AE%B0%E5%BD%95	检测结果记录
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95	生产过程记录
+/dokuwiki/doku.php?id=hmi%E7%AB%AF%E4%B9%9D%E5%AE%AB%E6%A0%BC%E9%85%8D%E7%BD%AE%E9%A1%B9	HMI端九宫格配置项
+/dokuwiki/doku.php?id=hmi%E7%AB%AF%E5%BE%85%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%BA%8F%E8%AE%A1%E5%88%92	HMI端待检测工序计划
+/dokuwiki/doku.php?id=hmi%E7%AB%AF%E6%A3%80%E6%B5%8B%E7%BB%93%E6%9E%9C%E8%AE%B0%E5%BD%95%E5%BD%95%E5%85%A5	HMI端检测结果记录录入
+/dokuwiki/doku.php?id=hmi%E7%AB%AF%E7%94%9F%E4%BA%A7%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95%E5%BD%95%E5%85%A5	HMI端生产过程记录录入
+/dokuwiki/doku.php?id=hmi%E7%AB%AF%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%AE%A1%E6%A0%B8	HMI端过程记录查询和审核
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E8%BF%87%E7%A8%8B%E6%A3%80%E6%B5%8B%E6%89%93%E5%8D%B0	工序过程检测打印
+/dokuwiki/doku.php?id=%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88	文件导入配置方案
+/dokuwiki/doku.php?id=%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%97%A5%E5%BF%97	文件导入日志
+/dokuwiki/doku.php?id=%E8%BE%85%E5%8A%A9%E8%B5%84%E6%96%99-%E5%AE%89%E7%81%AF%E5%A4%84%E7%90%86%E9%98%B6%E6%AE%B5	辅助资料-安灯处理阶段
+/dokuwiki/doku.php?id=%E8%BE%85%E5%8A%A9%E8%B5%84%E6%96%99-%E5%BC%82%E5%B8%B8%E4%B8%A5%E9%87%8D%E7%A8%8B%E5%BA%A6	辅助资料-异常严重程度
+/dokuwiki/doku.php?id=%E8%BE%85%E5%8A%A9%E8%B5%84%E6%96%99-%E9%A2%84%E9%98%B2%E6%8E%AA%E6%96%BD%E8%B7%9F%E8%B8%AA%E7%B1%BB%E5%9E%8B	辅助资料-预防措施跟踪类型
+/dokuwiki/doku.php?id=%E4%B8%89%E8%89%B2%E7%81%AF%E6%8E%A7%E5%88%B6%E6%8C%87%E4%BB%A4	三色灯控制指令
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86	生产事件管理
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E5%BC%82%E5%B8%B8%E5%8E%9F%E5%9B%A0	生产异常原因
+/dokuwiki/doku.php?id=%E7%8E%B0%E5%9C%BA%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%8D%95	现场异常处理单
+/dokuwiki/doku.php?id=hmi%E5%AE%89%E7%81%AF%E5%91%BC%E5%8F%AB	HMI安灯呼叫
+/dokuwiki/doku.php?id=hmi%E5%AE%89%E7%81%AF%E5%A4%84%E7%90%86	HMI安灯处理
+/dokuwiki/doku.php?id=%E4%B8%89%E8%89%B2%E7%81%AF%E4%BA%AE%E7%81%AF%E7%89%B9%E6%80%A7	三色灯亮灯特性
+/dokuwiki/doku.php?id=pc%E7%AB%AF%E5%AE%89%E7%81%AF%E5%A4%84%E7%90%86%E5%92%8C%E6%9F%A5%E8%AF%A2	PC端安灯处理和查询
+/dokuwiki/doku.php?id=%E5%BC%82%E5%B8%B8%E5%8D%87%E7%BA%A7%E6%8A%A5%E8%AD%A6%E6%9C%BA%E5%88%B6	异常升级报警机制
+/dokuwiki/doku.php?id=%E9%A2%84%E9%98%B2%E6%8E%AA%E6%96%BD%E8%B7%9F%E8%B8%AA%E5%8D%95	预防措施跟踪单
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%BB%A9%E6%95%88%E7%BB%9F%E8%AE%A1%E8%A1%A8	车间异常处理绩效统计表
+/dokuwiki/doku.php?id=pda%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE	PDA界面配置
+/dokuwiki/doku.php?id=%E9%A3%9E%E8%BE%BE%E8%A7%84%E6%A0%BC%E5%9E%8B%E5%8F%B7	飞达规格型号
+/dokuwiki/doku.php?id=%E9%A3%9E%E8%BE%BE%E6%98%8E%E7%BB%86	飞达明细
+/dokuwiki/doku.php?id=%E9%9B%B6%E4%BB%B6%E4%BD%8D%E7%BD%AE%E5%8F%B7	零件位置号
+/dokuwiki/doku.php?id=%E7%AB%99%E4%BD%8D%E8%A1%A8	站位表
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7smt%E4%B8%8A%E6%96%99%E8%A1%A8	生产SMT上料表
+/dokuwiki/doku.php?id=%E4%B8%8A%E4%B8%8B%E6%96%99%E6%B5%81%E6%B0%B4%E8%A1%A8	上下料流水表
+/dokuwiki/doku.php?id=smt%E4%B8%8A%E6%96%99	SMT上料
+/dokuwiki/doku.php?id=smt%E7%BB%AD%E6%96%99	SMT续料
+/dokuwiki/doku.php?id=smt%E6%8D%A2%E6%96%99	SMT换料
+/dokuwiki/doku.php?id=smt%E6%89%B9%E9%87%8F%E4%B8%8B%E6%96%99	SMT批量下料
+/dokuwiki/doku.php?id=smt%E6%8C%AA%E6%96%99	SMT挪料
+/dokuwiki/doku.php?id=smt%E4%B8%8A%E6%96%99%E8%A1%A8%E6%9F%A5%E8%AF%A2	SMT上料表查询
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E4%B8%8A%E6%96%99	生产上料
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E4%B8%8B%E6%96%99	生产下料
+/dokuwiki/doku.php?id=%E5%B7%B2%E4%B8%8A%E6%96%99%E4%B8%8D%E8%89%AF%E9%80%80%E6%96%99	已上料不良退料
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%8D%E6%95%B0%E9%87%8F%E6%9F%A5%E8%AF%A2	工位数量查询
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87	设备
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E4%BA%8B%E4%BB%B6%E7%AE%A1%E7%90%86	生产事件管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%BD%95%E4%BA%8B%E4%BB%B6%E8%A7%84%E5%88%99	设备自动补录事件规则
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E6%96%B9%E6%A1%88	设备联网方案
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E9%85%8D%E7%BD%AE	设备联网工程配置
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E5%90%8C%E6%AD%A5%E5%90%91%E5%AF%BC	设备联网同步向导
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E9%87%87%E9%9B%86%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%E9%85%8D%E7%BD%AE	设备采集执行计划配置
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF1-%E7%9B%91%E6%8E%A7%E5%A4%9A%E5%8F%B0%E8%AE%BE%E5%A4%87%E6%80%BB%E4%BD%93%E5%B7%A5%E5%86%B5	复杂工序联网-场景1-监控多台设备总体工况
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF2-%E7%9B%91%E6%8E%A7%E5%8D%95%E5%8F%B0%E8%AE%BE%E5%A4%87%E5%85%B7%E4%BD%93%E5%B7%A5%E5%86%B5	复杂工序联网-场景2-监控单台设备具体工况
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF3-%E8%AE%BE%E5%A4%87%E6%97%A0%E4%BB%BB%E5%8A%A1%E6%97%B6%E5%88%87%E6%8D%A2%E7%94%9F%E4%BA%A7%E4%BA%8B%E4%BB%B6	复杂工序联网-场景3-设备无任务时切换生产事件
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF4-%E8%AE%BE%E5%A4%87%E5%B7%A5%E5%BA%8F%E4%BB%BB%E5%8A%A1%E5%BC%80%E5%B7%A5	复杂工序联网-场景4-设备工序任务开工
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF5-%E8%AE%BE%E5%A4%87%E7%94%9F%E4%BA%A7%E4%B8%AD%E5%88%87%E6%8D%A2%E4%BA%8B%E4%BB%B6	复杂工序联网-场景5-设备生产中切换事件
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF6-%E7%94%9F%E4%BA%A7%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%BA%BA%E5%91%98%E5%8F%98%E6%9B%B4	复杂工序联网-场景6-生产过程中人员变更
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF7-%E5%88%87%E6%8D%A2%E7%9B%91%E6%8E%A7%E8%AE%BE%E5%A4%87	复杂工序联网-场景7-切换监控设备
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF8-%E4%B8%8D%E5%81%9C%E6%9C%BA%E4%BA%A4%E6%8E%A5%E7%8F%AD	复杂工序联网-场景8-不停机交接班
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF9-%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81%E5%AE%9E%E6%97%B6%E8%81%94%E5%8A%A8_scada%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81	复杂工序联网-场景9-设备状态实时联动（SCADA主动推送）
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF10-%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E5%BC%82%E5%B8%B8%E6%B6%88%E6%81%AF%E4%B8%89%E8%89%B2%E7%81%AF%E4%BA%AE%E7%81%AF%E6%8F%90%E9%86%92	复杂工序联网-场景10-设备联网异常消息三色灯亮灯提醒
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF11-%E8%A1%A5%E5%BD%95%E7%94%9F%E4%BA%A7%E4%BA%8B%E4%BB%B6	复杂工序联网-场景11-补录生产事件
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF12-%E6%9F%A5%E7%9C%8Bbom	复杂工序联网-场景12-查看BOM
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF13-%E6%9F%A5%E7%9C%8B%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3	复杂工序联网-场景13-查看技术文档
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF14.1-%E8%81%94%E7%BD%91%E9%87%87%E9%9B%86%E8%87%AA%E5%8A%A8%E6%8A%A5%E5%B7%A5-%E5%8E%9F%E5%A7%8B%E7%82%B9%E5%80%BC%E6%96%B9%E5%BC%8F	复杂工序联网-场景14.1-联网采集自动报工-原始点值方式
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF14.2-%E8%81%94%E7%BD%91%E9%87%87%E9%9B%86%E8%87%AA%E5%8A%A8%E6%8A%A5%E5%B7%A5-%E8%AE%A1%E7%AE%97%E5%90%8E%E7%9B%B4%E6%8E%A5%E4%BC%A0%E5%85%A5%E6%96%B9%E5%BC%8F	复杂工序联网-场景14.2-联网采集自动报工-计算后直接传入方式
+/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E5%B7%A5%E5%BA%8F%E8%81%94%E7%BD%91-%E5%9C%BA%E6%99%AF15-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81%E7%9B%91%E6%8E%A7%E7%9C%8B%E6%9D%BF	复杂工序联网-场景15-数据可视化-设备状态监控看板
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E8%81%94%E7%BD%91-%E8%AE%BE%E5%A4%87%E7%9B%91%E6%8E%A7	柔性产线联网-设备监控
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E8%81%94%E7%BD%91-%E7%BB%84%E8%A3%85%E8%AE%BE%E5%A4%87%E7%94%9F%E4%BA%A7	柔性产线联网-组装设备生产
+/dokuwiki/doku.php?id=%E6%9F%94%E6%80%A7%E4%BA%A7%E7%BA%BF%E8%81%94%E7%BD%91-%E5%8C%85%E8%A3%85%E8%AE%BE%E5%A4%87%E7%94%9F%E4%BA%A7	柔性产线联网-包装设备生产
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E4%BB%BB%E5%8A%A1%E5%AE%9E%E6%97%B6%E8%A1%A8	设备联网任务实时表
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E4%BB%BB%E5%8A%A1%E5%8E%86%E5%8F%B2%E8%A1%A8	设备联网任务历史表
+/dokuwiki/doku.php?id=%E4%BB%AA%E8%A1%A8%E9%87%87%E9%9B%86%E5%80%BC%E6%9F%A5%E8%AF%A2	仪表采集值查询
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E9%87%87%E9%9B%86%E7%BB%BC%E5%90%88%E6%9F%A5%E8%AF%A2	设备联网采集综合查询
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E7%82%B9%E5%80%BC%E4%B8%9A%E5%8A%A1%E5%BD%92%E6%A1%A3	设备点值业务归档
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81%E5%8F%98%E6%9B%B4%E6%97%A5%E5%BF%97	设备状态变更日志
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E5%90%8C%E6%AD%A5%E6%97%A5%E5%BF%97	设备联网同步日志
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E6%B6%88%E6%81%AF%E6%97%A5%E5%BF%97	设备联网消息日志
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E8%81%94%E7%BD%91%E7%9B%91%E6%8E%A7%E9%93%BE%E6%8E%A5	设备联网监控链接
+/dokuwiki/doku.php?id=oee%E8%AE%A1%E7%AE%97%E6%9E%B6%E6%9E%84	OEE计算架构
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87oee%E8%AE%A1%E7%AE%97%E6%97%A5%E5%BF%97	设备OEE计算日志
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87oee%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE	设备OEE实时数据
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87oee%E5%8E%86%E5%8F%B2%E6%95%B0%E6%8D%AE	设备OEE历史数据
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1%E8%A1%A8	设备时间统计表
+/dokuwiki/doku.php?id=%E8%AE%BE%E5%A4%87%E5%81%9C%E6%9C%BA%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90%E8%A1%A8	设备停机原因分析表
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E7%9C%8B%E6%9D%BF-%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81%E7%9B%91%E6%8E%A7	电子看板-设备状态监控
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E7%9C%8B%E6%9D%BF-%E5%AE%9E%E6%97%B6oee%E5%88%86%E6%9E%90	电子看板-实时OEE分析
+/dokuwiki/doku.php?id=%E6%8E%8C%E4%B8%8A%E5%B7%A5%E5%8E%82-oee%E5%88%86%E6%9E%90	掌上工厂-OEE分析
+/dokuwiki/doku.php?id=%E4%BA%91%E9%9B%BE%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B	云雾业务流程
+/dokuwiki/doku.php?id=%E9%9B%BE%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86	雾平台同步管理
+/dokuwiki/doku.php?id=%E9%9B%BE%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5%E6%97%A5%E5%BF%97	雾平台同步日志
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D	车间移动质检_功能介绍
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE	车间移动质检_参数设置
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E9%A6%96%E6%A3%80	车间移动质检_首检
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E5%B7%A1%E6%A3%80	车间移动质检_巡检
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E5%B7%A5%E5%BA%8F%E6%A3%80%E9%AA%8C	车间移动质检_工序检验
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%A7%BB%E5%8A%A8%E8%B4%A8%E6%A3%80_%E5%A7%94%E5%A4%96%E6%A3%80%E9%AA%8C	车间移动质检_委外检验
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D	PDA轻报工_功能介绍
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%BE%E7%BD%AE	PDA轻报工_初始化设置
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E5%8D%95%E4%BB%B6%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%B7%A5	PDA轻报工_单件扫描报工
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E6%89%B9%E9%87%8F%E6%8A%A5%E5%B7%A5	PDA轻报工_批量报工
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E9%9D%9E%E5%8D%95%E4%BB%B6%E6%8A%A5%E5%B7%A5	PDA轻报工_非单件报工
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E5%85%B3%E9%94%AE%E4%BB%B6%E8%A7%A3%E7%BB%91	PDA轻报工_关键件解绑
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E6%8A%A5%E5%B7%A5%E6%9F%A5%E8%AF%A2	PDA轻报工__报工查询
+/dokuwiki/doku.php?id=pda%E8%BD%BB%E6%8A%A5%E5%B7%A5_%E5%AE%9E%E4%BD%9C%E5%B7%A5%E6%97%B6%E7%BB%9F%E8%AE%A1	PDA轻报工__实作工时统计
+/dokuwiki/doku.php?id=%E6%80%BB%E4%BD%93%E4%BB%8B%E7%BB%8D	总体介绍
+/dokuwiki/doku.php?id=%E6%A0%87%E7%AD%BE%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF	标签应用场景
+/dokuwiki/doku.php?id=%E6%A0%87%E7%AD%BE%E6%89%93%E5%8D%B0%E6%9C%BA	标签打印机
+/dokuwiki/doku.php?id=%E6%A0%87%E7%AD%BE%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%88%B6%E4%BD%9C%E5%BA%94%E7%94%A8%E6%AD%A5%E9%AA%A4	标签初始化和制作应用步骤
+/dokuwiki/doku.php?id=prn%E6%A0%87%E7%AD%BE%E5%88%B6%E4%BD%9C	PRN标签制作
+/dokuwiki/doku.php?id=%E6%A0%87%E7%AD%BE%E6%A8%A1%E6%9D%BF%E9%85%8D%E7%BD%AE	标签模板配置
+/dokuwiki/doku.php?id=%E6%A0%87%E7%AD%BE%E4%BA%8C%E5%BC%80%E6%8F%92%E4%BB%B6%E5%BA%94%E7%94%A8	标签二开插件应用
+/dokuwiki/doku.php?id=hmi%E7%95%8C%E9%9D%A2%E8%B0%83%E7%94%A8%E6%A0%87%E7%AD%BE%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1	HMI界面调用标签打印服务
+/dokuwiki/doku.php?id=hmi%E6%96%91%E9%A9%AC%E6%89%93%E5%8D%B0%E6%9C%BA%E8%B0%83%E8%AF%95	HMI斑马打印机调试
+/dokuwiki/doku.php?id=mes%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E4%BB%8B%E7%BB%8D	MES打印服务介绍
+/dokuwiki/doku.php?id=%E5%AE%9A%E4%B9%89%E8%BD%A6%E9%97%B4%E5%B7%A5%E4%BD%9C%E5%8C%BA	定义车间工作区
+/dokuwiki/doku.php?id=%E5%AF%BC%E5%87%BA%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E5%BA%94%E7%94%A8%E5%8C%85	导出打印服务应用包
+/dokuwiki/doku.php?id=pc%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B3%A8%E5%86%8C%E6%89%93%E5%8D%B0%E6%9C%BA	PC打印服务器注册打印机
+/dokuwiki/doku.php?id=pc%E7%AB%AF%E5%90%AF%E5%8A%A8%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1	PC端启动打印服务
+/dokuwiki/doku.php?id=%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE%E6%A8%A1%E6%9D%BF	定义标签模板
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%B8%9A%E5%B1%8F%E8%BF%9B%E8%A1%8C%E7%BB%88%E7%AB%AF%E6%B3%A8%E5%86%8C	工业屏进行终端注册
+/dokuwiki/doku.php?id=hmi%E7%AB%AF%E6%89%93%E5%8D%B0%E4%B8%9A%E5%8A%A1%E5%BA%94%E7%94%A8	HMI端打印业务应用
+/dokuwiki/doku.php?id=hmi%E6%89%93%E5%8D%B0%E4%BB%BB%E5%8A%A1%E8%A1%A8	HMI打印任务表
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4%E4%BA%91%E5%B7%A1%E6%A3%80_%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D	智慧车间云巡检_整体介绍
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4%E4%BA%91%E5%B7%A1%E6%A3%80%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE	智慧车间云巡检服务配置
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4%E4%BA%91%E5%B7%A1%E6%A3%80%E7%BB%93%E6%9E%9C%E6%8A%A5%E5%91%8A	智慧车间云巡检结果报告
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E8%AE%A2%E5%8D%95%E5%B7%A5%E6%97%B6%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%E8%A1%A8	生产订单工时对比分析表
+/dokuwiki/doku.php?id=%E5%B7%A5%E5%BA%8F%E6%B1%87%E6%8A%A5%E7%BC%BA%E9%99%B7%E5%88%86%E6%9E%90%E8%A1%A8	工序汇报缺陷分析表
+/dokuwiki/doku.php?id=%E4%BA%BA%E5%91%98%E4%BB%BB%E5%8A%A1%E5%B7%A5%E6%97%B6%E7%BB%9F%E8%AE%A1%E8%A1%A8	人员任务工时统计表
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4mes%E5%BC%82%E5%B8%B8%E5%B7%A5%E4%BD%9C%E5%8F%B0	车间MES异常工作台
+/dokuwiki/doku.php?id=%E6%B8%85%E9%99%A4%E6%97%A5%E5%BF%97%E6%B5%81%E6%B0%B4%E8%AE%B0%E5%BD%95	清除日志流水记录
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	智慧车间
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	文章
+/dokuwiki/doku.php?id=talk:%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	讨论
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	阅读
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4&do=edit&rev=1784083114	显示源文件
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4&do=revisions	修订记录
+/dokuwiki/doku.php?id=start	
+/dokuwiki/doku.php?id=%E9%87%91%E8%9D%B6ai%E6%98%9F%E7%A9%BA%E7%BB%BC%E8%BF%B0	综述
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7	人人资产
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E6%8A%A5%E9%94%80	人人报销
+/dokuwiki/doku.php?id=%E6%80%BB%E8%B4%A6	总账
+/dokuwiki/doku.php?id=%E5%86%85%E9%83%A8%E5%BE%80%E6%9D%A5%E5%8D%8F%E5%90%8C	内部往来协同
+/dokuwiki/doku.php?id=%E6%99%BA%E8%83%BD%E4%BC%9A%E8%AE%A1%E5%B9%B3%E5%8F%B0	智能会计平台
+/dokuwiki/doku.php?id=%E5%BA%94%E6%94%B6%E6%AC%BE%E7%AE%A1%E7%90%86	应收款管理
+/dokuwiki/doku.php?id=%E5%BA%94%E4%BB%98%E6%AC%BE%E7%AE%A1%E7%90%86	应付款管理
+/dokuwiki/doku.php?id=%E5%87%BA%E7%BA%B3%E7%AE%A1%E7%90%86	出纳管理
+/dokuwiki/doku.php?id=%E7%A5%A8%E6%8D%AE%E7%AE%A1%E7%90%86	票据管理
+/dokuwiki/doku.php?id=%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86	资金管理
+/dokuwiki/doku.php?id=%E7%BD%91%E4%B8%8A%E9%93%B6%E8%A1%8C	网上银行
+/dokuwiki/doku.php?id=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C	开放银行
+/dokuwiki/doku.php?id=%E8%B4%B9%E7%94%A8%E6%8A%A5%E9%94%80	费用管理
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F	报表系统
+/dokuwiki/doku.php?id=%E5%90%88%E5%B9%B6%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F	合并报表系统
+/dokuwiki/doku.php?id=%E9%98%BF%E7%B1%B3%E5%B7%B4%E6%8A%A5%E8%A1%A8	阿米巴报表
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E4%BC%9A%E8%AE%A1%E6%A1%A3%E6%A1%88%E9%9B%86%E6%88%90	电子会计档案集成
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E5%87%AD%E8%AF%81%E6%B1%A0	电子凭证池
+/dokuwiki/doku.php?id=%E5%8F%91%E7%A5%A8%E7%AE%A1%E7%90%86	发票管理
+/dokuwiki/doku.php?id=%E7%BA%B3%E7%A8%8E%E7%94%B3%E6%8A%A5	纳税申报
+/dokuwiki/doku.php?id=%E5%AD%98%E8%B4%A7%E6%A0%B8%E7%AE%97	存货核算
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97	产品成本核算
+/dokuwiki/doku.php?id=%E9%A3%9F%E5%93%81%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97	食品成本核算
+/dokuwiki/doku.php?id=%E6%A0%87%E5%87%86%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90	标准成本分析
+/dokuwiki/doku.php?id=%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7	固定资产
+/dokuwiki/doku.php?id=%E7%A7%9F%E8%B5%81%E8%B5%84%E4%BA%A7	租赁资产
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86	人人资产管理
+/dokuwiki/doku.php?id=%E9%A2%84%E7%AE%97%E7%AE%A1%E7%90%86	预算管理
+/dokuwiki/doku.php?id=%E7%BB%8F%E8%90%A5%E4%BC%9A%E8%AE%A1	经营会计
+/dokuwiki/doku.php?id=%E7%BB%8F%E8%90%A5%E4%BC%9A%E8%AE%A1%E5%88%86%E6%9E%90	经营会计分析
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86	采购管理
+/dokuwiki/doku.php?id=%E9%94%80%E5%94%AE%E7%AE%A1%E7%90%86	销售管理
+/dokuwiki/doku.php?id=%E4%BF%A1%E7%94%A8%E7%AE%A1%E7%90%86	信用管理
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	库存管理
+/dokuwiki/doku.php?id=%E7%BB%84%E7%BB%87%E9%97%B4%E7%BB%93%E7%AE%97	组织间结算
+/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E7%AE%A1%E7%90%86	条码管理
+/dokuwiki/doku.php?id=%E4%BE%9B%E5%BA%94%E5%95%86%E5%8D%8F%E5%90%8C	供应商协同
+/dokuwiki/doku.php?id=bbc%E4%B8%9A%E5%8A%A1%E4%B8%AD%E5%BF%83	BBC业务中心
+/dokuwiki/doku.php?id=bbc%E5%88%86%E9%94%80%E5%95%86%E9%97%A8%E6%88%B7	BBC分销商门户
+/dokuwiki/doku.php?id=bbc%E9%97%A8%E5%BA%97%E9%97%A8%E6%88%B7	BBC门店门户
+/dokuwiki/doku.php?id=%E6%8E%8C%E4%B8%8A%E8%AE%A2%E8%B4%A7	掌上订货
+/dokuwiki/doku.php?id=b2c%E7%94%B5%E5%95%86%E4%B8%AD%E5%BF%83	B2C电商中心
+/dokuwiki/doku.php?id=%E8%A6%81%E8%A1%A5%E8%B4%A7%E7%AE%A1%E7%90%86	要补货管理
+/dokuwiki/doku.php?id=%E5%85%A8%E7%BD%91%E4%BC%9A%E5%91%98	全网会员
+/dokuwiki/doku.php?id=%E4%BF%83%E9%94%80%E7%AE%A1%E7%90%86	促销管理
+/dokuwiki/doku.php?id=%E8%BF%94%E5%88%A9%E7%AE%A1%E7%90%86	返利管理
+/dokuwiki/doku.php?id=%E8%90%A5%E9%94%80%E8%B4%B9%E7%94%A8%E7%AE%A1%E7%90%86	营销费用管理
+/dokuwiki/doku.php?id=b2b%E7%94%B5%E5%95%86%E7%AE%A1%E7%90%86_%E6%97%A7%E7%89%88	B2B电商管理（旧版）
+/dokuwiki/doku.php?id=%E6%B8%A0%E9%81%93%E8%B5%84%E9%87%91%E6%B1%A0%E7%AE%A1%E7%90%86	渠道资金池管理
+/dokuwiki/doku.php?id=%E8%BF%9E%E9%94%81%E6%A1%A3%E6%A1%88	连锁档案
+/dokuwiki/doku.php?id=%E4%BB%B7%E6%A0%BC%E4%BF%83%E9%94%80	价格促销
+/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E7%AE%A1%E7%90%86	会员管理
+/dokuwiki/doku.php?id=%E7%A4%BC%E5%88%B8%E7%AE%A1%E7%90%86	礼券管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%8D%8F%E5%90%8C	门店协同
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E6%94%B6%E9%93%B6	门店收银
+/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9	商品返利
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E4%B8%AD%E5%BF%83	报表中心
+/dokuwiki/doku.php?id=%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2	安装部署
+/dokuwiki/doku.php?id=%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86	文档管理
+/dokuwiki/doku.php?id=%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86	项目管理
+/dokuwiki/doku.php?id=%E7%A0%94%E5%8F%91%E7%89%A9%E6%96%99%E7%AE%A1%E7%90%86	研发物料管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1bom%E7%AE%A1%E7%90%86	设计BOM管理
+/dokuwiki/doku.php?id=%E8%B6%85%E7%BA%A7bom%E7%AE%A1%E7%90%86	超级BOM管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E8%89%BA%E7%AE%A1%E7%90%86	设计工艺管理
+/dokuwiki/doku.php?id=%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86	流程管理
+/dokuwiki/doku.php?id=%E7%A0%94%E5%8F%91%E6%99%BA%E5%BA%93	研发智库
+/dokuwiki/doku.php?id=catia%E9%9B%86%E6%88%90	Catia集成
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E5%BB%BA%E6%A8%A1	系统建模
+/dokuwiki/doku.php?id=solidworks%E9%9B%86%E6%88%90	SolidWorks集成
+/dokuwiki/doku.php?id=autocad%E9%9B%86%E6%88%90	AutoCAD集成
+/dokuwiki/doku.php?id=caxa%E9%9B%86%E6%88%90	CAXA集成
+/dokuwiki/doku.php?id=cadence%E9%9B%86%E6%88%90	Cadence集成
+/dokuwiki/doku.php?id=altium_designer%E9%9B%86%E6%88%90	Altium Designer集成
+/dokuwiki/doku.php?id=nx%E9%9B%86%E6%88%90	NX集成
+/dokuwiki/doku.php?id=creo%E9%9B%86%E6%88%90	Creo集成
+/dokuwiki/doku.php?id=%E4%B8%AD%E6%9C%9Bcad%E9%9B%86%E6%88%90	中望CAD集成
+/dokuwiki/doku.php?id=inventor%E9%9B%86%E6%88%90	Inventor集成
+/dokuwiki/doku.php?id=zwcad%E6%9C%BA%E6%A2%B0%E7%89%88%E9%9B%86%E6%88%90	ZWCAD机械版集成
+/dokuwiki/doku.php?id=pads%E9%9B%86%E6%88%90	PADS集成
+/dokuwiki/doku.php?id=eplan%E9%9B%86%E6%88%90	Eplan集成
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1%E5%8F%98%E6%9B%B4%E7%AE%A1%E7%90%86	设计变更管理
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86	产品管理
+/dokuwiki/doku.php?id=tr%E7%AE%A1%E7%90%86	TR管理
+/dokuwiki/doku.php?id=pdm%E5%AF%B9%E8%B1%A1%E6%89%A9%E5%B1%95	PDM对象扩展
+/dokuwiki/doku.php?id=%E5%B7%A5%E7%A8%8B%E6%95%B0%E6%8D%AE	工程数据
+/dokuwiki/doku.php?id=%E8%AE%A1%E5%88%92%E7%AE%A1%E7%90%86	计划管理
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86	生产管理
+/dokuwiki/doku.php?id=%E5%A7%94%E5%A4%96%E7%AE%A1%E7%90%86	委外管理
+/dokuwiki/doku.php?id=%E6%97%A5%E6%8E%92%E4%BA%A7	日排产
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E7%BA%BF%E7%94%9F%E4%BA%A7	生产线生产
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	车间管理
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	智慧车间
+/dokuwiki/doku.php?id=%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86	质量管理
+/dokuwiki/doku.php?id=%E8%B4%A8%E9%87%8F%E8%BF%BD%E6%BA%AF%E5%AF%BC%E8%88%AA%E9%A1%B5	质量追溯
+/dokuwiki/doku.php?id=%E4%BB%BB%E5%8A%A1%E5%85%B1%E4%BA%AB%E4%B8%AD%E5%BF%83	任务共享中心
+/dokuwiki/doku.php?id=%E8%B4%A2%E5%8A%A1%E5%85%B1%E4%BA%AB	财务共享
+/dokuwiki/doku.php?id=%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%BF%83	信息中心
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%9C%E6%B5%81	工作流
+/dokuwiki/doku.php?id=%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B	业务流程
+/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD%E6%9C%8D%E5%8A%A1	数据智能服务
+/dokuwiki/doku.php?id=%E5%A2%9E%E5%80%BC%E4%BA%91%E6%9C%8D%E5%8A%A1	增值云服务
+/dokuwiki/doku.php?id=%E6%95%B0%E5%AD%97%E5%A4%A7%E5%B1%8F	数字大屏
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BArpa%E6%9C%BA%E5%99%A8%E4%BA%BA	星空RPA机器人
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	基础资料
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	公共设置
+/dokuwiki/doku.php?id=%E4%B8%9A%E5%8A%A1%E7%9B%91%E6%8E%A7	业务监控预警
+/dokuwiki/doku.php?id=%E6%B6%88%E6%81%AF%E5%B9%B3%E5%8F%B0	消息平台
+/dokuwiki/doku.php?id=%E5%AE%9E%E6%96%BD%E5%B9%B3%E5%8F%B0%E4%BF%A1%E6%81%AF	实施平台
+/dokuwiki/doku.php?id=%E7%BF%BB%E8%AF%91%E5%B9%B3%E5%8F%B0	翻译平台
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E8%AE%BE%E7%BD%AE	移动设置
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7	系统工具
+/dokuwiki/doku.php?id=%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86	安全登录
+/dokuwiki/doku.php?id=s-hr%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE	s-HR集成
+/dokuwiki/doku.php?id=%E4%BA%91%E4%B9%8B%E5%AE%B6%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE	云之家集成
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BA%E5%8D%AB%E5%A3%AB	星空卫士
+/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83	数据中心管理
+/dokuwiki/doku.php?id=%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86	组织管理
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86	系统管理
+/dokuwiki/doku.php?id=%E9%9B%86%E6%88%90%E5%B9%B3%E5%8F%B0	集成平台
+/dokuwiki/doku.php?id=%E9%97%A8%E6%88%B7%E7%AE%A1%E7%90%86	门户管理
+/dokuwiki/doku.php?id=%E9%9A%90%E7%A7%81%E4%B8%AD%E5%BF%83	隐私中心
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BAlive	星空Live
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BA%E5%B7%A5%E4%BD%9C%E5%8F%B0	星空工作台
+/dokuwiki/doku.php?id=bos%E5%B9%B3%E5%8F%B0	BOS平台
+/dokuwiki/doku.php?id=%E5%A5%97%E6%89%93%E5%B9%B3%E5%8F%B0	套打平台
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E5%B9%B3%E5%8F%B0	报表平台
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0	移动平台
+/dokuwiki/doku.php?id=%E9%99%84%E5%BD%95	附录
+/dokuwiki/doku.php?id=%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E4%BA%91	协同开发云
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86	产品数据管理
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E7%AE%A1%E7%90%86	产品加工管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	加工车间管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86	加工成本管理
+/dokuwiki/doku.php?id=%E4%BA%91%E8%B0%83%E5%BA%A6%E6%8C%87%E6%8C%A5%E4%B8%AD%E5%BF%83	云调度指挥中心
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E7%89%A9%E8%81%94	智慧物联
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE	加工基础数据
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86	加工订单管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	加工车间管理
+/dokuwiki/doku.php?id=%E7%BD%91%E7%82%B9%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86	网点运营管理
+/dokuwiki/doku.php?id=%E8%8F%9C%E8%B0%B1%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86	菜谱综合管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86	加工数据管理
+/dokuwiki/doku.php?id=%E9%A4%90%E9%A5%AE%E5%8A%A0%E5%B7%A5%E7%AE%A1%E7%90%86	餐饮加工管理
+/dokuwiki/doku.php?id=%E6%80%BB%E9%83%A8%E9%85%8D%E9%80%81%E7%AE%A1%E7%90%86	总部配送管理
+/dokuwiki/doku.php?id=%E9%85%8D%E9%80%81%E8%B7%AF%E7%BA%BF%E7%AE%A1%E7%90%86	配送路线管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E8%AE%BE%E7%BD%AE	门店营业设置
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E5%88%86%E6%9E%90	门店营业分析
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E5%AF%B9%E8%B4%A6	门店营业对账
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%A4%96%E5%8D%96%E7%AE%A1%E7%90%86	门店外卖管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E9%A2%84%E6%B5%8B	门店销售预测
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%AE%A2%E8%B4%A7%E9%A2%84%E4%BC%B0	门店订货预估
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%AE%A2%E8%B4%A7%E7%AE%A1%E7%90%86	门店订货管理
+/dokuwiki/doku.php?id=%E9%A4%90%E9%A5%AE%E5%9B%A2%E9%A4%90%E7%AE%A1%E7%90%86	餐饮团餐管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	门店库存管理
+/dokuwiki/doku.php?id=%E5%8D%8F%E8%AE%AE%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86	协议客户管理
+/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E5%8D%A1%E5%8A%A1%E7%AE%A1%E7%90%86	会员卡务管理
+/dokuwiki/doku.php?id=%E8%90%A5%E9%94%80%E7%AD%96%E5%88%92%E7%AE%A1%E7%90%86	营销策划管理
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	基础设置
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E7%A7%BB%E5%8A%A8%E8%AE%A2%E8%B4%A7	门店移动订货
+/dokuwiki/doku.php?id=%E5%89%8D%E5%8F%B0pos	前台POS
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8pos	移动POS
+/dokuwiki/doku.php?id=%E5%BE%AE%E4%BF%A1%E7%82%B9%E9%A4%90	微信点餐
+/dokuwiki/doku.php?id=%E4%BA%91%E5%BA%97%E9%80%9A	云店通
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E7%A7%A4	电子秤

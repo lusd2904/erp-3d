@@ -1,0 +1,9 @@
+ID: 整体框图_菜谱
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%95%B4%E4%BD%93%E6%A1%86%E5%9B%BE_%E8%8F%9C%E8%B0%B1
+
+[[菜谱综合管理|>>菜谱综合管理]]
+
+
+{{:cloud:base:18.png?direct&400 |}}
+
+{{:cloud:19.png?direct&400 |}}

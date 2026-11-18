@@ -1,0 +1,5 @@
+ID: 结账
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%BB%93%E8%B4%A6
+
+[[固定资产结账|固定资产结账]]
+

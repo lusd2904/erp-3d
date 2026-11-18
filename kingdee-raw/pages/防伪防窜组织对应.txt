@@ -1,0 +1,5 @@
+ID: 防伪防窜组织对应
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%98%B2%E4%BC%AA%E9%98%B2%E7%AA%9C%E7%BB%84%E7%BB%87%E5%AF%B9%E5%BA%94
+
+==== 1.功能说明 ====
+用于定义防伪防窜货组织对应关系。

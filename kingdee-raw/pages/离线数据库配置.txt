@@ -1,0 +1,5 @@
+ID: 离线数据库配置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%A6%BB%E7%BA%BF%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE
+
+==== 1.功能说明 ====
+用于配置已出库条码的离线范围。

@@ -1,0 +1,7 @@
+ID: 商品返利方式
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9%E6%96%B9%E5%BC%8F
+
+==== 商品返利方式 ====
+返利方式：依据返利的返还方式，对返利方式进行归类定义，分为按年度或月度返利、按实物返回、现金返回、抵货款。
+
+{{SPFLFS.png?400}}

@@ -1,0 +1,589 @@
+https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86
+
+1 库存管理概述
+1.1 库存管理概述
+库存管理是企业的基础和核心，支撑企业销售、采购、生产业务的有效运作。库存管理在物料日常出入库控制、保证生产的正常进行发挥重要作用，同时将库存控制在合理水平，为企业提供准确的库存信息。为企业快速响应市场变化、满足市场需求、提高企业竞争力提供了有力保证。
+库存管理主要业务包括仓库管理、日常的物料的流转业务、库存控制3大部分。是通过入库业务、出库业务、调拨、组装拆卸、库存调整等功能，结合批号保质期管理、库存盘点、即时库存管理等功能综合运用的管理系统，对仓存业务的物流和成本管理全过程进行有效控制和跟踪，实现完善的企业仓储信息管理。
+1.2 总体流程图
+1.3 系统特性
+提供库存管理系统初始化，把企业在实施ERP系统前通过手工记录的库存余额导入系统。
+提供日常出、入库业务数据录入。
+提供直接调拨、分步式调拨业务。
+提供即时库存多维度汇总查询。
+存货按照货主（存货所有者）、保管者、库存状态等来区分。
+支持多计量单位：基本单位、库存单位、库存辅助单位。
+支持库位管理，提供多维度库位的定义。
+支持不良品的库存锁库。
+提供批号保质期管理，提供根据编码规则自动获取批号。
+提供多种拣货规则，根据用户设置的批号、保质期拣货规则实现出库自动指定。
+支持定期盘点、周期盘点，实现盘点数据备份及盘盈、盘亏调整。
+支持库存调整：形态转换、库存状态转换、批号调整。
+支持关账/反关账，可指定日期关账。
+支持保质期、安全库存、最大/最小库存业务预警。
+提供库存数据的统计分析报表，供各级管理人员使用。
+库存单据反审核时，如果已生成总账凭证，则不允许反审核；如果只生成业务凭证，则库存单据反审核时自动删除业务凭证。
+2 业务类型及应用
+库存管理系统，全面支持单体和多工厂企业日常库存收发业务，除支持采购、销售、委外、生产业务的出入库外，还支持其他出入库、库存调拨、组装拆卸、受托等库存业务的处理，同时支持多工厂企业间的跨组织收发业务，如跨组织采购、跨组织销售、跨组织调拨、跨组织生产领料、跨组织委外领料等。
+3 库存业务专题
+库存维度
+盘点
+库存调整业务
+4 库存操作手册
+4.1 应用流程
+库存系统的应用流程如下：
+第一步，设置基础数据。
+首先，设置公共的基础资料，包括：组织信息、计量单位、物料、供应商、客户、部门、业务员、仓库、仓位、库存状态等。
+功能路径：【基础管理】－>【基础资料】。
+其次，启用库存管理及设置库存管理系统参数。
+功能路径：
+【供应链】－>【库存管理】－>【初始化】－>【启用库存管理】。
+【供应链】－>【库存管理】－>【参数设置】－>【库存管理系统参数】。
+再次，设置库存基础数据，包括库存状态、仓位值集、仓库、辅助属性、批号编码规则等；
+功能路径：【供应链】－>【库存管理】－>【基础资料】。
+第二步，设置期初数据。
+系统启用时，录入期初库存余额。
+功能路径：【供应链】－>【库存管理】－>【初始化】－>【初始库存】；
+第三步，日常业务操作。
+入库业务通常有外购入库、生产入库、其他入库等，出库业务有销售出库、生产领料、其他出库、调拨等。
+其他：关账、盘点。
+指定日期关账；
+周期盘点或定期盘点。
+4.2 基础设置
+库存管理系统参数
+单据选项库存通用业务参数
+序列号系统参数和设置
+仓库
+仓位值集
+库存状态
+仓库最大最小安全库存
+库存预警方案
+批号/序列号属性
+批号/序列号编码规则
+物料批号规则设置
+批号主档
+序列号主档
+生产追溯序列号
+归档序列号
+4.3 库存初始化
+库存初始化指引工作台
+启用库存管理
+初始库存
+结束初始化
+4.4 业务功能
+出入库列表
+其他入库单
+出库申请单
+其他出库单
+调拨申请单
+直接调拨单
+分步式调出单
+分步式调入单
+受托加工材料收料单
+受托加工材料入库单
+受托加工材料退料单
+组装拆卸单
+形态转换单
+库存状态转换单
+批号调整单
+盘点方案
+物料盘点作业
+盘盈单
+盘亏单
+ABC分配组
+周期盘点计划
+物料周期盘点表
+即时库存
+即时库存校对
+清除零库存记录
+库存调整
+锁库
+锁库日志
+库存关账
+4.5 报表分析
+库存汇总统计表
+物料收发汇总表
+物料收发明细表
+物料收发分类统计表
+库存台账
+库存盘点差异报告
+库存账龄分析表
+呆滞料分析
+库存预警报表
+保质期预警
+库存负结余预警
+ABC分析
+序列号串号查询
+库存流水表
+已调出未调入统计表
+库存预警分析表
+4.6 库存数据表管理
+备份数据表
+还原数据表
+删除备份表数据
+4.7 库存工作台
+库存工作台
+警示灯方案
+4.8 库存云巡检
+库存云巡检
+4.9 库存同步管易
+库存同步管易
+您的足迹:
+•
+库存管理
+文章
+讨论
+阅读
+显示源文件
+修订记录
+搜索
+导航
+新特性汇总
+金蝶AI星空新特性
+金蝶AI星空企业版综述
+综述
+员工服务
+人人资产
+人人报销
+财务会计
+总账
+内部往来协同
+智能会计平台
+应收款管理
+应付款管理
+出纳管理
+票据管理
+资金管理
+网上银行
+开放银行
+费用管理
+报表系统
+合并报表系统
+阿米巴报表
+电子会计档案集成
+电子凭证池
+税务管理
+发票管理
+纳税申报
+成本管理
+存货核算
+产品成本核算
+食品成本核算
+标准成本分析
+资产管理
+固定资产
+租赁资产
+人人资产管理
+管理会计
+预算管理
+经营会计
+经营会计分析
+供应链
+采购管理
+销售管理
+信用管理
+库存管理
+组织间结算
+条码管理
+供应商协同
+全渠道营销
+BBC业务中心
+BBC分销商门户
+BBC门店门户
+掌上订货
+B2C电商中心
+要补货管理
+全网会员
+促销管理
+返利管理
+营销费用管理
+B2B电商管理（旧版）
+渠道资金池管理
+零售管理
+连锁档案
+价格促销
+会员管理
+礼券管理
+门店协同
+门店收银
+商品返利
+报表中心
+PLM
+安装部署
+文档管理
+项目管理
+研发物料管理
+设计BOM管理
+超级BOM管理
+设计工艺管理
+流程管理
+研发智库
+Catia集成
+系统建模
+SolidWorks集成
+AutoCAD集成
+CAXA集成
+Cadence集成
+Altium Designer集成
+NX集成
+Creo集成
+中望CAD集成
+Inventor集成
+ZWCAD机械版集成
+PADS集成
+Eplan集成
+设计变更管理
+产品管理
+TR管理
+PDM对象扩展
+生产制造
+工程数据
+计划管理
+生产管理
+委外管理
+日排产
+生产线生产
+车间管理
+智慧车间
+质量管理
+质量管理
+质量追溯
+共享服务中心
+任务共享中心
+财务共享
+流程中心
+信息中心
+工作流
+业务流程
+星空云服务
+数据智能服务
+增值云服务
+经营分析
+轻分析
+数字大屏
+RPA机器人
+星空RPA机器人
+基础管理
+基础资料
+公共设置
+业务监控预警
+消息平台
+实施平台
+翻译平台
+移动设置
+系统工具
+安全登录
+s-HR集成
+云之家集成
+星空卫士
+系统管理
+数据中心管理
+组织管理
+系统管理
+集成平台
+门户管理
+隐私中心
+移动应用
+星空Live
+星空工作台
+BOS平台
+BOS平台
+套打平台
+报表平台
+移动平台
+附录
+协同开发云
+协同开发云
+食品加工管理
+产品数据管理
+产品加工管理
+加工车间管理
+加工成本管理
+云调度指挥中心
+智慧物联
+餐饮加工管理
+加工基础数据
+加工订单管理
+加工车间管理
+餐饮团餐管理
+网点运营管理
+菜谱综合管理
+餐饮配送管理
+加工数据管理
+餐饮加工管理
+总部配送管理
+配送路线管理
+餐饮门店管理
+门店营业设置
+门店营业分析
+门店营业对账
+门店外卖管理
+门店销售预测
+门店订货预估
+门店订货管理
+餐饮团餐管理
+门店库存管理
+餐饮客户关系
+协议客户管理
+会员卡务管理
+营销策划管理
+基础设置
+餐饮终端产品
+门店移动订货
+前台POS
+移动POS
+微信点餐
+云店通
+电子秤
+库存管理.txt
+· 最后更改: 2025/07/28 06:17 由
+127.0.0.1
+金蝶软件（中国）有限公司版权所有©1993 - 2023
+粤公网安备 44030502002324号
+粤ICP备05041751号
+
+=== LINKS ===
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E4%B8%9A%E5%8A%A1%E4%B8%93%E9%A2%98_%E5%BA%93%E5%AD%98%E7%BB%B4%E5%BA%A6	库存维度
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E4%B8%9A%E5%8A%A1%E4%B8%93%E9%A2%98_%E7%9B%98%E7%82%B9	盘点
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E4%B8%9A%E5%8A%A1%E4%B8%93%E9%A2%98_%E5%BA%93%E5%AD%98%E8%B0%83%E6%95%B4%E4%B8%9A%E5%8A%A1	库存调整业务
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0	库存管理系统参数
+/dokuwiki/doku.php?id=%E5%8D%95%E6%8D%AE%E9%80%89%E9%A1%B9%E5%BA%93%E5%AD%98%E9%80%9A%E7%94%A8%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0	单据选项库存通用业务参数
+/dokuwiki/doku.php?id=%E5%BA%8F%E5%88%97%E5%8F%B7%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E5%92%8C%E8%AE%BE%E7%BD%AE	序列号系统参数和设置
+/dokuwiki/doku.php?id=%E4%BB%93%E5%BA%93	仓库
+/dokuwiki/doku.php?id=%E4%BB%93%E4%BD%8D%E5%80%BC%E9%9B%86	仓位值集
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%8A%B6%E6%80%81	库存状态
+/dokuwiki/doku.php?id=%E4%BB%93%E5%BA%93%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%AE%89%E5%85%A8%E5%BA%93%E5%AD%98	仓库最大最小安全库存
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E9%A2%84%E8%AD%A6%E6%96%B9%E6%A1%88	库存预警方案
+/dokuwiki/doku.php?id=%E6%89%B9%E5%8F%B7_%E5%BA%8F%E5%88%97%E5%8F%B7%E5%B1%9E%E6%80%A7	批号/序列号属性
+/dokuwiki/doku.php?id=%E6%89%B9%E5%8F%B7_%E5%BA%8F%E5%88%97%E5%8F%B7%E7%BC%96%E7%A0%81%E8%A7%84%E5%88%99	批号/序列号编码规则
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E6%89%B9%E5%8F%B7%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE	物料批号规则设置
+/dokuwiki/doku.php?id=%E6%89%B9%E5%8F%B7%E4%B8%BB%E6%A1%A3	批号主档
+/dokuwiki/doku.php?id=%E5%BA%8F%E5%88%97%E5%8F%B7%E4%B8%BB%E6%A1%A3	序列号主档
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E8%BF%BD%E6%BA%AF%E5%BA%8F%E5%88%97%E5%8F%B7%E4%B8%BB%E6%A1%A3	生产追溯序列号
+/dokuwiki/doku.php?id=%E5%BD%92%E6%A1%A3%E5%BA%8F%E5%88%97%E5%8F%B7	归档序列号
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8C%87%E5%BC%95	库存初始化指引工作台
+/dokuwiki/doku.php?id=%E5%90%AF%E7%94%A8%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	启用库存管理
+/dokuwiki/doku.php?id=%E5%88%9D%E5%A7%8B%E5%BA%93%E5%AD%98	初始库存
+/dokuwiki/doku.php?id=%E7%BB%93%E6%9D%9F%E5%88%9D%E5%A7%8B%E5%8C%96_%E5%8F%8D%E5%88%9D%E5%A7%8B%E5%8C%96	结束初始化
+/dokuwiki/doku.php?id=%E5%87%BA%E5%85%A5%E5%BA%93%E5%88%97%E8%A1%A8	出入库列表
+/dokuwiki/doku.php?id=%E5%85%B6%E4%BB%96%E5%85%A5%E5%BA%93%E5%8D%95	其他入库单
+/dokuwiki/doku.php?id=%E5%87%BA%E5%BA%93%E7%94%B3%E8%AF%B7%E5%8D%95	出库申请单
+/dokuwiki/doku.php?id=%E5%85%B6%E4%BB%96%E5%87%BA%E5%BA%93%E5%8D%95	其他出库单
+/dokuwiki/doku.php?id=%E8%B0%83%E6%8B%A8%E7%94%B3%E8%AF%B7%E5%8D%95	调拨申请单
+/dokuwiki/doku.php?id=%E7%9B%B4%E6%8E%A5%E8%B0%83%E6%8B%A8%E5%8D%95	直接调拨单
+/dokuwiki/doku.php?id=%E5%88%86%E6%AD%A5%E5%BC%8F%E8%B0%83%E5%87%BA%E5%8D%95	分步式调出单
+/dokuwiki/doku.php?id=%E5%88%86%E6%AD%A5%E5%BC%8F%E8%B0%83%E5%85%A5%E5%8D%95	分步式调入单
+/dokuwiki/doku.php?id=%E5%8F%97%E6%89%98%E5%8A%A0%E5%B7%A5%E6%9D%90%E6%96%99%E6%94%B6%E6%96%99%E5%8D%95	受托加工材料收料单
+/dokuwiki/doku.php?id=%E5%8F%97%E6%89%98%E5%8A%A0%E5%B7%A5%E6%9D%90%E6%96%99%E5%85%A5%E5%BA%93%E5%8D%95	受托加工材料入库单
+/dokuwiki/doku.php?id=%E5%8F%97%E6%89%98%E5%8A%A0%E5%B7%A5%E6%9D%90%E6%96%99%E9%80%80%E6%96%99%E5%8D%95	受托加工材料退料单
+/dokuwiki/doku.php?id=%E7%BB%84%E8%A3%85%E6%8B%86%E5%8D%B8%E5%8D%95	组装拆卸单
+/dokuwiki/doku.php?id=%E5%BD%A2%E6%80%81%E8%BD%AC%E6%8D%A2%E5%8D%95	形态转换单
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2	库存状态转换单
+/dokuwiki/doku.php?id=%E6%89%B9%E5%8F%B7%E8%B0%83%E6%95%B4%E5%8D%95	批号调整单
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%9B%98%E7%82%B9%E6%96%B9%E6%A1%88	盘点方案
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E7%9B%98%E7%82%B9%E4%BD%9C%E4%B8%9A	物料盘点作业
+/dokuwiki/doku.php?id=%E7%9B%98%E7%9B%88%E5%8D%95	盘盈单
+/dokuwiki/doku.php?id=%E7%9B%98%E4%BA%8F%E5%8D%95	盘亏单
+/dokuwiki/doku.php?id=abc%E5%88%86%E9%85%8D%E7%BB%84	ABC分配组
+/dokuwiki/doku.php?id=%E5%91%A8%E6%9C%9F%E7%9B%98%E7%82%B9%E8%AE%A1%E5%88%92	周期盘点计划
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E5%91%A8%E6%9C%9F%E7%9B%98%E7%82%B9%E8%A1%A8	物料周期盘点表
+/dokuwiki/doku.php?id=%E5%8D%B3%E6%97%B6%E5%BA%93%E5%AD%98%E6%B1%87%E6%80%BB%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2	即时库存
+/dokuwiki/doku.php?id=%E5%8D%B3%E6%97%B6%E5%BA%93%E5%AD%98%E6%A0%A1%E5%AF%B9	即时库存校对
+/dokuwiki/doku.php?id=%E6%B8%85%E9%99%A4%E9%9B%B6%E5%BA%93%E5%AD%98%E8%AE%B0%E5%BD%95	清除零库存记录
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E8%B0%83%E6%95%B4	库存调整
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E9%94%81%E5%BA%93	锁库
+/dokuwiki/doku.php?id=%E9%94%81%E5%BA%93%E6%97%A5%E5%BF%97	锁库日志
+/dokuwiki/doku.php?id=%E5%85%B3%E8%B4%A6_%E5%8F%8D%E5%85%B3%E8%B4%A6	库存关账
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E6%B1%87%E6%80%BB%E7%BB%9F%E8%AE%A1%E8%A1%A8	库存汇总统计表
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E6%94%B6%E5%8F%91%E6%B1%87%E6%80%BB%E8%A1%A8	物料收发汇总表
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E6%94%B6%E5%8F%91%E6%98%8E%E7%BB%86%E8%A1%A8	物料收发明细表
+/dokuwiki/doku.php?id=%E7%89%A9%E6%96%99%E6%94%B6%E5%8F%91%E5%88%86%E7%B1%BB%E7%BB%9F%E8%AE%A1%E8%A1%A8	物料收发分类统计表
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E5%8F%B0%E8%B4%A6	库存台账
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%9B%98%E7%82%B9%E5%B7%AE%E5%BC%82%E6%8A%A5%E5%91%8A	库存盘点差异报告
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E8%B4%A6%E9%BE%84%E5%88%86%E6%9E%90%E8%A1%A8	库存账龄分析表
+/dokuwiki/doku.php?id=%E5%91%86%E6%BB%9E%E6%96%99%E5%88%86%E6%9E%90	呆滞料分析
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E9%A2%84%E8%AD%A6%E6%8A%A5%E8%A1%A8	库存预警报表
+/dokuwiki/doku.php?id=%E4%BF%9D%E8%B4%A8%E6%9C%9F%E9%A2%84%E8%AD%A6	保质期预警
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E8%B4%9F%E7%BB%93%E4%BD%99%E9%A2%84%E8%AD%A6	库存负结余预警
+/dokuwiki/doku.php?id=abc%E5%88%86%E6%9E%90	ABC分析
+/dokuwiki/doku.php?id=%E5%BA%8F%E5%88%97%E5%8F%B7%E4%B8%B2%E5%8F%B7%E6%9F%A5%E8%AF%A2	序列号串号查询
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E6%B5%81%E6%B0%B4%E8%A1%A8	库存流水表
+/dokuwiki/doku.php?id=%E5%B7%B2%E8%B0%83%E5%87%BA%E6%9C%AA%E8%B0%83%E5%85%A5%E7%BB%9F%E8%AE%A1%E8%A1%A8	已调出未调入统计表
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E9%A2%84%E8%AD%A6%E5%88%86%E6%9E%90%E8%A1%A8	库存预警分析表
+/dokuwiki/doku.php?id=%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F%E6%95%B0%E6%8D%AE%E8%A1%A8	备份数据表
+/dokuwiki/doku.php?id=%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F%E6%95%B0%E6%8D%AE%E8%A1%A8	还原数据表
+/dokuwiki/doku.php?id=%E5%88%A0%E9%99%A4%E5%A4%87%E4%BB%BD%E8%A1%A8%E6%95%B0%E6%8D%AE	删除备份表数据
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E5%B7%A5%E4%BD%9C%E5%8F%B0	库存工作台
+/dokuwiki/doku.php?id=%E8%AD%A6%E7%A4%BA%E7%81%AF%E6%96%B9%E6%A1%88	警示灯方案
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E4%BA%91%E5%B7%A1%E6%A3%80	库存云巡检
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E5%90%8C%E6%AD%A5%E7%AE%A1%E6%98%93	库存同步管易
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	库存管理
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	文章
+/dokuwiki/doku.php?id=talk:%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	讨论
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	阅读
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86&do=edit&rev=1753683424	显示源文件
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86&do=revisions	修订记录
+/dokuwiki/doku.php?id=start	
+/dokuwiki/doku.php?id=%E9%87%91%E8%9D%B6ai%E6%98%9F%E7%A9%BA%E7%BB%BC%E8%BF%B0	综述
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7	人人资产
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E6%8A%A5%E9%94%80	人人报销
+/dokuwiki/doku.php?id=%E6%80%BB%E8%B4%A6	总账
+/dokuwiki/doku.php?id=%E5%86%85%E9%83%A8%E5%BE%80%E6%9D%A5%E5%8D%8F%E5%90%8C	内部往来协同
+/dokuwiki/doku.php?id=%E6%99%BA%E8%83%BD%E4%BC%9A%E8%AE%A1%E5%B9%B3%E5%8F%B0	智能会计平台
+/dokuwiki/doku.php?id=%E5%BA%94%E6%94%B6%E6%AC%BE%E7%AE%A1%E7%90%86	应收款管理
+/dokuwiki/doku.php?id=%E5%BA%94%E4%BB%98%E6%AC%BE%E7%AE%A1%E7%90%86	应付款管理
+/dokuwiki/doku.php?id=%E5%87%BA%E7%BA%B3%E7%AE%A1%E7%90%86	出纳管理
+/dokuwiki/doku.php?id=%E7%A5%A8%E6%8D%AE%E7%AE%A1%E7%90%86	票据管理
+/dokuwiki/doku.php?id=%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86	资金管理
+/dokuwiki/doku.php?id=%E7%BD%91%E4%B8%8A%E9%93%B6%E8%A1%8C	网上银行
+/dokuwiki/doku.php?id=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C	开放银行
+/dokuwiki/doku.php?id=%E8%B4%B9%E7%94%A8%E6%8A%A5%E9%94%80	费用管理
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F	报表系统
+/dokuwiki/doku.php?id=%E5%90%88%E5%B9%B6%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F	合并报表系统
+/dokuwiki/doku.php?id=%E9%98%BF%E7%B1%B3%E5%B7%B4%E6%8A%A5%E8%A1%A8	阿米巴报表
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E4%BC%9A%E8%AE%A1%E6%A1%A3%E6%A1%88%E9%9B%86%E6%88%90	电子会计档案集成
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E5%87%AD%E8%AF%81%E6%B1%A0	电子凭证池
+/dokuwiki/doku.php?id=%E5%8F%91%E7%A5%A8%E7%AE%A1%E7%90%86	发票管理
+/dokuwiki/doku.php?id=%E7%BA%B3%E7%A8%8E%E7%94%B3%E6%8A%A5	纳税申报
+/dokuwiki/doku.php?id=%E5%AD%98%E8%B4%A7%E6%A0%B8%E7%AE%97	存货核算
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97	产品成本核算
+/dokuwiki/doku.php?id=%E9%A3%9F%E5%93%81%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97	食品成本核算
+/dokuwiki/doku.php?id=%E6%A0%87%E5%87%86%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90	标准成本分析
+/dokuwiki/doku.php?id=%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7	固定资产
+/dokuwiki/doku.php?id=%E7%A7%9F%E8%B5%81%E8%B5%84%E4%BA%A7	租赁资产
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86	人人资产管理
+/dokuwiki/doku.php?id=%E9%A2%84%E7%AE%97%E7%AE%A1%E7%90%86	预算管理
+/dokuwiki/doku.php?id=%E7%BB%8F%E8%90%A5%E4%BC%9A%E8%AE%A1	经营会计
+/dokuwiki/doku.php?id=%E7%BB%8F%E8%90%A5%E4%BC%9A%E8%AE%A1%E5%88%86%E6%9E%90	经营会计分析
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86	采购管理
+/dokuwiki/doku.php?id=%E9%94%80%E5%94%AE%E7%AE%A1%E7%90%86	销售管理
+/dokuwiki/doku.php?id=%E4%BF%A1%E7%94%A8%E7%AE%A1%E7%90%86	信用管理
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	库存管理
+/dokuwiki/doku.php?id=%E7%BB%84%E7%BB%87%E9%97%B4%E7%BB%93%E7%AE%97	组织间结算
+/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E7%AE%A1%E7%90%86	条码管理
+/dokuwiki/doku.php?id=%E4%BE%9B%E5%BA%94%E5%95%86%E5%8D%8F%E5%90%8C	供应商协同
+/dokuwiki/doku.php?id=bbc%E4%B8%9A%E5%8A%A1%E4%B8%AD%E5%BF%83	BBC业务中心
+/dokuwiki/doku.php?id=bbc%E5%88%86%E9%94%80%E5%95%86%E9%97%A8%E6%88%B7	BBC分销商门户
+/dokuwiki/doku.php?id=bbc%E9%97%A8%E5%BA%97%E9%97%A8%E6%88%B7	BBC门店门户
+/dokuwiki/doku.php?id=%E6%8E%8C%E4%B8%8A%E8%AE%A2%E8%B4%A7	掌上订货
+/dokuwiki/doku.php?id=b2c%E7%94%B5%E5%95%86%E4%B8%AD%E5%BF%83	B2C电商中心
+/dokuwiki/doku.php?id=%E8%A6%81%E8%A1%A5%E8%B4%A7%E7%AE%A1%E7%90%86	要补货管理
+/dokuwiki/doku.php?id=%E5%85%A8%E7%BD%91%E4%BC%9A%E5%91%98	全网会员
+/dokuwiki/doku.php?id=%E4%BF%83%E9%94%80%E7%AE%A1%E7%90%86	促销管理
+/dokuwiki/doku.php?id=%E8%BF%94%E5%88%A9%E7%AE%A1%E7%90%86	返利管理
+/dokuwiki/doku.php?id=%E8%90%A5%E9%94%80%E8%B4%B9%E7%94%A8%E7%AE%A1%E7%90%86	营销费用管理
+/dokuwiki/doku.php?id=b2b%E7%94%B5%E5%95%86%E7%AE%A1%E7%90%86_%E6%97%A7%E7%89%88	B2B电商管理（旧版）
+/dokuwiki/doku.php?id=%E6%B8%A0%E9%81%93%E8%B5%84%E9%87%91%E6%B1%A0%E7%AE%A1%E7%90%86	渠道资金池管理
+/dokuwiki/doku.php?id=%E8%BF%9E%E9%94%81%E6%A1%A3%E6%A1%88	连锁档案
+/dokuwiki/doku.php?id=%E4%BB%B7%E6%A0%BC%E4%BF%83%E9%94%80	价格促销
+/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E7%AE%A1%E7%90%86	会员管理
+/dokuwiki/doku.php?id=%E7%A4%BC%E5%88%B8%E7%AE%A1%E7%90%86	礼券管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%8D%8F%E5%90%8C	门店协同
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E6%94%B6%E9%93%B6	门店收银
+/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9	商品返利
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E4%B8%AD%E5%BF%83	报表中心
+/dokuwiki/doku.php?id=%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2	安装部署
+/dokuwiki/doku.php?id=%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86	文档管理
+/dokuwiki/doku.php?id=%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86	项目管理
+/dokuwiki/doku.php?id=%E7%A0%94%E5%8F%91%E7%89%A9%E6%96%99%E7%AE%A1%E7%90%86	研发物料管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1bom%E7%AE%A1%E7%90%86	设计BOM管理
+/dokuwiki/doku.php?id=%E8%B6%85%E7%BA%A7bom%E7%AE%A1%E7%90%86	超级BOM管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E8%89%BA%E7%AE%A1%E7%90%86	设计工艺管理
+/dokuwiki/doku.php?id=%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86	流程管理
+/dokuwiki/doku.php?id=%E7%A0%94%E5%8F%91%E6%99%BA%E5%BA%93	研发智库
+/dokuwiki/doku.php?id=catia%E9%9B%86%E6%88%90	Catia集成
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E5%BB%BA%E6%A8%A1	系统建模
+/dokuwiki/doku.php?id=solidworks%E9%9B%86%E6%88%90	SolidWorks集成
+/dokuwiki/doku.php?id=autocad%E9%9B%86%E6%88%90	AutoCAD集成
+/dokuwiki/doku.php?id=caxa%E9%9B%86%E6%88%90	CAXA集成
+/dokuwiki/doku.php?id=cadence%E9%9B%86%E6%88%90	Cadence集成
+/dokuwiki/doku.php?id=altium_designer%E9%9B%86%E6%88%90	Altium Designer集成
+/dokuwiki/doku.php?id=nx%E9%9B%86%E6%88%90	NX集成
+/dokuwiki/doku.php?id=creo%E9%9B%86%E6%88%90	Creo集成
+/dokuwiki/doku.php?id=%E4%B8%AD%E6%9C%9Bcad%E9%9B%86%E6%88%90	中望CAD集成
+/dokuwiki/doku.php?id=inventor%E9%9B%86%E6%88%90	Inventor集成
+/dokuwiki/doku.php?id=zwcad%E6%9C%BA%E6%A2%B0%E7%89%88%E9%9B%86%E6%88%90	ZWCAD机械版集成
+/dokuwiki/doku.php?id=pads%E9%9B%86%E6%88%90	PADS集成
+/dokuwiki/doku.php?id=eplan%E9%9B%86%E6%88%90	Eplan集成
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1%E5%8F%98%E6%9B%B4%E7%AE%A1%E7%90%86	设计变更管理
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86	产品管理
+/dokuwiki/doku.php?id=tr%E7%AE%A1%E7%90%86	TR管理
+/dokuwiki/doku.php?id=pdm%E5%AF%B9%E8%B1%A1%E6%89%A9%E5%B1%95	PDM对象扩展
+/dokuwiki/doku.php?id=%E5%B7%A5%E7%A8%8B%E6%95%B0%E6%8D%AE	工程数据
+/dokuwiki/doku.php?id=%E8%AE%A1%E5%88%92%E7%AE%A1%E7%90%86	计划管理
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86	生产管理
+/dokuwiki/doku.php?id=%E5%A7%94%E5%A4%96%E7%AE%A1%E7%90%86	委外管理
+/dokuwiki/doku.php?id=%E6%97%A5%E6%8E%92%E4%BA%A7	日排产
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E7%BA%BF%E7%94%9F%E4%BA%A7	生产线生产
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	车间管理
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	智慧车间
+/dokuwiki/doku.php?id=%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86	质量管理
+/dokuwiki/doku.php?id=%E8%B4%A8%E9%87%8F%E8%BF%BD%E6%BA%AF%E5%AF%BC%E8%88%AA%E9%A1%B5	质量追溯
+/dokuwiki/doku.php?id=%E4%BB%BB%E5%8A%A1%E5%85%B1%E4%BA%AB%E4%B8%AD%E5%BF%83	任务共享中心
+/dokuwiki/doku.php?id=%E8%B4%A2%E5%8A%A1%E5%85%B1%E4%BA%AB	财务共享
+/dokuwiki/doku.php?id=%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%BF%83	信息中心
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%9C%E6%B5%81	工作流
+/dokuwiki/doku.php?id=%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B	业务流程
+/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD%E6%9C%8D%E5%8A%A1	数据智能服务
+/dokuwiki/doku.php?id=%E5%A2%9E%E5%80%BC%E4%BA%91%E6%9C%8D%E5%8A%A1	增值云服务
+/dokuwiki/doku.php?id=%E6%95%B0%E5%AD%97%E5%A4%A7%E5%B1%8F	数字大屏
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BArpa%E6%9C%BA%E5%99%A8%E4%BA%BA	星空RPA机器人
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	基础资料
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	公共设置
+/dokuwiki/doku.php?id=%E4%B8%9A%E5%8A%A1%E7%9B%91%E6%8E%A7	业务监控预警
+/dokuwiki/doku.php?id=%E6%B6%88%E6%81%AF%E5%B9%B3%E5%8F%B0	消息平台
+/dokuwiki/doku.php?id=%E5%AE%9E%E6%96%BD%E5%B9%B3%E5%8F%B0%E4%BF%A1%E6%81%AF	实施平台
+/dokuwiki/doku.php?id=%E7%BF%BB%E8%AF%91%E5%B9%B3%E5%8F%B0	翻译平台
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E8%AE%BE%E7%BD%AE	移动设置
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7	系统工具
+/dokuwiki/doku.php?id=%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86	安全登录
+/dokuwiki/doku.php?id=s-hr%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE	s-HR集成
+/dokuwiki/doku.php?id=%E4%BA%91%E4%B9%8B%E5%AE%B6%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE	云之家集成
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BA%E5%8D%AB%E5%A3%AB	星空卫士
+/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83	数据中心管理
+/dokuwiki/doku.php?id=%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86	组织管理
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86	系统管理
+/dokuwiki/doku.php?id=%E9%9B%86%E6%88%90%E5%B9%B3%E5%8F%B0	集成平台
+/dokuwiki/doku.php?id=%E9%97%A8%E6%88%B7%E7%AE%A1%E7%90%86	门户管理
+/dokuwiki/doku.php?id=%E9%9A%90%E7%A7%81%E4%B8%AD%E5%BF%83	隐私中心
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BAlive	星空Live
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BA%E5%B7%A5%E4%BD%9C%E5%8F%B0	星空工作台
+/dokuwiki/doku.php?id=bos%E5%B9%B3%E5%8F%B0	BOS平台
+/dokuwiki/doku.php?id=%E5%A5%97%E6%89%93%E5%B9%B3%E5%8F%B0	套打平台
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E5%B9%B3%E5%8F%B0	报表平台
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0	移动平台
+/dokuwiki/doku.php?id=%E9%99%84%E5%BD%95	附录
+/dokuwiki/doku.php?id=%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E4%BA%91	协同开发云
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86	产品数据管理
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E7%AE%A1%E7%90%86	产品加工管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	加工车间管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86	加工成本管理
+/dokuwiki/doku.php?id=%E4%BA%91%E8%B0%83%E5%BA%A6%E6%8C%87%E6%8C%A5%E4%B8%AD%E5%BF%83	云调度指挥中心
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E7%89%A9%E8%81%94	智慧物联
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE	加工基础数据
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86	加工订单管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	加工车间管理
+/dokuwiki/doku.php?id=%E7%BD%91%E7%82%B9%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86	网点运营管理
+/dokuwiki/doku.php?id=%E8%8F%9C%E8%B0%B1%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86	菜谱综合管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86	加工数据管理
+/dokuwiki/doku.php?id=%E9%A4%90%E9%A5%AE%E5%8A%A0%E5%B7%A5%E7%AE%A1%E7%90%86	餐饮加工管理
+/dokuwiki/doku.php?id=%E6%80%BB%E9%83%A8%E9%85%8D%E9%80%81%E7%AE%A1%E7%90%86	总部配送管理
+/dokuwiki/doku.php?id=%E9%85%8D%E9%80%81%E8%B7%AF%E7%BA%BF%E7%AE%A1%E7%90%86	配送路线管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E8%AE%BE%E7%BD%AE	门店营业设置
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E5%88%86%E6%9E%90	门店营业分析
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E5%AF%B9%E8%B4%A6	门店营业对账
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%A4%96%E5%8D%96%E7%AE%A1%E7%90%86	门店外卖管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E9%A2%84%E6%B5%8B	门店销售预测
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%AE%A2%E8%B4%A7%E9%A2%84%E4%BC%B0	门店订货预估
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%AE%A2%E8%B4%A7%E7%AE%A1%E7%90%86	门店订货管理
+/dokuwiki/doku.php?id=%E9%A4%90%E9%A5%AE%E5%9B%A2%E9%A4%90%E7%AE%A1%E7%90%86	餐饮团餐管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	门店库存管理
+/dokuwiki/doku.php?id=%E5%8D%8F%E8%AE%AE%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86	协议客户管理
+/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E5%8D%A1%E5%8A%A1%E7%AE%A1%E7%90%86	会员卡务管理
+/dokuwiki/doku.php?id=%E8%90%A5%E9%94%80%E7%AD%96%E5%88%92%E7%AE%A1%E7%90%86	营销策划管理
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	基础设置
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E7%A7%BB%E5%8A%A8%E8%AE%A2%E8%B4%A7	门店移动订货
+/dokuwiki/doku.php?id=%E5%89%8D%E5%8F%B0pos	前台POS
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8pos	移动POS
+/dokuwiki/doku.php?id=%E5%BE%AE%E4%BF%A1%E7%82%B9%E9%A4%90	微信点餐
+/dokuwiki/doku.php?id=%E4%BA%91%E5%BA%97%E9%80%9A	云店通
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E7%A7%A4	电子秤

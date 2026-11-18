@@ -1,0 +1,4 @@
+ID: 预订管理
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%A2%84%E8%AE%A2%E7%AE%A1%E7%90%86
+
+[[登记预订]]

@@ -1,0 +1,9 @@
+ID: 厨显管理
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8E%A8%E6%98%BE%E7%AE%A1%E7%90%86
+
+  *功能说明
+安装在后厨大屏幕上，用于展示各个房台所点菜品的制作耗时等情况。
+
+  *界面展示
+
+{{:厨显.png}}

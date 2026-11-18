@@ -1,0 +1,4 @@
+ID: 存货核算概述
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AD%98%E8%B4%A7%E6%A0%B8%E7%AE%97%E6%A6%82%E8%BF%B0
+
+存货核算是指企业存货价值（即成本）的计量，用于工商业企业存货出入库核算，存货出入库凭证处理，核算报表查询，期初期末库存余额处理及相关资料的维护。

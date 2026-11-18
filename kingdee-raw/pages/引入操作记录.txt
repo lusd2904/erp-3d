@@ -1,0 +1,6 @@
+ID: 引入操作记录
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%BC%95%E5%85%A5%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95
+
+====== 引入操作记录 ======
+
+引入操作的日志，支持记录引入操作的操作人、操作时间、操作的业务对象和引入的数量。

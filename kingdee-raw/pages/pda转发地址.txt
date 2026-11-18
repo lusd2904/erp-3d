@@ -1,0 +1,5 @@
+ID: pda转发地址
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pda%E8%BD%AC%E5%8F%91%E5%9C%B0%E5%9D%80
+
+==== 1.功能说明 ====
+用于定义转发地址中维护Cloud服务器的内网访问地址，如http://localhost:8090/K3Cloud，如果端口默认为80，则维护为http://localhost/K3Cloud。需确保录入的地址在服务器本地能够正常访问。设置转发地址后可在wince程序中登录。（适用于wince程序）。

@@ -1,0 +1,22 @@
+ID: pc-派工工作台pt145060
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=pc-%E6%B4%BE%E5%B7%A5%E5%B7%A5%E4%BD%9C%E5%8F%B0pt145060
+
+PT145060补丁新增了派工工作台功能，具体功能介绍可参照如下链接：
+
+1、【视频】智慧车间_新增派工工作台功能实操演示详细内容请点击：
+
+https://vip.kingdee.com/school/5475
+
+2、【视频】智慧车间-派工工作台使用介绍-批量派工详细内容请点击：
+
+https://vip.kingdee.com/school/5439
+
+3、【视频】智慧车间-派工工作台使用介绍-主界面详细内容请点击：
+
+https://vip.kingdee.com/school/5437
+
+4、【文档】金蝶AI星空_V7.5 智慧工厂新增派工工作台功能介绍详细内容请点击：
+
+https://vip.kingdee.com/school/5438
+
+

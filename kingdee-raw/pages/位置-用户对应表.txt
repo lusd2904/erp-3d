@@ -1,0 +1,5 @@
+ID: 位置-用户对应表
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E4%BD%8D%E7%BD%AE-%E7%94%A8%E6%88%B7%E5%AF%B9%E5%BA%94%E8%A1%A8
+
+==== 1.功能说明 ====
+维护仓库仓位与用户之间的对应关系。

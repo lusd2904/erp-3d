@@ -1,0 +1,4 @@
+ID: 客户关系管理概述
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%AE%A2%E6%88%B7%E5%85%B3%E7%B3%BB%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0
+
+客户关系管理相关内容，具体可参考[[http://club.youshang.com/forum.php?mod=viewthread&tid=1107537&extra=page%3D1|金蝶云 CRM用户手册]]的介绍。

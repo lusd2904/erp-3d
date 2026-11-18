@@ -1,0 +1,5 @@
+ID: 归档扫描记录
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%BD%92%E6%A1%A3%E6%89%AB%E6%8F%8F%E8%AE%B0%E5%BD%95
+
+==== 1.功能说明 ====
+用于归档当前系统中条码扫描记录。

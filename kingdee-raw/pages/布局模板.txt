@@ -1,0 +1,8 @@
+ID: 布局模板
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%B8%83%E5%B1%80%E6%A8%A1%E6%9D%BF
+
+布局模板介绍：
+
+  - Admindtrator才可以进行布局模板；
+  - 根据企业个性化需求，确认主页的大小；
+  - 通过拆分行、拆分列等功能，对主页进行划分和布局，可以拖拽调整区域的大小。

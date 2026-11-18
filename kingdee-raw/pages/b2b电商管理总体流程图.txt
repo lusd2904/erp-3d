@@ -1,0 +1,6 @@
+ID: b2b电商管理总体流程图
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=b2b%E7%94%B5%E5%95%86%E7%AE%A1%E7%90%86%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B%E5%9B%BE
+
+总体流程图如下：
+
+{{::b2b_b2b电商管理总体流程图.png|}}

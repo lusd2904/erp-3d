@@ -1,0 +1,41 @@
+ID: 系统配置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE
+
+[[云店通轻餐_android|>>云店通轻餐_android]]
+
+===== 1）账号、环境准备 =====
+
+  - 由于云店通系统依赖于金蝶AI星空、食神CRM系统、食神商户平台系统，因此用户需要预先准备好金蝶AI星空V7.5系统环境、食神CRM系统账号、商户平台系统账号。
+  - 食神CRM系统地址：[[http://shishen.kingdee.com/jsp/login.jsp]]。用户可以在此链接中注册账号、登录、使用。
+  - 商户平台系统地址：[[http://shishen.kingdee.com/portal/]]。用户可以在此链接中注册账号、登录、使用。
+
+
+=====  2）商户注册和设备绑定 =====
+
+  - 商户平台系统地址：[[http://shishen.kingdee.com/portal/]] 注册商户
+  - 提供设备的设备特征码（SN）由金蝶运维人员将设备绑定在注册的商户中
+  - 绑定后，在设备管理中可见，同时将AppID和AppSecret参数绑定在cloud的金蝶食神开发者参数中
+{{:cloud:bos:图片1.png?direct&400 |}}
+
+{{:cloud:bos:图片2.png?direct&400 |}}
+
+===== 3）cloud配置 =====
+
+==== cloud连通商户 ====
+
+  - 首先使用管理员账号登录金蝶AI星空，打开【基础管理】-【公共设置】-【金蝶食神开发者参数配置】界面
+  - 在【基本配置】页签中，填入在线平台地址（http://shishen.kingdee.com/）
+  - 在线平台AppID、在线平台密钥（AppID、密钥可以在商户平台中【开发者】页签找到）
+{{:cloud:bos:商户平台.png?direct&400 |}}
+
+
+==== cloud参数配置 ====
+
+  - 切换到【Cloud参数配置】中，填写Cloud地址、用户名、密码，Cloud地址为金蝶AI星空地址，用户名、密码为登录金蝶AI星空的用户名和密码。
+{{:cloud参数.png?direct&400 |}}
+
+==== 微信点餐和会员参数配置 ====
+
+  - 如果需要用到微信点餐，需要继续配置【线上点餐参数配置】和【线上会员参数配置】两者配置的客户端ID、密钥一致，填写接口地址（http://shishen.kingdee.com/）
+  - 客户端ID、密钥：客户端ID、密钥可以登录食神CRM系统后，在【系统设置】-【开发者信息】中找到
+{{:微信点餐.png?direct&400 |}}

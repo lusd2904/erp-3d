@@ -1,0 +1,4 @@
+ID: 复杂股权关系_自动计算
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%A4%8D%E6%9D%82%E8%82%A1%E6%9D%83%E5%85%B3%E7%B3%BB_%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97
+
+在采用“统一在控股公司”权益核算方法下，直接持股、间接持股、交叉持股，系统自动计算控股公司与被投资公司的持股比例。 

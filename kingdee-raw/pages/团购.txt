@@ -1,0 +1,8 @@
+ID: 团购
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%9B%A2%E8%B4%AD
+
+==== 团购 ====
+
+团购：类似于门店收银操作，先选定零售客户。
+
+{{TG.png?400}}

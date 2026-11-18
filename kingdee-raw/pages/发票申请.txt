@@ -1,0 +1,8 @@
+ID: 发票申请
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8F%91%E7%A5%A8%E7%94%B3%E8%AF%B7
+
+==== 发票申请 ====
+
+ 发票申请：可以根据零售单填写发票申请单，零售单记录申请开票记录。
+
+{{FPSQ.png?400}}

@@ -1,0 +1,9 @@
+ID: 商品返利结算单
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9%E7%BB%93%E7%AE%97%E5%8D%95
+
+==== 商品返利结算单 ====
+
+商品返利结算单：返利计算完成后生成相应的返利结算单做为返利结算依据。
+
+
+{{FLJSD.png?400}}

@@ -1,0 +1,661 @@
+https://help.open.kingdee.com/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95
+
+<<返回采购管理界面
+1功能概述
+采购申请单是采购需求的主要来源之一，是使用部门或计划部门根据采购计划或物料需求，向采购部门提出申请采购的单据；申请单经过相关部门审核后，才能进行采购。
+2使用前提
+定义采购申请单的单据类型、业务组织、采购组织、物料、单位等。
+3功能路径
+【供应链】－>【采购管理】－>【采购申请】－>【采购申请单】
+4字段说明
+4.1基本信息
+单据类型
+采购申请单的单据类型，从采购申请单单据类型基础资料中选择
+申请类型
+采购申请的类别，携带单据类型上申请类型字段，分为物料、资产、费用等
+申请组织
+申请单的发出组织
+其他字段
+字段
+说明
+单据编码
+采购申请单的单据编码，具有唯一性并遵循采购申请单编码规则
+申请日期
+采购申请单的申请日期
+单据状态
+申请单的状态
+申请人
+申请的发起人，从职员基础资料中进行选择，必须为申请部门下的职员
+申请部门
+申请的需求部门。从部门基础资料中选择，必须为申请组织下的部门
+币别
+预估物料价格的币别
+合计金额
+所有申请物料估计金额合计
+备注
+补充说明
+4.2表头其他
+字段
+说明
+创建人
+指创建采购申请单的用户
+创建日期
+指创建采购申请单的日期
+最后修改人
+指最后修改采购申请单的用户
+最后修改日期
+指最后修改采购申请单的日期
+审核人
+指审核采购申请单的用户
+审核日期
+指审核采购申请单的日期
+关闭状态
+指采购申请单是否关闭
+关闭人
+指关闭采购申请单的用户
+关闭日期
+指关闭采购申请单的日期
+作废状态
+指采购申请单是否作废
+作废人
+指作废采购申请单的用户
+作废日期
+指作废采购申请单的日期
+4.3明细信息
+需求组织
+需求物料的组织，即物料入库后的货主
+批准数量
+采购申请单的批准数量，只有审核中才能够编辑，必须大于零
+到货日期
+采购申请单创建时，到货日期 = 建议采购日期 + 提前期，采购申请单由上游单据下推生成时，到货日期由上游单据携带。
+收料组织
+负责收料的组织，可以选择与需求组织有委托保管关系的业务组织。
+采购组织
+负责采购的组织，可以选择与需求组织有委托采购关系的业务组织。
+建议供应商
+采购物料的建议供应商，自动携带物料上的默认供应商。
+其他字段
+字段
+说明
+物料编码
+申请物料的物料编码，从物料基础资料中选择
+物料名称
+指物料的名称，根据物料编码携带，在申请类型为“物料”时显示
+物料说明
+物料的说明，在申请类型为“资产”时显示
+规格型号
+指物料的规格型号，根据物料编码携带
+单位
+指物料的单位，只能选择与基本单位存在固定换算率的计量单位
+申请数量
+采购申请单的申请数量，必须大于零
+单价
+申请物料的采购单价，从价目表获取
+含税单价
+申请物料的采购含税单价，从价目表获取
+含税金额
+申请物料的采购金额，根据数量和含税单价计算。
+计价单位
+物料的采购计价单位
+计价数量
+按计价单位计量的申请数量
+库存单位
+物料的库存单位
+库存数量
+按库存单位计量的申请数量
+备注
+补充说明
+以下表体页签均可翻页，每页与表体明细分录行一一对应
+4.4货源安排
+BOM版本
+物料对应的BOM版本，从BOM清单中选择
+需求组织
+等同于明细页签的需求组织
+需求部门
+具体提出需求的部门，可以选择需求组织下的部门
+采购组织
+等同于明细页签的采购组织
+采购员
+具体负责采购的业务员，可以选择采购组织下的采购员
+收料组织
+等同于明细页签的收料组织
+收料部门
+具体负责收料的部门，可以选择收料组织下的部门|
+到货日期
+物料的到货日期，与表体明细页签到货日期联动
+提前期
+物料的总提前期。提前期包含：固定提前期，变动提前期，检验提前期，数据来源于物料主数据计划属性页签中的设置。
+其他字段
+字段
+说明
+物料编码
+根据表体[明细]页签的物料编码携带
+物料名称
+根据物料编码携带物料名称
+交货地址
+采购物料的交货地址
+建议采购日期
+建议的物料采购日期
+4.5表体其他
+字段
+说明
+业务终止
+采购申请单分录是否业务终止
+终止人
+采购申请单分录的业务终止人
+终止日期
+采购申请单分录的业务终止日期
+业务关闭
+采购申请单分录是否业务关闭
+业务流程
+采购申请单关联的业务流程
+关联数量
+下游单据关联采购申请单的数量，由下游单据保存时反写
+订单数量
+采购订单关联采购申请单的数量，由采购订单审核时反写
+剩余数量
+采购申请单剩余的可关联数量，剩余数量=批准数量-关联数量
+收料数量
+采购申请单对应的物料的收料数量
+入库数量
+采购申请单对应的物料的入库数量
+源单类型
+采购申请单关联的上游单据的单据类型
+源单单号
+采购申请单关联的上游单据的单据编号
+计划跟踪号
+用于跟踪物料计划的字符，采购单据上都有并可以携带。从计划订单向下进行需求的记录，用于计划需求的跟踪。关联库存维度
+需求跟踪号
+用于跟踪采购需求的字符，采购单据上都有并可以携带。从采购申请向下进行需求的记录，用于采购需求的跟踪。不关联库存维度
+计划确认
+采购申请单是否进行过计划确认
+5操作说明
+采购申请单单据状态说明，请参考
+单据状态通用说明
+采购申请单单据操作分为整单操作与行业务操作两种
+5.1作废
+未作废状态
+执行单据新增时，单据默认是未作废状态
+表示当前单据为正常、可用的
+作废
+执行作废操作时，系统将单据的作废状态字段置为【作废】
+作废只能针对创建或重新审核的单据，已审核的单据不能做废
+作废状态下，表示当前单据除查看、反作废、打印、附件、引入引出等操作，其它操作不允许，包括编辑和关联操作
+5.2关闭
+未关闭状态
+单据新增时，关闭状态为未关闭
+整单未关闭时，表示当前单据未被下游单据执行完成，仍可继续进行相关的业务操作
+关闭
+在下游单据执行完成时系统自动触发关闭，或由用户手工进行整单关闭
+关闭只能针对已审核未关闭的单据
+表示当前单据已经由下游单据执行完成，整单关闭的单据可以进行除查看、反关闭、附件、打印、引入引出等操作，其它操作不允许，包括编辑和关联操作
+采购申请单所有分录行均业务关闭，采购申请单自动关闭
+反关闭
+系统自动触发反关闭，或由用户手工进行整单反关闭
+自动关闭的采购申请单存在未业务关闭的分录，采购申请单自动反关闭
+不能对自动关闭的采购申请单进行反关闭操作
+5.3业务关闭
+正常状态
+执行单据新增时，单据默认业务关闭字段是【正常】状态
+表示订单的当前记录行未被采购订单关联完成
+业务关闭
+业务关闭只能由系统自动进行
+采购申请单表体[其他]页签的订单数量>=申请单表体[明细]页签的批准数量时，采购申请单记录行自动行关闭
+单据记录行为业务关闭状态时，除查看、打印、引入引出等操作外，不允许进行其他操作，包括编辑和关联操作
+业务反关闭
+业务反关闭只能由系统自动进行
+已业务关闭的采购申请单表体[其他]页签的订单数量＜申请单表体[明细]页签的批准数量时，采购申请单记录行自动业务反关闭
+业务反关闭后系统自动修改业务关闭状态字段为“正常”
+5.4业务终止
+正常状态
+执行单据新增时，单据默认业务终止字段是【正常】状态
+表示当前单据可以正常进行业务处理和操作
+终止
+业务终止是由用户手动进行的业务操作
+已审核、未关闭、未终止的采购申请单可以进行业务终止操作
+业务终止表示由当前记录行不再进行相关的业务处理；被终止的分录可以进行除查看、反终止、打印、引入引出等操作，其它操作都不允许，包括编辑和关联等
+反终止
+业务反终止是由用户手动进行的业务操作
+业务终止的采购申请单分录可以进行业务反终止操作
+反终止后系统自动修改业务终止状态字段为“正常”
+6业务说明
+6.1采购申请单库存查询业务
+采购申请单上支持库存查询功能，直接调用库存数据，具体库存查询的规则如下：
+库存查询规则
+| 判断条件                                 | 过滤条件     | 查询结果              |
+1.是否选择物料
+不选择物料不支持库存查询
+1.收货组织录入
+2.选择物料
+收货组织+物料
+物料在当前收货组织的即时库存数据
+1.当前组织是库存组织
+2.选择物料
+3.收货组织没有录入
+当前组织+物料
+物料在当前组织的即时库存数据
+6.2采购申请单合并业务
+合并功能主要应用于客户对采购申请单数据的整理，用户可以按业务需要例如按采购组织、需求组织等过滤出采购申请单列表，然后对多张采购申请单据进行合并，满足以下条件的申请单才能合并：
+单据状态为“创建”，且作废状态为“未作废”的采购申请单才能进行合并
+相同单据类型的采购申请单才能进行合并
+必须【采购组织】、【需求组织】相同的采购申请单才能进行合并
+采购申请单上存在源单单号，则不能进行合并
+采购申请单上的币别对合并没有影响
+采购申请单的合并必须遵从以下规则：
+采购申请单合并后不记录合并前后单据的对应关系
+合并在单据编码最小的申请单上，其余单据在合并后系统自动删除
+合并时，单据头信息默认取第一张单据（即单据编码最小的单据）的单据头信息
+合并时，单据体的记录行依照单据编码顺序以及行号依次并在单据编码最小的申请单上
+合并时，新单据体如果存在相同的物料、且物料属性相同时，将相同物料的数量合并，合并后的物料记录行其他信息默认取第一条物料的对应信息
+合并时，如果进行合并的记录中，相同属性的物料，如果单位不一致，则统一转换为采购单位，申请数量按采购单位进行转换后，再进行合并。合并到新单的单位为采购单位，申请数量为转换合并后的数量
+合并时，单据体上相同的物料，但物料属性不相同时，不对该记录行进行物料的合并
+合并后的新单为创建状态，单据编码符合编码规则自动编码
+6.3采购申请单拆分业务
+采购申请单具有拆分功能，拆分功能是指对一张采购申请单，可以按照分录行拆分成多张采购申请单，拆分同样不记录单据前后的对应关系，拆分需要遵循以下规则：
+单据状态为“创建”，且作废状态为“未作废”的采购申请单才能进行拆分
+只能对同一张采购申请单上的不同分录进行拆分
+不能选择一张采购申请单上的所有分录进行拆分
+新的申请单生成时，默认取原单的所有表头信息，表体信息取拆分记录行所在的原单信息；新的申请单按单据编码规则自动编码，产生后默认为创建状态；
+6.4采购申请单指定供应商业务
+在采购申请单列表中可以进行指定供应商操作，具体操作规则如下：
+选择多条记录分配时，系统控制只能选择记录行采购组织相同的情况下才能同时指定
+只能选择单据状态为“已审核”、业务终止状态都为“正常”的单据进行指定
+申请单已被下游单据关联，不影响指定供应商操作
+只能选择当前分录的采购组织下存在有效价格的供应商，
+6.5采购申请单单据转换业务
+采购申请单可以下推采购订单，也可以在采购订单界面选单采购申请单生成采购订单，实现关联业务的转化，采购申请单与采购订单转化的规则如下：
+单据状态为“已审核”，且业务关闭状态为“正常”，且业务终止状态为 “正常”的采购申请单才能转换为采购订单
+在采购订单界面选单时，可选择的申请单列表界面默认只过滤出符合上面条件的申请单
+申请单下推订单时，申请单的字段关联携带到订单上
+采购申请单转换为采购订单时按平台的方式支持一对一转换、多对一转换、按分组策略合并转换
+采购申请单的分组策略支持按物料、供应商、采购组织、到货日期等的合并转换
+按分组策略转换时存在相同记录行合并转换，则采购订单的交货明细页签需要跟踪到源单的单号、行号
+采购订单保存后，关联反写申请单的关联数量字段；订单删除后，也需更新申请单的关联数量字段；采购订单审核后，关联反写申请单的订单数量字段，订单反审核后，也需要更新申请单的订单数量字段
+您的足迹:
+•
+采购申请单
+文章
+讨论
+阅读
+显示源文件
+修订记录
+搜索
+导航
+新特性汇总
+金蝶AI星空新特性
+金蝶AI星空企业版综述
+综述
+员工服务
+人人资产
+人人报销
+财务会计
+总账
+内部往来协同
+智能会计平台
+应收款管理
+应付款管理
+出纳管理
+票据管理
+资金管理
+网上银行
+开放银行
+费用管理
+报表系统
+合并报表系统
+阿米巴报表
+电子会计档案集成
+电子凭证池
+税务管理
+发票管理
+纳税申报
+成本管理
+存货核算
+产品成本核算
+食品成本核算
+标准成本分析
+资产管理
+固定资产
+租赁资产
+人人资产管理
+管理会计
+预算管理
+经营会计
+经营会计分析
+供应链
+采购管理
+销售管理
+信用管理
+库存管理
+组织间结算
+条码管理
+供应商协同
+全渠道营销
+BBC业务中心
+BBC分销商门户
+BBC门店门户
+掌上订货
+B2C电商中心
+要补货管理
+全网会员
+促销管理
+返利管理
+营销费用管理
+B2B电商管理（旧版）
+渠道资金池管理
+零售管理
+连锁档案
+价格促销
+会员管理
+礼券管理
+门店协同
+门店收银
+商品返利
+报表中心
+PLM
+安装部署
+文档管理
+项目管理
+研发物料管理
+设计BOM管理
+超级BOM管理
+设计工艺管理
+流程管理
+研发智库
+Catia集成
+系统建模
+SolidWorks集成
+AutoCAD集成
+CAXA集成
+Cadence集成
+Altium Designer集成
+NX集成
+Creo集成
+中望CAD集成
+Inventor集成
+ZWCAD机械版集成
+PADS集成
+Eplan集成
+设计变更管理
+产品管理
+TR管理
+PDM对象扩展
+生产制造
+工程数据
+计划管理
+生产管理
+委外管理
+日排产
+生产线生产
+车间管理
+智慧车间
+质量管理
+质量管理
+质量追溯
+共享服务中心
+任务共享中心
+财务共享
+流程中心
+信息中心
+工作流
+业务流程
+星空云服务
+数据智能服务
+增值云服务
+经营分析
+轻分析
+数字大屏
+RPA机器人
+星空RPA机器人
+基础管理
+基础资料
+公共设置
+业务监控预警
+消息平台
+实施平台
+翻译平台
+移动设置
+系统工具
+安全登录
+s-HR集成
+云之家集成
+星空卫士
+系统管理
+数据中心管理
+组织管理
+系统管理
+集成平台
+门户管理
+隐私中心
+移动应用
+星空Live
+星空工作台
+BOS平台
+BOS平台
+套打平台
+报表平台
+移动平台
+附录
+协同开发云
+协同开发云
+食品加工管理
+产品数据管理
+产品加工管理
+加工车间管理
+加工成本管理
+云调度指挥中心
+智慧物联
+餐饮加工管理
+加工基础数据
+加工订单管理
+加工车间管理
+餐饮团餐管理
+网点运营管理
+菜谱综合管理
+餐饮配送管理
+加工数据管理
+餐饮加工管理
+总部配送管理
+配送路线管理
+餐饮门店管理
+门店营业设置
+门店营业分析
+门店营业对账
+门店外卖管理
+门店销售预测
+门店订货预估
+门店订货管理
+餐饮团餐管理
+门店库存管理
+餐饮客户关系
+协议客户管理
+会员卡务管理
+营销策划管理
+基础设置
+餐饮终端产品
+门店移动订货
+前台POS
+移动POS
+微信点餐
+云店通
+电子秤
+采购申请单.txt
+· 最后更改: 2024/07/24 01:41 由
+127.0.0.1
+金蝶软件（中国）有限公司版权所有©1993 - 2023
+粤公网安备 44030502002324号
+粤ICP备05041751号
+
+=== LINKS ===
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86	<<返回采购管理界面
+/dokuwiki/doku.php?id=%E5%8D%95%E6%8D%AE%E7%8A%B6%E6%80%81%E9%80%9A%E7%94%A8%E8%AF%B4%E6%98%8E	单据状态通用说明
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95	采购申请单
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95	文章
+/dokuwiki/doku.php?id=talk:%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95	讨论
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95	阅读
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95&do=edit&rev=1721785309	显示源文件
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%94%B3%E8%AF%B7%E5%8D%95&do=revisions	修订记录
+/dokuwiki/doku.php?id=start	
+/dokuwiki/doku.php?id=%E9%87%91%E8%9D%B6ai%E6%98%9F%E7%A9%BA%E7%BB%BC%E8%BF%B0	综述
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7	人人资产
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E6%8A%A5%E9%94%80	人人报销
+/dokuwiki/doku.php?id=%E6%80%BB%E8%B4%A6	总账
+/dokuwiki/doku.php?id=%E5%86%85%E9%83%A8%E5%BE%80%E6%9D%A5%E5%8D%8F%E5%90%8C	内部往来协同
+/dokuwiki/doku.php?id=%E6%99%BA%E8%83%BD%E4%BC%9A%E8%AE%A1%E5%B9%B3%E5%8F%B0	智能会计平台
+/dokuwiki/doku.php?id=%E5%BA%94%E6%94%B6%E6%AC%BE%E7%AE%A1%E7%90%86	应收款管理
+/dokuwiki/doku.php?id=%E5%BA%94%E4%BB%98%E6%AC%BE%E7%AE%A1%E7%90%86	应付款管理
+/dokuwiki/doku.php?id=%E5%87%BA%E7%BA%B3%E7%AE%A1%E7%90%86	出纳管理
+/dokuwiki/doku.php?id=%E7%A5%A8%E6%8D%AE%E7%AE%A1%E7%90%86	票据管理
+/dokuwiki/doku.php?id=%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86	资金管理
+/dokuwiki/doku.php?id=%E7%BD%91%E4%B8%8A%E9%93%B6%E8%A1%8C	网上银行
+/dokuwiki/doku.php?id=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C	开放银行
+/dokuwiki/doku.php?id=%E8%B4%B9%E7%94%A8%E6%8A%A5%E9%94%80	费用管理
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F	报表系统
+/dokuwiki/doku.php?id=%E5%90%88%E5%B9%B6%E6%8A%A5%E8%A1%A8%E7%B3%BB%E7%BB%9F	合并报表系统
+/dokuwiki/doku.php?id=%E9%98%BF%E7%B1%B3%E5%B7%B4%E6%8A%A5%E8%A1%A8	阿米巴报表
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E4%BC%9A%E8%AE%A1%E6%A1%A3%E6%A1%88%E9%9B%86%E6%88%90	电子会计档案集成
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E5%87%AD%E8%AF%81%E6%B1%A0	电子凭证池
+/dokuwiki/doku.php?id=%E5%8F%91%E7%A5%A8%E7%AE%A1%E7%90%86	发票管理
+/dokuwiki/doku.php?id=%E7%BA%B3%E7%A8%8E%E7%94%B3%E6%8A%A5	纳税申报
+/dokuwiki/doku.php?id=%E5%AD%98%E8%B4%A7%E6%A0%B8%E7%AE%97	存货核算
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97	产品成本核算
+/dokuwiki/doku.php?id=%E9%A3%9F%E5%93%81%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97	食品成本核算
+/dokuwiki/doku.php?id=%E6%A0%87%E5%87%86%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90	标准成本分析
+/dokuwiki/doku.php?id=%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7	固定资产
+/dokuwiki/doku.php?id=%E7%A7%9F%E8%B5%81%E8%B5%84%E4%BA%A7	租赁资产
+/dokuwiki/doku.php?id=%E4%BA%BA%E4%BA%BA%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86	人人资产管理
+/dokuwiki/doku.php?id=%E9%A2%84%E7%AE%97%E7%AE%A1%E7%90%86	预算管理
+/dokuwiki/doku.php?id=%E7%BB%8F%E8%90%A5%E4%BC%9A%E8%AE%A1	经营会计
+/dokuwiki/doku.php?id=%E7%BB%8F%E8%90%A5%E4%BC%9A%E8%AE%A1%E5%88%86%E6%9E%90	经营会计分析
+/dokuwiki/doku.php?id=%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86	采购管理
+/dokuwiki/doku.php?id=%E9%94%80%E5%94%AE%E7%AE%A1%E7%90%86	销售管理
+/dokuwiki/doku.php?id=%E4%BF%A1%E7%94%A8%E7%AE%A1%E7%90%86	信用管理
+/dokuwiki/doku.php?id=%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	库存管理
+/dokuwiki/doku.php?id=%E7%BB%84%E7%BB%87%E9%97%B4%E7%BB%93%E7%AE%97	组织间结算
+/dokuwiki/doku.php?id=%E6%9D%A1%E7%A0%81%E7%AE%A1%E7%90%86	条码管理
+/dokuwiki/doku.php?id=%E4%BE%9B%E5%BA%94%E5%95%86%E5%8D%8F%E5%90%8C	供应商协同
+/dokuwiki/doku.php?id=bbc%E4%B8%9A%E5%8A%A1%E4%B8%AD%E5%BF%83	BBC业务中心
+/dokuwiki/doku.php?id=bbc%E5%88%86%E9%94%80%E5%95%86%E9%97%A8%E6%88%B7	BBC分销商门户
+/dokuwiki/doku.php?id=bbc%E9%97%A8%E5%BA%97%E9%97%A8%E6%88%B7	BBC门店门户
+/dokuwiki/doku.php?id=%E6%8E%8C%E4%B8%8A%E8%AE%A2%E8%B4%A7	掌上订货
+/dokuwiki/doku.php?id=b2c%E7%94%B5%E5%95%86%E4%B8%AD%E5%BF%83	B2C电商中心
+/dokuwiki/doku.php?id=%E8%A6%81%E8%A1%A5%E8%B4%A7%E7%AE%A1%E7%90%86	要补货管理
+/dokuwiki/doku.php?id=%E5%85%A8%E7%BD%91%E4%BC%9A%E5%91%98	全网会员
+/dokuwiki/doku.php?id=%E4%BF%83%E9%94%80%E7%AE%A1%E7%90%86	促销管理
+/dokuwiki/doku.php?id=%E8%BF%94%E5%88%A9%E7%AE%A1%E7%90%86	返利管理
+/dokuwiki/doku.php?id=%E8%90%A5%E9%94%80%E8%B4%B9%E7%94%A8%E7%AE%A1%E7%90%86	营销费用管理
+/dokuwiki/doku.php?id=b2b%E7%94%B5%E5%95%86%E7%AE%A1%E7%90%86_%E6%97%A7%E7%89%88	B2B电商管理（旧版）
+/dokuwiki/doku.php?id=%E6%B8%A0%E9%81%93%E8%B5%84%E9%87%91%E6%B1%A0%E7%AE%A1%E7%90%86	渠道资金池管理
+/dokuwiki/doku.php?id=%E8%BF%9E%E9%94%81%E6%A1%A3%E6%A1%88	连锁档案
+/dokuwiki/doku.php?id=%E4%BB%B7%E6%A0%BC%E4%BF%83%E9%94%80	价格促销
+/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E7%AE%A1%E7%90%86	会员管理
+/dokuwiki/doku.php?id=%E7%A4%BC%E5%88%B8%E7%AE%A1%E7%90%86	礼券管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%8D%8F%E5%90%8C	门店协同
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E6%94%B6%E9%93%B6	门店收银
+/dokuwiki/doku.php?id=%E5%95%86%E5%93%81%E8%BF%94%E5%88%A9	商品返利
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E4%B8%AD%E5%BF%83	报表中心
+/dokuwiki/doku.php?id=%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2	安装部署
+/dokuwiki/doku.php?id=%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86	文档管理
+/dokuwiki/doku.php?id=%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86	项目管理
+/dokuwiki/doku.php?id=%E7%A0%94%E5%8F%91%E7%89%A9%E6%96%99%E7%AE%A1%E7%90%86	研发物料管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1bom%E7%AE%A1%E7%90%86	设计BOM管理
+/dokuwiki/doku.php?id=%E8%B6%85%E7%BA%A7bom%E7%AE%A1%E7%90%86	超级BOM管理
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E8%89%BA%E7%AE%A1%E7%90%86	设计工艺管理
+/dokuwiki/doku.php?id=%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86	流程管理
+/dokuwiki/doku.php?id=%E7%A0%94%E5%8F%91%E6%99%BA%E5%BA%93	研发智库
+/dokuwiki/doku.php?id=catia%E9%9B%86%E6%88%90	Catia集成
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E5%BB%BA%E6%A8%A1	系统建模
+/dokuwiki/doku.php?id=solidworks%E9%9B%86%E6%88%90	SolidWorks集成
+/dokuwiki/doku.php?id=autocad%E9%9B%86%E6%88%90	AutoCAD集成
+/dokuwiki/doku.php?id=caxa%E9%9B%86%E6%88%90	CAXA集成
+/dokuwiki/doku.php?id=cadence%E9%9B%86%E6%88%90	Cadence集成
+/dokuwiki/doku.php?id=altium_designer%E9%9B%86%E6%88%90	Altium Designer集成
+/dokuwiki/doku.php?id=nx%E9%9B%86%E6%88%90	NX集成
+/dokuwiki/doku.php?id=creo%E9%9B%86%E6%88%90	Creo集成
+/dokuwiki/doku.php?id=%E4%B8%AD%E6%9C%9Bcad%E9%9B%86%E6%88%90	中望CAD集成
+/dokuwiki/doku.php?id=inventor%E9%9B%86%E6%88%90	Inventor集成
+/dokuwiki/doku.php?id=zwcad%E6%9C%BA%E6%A2%B0%E7%89%88%E9%9B%86%E6%88%90	ZWCAD机械版集成
+/dokuwiki/doku.php?id=pads%E9%9B%86%E6%88%90	PADS集成
+/dokuwiki/doku.php?id=eplan%E9%9B%86%E6%88%90	Eplan集成
+/dokuwiki/doku.php?id=%E8%AE%BE%E8%AE%A1%E5%8F%98%E6%9B%B4%E7%AE%A1%E7%90%86	设计变更管理
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86	产品管理
+/dokuwiki/doku.php?id=tr%E7%AE%A1%E7%90%86	TR管理
+/dokuwiki/doku.php?id=pdm%E5%AF%B9%E8%B1%A1%E6%89%A9%E5%B1%95	PDM对象扩展
+/dokuwiki/doku.php?id=%E5%B7%A5%E7%A8%8B%E6%95%B0%E6%8D%AE	工程数据
+/dokuwiki/doku.php?id=%E8%AE%A1%E5%88%92%E7%AE%A1%E7%90%86	计划管理
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86	生产管理
+/dokuwiki/doku.php?id=%E5%A7%94%E5%A4%96%E7%AE%A1%E7%90%86	委外管理
+/dokuwiki/doku.php?id=%E6%97%A5%E6%8E%92%E4%BA%A7	日排产
+/dokuwiki/doku.php?id=%E7%94%9F%E4%BA%A7%E7%BA%BF%E7%94%9F%E4%BA%A7	生产线生产
+/dokuwiki/doku.php?id=%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	车间管理
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E8%BD%A6%E9%97%B4	智慧车间
+/dokuwiki/doku.php?id=%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86	质量管理
+/dokuwiki/doku.php?id=%E8%B4%A8%E9%87%8F%E8%BF%BD%E6%BA%AF%E5%AF%BC%E8%88%AA%E9%A1%B5	质量追溯
+/dokuwiki/doku.php?id=%E4%BB%BB%E5%8A%A1%E5%85%B1%E4%BA%AB%E4%B8%AD%E5%BF%83	任务共享中心
+/dokuwiki/doku.php?id=%E8%B4%A2%E5%8A%A1%E5%85%B1%E4%BA%AB	财务共享
+/dokuwiki/doku.php?id=%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%BF%83	信息中心
+/dokuwiki/doku.php?id=%E5%B7%A5%E4%BD%9C%E6%B5%81	工作流
+/dokuwiki/doku.php?id=%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B	业务流程
+/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD%E6%9C%8D%E5%8A%A1	数据智能服务
+/dokuwiki/doku.php?id=%E5%A2%9E%E5%80%BC%E4%BA%91%E6%9C%8D%E5%8A%A1	增值云服务
+/dokuwiki/doku.php?id=%E6%95%B0%E5%AD%97%E5%A4%A7%E5%B1%8F	数字大屏
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BArpa%E6%9C%BA%E5%99%A8%E4%BA%BA	星空RPA机器人
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	基础资料
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	公共设置
+/dokuwiki/doku.php?id=%E4%B8%9A%E5%8A%A1%E7%9B%91%E6%8E%A7	业务监控预警
+/dokuwiki/doku.php?id=%E6%B6%88%E6%81%AF%E5%B9%B3%E5%8F%B0	消息平台
+/dokuwiki/doku.php?id=%E5%AE%9E%E6%96%BD%E5%B9%B3%E5%8F%B0%E4%BF%A1%E6%81%AF	实施平台
+/dokuwiki/doku.php?id=%E7%BF%BB%E8%AF%91%E5%B9%B3%E5%8F%B0	翻译平台
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E8%AE%BE%E7%BD%AE	移动设置
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7	系统工具
+/dokuwiki/doku.php?id=%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86	安全登录
+/dokuwiki/doku.php?id=s-hr%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE	s-HR集成
+/dokuwiki/doku.php?id=%E4%BA%91%E4%B9%8B%E5%AE%B6%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE	云之家集成
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BA%E5%8D%AB%E5%A3%AB	星空卫士
+/dokuwiki/doku.php?id=%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83	数据中心管理
+/dokuwiki/doku.php?id=%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86	组织管理
+/dokuwiki/doku.php?id=%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86	系统管理
+/dokuwiki/doku.php?id=%E9%9B%86%E6%88%90%E5%B9%B3%E5%8F%B0	集成平台
+/dokuwiki/doku.php?id=%E9%97%A8%E6%88%B7%E7%AE%A1%E7%90%86	门户管理
+/dokuwiki/doku.php?id=%E9%9A%90%E7%A7%81%E4%B8%AD%E5%BF%83	隐私中心
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BAlive	星空Live
+/dokuwiki/doku.php?id=%E6%98%9F%E7%A9%BA%E5%B7%A5%E4%BD%9C%E5%8F%B0	星空工作台
+/dokuwiki/doku.php?id=bos%E5%B9%B3%E5%8F%B0	BOS平台
+/dokuwiki/doku.php?id=%E5%A5%97%E6%89%93%E5%B9%B3%E5%8F%B0	套打平台
+/dokuwiki/doku.php?id=%E6%8A%A5%E8%A1%A8%E5%B9%B3%E5%8F%B0	报表平台
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0	移动平台
+/dokuwiki/doku.php?id=%E9%99%84%E5%BD%95	附录
+/dokuwiki/doku.php?id=%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E4%BA%91	协同开发云
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86	产品数据管理
+/dokuwiki/doku.php?id=%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E7%AE%A1%E7%90%86	产品加工管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	加工车间管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86	加工成本管理
+/dokuwiki/doku.php?id=%E4%BA%91%E8%B0%83%E5%BA%A6%E6%8C%87%E6%8C%A5%E4%B8%AD%E5%BF%83	云调度指挥中心
+/dokuwiki/doku.php?id=%E6%99%BA%E6%85%A7%E7%89%A9%E8%81%94	智慧物联
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE	加工基础数据
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86	加工订单管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E8%BD%A6%E9%97%B4%E7%AE%A1%E7%90%86	加工车间管理
+/dokuwiki/doku.php?id=%E7%BD%91%E7%82%B9%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86	网点运营管理
+/dokuwiki/doku.php?id=%E8%8F%9C%E8%B0%B1%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86	菜谱综合管理
+/dokuwiki/doku.php?id=%E5%8A%A0%E5%B7%A5%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86	加工数据管理
+/dokuwiki/doku.php?id=%E9%A4%90%E9%A5%AE%E5%8A%A0%E5%B7%A5%E7%AE%A1%E7%90%86	餐饮加工管理
+/dokuwiki/doku.php?id=%E6%80%BB%E9%83%A8%E9%85%8D%E9%80%81%E7%AE%A1%E7%90%86	总部配送管理
+/dokuwiki/doku.php?id=%E9%85%8D%E9%80%81%E8%B7%AF%E7%BA%BF%E7%AE%A1%E7%90%86	配送路线管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E8%AE%BE%E7%BD%AE	门店营业设置
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E5%88%86%E6%9E%90	门店营业分析
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%90%A5%E4%B8%9A%E5%AF%B9%E8%B4%A6	门店营业对账
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%A4%96%E5%8D%96%E7%AE%A1%E7%90%86	门店外卖管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E9%A2%84%E6%B5%8B	门店销售预测
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%AE%A2%E8%B4%A7%E9%A2%84%E4%BC%B0	门店订货预估
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E8%AE%A2%E8%B4%A7%E7%AE%A1%E7%90%86	门店订货管理
+/dokuwiki/doku.php?id=%E9%A4%90%E9%A5%AE%E5%9B%A2%E9%A4%90%E7%AE%A1%E7%90%86	餐饮团餐管理
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86	门店库存管理
+/dokuwiki/doku.php?id=%E5%8D%8F%E8%AE%AE%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86	协议客户管理
+/dokuwiki/doku.php?id=%E4%BC%9A%E5%91%98%E5%8D%A1%E5%8A%A1%E7%AE%A1%E7%90%86	会员卡务管理
+/dokuwiki/doku.php?id=%E8%90%A5%E9%94%80%E7%AD%96%E5%88%92%E7%AE%A1%E7%90%86	营销策划管理
+/dokuwiki/doku.php?id=%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE	基础设置
+/dokuwiki/doku.php?id=%E9%97%A8%E5%BA%97%E7%A7%BB%E5%8A%A8%E8%AE%A2%E8%B4%A7	门店移动订货
+/dokuwiki/doku.php?id=%E5%89%8D%E5%8F%B0pos	前台POS
+/dokuwiki/doku.php?id=%E7%A7%BB%E5%8A%A8pos	移动POS
+/dokuwiki/doku.php?id=%E5%BE%AE%E4%BF%A1%E7%82%B9%E9%A4%90	微信点餐
+/dokuwiki/doku.php?id=%E4%BA%91%E5%BA%97%E9%80%9A	云店通
+/dokuwiki/doku.php?id=%E7%94%B5%E5%AD%90%E7%A7%A4	电子秤

@@ -1,0 +1,11 @@
+ID: 可销设置
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%8F%AF%E9%94%80%E8%AE%BE%E7%BD%AE
+
+====== 可销设置 ======
+
+[[可销控制-客户物料]]
+
+[[可销控制-销售员客户]]
+
+[[可销控制-销售员物料]]
+

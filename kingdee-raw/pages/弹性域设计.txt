@@ -1,0 +1,10 @@
+ID: 弹性域设计
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E5%BC%B9%E6%80%A7%E5%9F%9F%E8%AE%BE%E8%AE%A1
+
+功能概述
+
+可以根据用户需要来伸缩扩展的字段组合，称之为弹性域，主要应用于辅助资料及辅助属性。
+
+操作步骤
+
+创建步骤参见[[单据设计与应用|单据设计与应用]]。

@@ -1,0 +1,4 @@
+ID: 挂账回款汇总报表过滤框
+URL: https://help.open.kingdee.com/dokuwiki/doku.php?id=%E6%8C%82%E8%B4%A6%E5%9B%9E%E6%AC%BE%E6%B1%87%E6%80%BB%E6%8A%A5%E8%A1%A8%E8%BF%87%E6%BB%A4%E6%A1%86
+
+====== 挂账回款汇总报表 ======
