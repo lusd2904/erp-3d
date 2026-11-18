@@ -6,13 +6,11 @@ const mysql = require('mysql2/promise');
 
 module.exports = async () => {
   process.env.NODE_ENV = 'test';
+  require('./load-test-env')();
   process.env.DB_HOST = process.env.DB_HOST || '127.0.0.1';
   process.env.DB_PORT = process.env.DB_PORT || '3307';
   process.env.DB_USER = process.env.DB_USER || 'erp3d';
-  process.env.DB_PASSWORD = process.env.DB_PASSWORD || 'erp3d_dev_pwd';
   process.env.DB_NAME = 'erp3d_test';
-  process.env.JWT_SECRET = process.env.JWT_SECRET || 'test-jwt-secret-please-32chars-min';
-  process.env.JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || 'test-refresh-secret-32chars-min';
   process.env.FILES_DIR = path.resolve(__dirname, '../files-test');
   process.env.ENABLE_JOBS = 'false';
   // 阻止 config.ts 读 apps/api/.env 覆盖上面的 DB_NAME
